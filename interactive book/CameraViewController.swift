@@ -20,8 +20,8 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupQrCodeHighlighter()
         setupCamera()
+        setupQrCodeHighlighter()
     }
 
     override func didReceiveMemoryWarning() {
