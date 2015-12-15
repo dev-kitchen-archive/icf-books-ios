@@ -105,9 +105,8 @@
 			children = (
 				E13573E71C175B700090478B /* AppDelegate.swift */,
 				E13573E91C175B700090478B /* HomeViewController.swift */,
-				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
 				E13573EB1C175B700090478B /* CameraViewController.swift */,
-				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
+				E19EE2961C20BF2900E4B550 /* CutomUI */,
 				E13573ED1C175B700090478B /* Main.storyboard */,
 				E13573F01C175B700090478B /* Assets.xcassets */,
 				E13573F21C175B700090478B /* LaunchScreen.storyboard */,
@@ -132,6 +131,15 @@
 				E135740B1C175B700090478B /* Info.plist */,
 			);
 			path = "interactive bookUITests";
+			sourceTree = "<group>";
+		};
+		E19EE2961C20BF2900E4B550 /* CutomUI */ = {
+			isa = PBXGroup;
+			children = (
+				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
+				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
+			);
+			name = CutomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
