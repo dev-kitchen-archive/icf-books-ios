@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    @IBOutlet weak var cameraOverlay: UIImageView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -87,6 +88,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             // Move the message label to the top view
                 //view.bringSubviewToFront(messageLabel)
                 //view.bringSubviewToFront(titleBarBlur)
+            view.bringSubviewToFront(cameraOverlay)
         } catch let error as NSError {
             print(error)
         }
@@ -94,7 +96,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func setupQrCodeHighlighter() {
         qrCodeFrameView = UIView()
-        qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
+        qrCodeFrameView?.layer.borderColor = UIColor(red:1, green:0.4, blue:0.38, alpha:1).CGColor
         qrCodeFrameView?.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)

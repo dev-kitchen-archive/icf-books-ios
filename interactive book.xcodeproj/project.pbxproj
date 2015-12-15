@@ -15,6 +15,8 @@
 		E13573F41C175B700090478B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13573F21C175B700090478B /* LaunchScreen.storyboard */; };
 		E13573FF1C175B700090478B /* interactive_bookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573FE1C175B700090478B /* interactive_bookTests.swift */; };
 		E135740A1C175B700090478B /* interactive_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13574091C175B700090478B /* interactive_bookUITests.swift */; };
+		E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2921C20872400E4B550 /* StartPageCell.swift */; };
+		E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2941C2098F900E4B550 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E13574051C175B700090478B /* interactive bookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interactive bookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13574091C175B700090478B /* interactive_bookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interactive_bookUITests.swift; sourceTree = "<group>"; };
 		E135740B1C175B700090478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19EE2921C20872400E4B550 /* StartPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageCell.swift; sourceTree = "<group>"; };
+		E19EE2941C2098F900E4B550 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				E13573E71C175B700090478B /* AppDelegate.swift */,
 				E13573E91C175B700090478B /* HomeViewController.swift */,
+				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
 				E13573EB1C175B700090478B /* CameraViewController.swift */,
+				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 				E13573ED1C175B700090478B /* Main.storyboard */,
 				E13573F01C175B700090478B /* Assets.xcassets */,
 				E13573F21C175B700090478B /* LaunchScreen.storyboard */,
@@ -261,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13573EC1C175B700090478B /* CameraViewController.swift in Sources */,
+				E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */,
 				E13573E81C175B700090478B /* AppDelegate.swift in Sources */,
+				E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */,
 				E13573EA1C175B700090478B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
