@@ -1,5 +1,5 @@
 //
-//  HorizontalCell.swift
+//  MultipleInfosCell
 //  interactive book
 //
 //  Created by Andreas Plüss on 17.12.15.
@@ -8,19 +8,18 @@
 
 import UIKit
 
-/*depercated > use new cell from startPAge*/
-class HorizontalCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+class MultipleInfosCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     var cellDescriptions = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -31,7 +30,7 @@ class HorizontalCell: UITableViewCell, UICollectionViewDataSource, UICollectionV
     
     /*UICollectionViewDataSource*/
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCollectionCell", forIndexPath: indexPath)
         
         //TODO:
         //set the margin left for the firs element to be 1/4 of a card so it is in the center

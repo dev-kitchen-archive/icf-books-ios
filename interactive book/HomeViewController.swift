@@ -31,20 +31,36 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? StartPageCell
-        if cell == nil {
-            cell = StartPageCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
+        
+        if indexPath.row == 1 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("infosContainerCell") as? MultipleInfosCell
+            if cell == nil {
+                cell = MultipleInfosCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infosContainerCell")
+            }
+            
+            cell!.cellDescriptions = ["hoi", String(tableData[indexPath.row]), "ade"]
+            
+            //        let myBackView = UIView(frame:cell!.frame)
+            //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
+            //        cell!.selectedBackgroundView = myBackView
+            
+            return cell!
+        } else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? StartPageCell
+            if cell == nil {
+                cell = StartPageCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
+            }
+            
+            cell!.delegate = self
+            cell!.cellDescription.text = tableData[indexPath.row]
+            cell!.cellImage.image = UIImage(named: "back_circle_kap12")
+            
+            //        let myBackView = UIView(frame:cell!.frame)
+            //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
+            //        cell!.selectedBackgroundView = myBackView
+            
+            return cell!
         }
-        
-        cell!.delegate = self
-        cell!.cellDescription.text = tableData[indexPath.row]
-        cell!.cellImage.image = UIImage(named: "back_circle_kap12")
-        
-//        let myBackView = UIView(frame:cell!.frame)
-//        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
-//        cell!.selectedBackgroundView = myBackView
-        
-        return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
