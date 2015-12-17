@@ -10,8 +10,8 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+
     @IBOutlet weak var cameraOverlay: UIImageView!
-    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?

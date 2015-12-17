@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PressButtonProtocol {
     
     @IBOutlet weak var table: UITableView!
     var tableData = [String]()
@@ -36,8 +36,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell = StartPageCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
         }
         
+        cell!.delegate = self
         cell!.cellDescription.text = tableData[indexPath.row]
-        cell!.cellImage.image = UIImage(named: "first")
+        cell!.cellImage.image = UIImage(named: "back_circle_kap12")
         
 //        let myBackView = UIView(frame:cell!.frame)
 //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
@@ -53,6 +54,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
+    
+    func alert(message: String) {
+        let alertController = UIAlertController(title: "interact book alert title", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "weg dämit", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "nai", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "mol", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "weiss nöd", style: UIAlertActionStyle.Default,handler: nil))
+
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     
     func populateTableData() {
         tableData.append("Desctiption for first Item.")

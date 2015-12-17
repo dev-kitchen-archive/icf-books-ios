@@ -17,6 +17,8 @@
 		E135740A1C175B700090478B /* interactive_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13574091C175B700090478B /* interactive_bookUITests.swift */; };
 		E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2921C20872400E4B550 /* StartPageCell.swift */; };
 		E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2941C2098F900E4B550 /* TabBarController.swift */; };
+		E1F504EE1C22D3310083821C /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504ED1C22D3310083821C /* HorizontalCell.swift */; };
+		E1F504F01C22D39E0083821C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504EF1C22D39E0083821C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		E135740B1C175B700090478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19EE2921C20872400E4B550 /* StartPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageCell.swift; sourceTree = "<group>"; };
 		E19EE2941C2098F900E4B550 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E1F504ED1C22D3310083821C /* HorizontalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
+		E1F504EF1C22D39E0083821C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				E13573E71C175B700090478B /* AppDelegate.swift */,
 				E13573E91C175B700090478B /* HomeViewController.swift */,
 				E13573EB1C175B700090478B /* CameraViewController.swift */,
+				E1F504EF1C22D39E0083821C /* SettingsViewController.swift */,
 				E19EE2961C20BF2900E4B550 /* CutomUI */,
 				E13573ED1C175B700090478B /* Main.storyboard */,
 				E13573F01C175B700090478B /* Assets.xcassets */,
@@ -136,8 +141,9 @@
 		E19EE2961C20BF2900E4B550 /* CutomUI */ = {
 			isa = PBXGroup;
 			children = (
-				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
+				E1F504ED1C22D3310083821C /* HorizontalCell.swift */,
+				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 			);
 			name = CutomUI;
 			sourceTree = "<group>";
@@ -276,9 +282,11 @@
 			files = (
 				E13573EC1C175B700090478B /* CameraViewController.swift in Sources */,
 				E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */,
+				E1F504F01C22D39E0083821C /* SettingsViewController.swift in Sources */,
 				E13573E81C175B700090478B /* AppDelegate.swift in Sources */,
 				E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */,
 				E13573EA1C175B700090478B /* HomeViewController.swift in Sources */,
+				E1F504EE1C22D3310083821C /* HorizontalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
