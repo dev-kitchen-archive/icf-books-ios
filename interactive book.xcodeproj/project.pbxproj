@@ -17,9 +17,9 @@
 		E135740A1C175B700090478B /* interactive_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13574091C175B700090478B /* interactive_bookUITests.swift */; };
 		E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2921C20872400E4B550 /* StartPageCell.swift */; };
 		E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2941C2098F900E4B550 /* TabBarController.swift */; };
-		E1F504EE1C22D3310083821C /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504ED1C22D3310083821C /* HorizontalCell.swift */; };
 		E1F504F01C22D39E0083821C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504EF1C22D39E0083821C /* SettingsViewController.swift */; };
 		E1F504F41C2324CA0083821C /* MultipleInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504F31C2324CA0083821C /* MultipleInfosCell.swift */; };
+		E1F504F61C2377EA0083821C /* InfoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F504F51C2377EA0083821C /* InfoCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +56,9 @@
 		E135740B1C175B700090478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19EE2921C20872400E4B550 /* StartPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageCell.swift; sourceTree = "<group>"; };
 		E19EE2941C2098F900E4B550 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		E1F504ED1C22D3310083821C /* HorizontalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
 		E1F504EF1C22D39E0083821C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E1F504F31C2324CA0083821C /* MultipleInfosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleInfosCell.swift; sourceTree = "<group>"; };
+		E1F504F51C2377EA0083821C /* InfoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
 				E1F504F31C2324CA0083821C /* MultipleInfosCell.swift */,
 				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
-				E1F504ED1C22D3310083821C /* HorizontalCell.swift */,
+				E1F504F51C2377EA0083821C /* InfoCollectionCell.swift */,
 			);
 			name = CutomUI;
 			sourceTree = "<group>";
@@ -286,11 +286,11 @@
 				E13573EC1C175B700090478B /* CameraViewController.swift in Sources */,
 				E19EE2931C20872400E4B550 /* StartPageCell.swift in Sources */,
 				E1F504F01C22D39E0083821C /* SettingsViewController.swift in Sources */,
+				E1F504F61C2377EA0083821C /* InfoCollectionCell.swift in Sources */,
 				E13573E81C175B700090478B /* AppDelegate.swift in Sources */,
 				E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */,
 				E1F504F41C2324CA0083821C /* MultipleInfosCell.swift in Sources */,
 				E13573EA1C175B700090478B /* HomeViewController.swift in Sources */,
-				E1F504EE1C22D3310083821C /* HorizontalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

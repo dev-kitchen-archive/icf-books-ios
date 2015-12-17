@@ -35,7 +35,7 @@ class MultipleInfosCell: UITableViewCell, UICollectionViewDataSource, UICollecti
         //TODO:
         //set the margin left for the firs element to be 1/4 of a card so it is in the center
         //as example one cell manipulated:
-        if indexPath.row == 1 {
+        if indexPath.row == 2 {
             cell.layer.borderColor = UIColor.blueColor().CGColor
             cell.layer.borderWidth = 2
         }
