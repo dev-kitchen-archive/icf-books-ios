@@ -145,8 +145,8 @@
 			children = (
 				E19EE2921C20872400E4B550 /* StartPageCell.swift */,
 				E1F504F31C2324CA0083821C /* MultipleInfosCell.swift */,
-				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 				E1F504F51C2377EA0083821C /* InfoCollectionCell.swift */,
+				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 			);
 			name = CutomUI;
 			sourceTree = "<group>";

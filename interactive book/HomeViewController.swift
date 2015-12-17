@@ -32,13 +32,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row == 1 {
+        if indexPath.row == 1 || indexPath.row == 5 {
             var cell = tableView.dequeueReusableCellWithIdentifier("infosContainerCell") as? MultipleInfosCell
             if cell == nil {
                 cell = MultipleInfosCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infosContainerCell")
             }
             
-            cell!.cellDescriptions = ["hoi", String(tableData[indexPath.row]), "ade"]
+            cell!.cellDescriptions = ["hoi", "das isch dZelle nr", String(indexPath.row), "da isch nochli text" , String(tableData[indexPath.row]), "ade"]
             
             //        let myBackView = UIView(frame:cell!.frame)
             //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
@@ -87,7 +87,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableData.append("Desctiption for second Item.")
         tableData.append("Desctiption for third Item.")
         tableData.append("Desctiption for forth Item.")
+        tableData.append("Desctiption for fifth Item.")
+        tableData.append("Desctiption for sixth Item.")
         tableData.append("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
+        tableData.append("Desctiption for eighth Item.")
     }
 }
 

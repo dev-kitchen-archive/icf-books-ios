@@ -25,20 +25,22 @@ class MultipleInfosCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     
     /*UICollectionViewDataSource*/
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return cellDescriptions.count
     }
     
     /*UICollectionViewDataSource*/
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCollectionCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCollectionCell", forIndexPath: indexPath) as! InfoCollectionCell
         
         //TODO:
         //set the margin left for the firs element to be 1/4 of a card so it is in the center
         //as example one cell manipulated:
         if indexPath.row == 2 {
-            cell.layer.borderColor = UIColor.blueColor().CGColor
-            cell.layer.borderWidth = 2
+            cell.layer.borderColor = UIColor.redColor().CGColor
+            cell.layer.borderWidth = 0.5
         }
+        
+        cell.cellDescription.text = cellDescriptions[indexPath.row]
         
         return cell
     }
