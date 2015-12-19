@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// this CollectionView Cell is displayed in the MultipleInfosCell on the HomeView
 class InfoCollectionCell: UICollectionViewCell {
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var content: UIView!
@@ -17,7 +18,8 @@ class InfoCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        //designing the cell
         content.layer.borderColor = UIColor(red:1, green:0.58, blue:0.01, alpha:1).CGColor
         content.layer.borderWidth = 0.5
         

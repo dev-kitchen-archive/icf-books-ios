@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         table.delegate = self
         table.dataSource = self
         populateTableData()
@@ -32,17 +32,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row == 1 || indexPath.row == 5 {
+        if indexPath.row == 0 {
             var cell = tableView.dequeueReusableCellWithIdentifier("infosContainerCell") as? MultipleInfosCell
             if cell == nil {
                 cell = MultipleInfosCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infosContainerCell")
             }
             
-            cell!.cellDescriptions = ["hoi", "das isch dZelle nr", String(indexPath.row), "da isch nochli text" , String(tableData[indexPath.row]), "ade"]
-            
-            //        let myBackView = UIView(frame:cell!.frame)
-            //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
-            //        cell!.selectedBackgroundView = myBackView
+            cell!.cellDescriptions = ["One", "Two", "Three", "devkitchen", String(indexPath.row), String(tableData[indexPath.row]), "Bye"]
             
             return cell!
         } else {
@@ -55,32 +51,34 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell!.cellDescription.text = tableData[indexPath.row]
             cell!.cellImage.image = UIImage(named: "back_circle_kap12")
             
-            //        let myBackView = UIView(frame:cell!.frame)
-            //        myBackView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
-            //        cell!.selectedBackgroundView = myBackView
-            
             return cell!
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 230
+        } else {
+            return 180
+        }
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //let newCell = tableView.cellForRowAtIndexPath(indexPath)
-        //newCell?.backgroundColor = UIColor.redColor()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
     func alert(message: String) {
-        let alertController = UIAlertController(title: "interact book alert title", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "weg dämit", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addAction(UIAlertAction(title: "nai", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addAction(UIAlertAction(title: "mol", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addAction(UIAlertAction(title: "weiss nöd", style: UIAlertActionStyle.Default,handler: nil))
-
-        self.presentViewController(alertController, animated: true, completion: nil)
+        let textToShare = message
+        if let myWebsite = NSURL(string: "http://dev.kitchen/")
+        {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
     }
-    
     
     func populateTableData() {
         tableData.append("Desctiption for first Item.")

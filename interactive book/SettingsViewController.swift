@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// use of this view is not yet defined
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var table: UITableView!
@@ -22,7 +23,6 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

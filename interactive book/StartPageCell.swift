@@ -12,6 +12,7 @@ protocol PressButtonProtocol : NSObjectProtocol {
     func alert(message: String) -> Void
 }
 
+/// This Cell displays a single object, it is used in the HomeView
 class StartPageCell: UITableViewCell {
     
     weak var delegate: PressButtonProtocol?

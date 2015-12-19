@@ -8,44 +8,41 @@
 
 import UIKit
 
-class MultipleInfosCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+/// This Cell contains a CollectionVeiw and displays multiple objects, it is used in the HomeView
+class MultipleInfosCell: UITableViewCell {
     
     var cellDescriptions = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
-    
-    /*UICollectionViewDataSource*/
+}
+
+// MARK: - UICollectionViewDataSource
+// This extension allows the cell to deliver the data to its containing CollectionView cells through the delegated Functions
+extension MultipleInfosCell : UICollectionViewDataSource {
+
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellDescriptions.count
     }
-    
-    /*UICollectionViewDataSource*/
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCollectionCell", forIndexPath: indexPath) as! InfoCollectionCell
-        
-        //TODO:
-        //set the margin left for the firs element to be 1/4 of a card so it is in the center
-        //as example one cell manipulated:
-        if indexPath.row == 2 {
-            cell.layer.borderColor = UIColor.redColor().CGColor
-            cell.layer.borderWidth = 0.5
-        }
-        
         cell.cellDescription.text = cellDescriptions[indexPath.row]
         
         return cell
     }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+// This extension allows the cell to define the layout of its containing CollectionViews cells through the delegated Functions
+extension MultipleInfosCell : UICollectionViewDelegateFlowLayout {
     
-    /*UICollectionViewDelegateFlowLayout*/
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 1.5
         let hardCodedPadding:CGFloat = 5

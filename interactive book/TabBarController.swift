@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// this TabBar Controllers defines the TabBars design
 class TabBarController: UITabBarController {
     var iconNames = ["home","scan","contact"]
     var iconColor = UIColor.whiteColor()
@@ -15,9 +16,6 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         // shrink to 40 from default around 50 px
         var tabFrame = self.tabBar.frame
         tabFrame.size.height = 40
@@ -31,15 +29,8 @@ class TabBarController: UITabBarController {
             //get tabbar element
             let tabBarIcn:UITabBarItem = self.tabBar.items![index]
             
-            //remove its title
+            //remove its titles
             tabBarIcn.title = nil
-            
-            //shink and reposition it to take space from missing title
-            //tabBarIcn.imageInsets = UIEdgeInsets(top: 10, left: 4, bottom: -2, right: 4)
-            
-            //set its icon accourdin to preset variable
-            //tabBarIcn.image = UIImage(named: "second")!.imageWithRenderingMode(.AlwaysOriginal)
-            //tabBarIcn.selectedImage = UIImage(named: "selected_" + self.iconNames[index])
         }
     }
 
@@ -58,8 +49,8 @@ class TabBarController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     override func viewWillLayoutSubviews() {
         
-
     }
 }

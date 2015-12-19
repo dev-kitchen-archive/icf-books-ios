@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+/// This view captures qr codes and handes the encoded String
 class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var cameraOverlay: UIImageView!
@@ -52,7 +53,6 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             }
         }
     }
-
     
     func setupCamera(){
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
@@ -85,9 +85,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             // Start video capture.
             captureSession?.startRunning()
             
-            // Move the message label to the top view
-                //view.bringSubviewToFront(messageLabel)
-                //view.bringSubviewToFront(titleBarBlur)
+            // Move png on top of the video preview layer
             view.bringSubviewToFront(cameraOverlay)
         } catch let error as NSError {
             print(error)
@@ -104,7 +102,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     func openWebView(scannedURL:String) {
         print(scannedURL)
+        qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
 }
-
