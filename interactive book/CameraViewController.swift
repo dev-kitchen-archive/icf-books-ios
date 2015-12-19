@@ -11,7 +11,8 @@ import AVFoundation
 
 /// This view captures qr codes and handes the encoded String
 class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
+    
+    @IBOutlet weak var titleBar: UIVisualEffectView!
     @IBOutlet weak var cameraOverlay: UIImageView!
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -87,6 +88,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             
             // Move png on top of the video preview layer
             view.bringSubviewToFront(cameraOverlay)
+            view.bringSubviewToFront(titleBar)
         } catch let error as NSError {
             print(error)
         }
