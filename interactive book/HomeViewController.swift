@@ -59,7 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if indexPath.row == 0 {
             return 230
         } else {
-            return 180
+            return 140
         }
     }
     
