@@ -136,7 +136,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCollectionCell" id="0fv-sl-2uu" customClass="InfoCollectionCell" customModule="interactive_book" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.5" width="379" height="201"/>
+                                                            <rect key="frame" x="0.0" y="1" width="379" height="201"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="201"/>
