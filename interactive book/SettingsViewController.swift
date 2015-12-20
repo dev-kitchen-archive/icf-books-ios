@@ -33,4 +33,15 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func firstTimeUse(sender: AnyObject) {
+//        // reset value for first time use
+//        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "HasLaunchedOnce")
+//        NSUserDefaults.standardUserDefaults().synchronize()
+//        
+        // go to HomeViewController, where IntroView is presented depending on the UserDefaults
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("introView")
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+    }
 }

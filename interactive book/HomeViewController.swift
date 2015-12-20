@@ -17,6 +17,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presentIntroductionView()
+        
         table.delegate = self
         table.dataSource = self
         populateTableData()
@@ -76,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         lastIndex = indexPath.row
     }
-        
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
     
@@ -111,6 +113,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableData.append(News(newsTitel: "Title number six", newsDescription: "Desctiption for Item number 6"))
         tableData.append(News(newsTitel: "Title number seven", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."))
         tableData.append(News(newsTitel: "Title number eight", newsDescription: "Desctiption for Item number 8"))
+    }
+    
+    func presentIntroductionView() {
+        //check if user uses the app for the first time to present him the IntroductionViewController
+        if(NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") != true) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("introductionView")
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+            // This is the first launch ever
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
     }
 }
 
