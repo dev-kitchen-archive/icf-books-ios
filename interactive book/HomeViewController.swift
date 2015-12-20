@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presentIntroductionView()
+        presentIntroView()
         
         table.delegate = self
         table.dataSource = self
@@ -115,11 +115,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableData.append(News(newsTitel: "Title number eight", newsDescription: "Desctiption for Item number 8"))
     }
     
-    func presentIntroductionView() {
+    func presentIntroView() {
         //check if user uses the app for the first time to present him the IntroductionViewController
         if(NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") != true) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("introductionView")
+            let vc = storyboard.instantiateViewControllerWithIdentifier("introView")
             self.presentViewController(vc, animated: true, completion: nil)
             
             // This is the first launch ever

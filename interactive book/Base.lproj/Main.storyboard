@@ -343,7 +343,7 @@
                                             </constraints>
                                             <state key="normal" title="first"/>
                                             <connections>
-                                                <action selector="firstTimeUse:" destination="oqz-pl-r90" eventType="touchUpInside" id="52v-Kk-hQQ"/>
+                                                <segue destination="lU2-zh-mV4" kind="custom" customClass="CustomSegueDown" customModule="interactive_book" customModuleProvider="target" id="pX3-tV-bHd"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -512,7 +512,7 @@
                                 <rect key="frame" x="271" y="550" width="58" height="30"/>
                                 <state key="normal" title="los get's"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="custom" id="Xx7-rq-eM3">
+                                    <segue destination="49e-Tb-3d3" kind="custom" identifier="modalClose" customClass="CustomSegueUp" customModule="interactive_book" customModuleProvider="target" id="Xx7-rq-eM3">
                                         <segue key="commit" inheritsFrom="parent" id="8T2-k0-wpV"/>
                                         <segue key="preview" inheritsFrom="commit" id="cVm-to-ljL"/>
                                     </segue>
