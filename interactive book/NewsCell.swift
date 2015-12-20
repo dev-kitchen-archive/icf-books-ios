@@ -8,14 +8,10 @@
 
 import UIKit
 
-protocol PressButtonProtocol : NSObjectProtocol {
-    func alert(message: String) -> Void
-}
-
 /// This Cell displays a single object, it is used in the HomeView
 class NewsCell: UITableViewCell {
     
-    weak var delegate: PressButtonProtocol?
+    weak var delegate: ButtonPressProtocol?
     
     @IBOutlet weak var contentShadow: UIView!
     @IBOutlet weak var contentContainer: UIView!
@@ -46,10 +42,9 @@ class NewsCell: UITableViewCell {
     }
     
     @IBAction func plusPressed(sender: AnyObject) {
-        print("you pressed the plus button")
-        let message = "Du häsch de + Button druckät uf de Zellä mit folgendem Text: " + cellDescription.text!;
-        if((delegate?.respondsToSelector("alert:")) != nil) {
-            delegate?.alert(message)
+        let message = "You pressed the Cell: " + cellDescription.text!;
+        if((delegate?.respondsToSelector("actionOnPress:")) != nil) {
+            delegate?.actionOnPress(message)
         }
     }
 }

@@ -14,14 +14,16 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     private var pageViewController: UIPageViewController?
     
     // Initialize it right away here
-    private let contentImages = ["camera_overlay.png",
+    let contentImages = ["camera_overlay.png",
         "camera_overlay.png",
         "camera_overlay.png",
         "camera_overlay.png"];
+    var pageCount:Int = 0
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pageCount = contentImages.count
         createPageViewController()
         setupPageControl()
     }
@@ -31,7 +33,7 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
         let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageController") as! UIPageViewController
         pageController.dataSource = self
         
-        if contentImages.count > 0 {
+        if pageCount > 0 {
             let firstController = getItemController(0)!
             let startingViewControllers = [firstController]
             pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
@@ -67,7 +69,7 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
         
         let itemController = viewController as! IntroPageController
         
-        if itemController.itemIndex+1 < contentImages.count {
+        if itemController.itemIndex+1 < pageCount {
             return getItemController(itemController.itemIndex+1)
         }
         
@@ -76,10 +78,14 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     
     private func getItemController(itemIndex: Int) -> IntroPageController? {
         
-        if itemIndex < contentImages.count {
+        if itemIndex < pageCount {
             let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("introPageView") as! IntroPageController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
+
+            if itemIndex == (pageCount - 1) {
+                pageItemController.visible = true
+            }
             return pageItemController
         }
         
@@ -89,12 +95,10 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     // MARK: - Page Indicator
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return contentImages.count
+        return pageCount
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
     }
-    
 }
-

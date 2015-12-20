@@ -16,18 +16,35 @@ class IntroPageController: UIViewController {
         
         didSet {
             
-            if let imageView = contentImageView {
+            if let imageView = pageImage {
                 imageView.image = UIImage(named: imageName)
             }
             
         }
     }
+    var visible: Bool = false {
     
-    @IBOutlet var contentImageView: UIImageView?
+        didSet {
+        
+            if let button = closeButton {
+                button.hidden = visible
+            }
+        }
+    }
+    @IBOutlet weak var pageTitle: UILabel!
+    @IBOutlet weak var pageDescription: UILabel!
+    @IBOutlet weak var pageImage: UIImageView?
+    @IBOutlet weak var closeButton: UIButton!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentImageView!.image = UIImage(named: imageName)
+        pageTitle.text = String(itemIndex)
+        pageImage!.image = UIImage(named: imageName)
+        closeButton.hidden = !visible
+    }
+    
+    @IBAction func closeIntro(sender: AnyObject) {
+        
     }
 }

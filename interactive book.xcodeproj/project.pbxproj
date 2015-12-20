@@ -18,6 +18,7 @@
 		E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2941C2098F900E4B550 /* TabBarController.swift */; };
 		E1D164311C2741690058BE42 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D164301C2741690058BE42 /* IntroViewController.swift */; };
 		E1D164351C27501E0058BE42 /* IntroPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D164341C27501E0058BE42 /* IntroPageController.swift */; };
+		E1D164371C275DB10058BE42 /* ButtonPressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D164361C275DB10058BE42 /* ButtonPressProtocol.swift */; };
 		E1D3DBAA1C267DFA005D48FA /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3DBA91C267DFA005D48FA /* TipInCellAnimator.swift */; };
 		E1D3DBAD1C268F50005D48FA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3DBAC1C268F50005D48FA /* News.swift */; };
 		E1D3DBAF1C269426005D48FA /* NewsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3DBAE1C269426005D48FA /* NewsGroup.swift */; };
@@ -62,6 +63,7 @@
 		E19EE2941C2098F900E4B550 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E1D164301C2741690058BE42 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E1D164341C27501E0058BE42 /* IntroPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageController.swift; sourceTree = "<group>"; };
+		E1D164361C275DB10058BE42 /* ButtonPressProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPressProtocol.swift; sourceTree = "<group>"; };
 		E1D3DBA91C267DFA005D48FA /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
 		E1D3DBAC1C268F50005D48FA /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		E1D3DBAE1C269426005D48FA /* NewsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsGroup.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D3DBA81C267DEB005D48FA /* Animation */,
+				E1D164361C275DB10058BE42 /* ButtonPressProtocol.swift */,
 				E1DA82101C26C194002F73C8 /* NewsCell.swift */,
 				E1F504F31C2324CA0083821C /* NewsGroupCell.swift */,
 				E1F504F51C2377EA0083821C /* NewsInGroupCollectionCell.swift */,
@@ -321,6 +324,7 @@
 				E13573E81C175B700090478B /* AppDelegate.swift in Sources */,
 				E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */,
 				E1F504F41C2324CA0083821C /* NewsGroupCell.swift in Sources */,
+				E1D164371C275DB10058BE42 /* ButtonPressProtocol.swift in Sources */,
 				E1D164351C27501E0058BE42 /* IntroPageController.swift in Sources */,
 				E1D3DBAA1C267DFA005D48FA /* TipInCellAnimator.swift in Sources */,
 				E1D164311C2741690058BE42 /* IntroViewController.swift in Sources */,

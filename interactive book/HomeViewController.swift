@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PressButtonProtocol {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ButtonPressProtocol {
     
     @IBOutlet weak var table: UITableView!
     var tableData = [AnyObject]()
@@ -85,7 +85,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
-    func alert(message: String) {
+    func actionOnPress(message: String) {
         let textToShare = message
         if let myWebsite = NSURL(string: "http://dev.kitchen/")
         {
