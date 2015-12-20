@@ -9,9 +9,9 @@
 import UIKit
 
 /// This Cell contains a CollectionVeiw and displays multiple objects, it is used in the HomeView
-class MultipleInfosCell: UITableViewCell {
+class NewsGroupCell: UITableViewCell {
     
-    var cellDescriptions = [String]()
+    var newsGroup:NewsGroup?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,15 +25,18 @@ class MultipleInfosCell: UITableViewCell {
 
 // MARK: - UICollectionViewDataSource
 // This extension allows the cell to deliver the data to its containing CollectionView cells through the delegated Functions
-extension MultipleInfosCell : UICollectionViewDataSource {
+extension NewsGroupCell : UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellDescriptions.count
+        return newsGroup!.news.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("infoCollectionCell", forIndexPath: indexPath) as! InfoCollectionCell
-        cell.cellDescription.text = cellDescriptions[indexPath.row]
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("newsInGroupCell", forIndexPath: indexPath) as! NewsInGroupCollectionCell
+        
+        cell.cellTitle.text = newsGroup!.news[indexPath.row].title
+        cell.cellDescription.text = newsGroup!.news[indexPath.row].description
+        cell.cellImage.image = newsGroup!.news[indexPath.row].image
         
         return cell
     }
@@ -41,7 +44,7 @@ extension MultipleInfosCell : UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 // This extension allows the cell to define the layout of its containing CollectionViews cells through the delegated Functions
-extension MultipleInfosCell : UICollectionViewDelegateFlowLayout {
+extension NewsGroupCell : UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 1.5

@@ -9,7 +9,7 @@
 import UIKit
 
 /// this CollectionView Cell is displayed in the MultipleInfosCell on the HomeView
-class InfoCollectionCell: UICollectionViewCell {
+class NewsInGroupCollectionCell: UICollectionViewCell {
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var cellImage: UIImageView!

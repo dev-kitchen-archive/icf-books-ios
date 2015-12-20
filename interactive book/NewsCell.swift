@@ -1,5 +1,5 @@
 //
-//  StartPageCell.swift
+//  NewsCell
 //  interactive book
 //
 //  Created by Andreas Plüss on 15.12.15.
@@ -13,7 +13,7 @@ protocol PressButtonProtocol : NSObjectProtocol {
 }
 
 /// This Cell displays a single object, it is used in the HomeView
-class StartPageCell: UITableViewCell {
+class NewsCell: UITableViewCell {
     
     weak var delegate: PressButtonProtocol?
     
@@ -22,7 +22,7 @@ class StartPageCell: UITableViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDescription: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,13 +38,13 @@ class StartPageCell: UITableViewCell {
         contentShadow.layer.shadowOpacity = 0.2
         contentShadow.layer.shadowRadius = 1.2
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
     @IBAction func plusPressed(sender: AnyObject) {
         print("you pressed the plus button")
         let message = "Du häsch de + Button druckät uf de Zellä mit folgendem Text: " + cellDescription.text!;

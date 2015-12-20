@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PressButtonProtocol {
     
     @IBOutlet weak var table: UITableView!
-    var tableData = [String]()
+    var tableData = [AnyObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,25 +32,31 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            var cell = tableView.dequeueReusableCellWithIdentifier("infosContainerCell") as? MultipleInfosCell
+        if tableData[indexPath.row] is NewsGroup {
+            var cell = tableView.dequeueReusableCellWithIdentifier("multipleNewsCell") as? NewsGroupCell
             if cell == nil {
-                cell = MultipleInfosCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infosContainerCell")
+                cell = NewsGroupCell(style: UITableViewCellStyle.Default, reuseIdentifier: "multipleNewsCell")
             }
             
-            cell!.cellDescriptions = ["One", "Two", "Three", "devkitchen", String(indexPath.row), String(tableData[indexPath.row]), "Bye"]
+            cell!.newsGroup = tableData[indexPath.row] as? NewsGroup
             
             return cell!
-        } else {
-            var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? StartPageCell
+        } else if tableData[indexPath.row] is News {
+            var cell = tableView.dequeueReusableCellWithIdentifier("singleNewsCell") as? NewsCell
             if cell == nil {
-                cell = StartPageCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
+                cell = NewsCell(style: UITableViewCellStyle.Default, reuseIdentifier: "singleNewsCell")
             }
             
             cell!.delegate = self
-            cell!.cellDescription.text = tableData[indexPath.row]
-            cell!.cellImage.image = UIImage(named: "back_circle_kap12")
+            let news = tableData[indexPath.row] as? News
+  
+            cell!.cellTitle.text = news!.title
+            cell!.cellDescription.text = news!.description
+            cell!.cellImage.image = news!.image
             
+            return cell!
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("singleNewsCell")
             return cell!
         }
     }
@@ -85,14 +91,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func populateTableData() {
-        tableData.append("Desctiption for first Item.")
-        tableData.append("Desctiption for second Item.")
-        tableData.append("Desctiption for third Item.")
-        tableData.append("Desctiption for forth Item.")
-        tableData.append("Desctiption for fifth Item.")
-        tableData.append("Desctiption for sixth Item.")
-        tableData.append("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
-        tableData.append("Desctiption for eighth Item.")
+        let multipleNews = NewsGroup(news: [News(newsTitel: "Group News 1", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"),
+                                            News(newsTitel: "Group News 2", newsDescription: "Desctiption for second Item"),
+                                            News(newsTitel: "Group News 3", newsDescription: "Carpe diem."),
+                                            News(newsTitel: "Group News 4", newsDescription: "Desctiption for Item number 4"),
+                                            News(newsTitel: "Group News 5", newsDescription: "At vero eos et accusam et justo duo dolores et ea rebum."),
+                                            News(newsTitel: "Group News 6", newsDescription: "Sed diam voluptua."),])
+        
+        tableData.append(multipleNews)
+        tableData.append(News(newsTitel: "Title number one", newsDescription: "Desctiption for first Item"))
+        tableData.append(News(newsTitel: "Title number two", newsDescription: "Desctiption for second Item"))
+        tableData.append(News(newsTitel: "Title number three", newsDescription: "Desctiption for third Item"))
+        tableData.append(News(newsTitel: "Title number four", newsDescription: "Desctiption for forth Item"))
+        tableData.append(News(newsTitel: "Title number five", newsDescription: "Desctiption for Item number 5"))
+        tableData.append(News(newsTitel: "Title number six", newsDescription: "Desctiption for Item number 6"))
+        tableData.append(News(newsTitel: "Title number seven", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."))
+        tableData.append(News(newsTitel: "Title number eight", newsDescription: "Desctiption for Item number 8"))
     }
 }
 

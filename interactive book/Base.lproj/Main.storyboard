@@ -28,7 +28,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="159" id="R81-48-y6H" customClass="StartPageCell" customModule="interactive_book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="singleNewsCell" rowHeight="159" id="R81-48-y6H" customClass="NewsCell" customModule="interactive_book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R81-48-y6H" id="7yH-fP-pB5">
@@ -118,7 +118,7 @@
                                             <outlet property="contentShadow" destination="wGl-hQ-23u" id="5w4-ZF-nEf"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infosContainerCell" rowHeight="218" id="wcH-N1-Gu8" userLabel="multiple infos" customClass="MultipleInfosCell" customModule="interactive_book" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="multipleNewsCell" rowHeight="218" id="wcH-N1-Gu8" userLabel="multiple infos" customClass="NewsGroupCell" customModule="interactive_book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="187" width="600" height="218"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wcH-N1-Gu8" id="4wI-w2-58w">
@@ -135,8 +135,8 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCollectionCell" id="0fv-sl-2uu" customClass="InfoCollectionCell" customModule="interactive_book" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="1" width="379" height="201"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsInGroupCell" id="0fv-sl-2uu" customClass="NewsInGroupCollectionCell" customModule="interactive_book" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.5" width="379" height="201"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="201"/>
@@ -310,7 +310,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DOO-bD-rJs" id="Kda-ve-3BY">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
