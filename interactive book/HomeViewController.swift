@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var table: UITableView!
     var tableData = [AnyObject]()
+    var lastIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if tableData[indexPath.row] is NewsGroup {
             return 230
         } else {
             return 140
@@ -70,9 +71,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        TipInCellAnimator.animate(cell)
+        if indexPath.row > lastIndex {
+            TipInCellAnimator.animate(cell)
+        }
+        lastIndex = indexPath.row
     }
-    
+        
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
     

@@ -47,7 +47,7 @@ extension NewsGroupCell : UICollectionViewDataSource {
 extension NewsGroupCell : UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let itemsPerRow:CGFloat = 1.5
+        let itemsPerRow:CGFloat = 1.2
         let hardCodedPadding:CGFloat = 5
         let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
         let itemHeight = collectionView.bounds.height - (2 * hardCodedPadding)

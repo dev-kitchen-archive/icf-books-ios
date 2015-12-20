@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				E1D3DBA81C267DEB005D48FA /* Animation */,
-				E1F504F31C2324CA0083821C /* NewsGroupCell.swift */,
 				E1DA82101C26C194002F73C8 /* NewsCell.swift */,
+				E1F504F31C2324CA0083821C /* NewsGroupCell.swift */,
 				E1F504F51C2377EA0083821C /* NewsInGroupCollectionCell.swift */,
 				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 			);
