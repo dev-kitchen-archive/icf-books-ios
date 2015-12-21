@@ -13,24 +13,34 @@ class IntroPageController: UIViewController {
     // MARK: - Variables
     var itemIndex: Int = 0
     var imageName: String = "" {
-        
         didSet {
-            
             if let imageView = pageImage {
                 imageView.image = UIImage(named: imageName)
             }
-            
         }
     }
-    var visible: Bool = false {
-    
+    var visible: Bool = false {    
         didSet {
-        
             if let button = closeButton {
                 button.hidden = visible
             }
         }
     }
+    var itemTitle: String = "" {
+        didSet {
+            if let title = pageTitle {
+                title.text = itemTitle
+            }
+        }
+    }
+    var itemDescription: String = "" {
+        didSet {
+            if let desc = pageDescription {
+                desc.text = itemDescription
+            }
+        }
+    }
+    
     @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var pageDescription: UILabel!
     @IBOutlet weak var pageImage: UIImageView?
@@ -39,7 +49,8 @@ class IntroPageController: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageTitle.text = String(itemIndex)
+        pageTitle.text = itemTitle
+        pageDescription.text = itemDescription
         pageImage!.image = UIImage(named: imageName)
         closeButton.hidden = !visible
     }

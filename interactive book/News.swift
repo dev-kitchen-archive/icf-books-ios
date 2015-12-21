@@ -21,15 +21,15 @@ class News {
         self.image = newsImage
     }
     
-    convenience init(newsTitel:String, newsDescription:String){
-        self.init(newsTitle: newsTitel, newsDescription: newsDescription, newsImage: UIImage(named: "back_circle_kap12")!)
+    convenience init(newsTitle:String, newsDescription:String){
+        self.init(newsTitle: newsTitle, newsDescription: newsDescription, newsImage: UIImage(named: "back_circle")!)
     }
     
-    convenience init(newsTitel:String, newsImage:UIImage){
-        self.init(newsTitle: newsTitel, newsDescription: "...", newsImage: newsImage)
+    convenience init(newsTitle:String, newsImage:UIImage){
+        self.init(newsTitle: newsTitle, newsDescription: "...", newsImage: newsImage)
     }
     
     convenience init(newsTitel:String){
-        self.init(newsTitle: newsTitel, newsDescription: "...", newsImage: UIImage(named: "back_circle_kap12")!)
+        self.init(newsTitle: newsTitel, newsDescription: "...", newsImage: UIImage(named: "back_circle")!)
     }
 }

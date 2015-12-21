@@ -17,11 +17,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presentIntroView()
-        
         table.delegate = self
         table.dataSource = self
         populateTableData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        //show intro to user, if he opens the app for the first time
+        presentIntroView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,22 +102,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func populateTableData() {
-        let multipleNews = NewsGroup(news: [News(newsTitel: "Group News 1", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"),
-                                            News(newsTitel: "Group News 2", newsDescription: "Desctiption for second Item"),
-                                            News(newsTitel: "Group News 3", newsDescription: "Carpe diem."),
-                                            News(newsTitel: "Group News 4", newsDescription: "Desctiption for Item number 4"),
-                                            News(newsTitel: "Group News 5", newsDescription: "At vero eos et accusam et justo duo dolores et ea rebum."),
-                                            News(newsTitel: "Group News 6", newsDescription: "Sed diam voluptua."),])
+        let multipleNews = NewsGroup(news: [News(newsTitle: "Group News 1", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"),
+                                            News(newsTitle: "Group News 2", newsDescription: "Desctiption for second Item"),
+                                            News(newsTitle: "Group News 3", newsDescription: "Carpe diem."),
+                                            News(newsTitle: "Group News 4", newsDescription: "Desctiption for Item number 4"),
+                                            News(newsTitle: "Group News 5", newsDescription: "At vero eos et accusam et justo duo dolores et ea rebum.", newsImage: UIImage(named: "camera_overlay")!),
+                                            News(newsTitle: "Group News 6", newsDescription: "Sed diam voluptua."),])
         
         tableData.append(multipleNews)
-        tableData.append(News(newsTitel: "Title number one", newsDescription: "Desctiption for first Item"))
-        tableData.append(News(newsTitel: "Title number two", newsDescription: "Desctiption for second Item"))
-        tableData.append(News(newsTitel: "Title number three", newsDescription: "Desctiption for third Item"))
-        tableData.append(News(newsTitel: "Title number four", newsDescription: "Desctiption for forth Item"))
-        tableData.append(News(newsTitel: "Title number five", newsDescription: "Desctiption for Item number 5"))
-        tableData.append(News(newsTitel: "Title number six", newsDescription: "Desctiption for Item number 6"))
-        tableData.append(News(newsTitel: "Title number seven", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."))
-        tableData.append(News(newsTitel: "Title number eight", newsDescription: "Desctiption for Item number 8"))
+        tableData.append(News(newsTitle: "Title number one", newsDescription: "Desctiption for first Item", newsImage: UIImage(named: "back_circle_kap12")!))
+        tableData.append(News(newsTitle: "Title number two", newsDescription: "Desctiption for second Item", newsImage: UIImage(named: "back_circle_kap12")!))
+        tableData.append(News(newsTitle: "Title number three", newsDescription: "Desctiption for third Item"))
+        tableData.append(News(newsTitle: "Title number four", newsDescription: "Desctiption for forth Item", newsImage: UIImage(named: "back_circle_kap12")!))
+        tableData.append(News(newsTitle: "Title number five", newsDescription: "Desctiption for Item number 5", newsImage: UIImage(named: "back_circle_kap12")!))
+        tableData.append(News(newsTitle: "Title number six", newsDescription: "Desctiption for Item number 6"))
+        tableData.append(News(newsTitle: "Title number seven", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", newsImage: UIImage(named: "camera_overlay")!))
+        tableData.append(News(newsTitle: "Title number eight", newsDescription: "Desctiption for Item number 8", newsImage: UIImage(named: "back_circle_kap12")!))
     }
     
     func presentIntroView() {

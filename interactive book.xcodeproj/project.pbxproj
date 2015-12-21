@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E12243991C283FD1008FC289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12243981C283FD1008FC289 /* Assets.xcassets */; };
 		E13573E81C175B700090478B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573E71C175B700090478B /* AppDelegate.swift */; };
 		E13573EA1C175B700090478B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573E91C175B700090478B /* HomeViewController.swift */; };
 		E13573EC1C175B700090478B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573EB1C175B700090478B /* CameraViewController.swift */; };
 		E13573EF1C175B700090478B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13573ED1C175B700090478B /* Main.storyboard */; };
-		E13573F11C175B700090478B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13573F01C175B700090478B /* Assets.xcassets */; };
 		E13573F41C175B700090478B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13573F21C175B700090478B /* LaunchScreen.storyboard */; };
 		E13573FF1C175B700090478B /* interactive_bookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573FE1C175B700090478B /* interactive_bookTests.swift */; };
 		E135740A1C175B700090478B /* interactive_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13574091C175B700090478B /* interactive_bookUITests.swift */; };
@@ -48,12 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E12243981C283FD1008FC289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E13573E41C175B700090478B /* interactive book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interactive book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13573E71C175B700090478B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13573E91C175B700090478B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E13573EB1C175B700090478B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		E13573EE1C175B700090478B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E13573F01C175B700090478B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E13573F31C175B700090478B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E13573F51C175B700090478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E13573FA1C175B700090478B /* interactive bookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interactive bookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +133,7 @@
 				E1D3DBAB1C268EF8005D48FA /* Models */,
 				E19EE2961C20BF2900E4B550 /* CutomUI */,
 				E13573ED1C175B700090478B /* Main.storyboard */,
-				E13573F01C175B700090478B /* Assets.xcassets */,
+				E12243981C283FD1008FC289 /* Assets.xcassets */,
 				E13573F21C175B700090478B /* LaunchScreen.storyboard */,
 				E13573F51C175B700090478B /* Info.plist */,
 			);
@@ -297,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13573F41C175B700090478B /* LaunchScreen.storyboard in Resources */,
-				E13573F11C175B700090478B /* Assets.xcassets in Resources */,
+				E12243991C283FD1008FC289 /* Assets.xcassets in Resources */,
 				E13573EF1C175B700090478B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

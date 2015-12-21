@@ -14,10 +14,18 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     private var pageViewController: UIPageViewController?
     
     // Initialize it right away here
-    let contentImages = ["camera_overlay.png",
-        "camera_overlay.png",
-        "camera_overlay.png",
-        "camera_overlay.png"];
+    let contentImages = ["intro0",
+                         "intro1",
+                         "intro2",
+                         "intro3"];
+    let contentTitle = ["Ester",
+                        "Scanne",
+                        "Forsche",
+                        "Viel Spass"];
+    let contentDescription = ["Kaufe hier das Buch",
+                              "Du kanst QR-Codes die sich im Buch befinden Scannen und zusätzliche Inhalte anschauen.",
+                              "Deine bereits gescannten Inhalte sind stehts nur ein Klick entfent.",
+                              "Wir hoffen dir gefällt die App!"];
     var pageCount:Int = 0
     
     // MARK: - View Lifecycle
@@ -47,9 +55,9 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
-        appearance.pageIndicatorTintColor = UIColor.grayColor()
-        appearance.currentPageIndicatorTintColor = UIColor.whiteColor()
-        appearance.backgroundColor = UIColor.darkGrayColor()
+        appearance.pageIndicatorTintColor = UIColor.lightGrayColor()
+        appearance.currentPageIndicatorTintColor = UIColor.darkGrayColor()
+        appearance.backgroundColor = UIColor.whiteColor()
     }
     
     // MARK: - UIPageViewControllerDataSource
@@ -82,7 +90,9 @@ class IntroViewController: UIViewController, UIPageViewControllerDataSource {
             let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("introPageView") as! IntroPageController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
-
+            pageItemController.itemTitle = contentTitle[itemIndex]
+            pageItemController.itemDescription = contentDescription[itemIndex]
+            
             if itemIndex == (pageCount - 1) {
                 pageItemController.visible = true
             }
