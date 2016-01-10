@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10618761C294E25006AB7B1 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10618751C294E25006AB7B1 /* ActionType.swift */; };
+		E11F07351C30A4BE001FA431 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F07341C30A4BE001FA431 /* SwiftyJSON.swift */; };
+		E11F07391C30A55F001FA431 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F07381C30A55F001FA431 /* DataManager.swift */; };
 		E12243991C283FD1008FC289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12243981C283FD1008FC289 /* Assets.xcassets */; };
 		E13573E81C175B700090478B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573E71C175B700090478B /* AppDelegate.swift */; };
 		E13573EA1C175B700090478B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573E91C175B700090478B /* HomeViewController.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E10618751C294E25006AB7B1 /* ActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		E11F07341C30A4BE001FA431 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E11F07381C30A55F001FA431 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E12243981C283FD1008FC289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E13573E41C175B700090478B /* interactive book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interactive book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13573E71C175B700090478B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11F07361C30A4DD001FA431 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1D164301C2741690058BE42 /* IntroViewController.swift */,
+				E13573E91C175B700090478B /* HomeViewController.swift */,
+				E13573EB1C175B700090478B /* CameraViewController.swift */,
+				E1F504EF1C22D39E0083821C /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E11F07371C30A502001FA431 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E11F07341C30A4BE001FA431 /* SwiftyJSON.swift */,
+				E1D164361C275DB10058BE42 /* ButtonPressProtocol.swift */,
+				E10618751C294E25006AB7B1 /* ActionType.swift */,
+				E11F07381C30A55F001FA431 /* DataManager.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		E13573DB1C175B700090478B = {
 			isa = PBXGroup;
 			children = (
@@ -126,10 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				E13573E71C175B700090478B /* AppDelegate.swift */,
-				E1D164301C2741690058BE42 /* IntroViewController.swift */,
-				E13573E91C175B700090478B /* HomeViewController.swift */,
-				E13573EB1C175B700090478B /* CameraViewController.swift */,
-				E1F504EF1C22D39E0083821C /* SettingsViewController.swift */,
+				E11F07371C30A502001FA431 /* Helpers */,
+				E11F07361C30A4DD001FA431 /* Controllers */,
 				E1D3DBAB1C268EF8005D48FA /* Models */,
 				E19EE2961C20BF2900E4B550 /* CutomUI */,
 				E13573ED1C175B700090478B /* Main.storyboard */,
@@ -162,12 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				E1D3DBA81C267DEB005D48FA /* Animation */,
-				E1D164361C275DB10058BE42 /* ButtonPressProtocol.swift */,
 				E1DA82101C26C194002F73C8 /* NewsCell.swift */,
 				E1F504F31C2324CA0083821C /* NewsGroupCell.swift */,
+				E1F504F51C2377EA0083821C /* NewsInGroupCollectionCell.swift */,
 				E1D164381C2762220058BE42 /* CustomSegueUp.swift */,
 				E1D1643A1C27635B0058BE42 /* CustomSegueDown.swift */,
-				E1F504F51C2377EA0083821C /* NewsInGroupCollectionCell.swift */,
 				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 				E1D164341C27501E0058BE42 /* IntroPageController.swift */,
 			);
@@ -336,7 +361,10 @@
 				E1D164311C2741690058BE42 /* IntroViewController.swift in Sources */,
 				E1D3DBAD1C268F50005D48FA /* News.swift in Sources */,
 				E1D1643B1C27635B0058BE42 /* CustomSegueDown.swift in Sources */,
+				E10618761C294E25006AB7B1 /* ActionType.swift in Sources */,
+				E11F07391C30A55F001FA431 /* DataManager.swift in Sources */,
 				E13573EA1C175B700090478B /* HomeViewController.swift in Sources */,
+				E11F07351C30A4BE001FA431 /* SwiftyJSON.swift in Sources */,
 				E1D164391C2762220058BE42 /* CustomSegueUp.swift in Sources */,
 				E1DA82111C26C194002F73C8 /* NewsCell.swift in Sources */,
 			);

@@ -9,8 +9,9 @@
 import UIKit
 
 /// This Cell contains a CollectionVeiw and displays multiple objects, it is used in the HomeView
-class NewsGroupCell: UITableViewCell {
+class NewsGroupCell: UITableViewCell, ButtonPressProtocol {
     
+    weak var delegate:ButtonPressProtocol?
     var newsGroup:NewsGroup?
     
     override func awakeFromNib() {
@@ -20,6 +21,12 @@ class NewsGroupCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    func actionOnPress(message: (ActionType, String)) {
+        if((delegate?.respondsToSelector("actionOnPress:")) != nil) {
+            delegate?.actionOnPress(message)
+        }
     }
 }
 
@@ -34,6 +41,7 @@ extension NewsGroupCell : UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("newsInGroupCell", forIndexPath: indexPath) as! NewsInGroupCollectionCell
         
+        cell.delegate = self
         cell.cellTitle.text = newsGroup!.news[indexPath.row].title
         cell.cellDescription.text = newsGroup!.news[indexPath.row].description
         cell.cellImage.image = newsGroup!.news[indexPath.row].image

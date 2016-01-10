@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 cell = NewsGroupCell(style: UITableViewCellStyle.Default, reuseIdentifier: "multipleNewsCell")
             }
             
+            cell!.delegate = self
             cell!.newsGroup = tableData[indexPath.row] as? NewsGroup
             
             return cell!
@@ -90,14 +91,26 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
-    func actionOnPress(message: String) {
-        let textToShare = message
-        if let myWebsite = NSURL(string: "http://dev.kitchen/")
-        {
-            let objectsToShare = [textToShare, myWebsite]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+    func actionOnPress(message: (ActionType, String)) {
+        if message.0 == ActionType.Alert {
+            let refreshAlert = UIAlertController(title: "Achtung", message: message.1, preferredStyle: UIAlertControllerStyle.Alert)
             
-            self.presentViewController(activityVC, animated: true, completion: nil)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                print("Handle Ok logic here")
+            }))
+            
+            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+                print("Handle Cancel Logic here")
+            }))
+            presentViewController(refreshAlert, animated: true, completion: nil)
+        } else if message.0 == ActionType.Share {
+            let textToShare = message.1
+            if let websiteToShare = NSURL(string: "http://dev.kitchen/") {
+                let objectsToShare = [textToShare, websiteToShare]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            }
         }
     }
     
@@ -115,7 +128,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableData.append(News(newsTitle: "Title number three", newsDescription: "Desctiption for third Item"))
         tableData.append(News(newsTitle: "Title number four", newsDescription: "Desctiption for forth Item", newsImage: UIImage(named: "back_circle_kap12")!))
         tableData.append(News(newsTitle: "Title number five", newsDescription: "Desctiption for Item number 5", newsImage: UIImage(named: "back_circle_kap12")!))
-        tableData.append(News(newsTitle: "Title number six", newsDescription: "Desctiption for Item number 6"))
+        tableData.append(News(newsTitle: "Title number six, Title number six, Title number six", newsDescription: "Desctiption for Item number 6"))
         tableData.append(News(newsTitle: "Title number seven", newsDescription: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", newsImage: UIImage(named: "camera_overlay")!))
         tableData.append(News(newsTitle: "Title number eight", newsDescription: "Desctiption for Item number 8", newsImage: UIImage(named: "back_circle_kap12")!))
     }

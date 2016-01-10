@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ButtonPressProtocol : NSObjectProtocol {
-    func actionOnPress(message: String) -> Void
+    func actionOnPress(message: (ActionType, String)) -> Void
 }

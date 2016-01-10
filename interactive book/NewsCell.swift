@@ -44,7 +44,7 @@ class NewsCell: UITableViewCell {
     @IBAction func plusPressed(sender: AnyObject) {
         let message = "You pressed the Cell: " + cellDescription.text!;
         if((delegate?.respondsToSelector("actionOnPress:")) != nil) {
-            delegate?.actionOnPress(message)
+            delegate?.actionOnPress((ActionType.Share, message))
         }
     }
 }

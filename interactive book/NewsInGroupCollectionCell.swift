@@ -15,6 +15,7 @@ class NewsInGroupCollectionCell: UICollectionViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDescription: UILabel!
+    weak var delegate:ButtonPressProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,4 +30,13 @@ class NewsInGroupCollectionCell: UICollectionViewCell {
         shadow.layer.shadowRadius = 1.2
     }
     
+    @IBAction func buttonPressed(sender: AnyObject) {
+        var message = "Nachricht aus der News Group "
+        if cellTitle != nil {
+            message += "\"" + cellTitle.text! + "\""
+        }
+        if((delegate?.respondsToSelector("actionOnPress:")) != nil) {
+            delegate?.actionOnPress((ActionType.Alert, message))
+        }
+    }
 }
