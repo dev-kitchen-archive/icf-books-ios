@@ -18,6 +18,8 @@
 		E13573F41C175B700090478B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13573F21C175B700090478B /* LaunchScreen.storyboard */; };
 		E13573FF1C175B700090478B /* interactive_bookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13573FE1C175B700090478B /* interactive_bookTests.swift */; };
 		E135740A1C175B700090478B /* interactive_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13574091C175B700090478B /* interactive_bookUITests.swift */; };
+		E1372BA31C5CEB3800C48119 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1372BA11C5CEB3800C48119 /* ActionButton.swift */; };
+		E1372BA41C5CEB3800C48119 /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1372BA21C5CEB3800C48119 /* ActionButtonItem.swift */; };
 		E19EE2951C2098F900E4B550 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19EE2941C2098F900E4B550 /* TabBarController.swift */; };
 		E1D164311C2741690058BE42 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D164301C2741690058BE42 /* IntroViewController.swift */; };
 		E1D164351C27501E0058BE42 /* IntroPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D164341C27501E0058BE42 /* IntroPageController.swift */; };
@@ -68,6 +70,8 @@
 		E13574051C175B700090478B /* interactive bookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interactive bookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13574091C175B700090478B /* interactive_bookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interactive_bookUITests.swift; sourceTree = "<group>"; };
 		E135740B1C175B700090478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1372BA11C5CEB3800C48119 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E1372BA21C5CEB3800C48119 /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		E19EE2941C2098F900E4B550 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E1D164301C2741690058BE42 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E1D164341C27501E0058BE42 /* IntroPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				E1D1643A1C27635B0058BE42 /* CustomSegueDown.swift */,
 				E19EE2941C2098F900E4B550 /* TabBarController.swift */,
 				E1D164341C27501E0058BE42 /* IntroPageController.swift */,
+				E1372BA11C5CEB3800C48119 /* ActionButton.swift */,
+				E1372BA21C5CEB3800C48119 /* ActionButtonItem.swift */,
 			);
 			name = CutomUI;
 			sourceTree = "<group>";
@@ -363,10 +369,12 @@
 				E1D1643B1C27635B0058BE42 /* CustomSegueDown.swift in Sources */,
 				E10618761C294E25006AB7B1 /* ActionType.swift in Sources */,
 				E11F07391C30A55F001FA431 /* DataManager.swift in Sources */,
+				E1372BA41C5CEB3800C48119 /* ActionButtonItem.swift in Sources */,
 				E13573EA1C175B700090478B /* HomeViewController.swift in Sources */,
 				E11F07351C30A4BE001FA431 /* SwiftyJSON.swift in Sources */,
 				E1D164391C2762220058BE42 /* CustomSegueUp.swift in Sources */,
 				E1DA82111C26C194002F73C8 /* NewsCell.swift in Sources */,
+				E1372BA31C5CEB3800C48119 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

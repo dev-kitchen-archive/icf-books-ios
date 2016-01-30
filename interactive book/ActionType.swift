@@ -9,5 +9,5 @@
 import Foundation
 
 enum ActionType {
-    case Alert, Share
+    case Alert, Share, NewView
 }

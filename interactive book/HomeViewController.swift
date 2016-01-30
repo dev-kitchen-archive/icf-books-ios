@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var table: UITableView!
     var tableData = [AnyObject]()
     var lastIndex = 0
+    var actionButton: ActionButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         table.delegate = self
         table.dataSource = self
         populateTableData()
+        
+        //add floating action button
+        actionButton = ActionButton(attachedToView: self.view, items: nil)
+        actionButton.action = { button in button.openView() }
+        actionButton.setTitle("+", forState: .Normal)
+        actionButton.delegate = self
+        
+        actionButton.backgroundColor = UIColor(red: 238.0/255.0, green: 130.0/255.0, blue: 34.0/255.0, alpha:1.0)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -110,6 +120,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 
                 self.presentViewController(activityVC, animated: true, completion: nil)
+            }
+        } else if message.0 == ActionType.NewView {
+            if let resultController = storyboard!.instantiateViewControllerWithIdentifier(message.1) as? CameraViewController {
+                presentViewController(resultController, animated: true, completion: nil)
             }
         }
     }
