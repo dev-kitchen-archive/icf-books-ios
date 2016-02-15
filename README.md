@@ -1,2 +1,2 @@
-# interactive-book-ios-prototype
+# icf-books-ios
 iOS Prototype
