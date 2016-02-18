@@ -19,6 +19,7 @@
 		E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589641C737CD600378011 /* ContentTableViewCell.swift */; };
 		E18589671C738A3400378011 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589661C738A3400378011 /* DetailViewController.swift */; };
 		E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */; };
+		E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589731C75CFD400378011 /* ScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E18589641C737CD600378011 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		E18589661C738A3400378011 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoImageTableViewCell.swift; sourceTree = "<group>"; };
+		E18589731C75CFD400378011 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				E18589311C734F4800378011 /* AppDelegate.swift */,
-				E18589331C734F4800378011 /* HomeViewController.swift */,
-				E18589641C737CD600378011 /* ContentTableViewCell.swift */,
-				E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */,
-				E18589621C737C8500378011 /* ProgressTableViewCell.swift */,
-				E18589661C738A3400378011 /* DetailViewController.swift */,
+				E18589721C75CFAF00378011 /* ViewControlers */,
+				E18589711C75CFA200378011 /* Cells */,
 				E18589351C734F4800378011 /* Main.storyboard */,
 				E185893B1C734F4800378011 /* Assets.xcassets */,
 				E185893D1C734F4800378011 /* LaunchScreen.storyboard */,
@@ -138,6 +137,26 @@
 				E18589561C734F4800378011 /* Info.plist */,
 			);
 			path = "icf-booksUITests";
+			sourceTree = "<group>";
+		};
+		E18589711C75CFA200378011 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E18589641C737CD600378011 /* ContentTableViewCell.swift */,
+				E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */,
+				E18589621C737C8500378011 /* ProgressTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		E18589721C75CFAF00378011 /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				E18589331C734F4800378011 /* HomeViewController.swift */,
+				E18589661C738A3400378011 /* DetailViewController.swift */,
+				E18589731C75CFD400378011 /* ScannerViewController.swift */,
+			);
+			name = ViewControlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +227,7 @@
 				TargetAttributes = {
 					E185892D1C734F4800378011 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = P93MCDR2XJ;
 					};
 					E18589441C734F4800378011 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -278,6 +298,7 @@
 				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
+				E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "icf-books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kitchen.dev.icf-books";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,10 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "icf-books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kitchen.dev.icf-books";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
