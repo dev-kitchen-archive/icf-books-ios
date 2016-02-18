@@ -93,8 +93,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-Ia-v1H">
-                                <rect key="frame" x="20" y="141" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-Ia-v1H">
+                                <rect key="frame" x="20" y="90" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-VI-lQi">
+                                <rect key="frame" x="20" y="148" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teaser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzl-e2-FAl">
+                                <rect key="frame" x="20" y="119" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,6 +114,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="detailTeaser" destination="Kzl-e2-FAl" id="hCX-Vz-Mbh"/>
+                        <outlet property="detailTitle" destination="1sU-Ia-v1H" id="IAK-Ym-Aet"/>
+                        <outlet property="detailVideo" destination="ik9-VI-lQi" id="abL-VG-BVG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AX-a8-nC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,10 +194,15 @@
                             <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="jPP-H0-XGq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeFenceImage" destination="UF0-mO-3Jy" id="ugl-UE-8tB"/>
+                        <outlet property="infoCancelLayer" destination="88s-i9-vrI" id="yVr-Nc-lJx"/>
+                        <segue destination="SC5-Sy-nO9" kind="show" id="b8w-Lw-iBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7H-bN-Qty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="612"/>
+            <point key="canvasLocation" x="-190" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hST-pK-KPw">
@@ -370,4 +392,7 @@
         <image name="empty_table_info" width="750" height="1334"/>
         <image name="qr_code_frame" width="327" height="336"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="b8w-Lw-iBG"/>
+    </inferredMetricsTieBreakers>
 </document>

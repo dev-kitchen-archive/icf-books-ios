@@ -8,19 +8,23 @@
 
 import UIKit
 
+enum GetJSONDataError: ErrorType {
+    case NoInternet, EmptyData, ParsingError, NoError
+}
+
 class DetailViewController: UIViewController {
+    @IBOutlet weak var detailTitle: UILabel!
+    @IBOutlet weak var detailTeaser: UILabel!
+    @IBOutlet weak var detailVideo: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
