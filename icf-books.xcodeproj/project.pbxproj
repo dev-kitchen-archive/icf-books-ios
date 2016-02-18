@@ -19,9 +19,6 @@
 		E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589641C737CD600378011 /* ContentTableViewCell.swift */; };
 		E18589671C738A3400378011 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589661C738A3400378011 /* DetailViewController.swift */; };
 		E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */; };
-		E185896B1C74BD4C00378011 /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185896A1C74BD4C00378011 /* ActionButtonItem.swift */; };
-		E185896D1C74BD6800378011 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185896C1C74BD6800378011 /* ActionButton.swift */; };
-		E185896F1C74BF8E00378011 /* ButtonPressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185896E1C74BF8E00378011 /* ButtonPressProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +57,6 @@
 		E18589641C737CD600378011 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		E18589661C738A3400378011 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoImageTableViewCell.swift; sourceTree = "<group>"; };
-		E185896A1C74BD4C00378011 /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
-		E185896C1C74BD6800378011 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		E185896E1C74BF8E00378011 /* ButtonPressProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPressProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +109,6 @@
 			children = (
 				E18589311C734F4800378011 /* AppDelegate.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
-				E18589701C74CE8600378011 /* ActionButotn */,
 				E18589641C737CD600378011 /* ContentTableViewCell.swift */,
 				E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */,
 				E18589621C737C8500378011 /* ProgressTableViewCell.swift */,
@@ -145,16 +138,6 @@
 				E18589561C734F4800378011 /* Info.plist */,
 			);
 			path = "icf-booksUITests";
-			sourceTree = "<group>";
-		};
-		E18589701C74CE8600378011 /* ActionButotn */ = {
-			isa = PBXGroup;
-			children = (
-				E185896C1C74BD6800378011 /* ActionButton.swift */,
-				E185896A1C74BD4C00378011 /* ActionButtonItem.swift */,
-				E185896E1C74BF8E00378011 /* ButtonPressProtocol.swift */,
-			);
-			name = ActionButotn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
-				E185896F1C74BF8E00378011 /* ButtonPressProtocol.swift in Sources */,
 				E18589341C734F4800378011 /* HomeViewController.swift in Sources */,
-				E185896B1C74BD4C00378011 /* ActionButtonItem.swift in Sources */,
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
 				E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */,
-				E185896D1C74BD6800378011 /* ActionButton.swift in Sources */,
 				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,

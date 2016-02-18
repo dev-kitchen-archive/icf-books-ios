@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ButtonPressProtocol {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
-    var actionButton: ActionButton!
-    var tableData = ["one","two","three","three","three"]
+
+    var tableData = ["one","two","three","three","three","three","three","three"]
     //var tableData = []
     
     override func viewDidLoad() {
@@ -21,14 +21,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         table.delegate = self
         table.dataSource = self
-        
-        //add floating action button
-        actionButton = ActionButton(attachedToView: self.view, items: nil)
-        actionButton.action = { button in button.openView() }
-        actionButton.setTitle("+", forState: .Normal)
-        actionButton.delegate = self
-        
-        actionButton.backgroundColor = UIColor(red: 238.0/255.0, green: 130.0/255.0, blue: 34.0/255.0, alpha:1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,15 +87,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        
 //        //performSegueWithIdentifier("segue", sender: self)
 //    }
-    
-    func actionOnPress(viewCtrl: OpenView) {
-        if viewCtrl == OpenView.Scanner {
-            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let destination = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
-            navigationController?.pushViewController(destination, animated: true)
-        }
-    }
-    
     
 }
 

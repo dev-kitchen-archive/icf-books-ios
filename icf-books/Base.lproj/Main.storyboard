@@ -106,6 +106,24 @@
             </objects>
             <point key="canvasLocation" x="554" y="-124"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6m9-LT-jbO">
+            <objects>
+                <viewController id="SKj-EP-XSB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eod-rg-2s2"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZg-b5-0FA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Mq-pk-nE2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7H-bN-Qty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="533"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hST-pK-KPw">
             <objects>
@@ -225,30 +243,30 @@
                                 </prototypes>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fW-EF-TkJ">
-                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <rect key="frame" x="0.0" y="528" width="600" height="72"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Lz-Lb-IaA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-YE-0Lc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
                                             <state key="normal" title="Kapitel Scannen"/>
                                             <connections>
-                                                <segue destination="SC5-Sy-nO9" kind="show" id="CqX-dO-EME"/>
+                                                <segue destination="SKj-EP-XSB" kind="show" id="1mb-Az-S9O"/>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iJx-dW-bEJ">
-                                            <rect key="frame" x="8" y="8" width="39" height="39"/>
+                                            <rect key="frame" x="8" y="16" width="39" height="39"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="39" id="LQR-Ym-wfy"/>
-                                                <constraint firstAttribute="height" constant="39" id="pZc-md-ix4"/>
+                                                <constraint firstAttribute="height" constant="39" id="6vR-qp-TTt"/>
+                                                <constraint firstAttribute="width" constant="39" id="rgm-VA-kPw"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="iJx-dW-bEJ" secondAttribute="bottom" constant="8" id="37E-TN-U7G"/>
+                                        <constraint firstItem="iJx-dW-bEJ" firstAttribute="leading" secondItem="8Lz-Lb-IaA" secondAttribute="leading" constant="8" id="5F3-A5-lSj"/>
+                                        <constraint firstAttribute="bottom" secondItem="iJx-dW-bEJ" secondAttribute="bottom" constant="17" id="NQX-Hq-K0g"/>
                                         <constraint firstItem="Prg-YE-0Lc" firstAttribute="top" secondItem="8Lz-Lb-IaA" secondAttribute="top" id="Rwh-S0-RxY"/>
-                                        <constraint firstItem="iJx-dW-bEJ" firstAttribute="leading" secondItem="8Lz-Lb-IaA" secondAttribute="leading" constant="8" id="f0a-sK-oWI"/>
                                         <constraint firstAttribute="bottom" secondItem="Prg-YE-0Lc" secondAttribute="bottom" id="heT-m2-Nju"/>
                                         <constraint firstAttribute="trailing" secondItem="Prg-YE-0Lc" secondAttribute="trailing" id="v9e-Mz-nb6"/>
                                         <constraint firstItem="Prg-YE-0Lc" firstAttribute="leading" secondItem="8Lz-Lb-IaA" secondAttribute="leading" id="yiz-UW-Kws"/>
@@ -256,7 +274,7 @@
                                 </view>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="mHR-1m-G35"/>
+                                    <constraint firstAttribute="height" constant="72" id="mHR-1m-G35"/>
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -293,7 +311,4 @@
         <image name="camera_icon" width="170" height="170"/>
         <image name="empty_table_info" width="750" height="1334"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ubg-Du-aK6"/>
-    </inferredMetricsTieBreakers>
 </document>
