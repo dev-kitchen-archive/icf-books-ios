@@ -102,7 +102,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let indexPath = table.indexPathForSelectedRow {
                 let destinationVC = segue.destinationViewController as! DetailViewController
                 destinationVC.scan = scans[indexPath.row - 1]
-                destinationVC.row = indexPath.row - 1
             }
         }
     }
