@@ -9,14 +9,9 @@
 import Foundation
 
 class ParseMedia {
-    var passedDict: NSDictionary
+    static let baseUrl = "https://rhino.dev.kitchen"
     
-    init(retrievedDictFromGetJson retrievedData: NSDictionary){
-        passedDict = retrievedData
-    }
-    
-    static func fromJson(dict: NSDictionary) {
-        
+    static func fromJson(dict: NSDictionary) -> [String: AnyObject] {
         let id = dict.objectForKey("id") as! String
         let type = dict.objectForKey("type") as! String
         let title = dict.objectForKey("title") as! String
@@ -26,11 +21,13 @@ class ParseMedia {
         let mediaData = dict.objectForKey("data") as! NSDictionary
         let fileUrl = mediaData.objectForKey("file_url") as! String
         
-        print(id)
-        print(type)
-        print(title)
-        print(teaser)
-        print(thumbnailUrl)
-        print(fileUrl)
+        //get thumbnail image
+        let url = NSURL(string: baseUrl + thumbnailUrl)
+        let imageData = NSData(contentsOfURL: url!)
+        
+        let returnData: [String: AnyObject] = ["id": id, "type": type, "title": title, "teaser": teaser, "thumbnailUrl": thumbnailUrl, "thumbnailData": imageData!, "fileUrl": fileUrl]
+        
+        return returnData
     }
+
 }

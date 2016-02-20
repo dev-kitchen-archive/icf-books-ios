@@ -22,6 +22,8 @@
 		E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589731C75CFD400378011 /* ScannerViewController.swift */; };
 		E18589761C76223000378011 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589751C76223000378011 /* GetJson.swift */; };
 		E18589791C766FB200378011 /* ParseMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589781C766FB200378011 /* ParseMedia.swift */; };
+		E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897C1C76919400378011 /* Media+CoreDataProperties.swift */; };
+		E185897F1C76919400378011 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897D1C76919400378011 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E18589731C75CFD400378011 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		E18589751C76223000378011 /* GetJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
 		E18589781C766FB200378011 /* ParseMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseMedia.swift; sourceTree = "<group>"; };
+		E185897C1C76919400378011 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E185897D1C76919400378011 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		E18589251C734F4800378011 = {
 			isa = PBXGroup;
 			children = (
+				E18589801C7691AA00378011 /* Model */,
 				E18589301C734F4800378011 /* icf-books */,
 				E18589481C734F4800378011 /* icf-booksTests */,
 				E18589531C734F4800378011 /* icf-booksUITests */,
@@ -171,6 +176,15 @@
 				E18589781C766FB200378011 /* ParseMedia.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E18589801C7691AA00378011 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E185897C1C76919400378011 /* Media+CoreDataProperties.swift */,
+				E185897D1C76919400378011 /* Media.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +321,9 @@
 			files = (
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
 				E18589761C76223000378011 /* GetJson.swift in Sources */,
+				E185897F1C76919400378011 /* Media.swift in Sources */,
 				E18589341C734F4800378011 /* HomeViewController.swift in Sources */,
+				E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */,
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
 				E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */,
 				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,

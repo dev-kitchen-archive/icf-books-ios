@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
 
-    var tableData = ["one","two","three","three","three","three","three","three"]
-    //var tableData = []
+    var scans = [NSManagedObject]()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        readScannedObjects()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,24 +35,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableData.count < 1 {
-            return 1
-        } else {
-            return tableData.count
-        }
+        return scans.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        if tableData.count < 1 {
+        if scans.count < 1 {
             var cell = tableView.dequeueReusableCellWithIdentifier("infoImageCell") as? InfoImageTableViewCell
             if cell == nil {
                 cell = InfoImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infoImageCell")
             }
             
             //cell!.titel oder so
-            
+        
             return cell!
+            
         } else if indexPath.row == 0 {
             var cell = tableView.dequeueReusableCellWithIdentifier("progressCell") as? ProgressTableViewCell
             if cell == nil {
@@ -56,12 +59,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //cell!.titel oder so
 
             return cell!
+            
         } else {
             var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
             if cell == nil {
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
             
+            let scan = scans[indexPath.row - 1]
+            
+            let imgData = scan.valueForKey("thumbnail_data") as? NSData
+            let imageArray = imgData.map({UIImage(data: $0)})
+            cell!.scanImage.image = imageArray!
+            
+            
+            cell!.scanTitle.text = scan.valueForKey("title") as? String
+            cell!.scanDesc.text = scan.valueForKey("teaser") as? String
             //cell!.titel oder so
             
             return cell!
@@ -70,7 +83,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if tableData.count < 1 {
+        if scans.count < 1 {
             return 600
         } else if indexPath.row == 0 {
             return 90
@@ -81,12 +94,40 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        
-//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-//        let destination = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
-//        navigationController?.pushViewController(destination, animated: true)
-//        
-//        //performSegueWithIdentifier("segue", sender: self)
 //    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if segue.identifier == "openSavedScan" {
+            if let indexPath = table.indexPathForSelectedRow {
+                let destinationVC = segue.destinationViewController as! DetailViewController
+                destinationVC.scan = scans[indexPath.row - 1]
+                destinationVC.row = indexPath.row - 1
+            }
+        }
+    }
+
+
+
+    
+    func readScannedObjects(){
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Media")
+        
+        //3
+        do {
+            let results =
+            try managedContext.executeFetchRequest(fetchRequest)
+            scans = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
     
 }
 

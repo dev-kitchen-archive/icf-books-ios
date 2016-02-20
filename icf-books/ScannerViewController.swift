@@ -8,16 +8,18 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var codeFenceImage: UIImageView!
     @IBOutlet weak var infoCancelLayer: UIVisualEffectView!
+    @IBOutlet weak var infoText: UILabel!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    var scannedURL: String?
-    var scannedAlreadyFlag: Bool = false
+    var lastScannedURL: String = ""
+    //var alreadyScannedFlag: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,28 +36,97 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     //this class is called as soon as a
     func foundCode(scannedString:String) {
-        //print(scannedString)
-        let scannedURL = NSURL(string: scannedString)
-        if scannedURL != nil {
-            dataRetrieve(scannedURL!)
-        }
         
+        if lastScannedURL != scannedString {
+            // (1) validate String
+            if scannedString.rangeOfString("rhino.dev.kitchen") != nil {
+                infoText.text = "QR Code gefunden."
+                infoText.textColor = UIColor.blackColor()
+            } else {
+                infoText.text = "Der QR Code ist nicht aus dem Ester Buch."
+                infoText.textColor = UIColor.redColor()
+            }
+            // (2) get data from url
+            let scannedURL = NSURL(string: scannedString)
+            if scannedURL != nil {
+                dataRetrieve(scannedURL!)
+            } else {
+                infoText.text = "Der QR Code repräsentiert keine gültige URL."
+                infoText.textColor = UIColor.redColor()
+            }
+        }
+
         qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
+        lastScannedURL = scannedString
     }
     
     func dataRetrieve(scannedURL: NSURL) {
         GetJson.retrieveDictFrom(scannedURL, completionHandler: { (jsonDict:NSDictionary?, jsonError:GetJSONDataError?) in
             if jsonError == nil && jsonDict != nil {
-                // (1) successfully loaded
-                //print(jsonDict!.description)
+                // (3) Parse Json
+                self.infoText.text = "Daten wurden vom Server empfangen und nun werden die Medien geladen."
+                self.infoText.textColor = UIColor.greenColor()
                 
-                // (2) ParseJson
-                ParseMedia.fromJson(jsonDict!)
+//                ParseMedia.fromJson(jsonDict!, completion: { (media:NSDictionary?, jsonError:NSError?) in
+//                    if jsonError == nil && jsonDict != nil {
+//
+//                        // (4) creat core data object
+//                        self.persistObject(media!)
+//                        
+//                        self.infoText.text = "Daten sind korrekt und wurden gespeichert."
+//                        self.infoText.textColor = UIColor.greenColor()
+//                        
+//                    } else {
+//                        // handle error
+//                    }
+//                })
+                
+                let media = ParseMedia.fromJson(jsonDict!)
+                self.persistObject(media)
             } else {
                 // handle error
             }
         })
     }
+    
+    func persistObject(objectToSave:NSDictionary){
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let entity =  NSEntityDescription.entityForName("Media", inManagedObjectContext:managedContext)
+        
+        let media = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        //3
+        media.setValue(objectToSave.valueForKey("id"), forKey: "id")
+        media.setValue(objectToSave.valueForKey("type"), forKey: "type")
+        media.setValue(objectToSave.valueForKey("title"), forKey: "title")
+        media.setValue(objectToSave.valueForKey("teaser"), forKey: "teaser")
+        media.setValue(objectToSave.valueForKey("thumbnailUrl"), forKey: "thumbnail_url")
+        media.setValue(objectToSave.valueForKey("fileUrl"), forKey: "file_url")
+        media.setValue(objectToSave.valueForKey("thumbnailData"), forKey: "thumbnail_data")
+        
+        //4
+        do {
+            try managedContext.save()
+            //5 update here list or just load whole data new...
+            //people.append(person)
+            print("Successfully saved in core data")
+            infoText.text = "Daten erfolgreich geladen."
+            infoText.textColor = UIColor.greenColor()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    
+    
+    /*
+        camera view appending to existing layout from here
+    */
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
@@ -67,15 +138,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-        
         if metadataObj.type == AVMetadataObjectTypeQRCode {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                scannedURL = metadataObj.stringValue
-                foundCode(scannedURL!)
+                foundCode(metadataObj.stringValue)
             }
         }
     }
