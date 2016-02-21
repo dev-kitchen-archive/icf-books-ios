@@ -14,10 +14,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var table: UITableView!
 
     var scans = [NSManagedObject]()
+    var chaptersCount = 1
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         readScannedObjects()
     }
     
@@ -33,13 +34,40 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        if scans.count < 1 {
+            return 1
+        } else {
+            return chaptersCount + 2 //plus two for firs section containing progress and las one that has spacing cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return nil
+            //bookmarks could be in section == 1
+            
+        } else if section == chaptersCount + 2 - 1 {
+            return nil
+        } else {
+            return "Kapitel \(section)"
+        }
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scans.count + 1
+        if section == 0 { //either about book or intro image
+            return 1
+        } else if section == chaptersCount + 1 { //spacing section sith space for button to scan
+            return 1
+        } else { //actual scans for chapter
+            return scans.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
+        // if nothing is scanned yet, show info howto use (only 1 section will be given)
         if scans.count < 1 {
             var cell = tableView.dequeueReusableCellWithIdentifier("infoImageCell") as? InfoImageTableViewCell
             if cell == nil {
@@ -50,7 +78,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
             return cell!
             
-        } else if indexPath.row == 0 {
+        }
+        // if something is scanned show progress in 1st section (only 1 cell given)
+        else if indexPath.section == 0 {
             var cell = tableView.dequeueReusableCellWithIdentifier("progressCell") as? ProgressTableViewCell
             if cell == nil {
                 cell = ProgressTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "progressCell")
@@ -60,13 +90,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
             return cell!
             
-        } else {
+        }
+        // last section after chapters (1 spacing cell)
+        else if indexPath.section == chaptersCount + 1 {
             var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
             if cell == nil {
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
+            cell!.scanTitle.text = ""
+            cell!.scanDesc.text = ""
+            cell!.scanImage.image = UIImage()
+            return cell!
+        }
+        //for all other sections (that represent each chapter) show its containig scans
+        else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
             
-            let scan = scans[indexPath.row - 1]
+            if cell == nil {
+                cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
+            }
+            
+            let scan = scans[indexPath.row]
             
             let imgData = scan.valueForKey("thumbnail_data") as? NSData
             let imageArray = imgData.map({UIImage(data: $0)})
@@ -78,7 +122,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             return cell!
         }
-
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -104,9 +147,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-
-
-
     
     func readScannedObjects(){
         //1
@@ -116,12 +156,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let fetchRequest = NSFetchRequest(entityName: "Media")
         //3
         do {
-            let results =
-            try managedContext.executeFetchRequest(fetchRequest)
+            let results = try managedContext.executeFetchRequest(fetchRequest)
             scans = results as! [NSManagedObject]
+            print("data is loaded")
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
+        
+        //make sure that table data is reloaded after successfully loading core data
+        //because you could have new entries in coredata afer scanning new entry
+        table.reloadData()
     }
     
 }

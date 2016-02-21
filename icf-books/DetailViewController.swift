@@ -56,8 +56,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-//    //ActionSheet for future use
-//    func mediaOptions(){
+    //ActionSheet for future use
+    func mediaOptions(){
 //        let alertController = UIAlertController(title: nil, message: "Was möchtest Du mit diesem gescannten Eintrag machen?", preferredStyle: .ActionSheet)
 //        let cancelAction = UIAlertAction(title: "Abbrechen", style: .Cancel) { (action) in
 //            print("ActionSheet cancel")
@@ -75,5 +75,5 @@ class DetailViewController: UIViewController {
 //        self.presentViewController(alertController, animated: true) {
 //
 //        }
-//    }
+    }
 }

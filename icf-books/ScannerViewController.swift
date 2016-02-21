@@ -125,6 +125,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             if metadataObj.stringValue != nil {
                 //only run code if a new qr code was detected
                 if metadataObj.stringValue != lastScannedCode {
+                    
+                    lastScannedCode = metadataObj.stringValue
                     foundNewCode(metadataObj.stringValue)
                 }
             }
