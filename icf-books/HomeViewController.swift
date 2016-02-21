@@ -72,7 +72,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let imageArray = imgData.map({UIImage(data: $0)})
             cell!.scanImage.image = imageArray!
             
-            
             cell!.scanTitle.text = scan.valueForKey("title") as? String
             cell!.scanDesc.text = scan.valueForKey("teaser") as? String
             //cell!.titel oder so
@@ -112,12 +111,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func readScannedObjects(){
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
         let managedContext = appDelegate.managedObjectContext
-        
         //2
         let fetchRequest = NSFetchRequest(entityName: "Media")
-        
         //3
         do {
             let results =

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1032A7C1C7A21DC00EAB4E3 /* DetailPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032A7B1C7A21DC00EAB4E3 /* DetailPages.storyboard */; };
 		E15FBBAE1C791E5B004C444B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FBBAD1C791E5B004C444B /* Config.plist */; };
 		E15FBBB01C791E9A004C444B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FBBAF1C791E9A004C444B /* Api.swift */; };
 		E18589321C734F4800378011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589311C734F4800378011 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1032A7B1C7A21DC00EAB4E3 /* DetailPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailPages.storyboard; sourceTree = "<group>"; };
 		E15FBBAD1C791E5B004C444B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		E15FBBAF1C791E9A004C444B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E185892E1C734F4800378011 /* icf-books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icf-books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,10 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				E18589311C734F4800378011 /* AppDelegate.swift */,
+				E18589351C734F4800378011 /* Main.storyboard */,
+				E1032A7B1C7A21DC00EAB4E3 /* DetailPages.storyboard */,
 				E18589771C766F9D00378011 /* Helpers */,
 				E18589721C75CFAF00378011 /* ViewControlers */,
 				E18589711C75CFA200378011 /* Cells */,
-				E18589351C734F4800378011 /* Main.storyboard */,
 				E185893B1C734F4800378011 /* Assets.xcassets */,
 				E185893D1C734F4800378011 /* LaunchScreen.storyboard */,
 				E18589401C734F4800378011 /* Info.plist */,
@@ -300,6 +303,7 @@
 			files = (
 				E15FBBAE1C791E5B004C444B /* Config.plist in Resources */,
 				E185893F1C734F4800378011 /* LaunchScreen.storyboard in Resources */,
+				E1032A7C1C7A21DC00EAB4E3 /* DetailPages.storyboard in Resources */,
 				E185893C1C734F4800378011 /* Assets.xcassets in Resources */,
 				E18589371C734F4800378011 /* Main.storyboard in Resources */,
 			);

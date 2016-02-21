@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailTeaser: UILabel!
     @IBOutlet weak var detailVideo: UILabel!
-    @IBOutlet weak var videoPlaceholder: UIView!
+    @IBOutlet weak var videoImage: UIImageView!
     
     var scan: NSManagedObject?
 
@@ -31,6 +31,9 @@ class DetailViewController: UIViewController {
         if scan != nil {
             detailTitle.text = scan!.valueForKey("title") as? String
             detailTeaser.text = scan!.valueForKey("teaser") as? String
+            
+            let imgData = scan!.valueForKey("thumbnail_data") as? NSData
+            videoImage.image = imgData.map({UIImage(data: $0)})!
         }
     }
 

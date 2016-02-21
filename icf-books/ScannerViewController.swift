@@ -18,8 +18,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    var lastScannedURL: String = ""
-    //var alreadyScannedFlag: Bool = false
+    var lastScannedCode:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,29 +34,25 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     //this class is called as soon as a
-    func foundCode(scannedString:String) {
+    func foundNewCode(scannedString:String) {
         
-        if lastScannedURL != scannedString {
-            // (1) validate String
-            if scannedString.rangeOfString("rhino.dev.kitchen") != nil {
-                infoText.text = "QR Code gefunden."
-                infoText.textColor = UIColor.blackColor()
-            } else {
-                infoText.text = "Der QR Code ist nicht aus dem Ester Buch."
-                infoText.textColor = UIColor.redColor()
-            }
+        // (1) validate origin
+        if scannedString.rangeOfString(apiBaseUrl as String) != nil {
+            infoText.text = "ICF QR Code gefunden."
+            
+            // (2) Validate if id already persisted
+            //...Media Class get by id != nil
+
             // (2) get data from url
             let scannedURL = NSURL(string: scannedString)
             if scannedURL != nil {
                 dataRetrieve(scannedURL!)
-            } else {
-                infoText.text = "Der QR Code repräsentiert keine gültige URL."
-                infoText.textColor = UIColor.redColor()
             }
+        } else {
+            infoText.text = "QR Code nicht aus dem ICF Buch."
         }
-
+        
         qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
-        lastScannedURL = scannedString
     }
     
     func dataRetrieve(scannedURL: NSURL) {
@@ -66,21 +61,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 // (3) Parse Json
                 self.infoText.text = "Daten wurden vom Server empfangen und nun werden die Medien geladen."
                 self.infoText.textColor = UIColor.greenColor()
-                
-//                ParseMedia.fromJson(jsonDict!, completion: { (media:NSDictionary?, jsonError:NSError?) in
-//                    if jsonError == nil && jsonDict != nil {
-//
-//                        // (4) creat core data object
-//                        self.persistObject(media!)
-//                        
-//                        self.infoText.text = "Daten sind korrekt und wurden gespeichert."
-//                        self.infoText.textColor = UIColor.greenColor()
-//                        
-//                    } else {
-//                        // handle error
-//                    }
-//                })
-                
                 let media = ParseMedia.fromJson(jsonDict!)
                 self.persistObject(media)
             } else {
@@ -127,7 +107,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     /*
         camera view appending to existing layout from here
     */
-    
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
@@ -144,7 +123,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                foundCode(metadataObj.stringValue)
+                //only run code if a new qr code was detected
+                if metadataObj.stringValue != lastScannedCode {
+                    foundNewCode(metadataObj.stringValue)
+                }
             }
         }
     }
