@@ -65,7 +65,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="detailPages" storyboardName="DetailPages" referencedIdentifier="DetailView" id="QTy-py-b2y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19D-QF-o0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225.5" y="-418"/>
+            <point key="canvasLocation" x="223.5" y="-418"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="6m9-LT-jbO">
@@ -80,22 +80,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
-                                <rect key="frame" x="0.0" y="442" width="600" height="158"/>
+                                <rect key="frame" x="0.0" y="440" width="600" height="160"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5aV-X5-Sza">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halte dein Handy über den QR-Code im Buch..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
-                                            <rect key="frame" x="8" y="8" width="584" height="29"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="29" id="1Ji-GA-uCR"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
-                                            <rect key="frame" x="251" y="105" width="98" height="30"/>
+                                            <rect key="frame" x="251" y="107" width="98" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="7k1-ND-wqu"/>
                                                 <constraint firstAttribute="width" constant="98" id="EW2-PB-Z3j"/>
@@ -105,18 +96,40 @@
                                                 <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>
                                             </connections>
                                         </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98b-Tu-Co1">
+                                            <rect key="frame" x="8" y="25" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Jwt-zb-yVI"/>
+                                                <constraint firstAttribute="height" constant="30" id="TdF-6b-PuO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="╳">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeInfo:" destination="SKj-EP-XSB" eventType="touchUpInside" id="qoG-p6-VZx"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scanne einen QR-Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
+                                            <rect key="frame" x="8" y="54" width="584" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="sa7-Vy-zgQ" secondAttribute="trailing" constant="8" id="Cxg-JS-UHz"/>
                                         <constraint firstAttribute="bottom" secondItem="fyT-CK-Gio" secondAttribute="bottom" constant="23" id="LzR-Xd-2UJ"/>
-                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="8" id="RC8-61-Ahm"/>
-                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="8" id="UE3-iN-333"/>
                                         <constraint firstItem="fyT-CK-Gio" firstAttribute="centerX" secondItem="5aV-X5-Sza" secondAttribute="centerX" id="UT5-c7-oaw"/>
-                                        <constraint firstAttribute="trailing" secondItem="sa7-Vy-zgQ" secondAttribute="trailing" constant="8" id="XDT-dI-d9r"/>
+                                        <constraint firstItem="98b-Tu-Co1" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="8" id="cIe-2C-EwQ"/>
+                                        <constraint firstItem="98b-Tu-Co1" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="25" id="hsX-UL-luG"/>
+                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="8" id="mJa-jR-KuY"/>
+                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="54" id="pdn-KL-och"/>
                                     </constraints>
                                 </view>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="158" id="pyw-0j-Fw9"/>
+                                    <constraint firstAttribute="height" constant="160" id="pyw-0j-Fw9"/>
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -138,8 +151,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="fyT-CK-Gio" id="ARM-de-00l"/>
+                        <outlet property="closeInfo" destination="98b-Tu-Co1" id="aiq-bl-8Ql"/>
                         <outlet property="codeFenceImage" destination="UF0-mO-3Jy" id="ugl-UE-8tB"/>
-                        <outlet property="infoCancelLayer" destination="88s-i9-vrI" id="yVr-Nc-lJx"/>
+                        <outlet property="infoHeight" destination="pyw-0j-Fw9" id="xBr-gt-SSb"/>
+                        <outlet property="infoLayer" destination="88s-i9-vrI" id="h6g-Ql-EHa"/>
                         <outlet property="infoText" destination="sa7-Vy-zgQ" id="AgF-td-OGW"/>
                     </connections>
                 </viewController>
@@ -304,20 +320,20 @@
                                 </prototypes>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fW-EF-TkJ">
-                                <rect key="frame" x="0.0" y="528" width="600" height="72"/>
+                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Lz-Lb-IaA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-YE-0Lc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <state key="normal" title="Kapitel Scannen"/>
                                             <connections>
-                                                <segue destination="SKj-EP-XSB" kind="presentation" id="kSR-SO-o4b"/>
+                                                <segue destination="SKj-EP-XSB" kind="presentation" identifier="openScanner" id="kSR-SO-o4b"/>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iJx-dW-bEJ">
-                                            <rect key="frame" x="8" y="16" width="39" height="39"/>
+                                            <rect key="frame" x="8" y="19" width="39" height="39"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="39" id="6vR-qp-TTt"/>
                                                 <constraint firstAttribute="width" constant="39" id="rgm-VA-kPw"/>
@@ -335,7 +351,7 @@
                                 </view>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="mHR-1m-G35"/>
+                                    <constraint firstAttribute="height" constant="75" id="mHR-1m-G35"/>
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>

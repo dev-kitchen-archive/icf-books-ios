@@ -98,7 +98,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
             cell!.scanTitle.text = ""
-            cell!.scanDesc.text = ""
+            cell!.scanDesc.text = "egg"
             cell!.scanImage.image = UIImage()
             return cell!
         }
@@ -127,8 +127,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if scans.count < 1 {
             return 600
-        } else if indexPath.row == 0 {
+        } else if indexPath.section == 0 {
             return 90
+        } else if indexPath.section == chaptersCount + 1 {
+            return 75 // equals folating scan button
         } else {
             return 120
         }
@@ -143,8 +145,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "openSavedScan" {
             if let indexPath = table.indexPathForSelectedRow {
                 let destinationVC = segue.destinationViewController as! DetailViewController
-                destinationVC.scan = scans[indexPath.row - 1]
+                destinationVC.scan = scans[indexPath.row]
             }
+        } else if segue.identifier == "openScanner" {
+            let destinationVC = segue.destinationViewController as! ScannerViewController
+            destinationVC.homeDelegate = self
         }
     }
     
@@ -158,7 +163,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
             scans = results as! [NSManagedObject]
-            print("data is loaded")
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }

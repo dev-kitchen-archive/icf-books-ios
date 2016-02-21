@@ -12,13 +12,18 @@ import CoreData
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var codeFenceImage: UIImageView!
-    @IBOutlet weak var infoCancelLayer: UIVisualEffectView!
+    @IBOutlet weak var infoLayer: UIVisualEffectView!
     @IBOutlet weak var infoText: UILabel!
+    @IBOutlet weak var infoHeight: NSLayoutConstraint!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var closeInfo: UIButton!
     
+    var homeDelegate:HomeViewController?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var lastScannedCode:String = ""
+    var infoSmall:Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,20 +41,25 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     //this class is called as soon as a
     func foundNewCode(scannedString:String) {
         
+        animateInfoHeight()
+        
         // (1) validate origin
         if scannedString.rangeOfString(apiBaseUrl as String) != nil {
-            infoText.text = "ICF QR Code gefunden."
-            
+            infoText.text = "QR-Code erkannt."
             // (2) Validate if id already persisted
-            //...Media Class get by id != nil
-
-            // (2) get data from url
-            let scannedURL = NSURL(string: scannedString)
-            if scannedURL != nil {
-                dataRetrieve(scannedURL!)
+            if Media.getById(idFromUrl(scannedString)) != nil {
+                infoText.text = "Der QR-Code wurde bereits gescannt (link direkt zur Detail-View?)"
+            } else {
+                
+                infoText.text = "Daten werden geladen."
+                // (3) get data from url
+                let scannedURL = NSURL(string: scannedString)
+                if scannedURL != nil {
+                    dataRetrieve(scannedURL!)
+                }
             }
         } else {
-            infoText.text = "QR Code nicht aus dem ICF Buch."
+            infoText.text = "Der QR-Code ist nicht aus einem ICF Buch."
         }
         
         qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
@@ -58,9 +68,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     func dataRetrieve(scannedURL: NSURL) {
         GetJson.retrieveDictFrom(scannedURL, completionHandler: { (jsonDict:NSDictionary?, jsonError:GetJSONDataError?) in
             if jsonError == nil && jsonDict != nil {
-                // (3) Parse Json
-                self.infoText.text = "Daten wurden vom Server empfangen und nun werden die Medien geladen."
-                self.infoText.textColor = UIColor.greenColor()
                 let media = ParseMedia.fromJson(jsonDict!)
                 self.persistObject(media)
             } else {
@@ -70,39 +77,52 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func persistObject(objectToSave:NSDictionary){
-        //1
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("Media", inManagedObjectContext:managedContext)
-        
-        let media = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        //3
-        media.setValue(objectToSave.valueForKey("id"), forKey: "id")
-        media.setValue(objectToSave.valueForKey("type"), forKey: "type")
-        media.setValue(objectToSave.valueForKey("title"), forKey: "title")
-        media.setValue(objectToSave.valueForKey("teaser"), forKey: "teaser")
-        media.setValue(objectToSave.valueForKey("thumbnailUrl"), forKey: "thumbnail_url")
-        media.setValue(objectToSave.valueForKey("fileUrl"), forKey: "file_url")
-        media.setValue(objectToSave.valueForKey("thumbnailData"), forKey: "thumbnail_data")
-        
-        //4
-        do {
-            try managedContext.save()
-            //5 update here list or just load whole data new...
-            //people.append(person)
-            print("Successfully saved in core data")
-            infoText.text = "Daten erfolgreich geladen."
-            infoText.textColor = UIColor.greenColor()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
+        infoText.text = "Daten werden gespeichert"
+        if Media.saveNewEntity(objectToSave) {
+            infoText.text = "Daten wurden gespeichert"
         }
+        
+        let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
+        self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+//        //1
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        
+//        //2
+//        let entity =  NSEntityDescription.entityForName("Media", inManagedObjectContext:managedContext)
+//        
+//        let media = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+//        
+//        //3
+//        media.setValue(objectToSave.valueForKey("id"), forKey: "id")
+//        media.setValue(objectToSave.valueForKey("type"), forKey: "type")
+//        media.setValue(objectToSave.valueForKey("title"), forKey: "title")
+//        media.setValue(objectToSave.valueForKey("teaser"), forKey: "teaser")
+//        media.setValue(objectToSave.valueForKey("thumbnailUrl"), forKey: "thumbnail_url")
+//        media.setValue(objectToSave.valueForKey("fileUrl"), forKey: "file_url")
+//        media.setValue(objectToSave.valueForKey("thumbnailData"), forKey: "thumbnail_data")
+//        
+//        //4
+//        do {
+//            try managedContext.save()
+//            //5 update here list or just load whole data new...
+//            //people.append(person)
+//            print("Successfully saved in core data")
+//            infoText.textColor = UIColor.greenColor()
+//            infoText.text = "Daten erfolgreich geladen."
+//            
+//            let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
+//            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
+//            self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//            
+//        } catch let error as NSError  {
+//            print("Could not save \(error), \(error.userInfo)")
+//        }
     }
-    
-    
-    
     
     /*
         camera view appending to existing layout from here
@@ -171,7 +191,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     // Place here all views that shall be placed above the camera view
     func placeViewsOverCamera() {
-        view.bringSubviewToFront(infoCancelLayer)
+        view.bringSubviewToFront(infoLayer)
         view.bringSubviewToFront(codeFenceImage)
     }
     
@@ -184,7 +204,40 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func cancelButtonPress(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: {
+            print("scanning is done")
+        })
+    }
+
+    @IBAction func closeInfo(sender: AnyObject) {
+        lastScannedCode = ""
+        infoText.text = "Scanne einen QR-Code"
+        animateInfoHeight()
+    }
+    
+    func animateInfoHeight() {
+        if infoSmall {
+            UIView.animateWithDuration(0.5, animations: {
+                self.infoHeight.constant = self.view.frame.height
+                // fade out self.codeFenceImage
+                // fade out self.cancelButton
+                self.codeFenceImage.hidden = true
+                self.cancelButton.hidden = true
+                self.closeInfo.hidden = false
+                self.qrCodeFrameView?.layer.borderColor = UIColor.clearColor().CGColor
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            UIView.animateWithDuration(0.5, animations: {
+                self.infoHeight.constant = 180
+                self.codeFenceImage.hidden = false
+                self.cancelButton.hidden = false
+                self.closeInfo.hidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+        
+        infoSmall = !infoSmall
     }
 
     /*

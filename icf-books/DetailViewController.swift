@@ -27,7 +27,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
  
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: self, action: "mediaOptions")
+        self.title = "Kapitel 1"
+        //self.navigationController?.navigationBar.bringSubviewToFront(navigationItem.backBarButtonItem)
         
+        //view.bringSubviewToFront(self.navigationItem)
         if scan != nil {
             detailTitle.text = scan!.valueForKey("title") as? String
             detailTeaser.text = scan!.valueForKey("teaser") as? String
