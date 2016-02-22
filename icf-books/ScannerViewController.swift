@@ -62,7 +62,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
         }
         
-        qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
+        if infoSmall {
+            qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
+        }
     }
     
     func dataRetrieve(scannedURL: NSURL) {
@@ -80,6 +82,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if Media.saveNewEntity(objectToSave) {
             let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
+            vc.scan = Media.getById(objectToSave.valueForKey("id") as! String)
             self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
