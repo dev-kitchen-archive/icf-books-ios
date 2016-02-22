@@ -48,10 +48,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
             if Media.getById(idFromUrl(scannedString)) != nil {
-                infoText.text = "Der QR-Code wurde bereits gescannt (link direkt zur Detail-View?)"
+                infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
             } else {
                 
-                infoText.text = "Daten werden geladen."
+                infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
                 // (3) get data from url
                 let scannedURL = NSURL(string: scannedString)
                 if scannedURL != nil {
@@ -59,7 +59,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 }
             }
         } else {
-            infoText.text = "Der QR-Code ist nicht aus einem ICF Buch."
+            infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
         }
         
         qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
@@ -76,16 +76,16 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         })
     }
     
-    func persistObject(objectToSave:NSDictionary){
-        infoText.text = "Daten werden gespeichert"
+    func persistObject(objectToSave:NSDictionary) {
         if Media.saveNewEntity(objectToSave) {
-            infoText.text = "Daten wurden gespeichert"
+            let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
+            self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was successfully saved")
         }
-        
-        let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
-        self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
-        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
     
     /*
@@ -168,14 +168,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func cancelButtonPress(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {
-            print("scanning is done")
-        })
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func closeInfo(sender: AnyObject) {
         lastScannedCode = ""
-        infoText.text = "Scanne einen QR-Code"
+        infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
         animateInfoHeight()
     }
     

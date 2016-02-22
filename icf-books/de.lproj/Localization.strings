@@ -7,4 +7,9 @@
 */
 
 //SCANNER
+"QR_SCAN"="Scanne einen QR-Code";
 "QR_RECOGNIZED"="QR-Code erkannt";
+"QR_AGAIN"="Der QR-Code wurde bereits gescannt (link direkt zur DetailView?)";
+"QR_INVALID"="Der QR-Code ist nicht aus einem ICF Buch";
+"LOAD_DATA"="Daten werden geladen";
+"SAVED_DATA"="Daten wurden gespeichert";
