@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: self, action: "mediaOptions")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: self, action: nil)
         self.title = "Kapitel 1"
         //self.navigationController?.navigationBar.bringSubviewToFront(navigationItem.backBarButtonItem)
         
@@ -57,26 +57,5 @@ class DetailViewController: UIViewController {
             destination.player = AVPlayer(URL: url!)
             
         }
-    }
-    
-    //ActionSheet for future use
-    func mediaOptions(){
-//        let alertController = UIAlertController(title: nil, message: "Was möchtest Du mit diesem gescannten Eintrag machen?", preferredStyle: .ActionSheet)
-//        let cancelAction = UIAlertAction(title: "Abbrechen", style: .Cancel) { (action) in
-//            print("ActionSheet cancel")
-//        }
-//        let reloadAction = UIAlertAction(title: "Neu laden", style: .Default) { (action) in
-//            print("ActionSheet reload")
-//        }
-//        let destroyAction = UIAlertAction(title: "Eintrag aus Übersicht entfernen", style: .Destructive) { (action) in
-//            print("ActionSheet deleted")
-//        }
-//        alertController.addAction(cancelAction)
-//        alertController.addAction(reloadAction)
-//        alertController.addAction(destroyAction)
-//        
-//        self.presentViewController(alertController, animated: true) {
-//
-//        }
     }
 }

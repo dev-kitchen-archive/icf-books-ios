@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="GpE-yR-N4n">
             <objects>
-                <viewController id="pvR-Jz-tbY" sceneMemberID="viewController">
+                <viewController id="pvR-Jz-tbY" customClass="AboutViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VxN-ea-vIW"/>
                         <viewControllerLayoutGuide type="bottom" id="jKC-XT-Eto"/>
@@ -25,6 +25,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGS-pa-hbD">
+                                <rect key="frame" x="20" y="101" width="71" height="30"/>
+                                <state key="normal" title="Reset App"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="pvR-Jz-tbY" eventType="touchUpInside" id="yVy-mb-Lr2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

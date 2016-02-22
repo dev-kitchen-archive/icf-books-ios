@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1032A7C1C7A21DC00EAB4E3 /* DetailPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032A7B1C7A21DC00EAB4E3 /* DetailPages.storyboard */; };
+		E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */; };
 		E15FBBAE1C791E5B004C444B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FBBAD1C791E5B004C444B /* Config.plist */; };
 		E15FBBB01C791E9A004C444B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FBBAF1C791E9A004C444B /* Api.swift */; };
 		E18589321C734F4800378011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589311C734F4800378011 /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		E1032A7B1C7A21DC00EAB4E3 /* DetailPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailPages.storyboard; sourceTree = "<group>"; };
+		E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E15FBBAD1C791E5B004C444B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		E15FBBAF1C791E9A004C444B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E185892E1C734F4800378011 /* icf-books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icf-books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 				E18589331C734F4800378011 /* HomeViewController.swift */,
 				E18589661C738A3400378011 /* DetailViewController.swift */,
 				E18589731C75CFD400378011 /* ScannerViewController.swift */,
+				E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */,
 			);
 			name = ViewControlers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */,
 				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,
 				E18589791C766FB200378011 /* ParseMedia.swift in Sources */,
+				E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
 				E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */,
