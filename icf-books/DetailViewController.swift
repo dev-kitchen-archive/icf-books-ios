@@ -27,7 +27,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
  
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: self, action: nil)
-        self.title = "Kapitel 1"
         //self.navigationController?.navigationBar.bringSubviewToFront(navigationItem.backBarButtonItem)
         
         //view.bringSubviewToFront(self.navigationItem)

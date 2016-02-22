@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Teaser"; ObjectID = "Cws-Vq-kXc"; */
+"Cws-Vq-kXc.text" = "Beschreibungstext";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "FVA-n1-yQC"; */
+"FVA-n1-yQC.text" = "Titel";
+
+/* Class = "UIViewController"; title = "Chapter"; ObjectID = "MvG-w0-eoO"; */
+"MvG-w0-eoO.title" = "Kapitel";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "O6f-JL-4GO"; */
+"O6f-JL-4GO.normalTitle" = "Abspielen";

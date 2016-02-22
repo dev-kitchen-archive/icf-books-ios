@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-263" y="-509"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Chapter-->
         <scene sceneID="vef-BN-ApT">
             <objects>
-                <viewController storyboardIdentifier="DetailView" extendedLayoutIncludesOpaqueBars="YES" id="MvG-w0-eoO" customClass="DetailViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailView" title="Chapter" extendedLayoutIncludesOpaqueBars="YES" id="MvG-w0-eoO" customClass="DetailViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wni-c8-MMg"/>
                         <viewControllerLayoutGuide type="bottom" id="Enx-XU-d6k"/>

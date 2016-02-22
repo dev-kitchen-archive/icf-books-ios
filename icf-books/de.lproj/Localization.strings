@@ -1,0 +1,10 @@
+/* 
+  Localization.strings
+  icf-books
+
+  Created by Andreas Plüss on 22.02.16.
+  Copyright © 2016 devkitchen. All rights reserved.
+*/
+
+//SCANNER
+"QR_RECOGNIZED"="QR-Code erkannt";

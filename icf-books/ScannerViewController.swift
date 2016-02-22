@@ -45,7 +45,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         // (1) validate origin
         if scannedString.rangeOfString(apiBaseUrl as String) != nil {
-            infoText.text = "QR-Code erkannt."
+            infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
             if Media.getById(idFromUrl(scannedString)) != nil {
                 infoText.text = "Der QR-Code wurde bereits gescannt (link direkt zur Detail-View?)"
@@ -86,42 +86,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
         self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
         self.dismissViewControllerAnimated(true, completion: nil)
-        
-//        //1
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        let managedContext = appDelegate.managedObjectContext
-//        
-//        //2
-//        let entity =  NSEntityDescription.entityForName("Media", inManagedObjectContext:managedContext)
-//        
-//        let media = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-//        
-//        //3
-//        media.setValue(objectToSave.valueForKey("id"), forKey: "id")
-//        media.setValue(objectToSave.valueForKey("type"), forKey: "type")
-//        media.setValue(objectToSave.valueForKey("title"), forKey: "title")
-//        media.setValue(objectToSave.valueForKey("teaser"), forKey: "teaser")
-//        media.setValue(objectToSave.valueForKey("thumbnailUrl"), forKey: "thumbnail_url")
-//        media.setValue(objectToSave.valueForKey("fileUrl"), forKey: "file_url")
-//        media.setValue(objectToSave.valueForKey("thumbnailData"), forKey: "thumbnail_data")
-//        
-//        //4
-//        do {
-//            try managedContext.save()
-//            //5 update here list or just load whole data new...
-//            //people.append(person)
-//            print("Successfully saved in core data")
-//            infoText.textColor = UIColor.greenColor()
-//            infoText.text = "Daten erfolgreich geladen."
-//            
-//            let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
-//            self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
-//            self.dismissViewControllerAnimated(true, completion: nil)
-//            
-//        } catch let error as NSError  {
-//            print("Could not save \(error), \(error.userInfo)")
-//        }
     }
     
     /*
