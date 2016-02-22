@@ -48,7 +48,7 @@ class AboutViewController: UIViewController {
             let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
             
             do {
-                try managedContext.executeRequest(fetchRequest)
+                try managedContext.executeRequest(deleteRequest)
                 try managedContext.save()
             } catch let error as NSError {
                 // TODO: handle the error

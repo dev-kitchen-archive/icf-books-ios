@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "playVideo" {
-            let urlStr = (apiBaseUrl as String) + (scan!.valueForKey("file_url") as! String)
+            let urlStr = (Api.baseUrl as String) + (scan!.valueForKey("file_url") as! String)
             print(urlStr)
             //let url = NSURL(string: urlStr)
             let url = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
