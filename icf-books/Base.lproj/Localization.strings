@@ -7,9 +7,9 @@
 */
 
 //SCANNER
-"QR_SCAN"="Scan the QR-Code"
-"QR_RECOGNIZED"="QR-Code recognized";
-"QR_AGAIN"="QR-Code already scanned (link to DetailView?)";
-"QR_INVALID"="QR-Code is not from valid source";
-"LOAD_DATA"="Data is beeing loaded";
-"SAVED_DATA"="Data was successfully saved";
+"QR_SCAN" = "Scan the QR-Code";
+"QR_RECOGNIZED" = "QR-Code recognized";
+"QR_AGAIN" = "QR-Code already scanned (link to DetailView?)";
+"QR_INVALID" = "QR-Code is not from valid source";
+"LOAD_DATA" = "Data is beeing loaded";
+"SAVED_DATA" = "Data was successfully saved";
