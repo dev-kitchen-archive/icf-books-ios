@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Desc"; ObjectID = "3ch-gt-r1e"; */
+"3ch-gt-r1e.text" = "Desc";
+
+/* Class = "UIButton"; normalTitle = "╳"; ObjectID = "98b-Tu-Co1"; */
+"98b-Tu-Co1.normalTitle" = "╳";
+
+/* Class = "UILabel"; text = "Ester"; ObjectID = "GOw-qj-xGP"; */
+"GOw-qj-xGP.text" = "Ester";
+
+/* Class = "UIViewController"; title = "Das Buch"; ObjectID = "GP6-1y-8k3"; */
+"GP6-1y-8k3.title" = "The Book";
+
+/* Class = "UILabel"; text = "About Book"; ObjectID = "JqV-ab-q6V"; */
+"JqV-ab-q6V.text" = "Über das Buch";
+
+/* Class = "UIButton"; normalTitle = "Scan new content"; ObjectID = "Prg-YE-0Lc"; */
+"Prg-YE-0Lc.normalTitle" = "Neuen Inhalt scannen";
+
+/* Class = "UILabel"; text = "2 of 7 chapters"; ObjectID = "TWB-HO-gU2"; */
+"TWB-HO-gU2.text" = "2 von 7 Kapiteln";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Wcp-VK-3Uf"; */
+"Wcp-VK-3Uf.text" = "Titel";
+
+/* Class = "UINavigationItem"; title = "Ester"; ObjectID = "X9J-BS-YDJ"; */
+"X9J-BS-YDJ.title" = "Ester";
+
+/* Class = "UILabel"; text = "Leo Bigger"; ObjectID = "bvr-nI-MPt"; */
+"bvr-nI-MPt.text" = "Leo Bigger";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "fyT-CK-Gio"; */
+"fyT-CK-Gio.normalTitle" = "Abbrechen";
+
+/* Class = "UILabel"; text = "Scan the QR-Code"; ObjectID = "sa7-Vy-zgQ"; */
+"sa7-Vy-zgQ.text" = "Scanne den QR-Code";

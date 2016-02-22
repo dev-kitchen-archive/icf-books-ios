@@ -7,43 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--About View Controller-->
-        <scene sceneID="GpE-yR-N4n">
-            <objects>
-                <viewController id="pvR-Jz-tbY" customClass="AboutViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VxN-ea-vIW"/>
-                        <viewControllerLayoutGuide type="bottom" id="jKC-XT-Eto"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XDp-FP-Jjv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKW-hB-Pc3">
-                                <rect key="frame" x="20" y="72" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGS-pa-hbD">
-                                <rect key="frame" x="20" y="101" width="71" height="30"/>
-                                <state key="normal" title="Reset App"/>
-                                <connections>
-                                    <action selector="resetButton:" destination="pvR-Jz-tbY" eventType="touchUpInside" id="yVy-mb-Lr2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H70-8w-z4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="580" y="-1026"/>
-        </scene>
-        <!--View Controller-->
+        <!--Das Buch-->
         <scene sceneID="EZE-UC-f1V">
             <objects>
-                <viewController id="GP6-1y-8k3" sceneMemberID="viewController">
+                <viewController title="Das Buch" id="GP6-1y-8k3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qib-L3-oyN"/>
                         <viewControllerLayoutGuide type="bottom" id="2Bj-Aj-FUB"/>
@@ -64,7 +31,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="riD-cT-VX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="-368"/>
+            <point key="canvasLocation" x="607" y="-372"/>
+        </scene>
+        <!--AboutApp-->
+        <scene sceneID="PAv-ZS-cbM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutApp" referencedIdentifier="AboutApp" id="pSI-Kd-yLV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gc-Hs-IZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.5" y="-468"/>
         </scene>
         <!--DetailView-->
         <scene sceneID="dP3-Do-all">
@@ -72,7 +47,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="detailPages" storyboardName="DetailPages" referencedIdentifier="DetailView" id="QTy-py-b2y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19D-QF-o0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223.5" y="-418"/>
+            <point key="canvasLocation" x="221.5" y="-423"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="6m9-LT-jbO">
@@ -98,7 +73,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="7k1-ND-wqu"/>
                                                 <constraint firstAttribute="width" constant="98" id="EW2-PB-Z3j"/>
                                             </constraints>
-                                            <state key="normal" title="Abbrechen"/>
+                                            <state key="normal" title="Cancel"/>
                                             <connections>
                                                 <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>
                                             </connections>
@@ -117,7 +92,7 @@
                                                 <action selector="closeInfo:" destination="SKj-EP-XSB" eventType="touchUpInside" id="qoG-p6-VZx"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scanne einen QR-Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scan the QR-Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
                                             <rect key="frame" x="8" y="54" width="584" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,7 +202,7 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-zX-Aag">
                                                     <rect key="frame" x="153" y="79" width="249" height="2"/>
                                                 </progressView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 von 7 Kapitel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-HO-gU2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 of 7 chapters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-HO-gU2">
                                                     <rect key="frame" x="153" y="60" width="113" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,7 +309,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-YE-0Lc">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
-                                            <state key="normal" title="Kapitel Scannen"/>
+                                            <state key="normal" title="Scan new content"/>
                                             <connections>
                                                 <segue destination="SKj-EP-XSB" kind="presentation" identifier="openScanner" id="kSR-SO-o4b"/>
                                             </connections>
@@ -377,7 +352,7 @@
                     <navigationItem key="navigationItem" title="Ester" id="X9J-BS-YDJ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="kqj-g4-k9X">
                             <connections>
-                                <segue destination="pvR-Jz-tbY" kind="show" id="tAz-3N-bsF"/>
+                                <segue destination="pSI-Kd-yLV" kind="show" id="EDI-sc-Kzl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

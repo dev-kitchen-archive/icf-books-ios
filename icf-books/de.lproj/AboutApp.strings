@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "FW7-fa-gmS"; */
+"FW7-fa-gmS.text" = "Sprache";
+
+/* Class = "UILabel"; text = "Than also the Content of the Scans will be loaded in that lang"; ObjectID = "GDc-0m-XfY"; */
+"GDc-0m-XfY.text" = "Entsprechen der gewählten Sprache, wird auch das Material in selber Sprache geladen";
+
+/* Class = "UIButton"; normalTitle = "change language"; ObjectID = "GTL-MV-GPr"; */
+"GTL-MV-GPr.normalTitle" = "Sprache ändern";
+
+/* Class = "UIViewController"; title = "About this App"; ObjectID = "KAJ-NJ-wP5"; */
+"KAJ-NJ-wP5.title" = "Über die App";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "L8a-4s-o8l"; */
+"L8a-4s-o8l.placeholder" = "E-Mail";
+
+/* Class = "UILabel"; text = "Change in your phones settings under **General > Language **"; ObjectID = "NZo-De-eli"; */
+"NZo-De-eli.text" = "Ändere die Sprache in den Einstellungen unter **Allgemein > Sprache**";
+
+/* Class = "UILabel"; text = "Successfully entered"; ObjectID = "SxB-5A-zXg"; */
+"SxB-5A-zXg.text" = "Erfolgreich angemeldet";
+
+/* Class = "UIViewController"; title = "Language"; ObjectID = "VGh-EG-uP4"; */
+"VGh-EG-uP4.title" = "Sprache";
+
+/* Class = "UILabel"; text = "Newsletter"; ObjectID = "WnJ-rc-Yfr"; */
+"WnJ-rc-Yfr.text" = "Newsletter";
+
+/* Class = "UIButton"; normalTitle = "Reset App"; ObjectID = "Wra-dI-M0Z"; */
+"Wra-dI-M0Z.normalTitle" = "App zurücksetzen";
+
+/* Class = "UIButton"; normalTitle = "sign up"; ObjectID = "u5b-uZ-bXU"; */
+"u5b-uZ-bXU.normalTitle" = "anmelden";
+
+/* Class = "UILabel"; text = "About App"; ObjectID = "vHz-2b-pmz"; */
+"vHz-2b-pmz.text" = "Über die App";
