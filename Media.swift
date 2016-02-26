@@ -62,4 +62,10 @@ class Media: NSManagedObject {
         
         return savingSuccessful
     }
+    
+//    media class needs to do
+//    - check if id of a media exists (get by id)
+//    - return the image of a certain id as UIImage
+//    - speichere aus json in coredata !!!
+
 }

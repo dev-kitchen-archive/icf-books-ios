@@ -98,7 +98,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
             cell!.scanTitle.text = ""
-            cell!.scanDesc.text = "egg"
+            cell!.scanDesc.text = ""
             cell!.scanImage.image = UIImage()
             return cell!
         }
