@@ -11,6 +11,16 @@
 		E1032A931C7AFD0B00EAB4E3 /* AboutApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032A951C7AFD0B00EAB4E3 /* AboutApp.storyboard */; };
 		E1032A9B1C7AFE9C00EAB4E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */; };
 		E1032A9F1C7AFFCC00EAB4E3 /* DetailPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032AA11C7AFFCC00EAB4E3 /* DetailPages.storyboard */; };
+		E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14611CA29155002EB7CA /* IntroViewController.swift */; };
+		E13F14641CA295AB002EB7CA /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14631CA295AB002EB7CA /* CenterCellCollectionViewFlowLayout.swift */; };
+		E13F14661CA2B0CD002EB7CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14651CA2B0CD002EB7CA /* Color.swift */; };
+		E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14671CA2B394002EB7CA /* MasterViewController.swift */; };
+		E13F146C1CA2B8DF002EB7CA /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E13F146B1CA2B7A4002EB7CA /* Montserrat-Light.otf */; };
+		E13F146D1CA2B8E2002EB7CA /* Montserrat-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E13F146A1CA2B79A002EB7CA /* Montserrat-UltraLight.otf */; };
+		E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F146E1CA2B951002EB7CA /* IntroSliderCell.swift */; };
+		E158D5401C8784E700A543EA /* IntroPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158D53F1C8784E700A543EA /* IntroPageViewController.swift */; };
+		E158D5421C87855A00A543EA /* IntroSlides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E158D5411C87855A00A543EA /* IntroSlides.storyboard */; };
+		E158D5441C87A36B00A543EA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158D5431C87A36B00A543EA /* PageViewController.swift */; };
 		E15FBBAE1C791E5B004C444B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FBBAD1C791E5B004C444B /* Config.plist */; };
 		E15FBBB01C791E9A004C444B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FBBAF1C791E9A004C444B /* Api.swift */; };
 		E18589321C734F4800378011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589311C734F4800378011 /* AppDelegate.swift */; };
@@ -59,6 +69,16 @@
 		E1032A9E1C7AFE9F00EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1032AA01C7AFFCC00EAB4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DetailPages.storyboard; sourceTree = "<group>"; };
 		E1032AA31C7AFFCF00EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/DetailPages.strings; sourceTree = "<group>"; };
+		E13F14611CA29155002EB7CA /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E13F14631CA295AB002EB7CA /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		E13F14651CA2B0CD002EB7CA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E13F14671CA2B394002EB7CA /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		E13F146A1CA2B79A002EB7CA /* Montserrat-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-UltraLight.otf"; sourceTree = "<group>"; };
+		E13F146B1CA2B7A4002EB7CA /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		E13F146E1CA2B951002EB7CA /* IntroSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSliderCell.swift; sourceTree = "<group>"; };
+		E158D53F1C8784E700A543EA /* IntroPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageViewController.swift; sourceTree = "<group>"; };
+		E158D5411C87855A00A543EA /* IntroSlides.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroSlides.storyboard; sourceTree = "<group>"; };
+		E158D5431C87A36B00A543EA /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		E15FBBAD1C791E5B004C444B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		E15FBBAF1C791E9A004C444B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E185892E1C734F4800378011 /* icf-books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icf-books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,11 +135,21 @@
 			isa = PBXGroup;
 			children = (
 				E18589351C734F4800378011 /* Main.storyboard */,
+				E158D5411C87855A00A543EA /* IntroSlides.storyboard */,
 				E1032AA11C7AFFCC00EAB4E3 /* DetailPages.storyboard */,
 				E1032A951C7AFD0B00EAB4E3 /* AboutApp.storyboard */,
 				E185893D1C734F4800378011 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E13F14691CA2B788002EB7CA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E13F146B1CA2B7A4002EB7CA /* Montserrat-Light.otf */,
+				E13F146A1CA2B79A002EB7CA /* Montserrat-UltraLight.otf */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		E18589251C734F4800378011 = {
@@ -148,6 +178,7 @@
 			children = (
 				E18589311C734F4800378011 /* AppDelegate.swift */,
 				E1032A981C7AFD1D00EAB4E3 /* Storyboards */,
+				E13F14691CA2B788002EB7CA /* Assets */,
 				E18589771C766F9D00378011 /* Helpers */,
 				E18589721C75CFAF00378011 /* ViewControlers */,
 				E18589711C75CFA200378011 /* Cells */,
@@ -183,6 +214,7 @@
 				E18589641C737CD600378011 /* ContentTableViewCell.swift */,
 				E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */,
 				E18589621C737C8500378011 /* ProgressTableViewCell.swift */,
+				E13F146E1CA2B951002EB7CA /* IntroSliderCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -190,10 +222,15 @@
 		E18589721C75CFAF00378011 /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				E13F14671CA2B394002EB7CA /* MasterViewController.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
 				E18589661C738A3400378011 /* DetailViewController.swift */,
+				E13F14611CA29155002EB7CA /* IntroViewController.swift */,
 				E18589731C75CFD400378011 /* ScannerViewController.swift */,
 				E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */,
+				E13F14631CA295AB002EB7CA /* CenterCellCollectionViewFlowLayout.swift */,
+				E158D53F1C8784E700A543EA /* IntroPageViewController.swift */,
+				E158D5431C87A36B00A543EA /* PageViewController.swift */,
 			);
 			name = ViewControlers;
 			sourceTree = "<group>";
@@ -202,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				E15FBBAF1C791E9A004C444B /* Api.swift */,
+				E13F14651CA2B0CD002EB7CA /* Color.swift */,
 				E18589751C76223000378011 /* GetJson.swift */,
 				E18589781C766FB200378011 /* ParseMedia.swift */,
 				E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */,
@@ -328,9 +366,12 @@
 				E185893F1C734F4800378011 /* LaunchScreen.storyboard in Resources */,
 				E1032A9B1C7AFE9C00EAB4E3 /* Localizable.strings in Resources */,
 				E1032A9F1C7AFFCC00EAB4E3 /* DetailPages.storyboard in Resources */,
+				E13F146D1CA2B8E2002EB7CA /* Montserrat-UltraLight.otf in Resources */,
 				E185893C1C734F4800378011 /* Assets.xcassets in Resources */,
+				E158D5421C87855A00A543EA /* IntroSlides.storyboard in Resources */,
 				E1032A931C7AFD0B00EAB4E3 /* AboutApp.storyboard in Resources */,
 				E18589371C734F4800378011 /* Main.storyboard in Resources */,
+				E13F146C1CA2B8DF002EB7CA /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */,
+				E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */,
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
 				E18589761C76223000378011 /* GetJson.swift in Sources */,
 				E185897F1C76919400378011 /* Media.swift in Sources */,
@@ -362,13 +405,18 @@
 				E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */,
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
 				E15FBBB01C791E9A004C444B /* Api.swift in Sources */,
+				E13F14641CA295AB002EB7CA /* CenterCellCollectionViewFlowLayout.swift in Sources */,
+				E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */,
+				E158D5401C8784E700A543EA /* IntroPageViewController.swift in Sources */,
 				E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */,
+				E13F14661CA2B0CD002EB7CA /* Color.swift in Sources */,
 				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,
 				E18589791C766FB200378011 /* ParseMedia.swift in Sources */,
 				E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
 				E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */,
+				E158D5441C87A36B00A543EA /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

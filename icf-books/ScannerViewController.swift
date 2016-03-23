@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var codeFenceImage: UIImageView!
     @IBOutlet weak var infoLayer: UIVisualEffectView!
     @IBOutlet weak var infoText: UILabel!
@@ -68,12 +68,15 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func dataRetrieve(scannedURL: NSURL) {
-        GetJson.retrieveDictFrom(scannedURL, completionHandler: { (jsonDict:NSDictionary?, jsonError:GetJSONDataError?) in
-            if jsonError == nil && jsonDict != nil {
-                let media = ParseMedia.fromJson(jsonDict!)
-                self.persistObject(media)
+        GetJson.retrieveDictFrom(scannedURL, completionHandler: { (jsonDict:NSDictionary?, errorMessage:String?) in
+            if errorMessage == nil {
+                if let media = ParseMedia.fromJson(jsonDict!) {
+                    self.persistObject(media)
+                } else {
+                    self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
+                }
             } else {
-                // handle error
+                self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + errorMessage!
             }
         })
     }

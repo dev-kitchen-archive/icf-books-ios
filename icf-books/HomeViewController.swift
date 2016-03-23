@@ -9,16 +9,21 @@
 import UIKit
 import CoreData
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
 
     var scans = [NSManagedObject]()
     var chaptersCount = 1
+    var introShown = false
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
+        //show intro to user, if he opens the app for the first time
+        presentIntroView()
+        
+        //load table data
         readScannedObjects()
     }
     
@@ -34,6 +39,33 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func readScannedObjects(){
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Media")
+        //3
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            scans = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
+        //make sure that table data is reloaded after successfully loading core data
+        //because you could have new entries in coredata afer scanning new entry
+        table.reloadData()
+    }
+    
+    func presentIntroView() {
+        if !introShown {
+            self.performSegueWithIdentifier("toIntroSlides", sender: self)
+            introShown = true
+        }
+    }
+
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -136,12 +168,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
         if segue.identifier == "openSavedScan" {
             if let indexPath = table.indexPathForSelectedRow {
                 let destinationVC = segue.destinationViewController as! DetailViewController
@@ -151,25 +178,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let destinationVC = segue.destinationViewController as! ScannerViewController
             destinationVC.homeDelegate = self
         }
-    }
-    
-    func readScannedObjects(){
-        //1
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        //2
-        let fetchRequest = NSFetchRequest(entityName: "Media")
-        //3
-        do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            scans = results as! [NSManagedObject]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        //make sure that table data is reloaded after successfully loading core data
-        //because you could have new entries in coredata afer scanning new entry
-        table.reloadData()
     }
     
 }

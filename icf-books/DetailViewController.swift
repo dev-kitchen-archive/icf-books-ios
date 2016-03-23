@@ -15,7 +15,7 @@ enum GetJSONDataError: ErrorType {
     case NoInternet, EmptyData, ParsingError, NoError
 }
 
-class DetailViewController: UIViewController {
+class DetailViewController: MasterViewController {
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailTeaser: UILabel!
     @IBOutlet weak var detailVideo: UILabel!

@@ -14,9 +14,9 @@ class GetJson {
      Requests data from the instances defined URL.
      - parameter completionHandler: is a function responsible to proceed with the retrieved data.
      */
-    static func retrieveDictFrom(url: NSURL, completionHandler: (jsonDict: NSDictionary, error: GetJSONDataError?) -> ()) {
+    static func retrieveDictFrom(url: NSURL, completionHandler: (jsonDict: NSDictionary?, errorMessage: String?) -> ()) {
         var retrievedData: NSDictionary?
-        var jsonError: GetJSONDataError?
+        var errorString: String? = nil
 
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url) {
@@ -28,22 +28,23 @@ class GetJson {
                     
                     if retrievedData == nil {
                         print("InvalidData")
-                        jsonError = GetJSONDataError.EmptyData
+                        errorString = "Invalid Data"
                     }
                 } else {
                     print("NoInternet")
-                    jsonError = GetJSONDataError.NoInternet
+                    errorString = "No Internet"
                 }
                 
             } catch (let message) {
                 print("ParsingError")
-                jsonError = GetJSONDataError.ParsingError
+                errorString = "Parsing Error"
             }
             
-            if retrievedData == nil {
-                retrievedData = NSDictionary()
+            if retrievedData != nil && retrievedData!.valueForKey("status") as! String != "404" {
+                let error = retrievedData?.valueForKey("No Data @ given URL")
             }
-            completionHandler(jsonDict: retrievedData!, error: jsonError)
+            
+            completionHandler(jsonDict: retrievedData, errorMessage: errorString)
         }
         
         task.resume()

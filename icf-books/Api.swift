@@ -8,11 +8,10 @@
 
 import Foundation
 
-
 class Api {
-    static var dct = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Config", ofType: "plist")!)
-    static var prodConfigs = dct!["AppConfig_prod"] as! NSDictionary
-    static var baseUrl = prodConfigs["base_url"] as! NSString
+    static let dct = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Config", ofType: "plist")!)
+    static let prodConfigs = dct!["AppConfig_prod"] as! NSDictionary
+    static var baseUrl = prodConfigs["base_url"] as! String
     
     static func idFromUrl(urlString:String) -> String {
         let strWithoutExtension = urlString.stringByReplacingOccurrencesOfString(".json", withString: "")
