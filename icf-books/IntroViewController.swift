@@ -11,12 +11,13 @@ import UIKit
 class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var pages =  [("Title 1", "imgName1", "Desc 1"),
-                    ("Title 2", "imgName2", "Desc 2"),
-                    ("Title 3", "imgName3", "Desc 3"),
-                    ("Title 4", "imgName4", "Desc 4")]
-    var cells = [UICollectionViewCell]()
-    var lastSeenCell: UICollectionViewCell?
+    var data =  [["WILLKOMMEN", "imgName1", "Erweitere dein Buch mit Zusatzinfos, Bildern und Videos."],
+                 ["SO GEHTS", "imgName2", "Scanne die QR-Codes im Buch um die Inhalte anzuzeigen."],
+                 ["WIEDERFINDEN", "imgName3", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."],
+                 ["WIEDERFINDEN", "imgName3", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."]]
+    var cells = [IntroSliderCell]()
+    var currentPosition = 0
+    var createdOnce = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,16 +44,10 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
     }
     
     @IBAction func nextButtonAction(sender: AnyObject) {
-        let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
-        let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint)
-        if currentIndexPath!.row + 1 < cells.count {
-            let nextIndexPath = collectionView.indexPathForCell(cells[currentIndexPath!.row + 1])
-            if nextIndexPath != nil {
-                collectionView.scrollToItemAtIndexPath(nextIndexPath!, atScrollPosition: .CenteredHorizontally, animated: true)
-            } else {
-                collectionView.scrollToItemAtIndexPath(collectionView.indexPathForCell(lastSeenCell!)!, atScrollPosition: .CenteredHorizontally, animated: true)
-            }
-            
+        //scrolling to next cell on the right by Cell
+        //of close modal if you are on last page
+        if currentPosition + 1 < cells.count {
+            defineCenterCell(asNextCellOnTheRight: true)
         } else {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -73,18 +68,22 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
     // This extension allows the cell to deliver the data to its containing CollectionView cells through the delegated Functions
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count
+        return data.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pageCell", forIndexPath: indexPath)
-        cells.append(cell)
-        
-        if cells.count > 0 {
-            lastSeenCell = cells[0]
+        if(!createdOnce) {
+            for i in 0..<data.count {
+                let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pageCell", forIndexPath: NSIndexPath(forRow: i, inSection: 0)) as! IntroSliderCell
+                cell.cellTitle.text = data[indexPath.row][0]
+                //cell.cellImage = data[indexPath.row].1
+                cell.cellDescription.text = data[indexPath.row][2]
+                cells.append(cell)
+            }
+            createdOnce = true
         }
-        return cell
+        
+        return cells[indexPath.row]
     }
     
     
@@ -96,14 +95,48 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
     }
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
-        if let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint) {
-            collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
-        }
-//        else {
-//            collectionView.scrollToItemAtIndexPath(collectionView.indexPathForCell(lastSeenCell!)!, atScrollPosition: .CenteredHorizontally, animated: true)
-//        }
+        defineCenterCell()
         
+    }
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        defineCenterCell()
+    }
+    
+    func defineCenterCell(asNextCellOnTheRight nextCell:Bool = false) {
+        if !nextCell {
+            
+            //scrolling to the center of the current cell by indexPath
+            let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
+            let leftPoint = CGPointMake(0, self.collectionView.center.y + self.collectionView.contentOffset.y)
+            if let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint) {
+                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+                setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
+            } else if let currentIndexPath = collectionView.indexPathForItemAtPoint(leftPoint) {
+                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+                setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
+            }
+        } else {
+            
+            //scrolling to next cell on the right by Cell
+            //of close modal if you are on last page
+            if currentPosition + 1 < cells.count {
+                if let nextCellIndexPath = collectionView.indexPathForCell(cells[currentPosition + 1]) {
+                    collectionView.scrollToItemAtIndexPath(nextCellIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+                    setCurrentCell(collectionView.cellForItemAtIndexPath(nextCellIndexPath)!)
+                }
+            }
+        }
+    }
+    
+    func setCurrentCell(cell:UICollectionViewCell) {
+        let cl = cell as! IntroSliderCell
+        
+        if let i = cells.indexOf(cl) {
+            currentPosition = i
+            print("cell position \(i) of \(cells.count)")
+        } else {
+            print("cell not in created array")
+        }
     }
     
     func getItemSize() -> CGSize {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Yr-Tq-YpM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Yr-Tq-YpM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -58,41 +58,39 @@
                                                     <rect key="frame" x="10" y="28" width="537" height="405"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_table_info" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-OH-9QC">
-                                                            <rect key="frame" x="8" y="66" width="521" height="270"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="270" id="zHV-tW-yRH"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="8" y="96" width="521" height="213"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILLKOMMEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-77-ena">
-                                                            <rect key="frame" x="8" y="8" width="521" height="50"/>
+                                                            <rect key="frame" x="8" y="8" width="521" height="80"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="4sa-SZ-jrv"/>
+                                                                <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
                                                             <color key="textColor" red="0.14901961389999999" green="0.5411764979" blue="0.70588237050000002" alpha="0.94902038570000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-zO-6jr">
-                                                            <rect key="frame" x="8" y="342" width="521" height="55"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-zO-6jr">
+                                                            <rect key="frame" x="8" y="317" width="521" height="80"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="55" id="Z6x-ha-I50"/>
+                                                                <constraint firstAttribute="height" constant="80" id="Z6x-ha-I50"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Fnd-77-ena" secondAttribute="trailing" constant="8" id="3wN-oj-scd"/>
-                                                        <constraint firstItem="yGV-OH-9QC" firstAttribute="leading" secondItem="xhp-kK-o1E" secondAttribute="leading" constant="8" id="5h7-Hm-vsi"/>
                                                         <constraint firstAttribute="trailing" secondItem="dfI-zO-6jr" secondAttribute="trailing" constant="8" id="Egz-ud-3sk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="yGV-OH-9QC" secondAttribute="trailing" constant="8" id="hXC-Ik-6XX"/>
+                                                        <constraint firstItem="yGV-OH-9QC" firstAttribute="leading" secondItem="xhp-kK-o1E" secondAttribute="leading" constant="8" id="EjW-Yb-5Qe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yGV-OH-9QC" secondAttribute="trailing" constant="8" id="Ft8-up-iUO"/>
+                                                        <constraint firstItem="dfI-zO-6jr" firstAttribute="top" secondItem="yGV-OH-9QC" secondAttribute="bottom" constant="8" id="W8R-5p-qoc"/>
+                                                        <constraint firstItem="yGV-OH-9QC" firstAttribute="top" secondItem="Fnd-77-ena" secondAttribute="bottom" constant="8" id="WJ5-HF-3bg"/>
                                                         <constraint firstItem="Fnd-77-ena" firstAttribute="leading" secondItem="xhp-kK-o1E" secondAttribute="leading" constant="8" id="k7u-a9-0eX"/>
                                                         <constraint firstItem="Fnd-77-ena" firstAttribute="top" secondItem="xhp-kK-o1E" secondAttribute="top" constant="8" id="m4z-g5-BW9"/>
                                                         <constraint firstItem="dfI-zO-6jr" firstAttribute="leading" secondItem="xhp-kK-o1E" secondAttribute="leading" constant="8" id="mW5-ZF-qzW"/>
                                                         <constraint firstAttribute="bottom" secondItem="dfI-zO-6jr" secondAttribute="bottom" constant="8" id="rnF-Zd-e6G"/>
-                                                        <constraint firstItem="yGV-OH-9QC" firstAttribute="top" secondItem="Fnd-77-ena" secondAttribute="bottom" constant="8" id="yOZ-uF-EgW"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -182,7 +180,7 @@
                                     <constraint firstAttribute="height" constant="45" id="YHW-ZG-DEf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-kv-2Br">
@@ -195,7 +193,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viel Spass mit deinem interaktiven Buch. Swipe nach rechts für erklärung oder überspringe das Intro." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be5-ej-9F4">
                                 <rect key="frame" x="20" y="420" width="560" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -261,13 +259,13 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="wWL-AS-hPS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klicke auf den Sann Button und erfasse den im Buch abgebildeten QR-Code. Danach wird der zusätzliche Content geladen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-am-zLM">
                                 <rect key="frame" x="20" y="420" width="560" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_scan" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-6N-IQV">
@@ -328,13 +326,13 @@
                                     <constraint firstAttribute="height" constant="45" id="5SN-L3-MqD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nichts wie los, Scanne Deinen ersten QR-Code! (Load homeview and open scanner)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYL-F0-IJv">
                                 <rect key="frame" x="20" y="420" width="560" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-vL-7bn">
