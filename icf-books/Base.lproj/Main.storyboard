@@ -148,7 +148,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hST-pK-KPw">
             <objects>
-                <navigationController storyboardIdentifier="rootView" id="yQp-hb-2Pm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootView" id="yQp-hb-2Pm" customClass="NavigationController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdh-zd-IYP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
