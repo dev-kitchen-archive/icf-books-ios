@@ -6,6 +6,19 @@
   Copyright © 2016 devkitchen. All rights reserved.
 */
 
+//Intro Slides
+"INTRO_WELCOME_TITLE" = "WELCOME";
+"INTRO_WELCOME_DESCRIPTION" = "Extend your reading experiance with extra content like pictures and movies.";
+"INTRO_WELCOME_IMAGE" = "intro_welcome";
+
+"INTRO_SCAN_TITLE" = "HOW IT WORKS";
+"INTRO_SCAN_DESCRIPTION" = "Scan a QR Code the access the linked content.";
+"INTRO_SCAN_IMAGE" = "intro_scan";
+
+"INTRO_FIND_TITLE" = "REVIEW";
+"INTRO_FIND_DESCRIPTION" = "After you scanned a content once you can alway review it again.";
+"INTRO_FIND_IMAGE" = "intro_find";
+
 //SCANNER
 "QR_SCAN" = "Scan the QR-Code";
 "QR_RECOGNIZED" = "QR-Code recognized";
@@ -13,3 +26,7 @@
 "QR_INVALID" = "QR-Code is not from valid source";
 "LOAD_DATA" = "Data is beeing loaded";
 "SAVED_DATA" = "Data was successfully saved";
+
+//General
+"BUTTON_NEXT" = "Next";
+"BUTTON_START" = "Start now";

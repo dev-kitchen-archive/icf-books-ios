@@ -62,7 +62,7 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_table_info" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-OH-9QC">
                                                             <rect key="frame" x="8" y="96" width="521" height="213"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-zO-6jr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-zO-6jr">
                                                             <rect key="frame" x="8" y="317" width="521" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="Z6x-ha-I50"/>
@@ -71,7 +71,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILLKOMMEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-77-ena">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-77-ena">
                                                             <rect key="frame" x="8" y="8" width="521" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
@@ -128,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="VaP-iq-F8J" id="LQd-GW-X51"/>
+                        <outlet property="nextButton" destination="nLx-oX-g0d" id="Lx5-bg-420"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yV-ng-KQc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,18 +10,24 @@ import UIKit
 
 class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    @IBOutlet weak var nextButton: UIButton!
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    var data =  [["WILLKOMMEN", "intro_welcome", "Erweitere dein Buch mit Zusatzinfos, Bildern und Videos."],
-                 ["SO GEHTS", "intro_scan", "Scanne die QR-Codes im Buch um die Inhalte anzuzeigen."],
-                 ["WIEDERFINDEN", "intro_find", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."],
-                 ["WIEDERFINDEN", "intro_find", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."]]
+    var data = [[NSLocalizedString("INTRO_WELCOME_TITLE", comment:"Welcome Title"), NSLocalizedString("INTRO_WELCOME_IMAGE", comment:"Welcome image"), NSLocalizedString("INTRO_WELCOME_DESCRIPTION", comment:"Welcome description")],
+                [NSLocalizedString("INTRO_SCAN_TITLE", comment:"SCAN Title"), NSLocalizedString("INTRO_SCAN_IMAGE", comment:"SCAN image"), NSLocalizedString("INTRO_SCAN_DESCRIPTION", comment:"SCAN description")],
+                [NSLocalizedString("INTRO_FIND_TITLE", comment:"FIND Title"), NSLocalizedString("INTRO_FIND_IMAGE", comment:"FIND image"), NSLocalizedString("INTRO_FIND_DESCRIPTION", comment:"FIND description")]]
+    
     var cells = [IntroSliderCell]()
-    var currentPosition = 0
+    var currentPosition = 0 {
+        didSet { positionChangedListener() }
+    }
     var createdOnce = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nextButton.setTitle(NSLocalizedString("BUTTON_NEXT", comment:"Button to next page"), forState: .Normal)
+            
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = Color.accent
@@ -52,6 +58,14 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
+    }
+    
+    func positionChangedListener() {
+        if currentPosition + 1 == data.count {
+            nextButton.setTitle(NSLocalizedString("BUTTON_START", comment:"Button that closes slides"), forState: .Normal)
+        } else {
+            nextButton.setTitle(NSLocalizedString("BUTTON_NEXT", comment:"Button to next page"), forState: .Normal)
+        }
     }
     
     /*
