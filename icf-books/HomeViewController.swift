@@ -12,16 +12,19 @@ import CoreData
 class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
+    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     var scans = [NSManagedObject]()
     var chaptersCount = 1
-    var introShown = false
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         //show intro to user, if he opens the app for the first time
-        //presentIntroView()
+        
+        if !self.userDefaults.boolForKey("appAlreadyUsed") {
+            presentIntroView()
+        }
         
         //load table data
         readScannedObjects()
@@ -60,10 +63,9 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     }
     
     func presentIntroView() {
-        if !introShown {
-            self.performSegueWithIdentifier("toIntroSlides", sender: self)
-            introShown = true
-        }
+        userDefaults.setValue(true, forKey: "appAlreadyUsed")
+        userDefaults.synchronize()
+        self.performSegueWithIdentifier("toIntroSlides", sender: self)
     }
 
     

@@ -36,13 +36,19 @@ class AboutViewController: UITableViewController {
             
             let fetchRequest = NSFetchRequest(entityName: "Media")
             let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-            
+
             do {
                 try managedContext.executeRequest(deleteRequest)
                 try managedContext.save()
             } catch let error as NSError {
                 // TODO: handle the error
             }
+            
+            
+            //make intro available again
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.removeObjectForKey("appAlreadyUsed")
+            userDefaults.synchronize()
         }
         alertController.addAction(cancelAction)
         alertController.addAction(destroyAction)

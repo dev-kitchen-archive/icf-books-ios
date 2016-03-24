@@ -6,6 +6,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Das Buch-->
         <scene sceneID="EZE-UC-f1V">
@@ -73,6 +78,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="7k1-ND-wqu"/>
                                                 <constraint firstAttribute="width" constant="98" id="EW2-PB-Z3j"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                             <state key="normal" title="Cancel"/>
                                             <connections>
                                                 <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>

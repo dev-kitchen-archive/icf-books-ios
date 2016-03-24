@@ -8,6 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Montserrat-Light.otf">
             <string>Montserrat-Light</string>
+            <string>Montserrat-Light</string>
         </mutableArray>
         <mutableArray key="Montserrat-UltraLight.otf">
             <string>Montserrat-UltraLight</string>
@@ -31,7 +32,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="NMD-hx-qLK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonAction:" destination="8Yr-Tq-YpM" eventType="touchUpInside" id="csY-ut-Fwm"/>
