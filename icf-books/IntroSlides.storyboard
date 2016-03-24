@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="0.0" maxY="0.0"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uBg-cL-usQ" customClass="CenterCellCollectionViewFlowLayout" customModule="icf_books" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uBg-cL-usQ">
                                     <size key="itemSize" width="562" height="529"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -60,15 +60,6 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_table_info" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-OH-9QC">
                                                             <rect key="frame" x="8" y="96" width="521" height="213"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILLKOMMEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-77-ena">
-                                                            <rect key="frame" x="8" y="8" width="521" height="80"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
-                                                            <color key="textColor" red="0.14901961389999999" green="0.5411764979" blue="0.70588237050000002" alpha="0.94902038570000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-zO-6jr">
                                                             <rect key="frame" x="8" y="317" width="521" height="80"/>
                                                             <constraints>
@@ -76,6 +67,15 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WILLKOMMEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-77-ena">
+                                                            <rect key="frame" x="8" y="8" width="521" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
+                                                            <color key="textColor" red="0.14901961389999999" green="0.5411764979" blue="0.70588237050000002" alpha="0.94902038570000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -132,239 +132,8 @@
             </objects>
             <point key="canvasLocation" x="-885" y="-1904"/>
         </scene>
-        <!--Intro Page View Controller-->
-        <scene sceneID="YYT-BB-qu6">
-            <objects>
-                <pageViewController storyboardIdentifier="introSliderr" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="TKA-wM-wlF" customClass="IntroPageViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KbT-n6-C75" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-867" y="-1164"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="vdT-Jz-6z7">
-            <objects>
-                <viewController storyboardIdentifier="infoPageOne" id="tHF-6r-NL8" customClass="PageViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f2V-1m-h4Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="W2E-Vg-chE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uk7-RJ-6xc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elS-PB-KOk">
-                                <rect key="frame" x="550" y="550" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="P2Y-un-nZI"/>
-                                    <constraint firstAttribute="width" constant="30" id="Pqc-0y-hDu"/>
-                                </constraints>
-                                <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="nextSlideButton:" destination="tHF-6r-NL8" eventType="touchUpInside" id="YLX-Ae-TB4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3US-Kj-Khs">
-                                <rect key="frame" x="285" y="550" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Ohd-d4-jrk"/>
-                                    <constraint firstAttribute="height" constant="30" id="aax-oK-USm"/>
-                                </constraints>
-                                <state key="normal" title="skip"/>
-                                <connections>
-                                    <action selector="finishIntroButton:" destination="tHF-6r-NL8" eventType="touchUpInside" id="XA0-iz-fcB"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wilkommen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cb-dh-tsd">
-                                <rect key="frame" x="20" y="65" width="560" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="YHW-ZG-DEf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-kv-2Br">
-                                <rect key="frame" x="180" y="150" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="0TQ-Mc-EVf"/>
-                                    <constraint firstAttribute="height" constant="240" id="KOC-Y8-4vz"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viel Spass mit deinem interaktiven Buch. Swipe nach rechts für erklärung oder überspringe das Intro." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be5-ej-9F4">
-                                <rect key="frame" x="20" y="420" width="560" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="be5-ej-9F4" firstAttribute="trailing" secondItem="uk7-RJ-6xc" secondAttribute="trailingMargin" id="47H-rd-wFt"/>
-                            <constraint firstItem="GQw-kv-2Br" firstAttribute="top" secondItem="1cb-dh-tsd" secondAttribute="bottom" constant="40" id="INJ-ZG-Lwa"/>
-                            <constraint firstItem="be5-ej-9F4" firstAttribute="leading" secondItem="uk7-RJ-6xc" secondAttribute="leadingMargin" id="MAk-29-OJe"/>
-                            <constraint firstItem="1cb-dh-tsd" firstAttribute="trailing" secondItem="uk7-RJ-6xc" secondAttribute="trailingMargin" id="RrD-mI-vJQ"/>
-                            <constraint firstItem="be5-ej-9F4" firstAttribute="top" secondItem="GQw-kv-2Br" secondAttribute="bottom" constant="30" id="W73-xS-U1I"/>
-                            <constraint firstItem="3US-Kj-Khs" firstAttribute="centerX" secondItem="uk7-RJ-6xc" secondAttribute="centerX" id="Zfv-Az-Kya"/>
-                            <constraint firstItem="GQw-kv-2Br" firstAttribute="centerX" secondItem="uk7-RJ-6xc" secondAttribute="centerX" id="a4Y-M9-fKE"/>
-                            <constraint firstItem="1cb-dh-tsd" firstAttribute="top" secondItem="f2V-1m-h4Y" secondAttribute="bottom" constant="45" id="d9J-LZ-7Ya"/>
-                            <constraint firstItem="W2E-Vg-chE" firstAttribute="top" secondItem="elS-PB-KOk" secondAttribute="bottom" constant="20" id="fSY-Ds-cnv"/>
-                            <constraint firstItem="W2E-Vg-chE" firstAttribute="top" secondItem="3US-Kj-Khs" secondAttribute="bottom" constant="20" id="ifK-ZV-dKw"/>
-                            <constraint firstItem="elS-PB-KOk" firstAttribute="trailing" secondItem="uk7-RJ-6xc" secondAttribute="trailingMargin" id="qJG-EG-6Et"/>
-                            <constraint firstItem="1cb-dh-tsd" firstAttribute="leading" secondItem="uk7-RJ-6xc" secondAttribute="leadingMargin" id="rZo-lE-WC4"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96f-vb-NnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1533" y="-404"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="zjq-oc-Jw8">
-            <objects>
-                <viewController storyboardIdentifier="infoPageTwo" id="vch-oi-KaB" customClass="PageViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q6m-rq-kLT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yni-LU-RxM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="abH-o6-qz7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-Wx-cTv">
-                                <rect key="frame" x="550" y="550" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Wdh-Kg-vtu"/>
-                                    <constraint firstAttribute="width" constant="30" id="swx-4E-yzC"/>
-                                </constraints>
-                                <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="nextSlideButton:" destination="vch-oi-KaB" eventType="touchUpInside" id="Qb9-rM-86k"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-qi-eT7">
-                                <rect key="frame" x="285" y="550" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0EV-Zr-Puc"/>
-                                    <constraint firstAttribute="width" constant="30" id="Y5t-jX-IjX"/>
-                                </constraints>
-                                <state key="normal" title="skip"/>
-                                <connections>
-                                    <action selector="finishIntroButton:" destination="vch-oi-KaB" eventType="touchUpInside" id="bji-i9-fhz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So funktionierts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIe-he-B4q">
-                                <rect key="frame" x="20" y="65" width="560" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="K2l-L7-Zx0"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="wWL-AS-hPS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klicke auf den Sann Button und erfasse den im Buch abgebildeten QR-Code. Danach wird der zusätzliche Content geladen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-am-zLM">
-                                <rect key="frame" x="20" y="420" width="560" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_scan" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-6N-IQV">
-                                <rect key="frame" x="180" y="150" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rdC-N8-qYq"/>
-                                    <constraint firstAttribute="height" constant="240" id="yXf-JZ-3GB"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Yni-LU-RxM" firstAttribute="top" secondItem="Rko-Wx-cTv" secondAttribute="bottom" constant="20" id="0dI-eD-Qef"/>
-                            <constraint firstItem="Yni-LU-RxM" firstAttribute="top" secondItem="3jH-qi-eT7" secondAttribute="bottom" constant="20" id="6Q9-kA-C8Y"/>
-                            <constraint firstItem="vIe-he-B4q" firstAttribute="trailing" secondItem="abH-o6-qz7" secondAttribute="trailingMargin" id="74H-3c-u4r"/>
-                            <constraint firstItem="vIe-he-B4q" firstAttribute="top" secondItem="Q6m-rq-kLT" secondAttribute="bottom" constant="45" id="8jw-oT-Sia"/>
-                            <constraint firstItem="eoN-6N-IQV" firstAttribute="centerX" secondItem="abH-o6-qz7" secondAttribute="centerX" id="Ysr-zC-UHI"/>
-                            <constraint firstItem="eoN-6N-IQV" firstAttribute="top" secondItem="vIe-he-B4q" secondAttribute="bottom" constant="40" id="Zkh-cW-z1s"/>
-                            <constraint firstItem="jdE-am-zLM" firstAttribute="top" secondItem="eoN-6N-IQV" secondAttribute="bottom" constant="30" id="bFE-ak-9gY"/>
-                            <constraint firstItem="Rko-Wx-cTv" firstAttribute="trailing" secondItem="abH-o6-qz7" secondAttribute="trailingMargin" id="lVh-th-szC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jdE-am-zLM" secondAttribute="trailing" id="pXj-53-Kz2"/>
-                            <constraint firstItem="jdE-am-zLM" firstAttribute="leading" secondItem="abH-o6-qz7" secondAttribute="leadingMargin" id="ue8-Pp-XaV"/>
-                            <constraint firstItem="3jH-qi-eT7" firstAttribute="centerX" secondItem="abH-o6-qz7" secondAttribute="centerX" id="xOv-lr-uDE"/>
-                            <constraint firstItem="vIe-he-B4q" firstAttribute="leading" secondItem="abH-o6-qz7" secondAttribute="leadingMargin" id="zE3-N2-jt4"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PTF-w7-bp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-867" y="-404"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="5Vn-Cz-vjV">
-            <objects>
-                <viewController storyboardIdentifier="infoPageThree" id="pGb-rS-Rru" customClass="PageViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zWl-fj-Bes"/>
-                        <viewControllerLayoutGuide type="bottom" id="e58-N4-gEi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sKo-iL-Yzj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCu-Ys-DtX">
-                                <rect key="frame" x="267" y="550" width="67" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="LC1-og-5jF"/>
-                                    <constraint firstAttribute="height" constant="30" id="cVL-hU-Wp7"/>
-                                </constraints>
-                                <state key="normal" title="los geht's"/>
-                                <connections>
-                                    <action selector="finishIntroButton:" destination="pGb-rS-Rru" eventType="touchUpInside" id="Pa4-bN-KO0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viel Spass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-Cu-vZC">
-                                <rect key="frame" x="20" y="65" width="560" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="5SN-L3-MqD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nichts wie los, Scanne Deinen ersten QR-Code! (Load homeview and open scanner)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYL-F0-IJv">
-                                <rect key="frame" x="20" y="420" width="560" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-vL-7bn">
-                                <rect key="frame" x="180" y="150" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="JgL-gP-ndM"/>
-                                    <constraint firstAttribute="width" constant="240" id="nKN-ix-qyF"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="dR3-Cu-vZC" firstAttribute="trailing" secondItem="sKo-iL-Yzj" secondAttribute="trailingMargin" id="71z-6g-T18"/>
-                            <constraint firstItem="dR3-Cu-vZC" firstAttribute="leading" secondItem="sKo-iL-Yzj" secondAttribute="leadingMargin" id="B2h-d3-G6N"/>
-                            <constraint firstItem="rYL-F0-IJv" firstAttribute="leading" secondItem="sKo-iL-Yzj" secondAttribute="leadingMargin" id="Sca-f4-ykb"/>
-                            <constraint firstItem="rYL-F0-IJv" firstAttribute="top" secondItem="BM7-vL-7bn" secondAttribute="bottom" constant="30" id="Vsr-yX-91i"/>
-                            <constraint firstItem="cCu-Ys-DtX" firstAttribute="centerX" secondItem="sKo-iL-Yzj" secondAttribute="centerX" id="Xhy-wT-CJS"/>
-                            <constraint firstItem="rYL-F0-IJv" firstAttribute="trailing" secondItem="sKo-iL-Yzj" secondAttribute="trailingMargin" id="a6Y-AF-ooc"/>
-                            <constraint firstItem="dR3-Cu-vZC" firstAttribute="top" secondItem="zWl-fj-Bes" secondAttribute="bottom" constant="45" id="aT7-jc-mQc"/>
-                            <constraint firstItem="BM7-vL-7bn" firstAttribute="centerX" secondItem="sKo-iL-Yzj" secondAttribute="centerX" id="aVk-4b-bi0"/>
-                            <constraint firstItem="BM7-vL-7bn" firstAttribute="top" secondItem="dR3-Cu-vZC" secondAttribute="bottom" constant="40" id="vga-mp-xDp"/>
-                            <constraint firstItem="e58-N4-gEi" firstAttribute="top" secondItem="cCu-Ys-DtX" secondAttribute="bottom" constant="20" id="x9u-FS-9Xj"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9oi-ss-0IA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-199" y="-404"/>
-        </scene>
     </scenes>
     <resources>
         <image name="empty_table_info" width="750" height="1334"/>
-        <image name="how_to_scan" width="584" height="584"/>
     </resources>
 </document>
