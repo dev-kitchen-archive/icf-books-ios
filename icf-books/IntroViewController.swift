@@ -18,6 +18,7 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
                 [NSLocalizedString("INTRO_FIND_TITLE", comment:"FIND Title"), NSLocalizedString("INTRO_FIND_IMAGE", comment:"FIND image"), NSLocalizedString("INTRO_FIND_DESCRIPTION", comment:"FIND description")]]
     
     var cells = [IntroSliderCell]()
+    var lastCell:UICollectionViewCell?
     var currentPosition = 0 {
         didSet { positionChangedListener() }
     }
@@ -93,7 +94,12 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
                 cell.cellImage.image = UIImage(named: data[i][1])
                 cell.cellDescription.text = data[i][2]
                 cells.append(cell)
+                
+                if i == 0 {
+                    lastCell = cell
+                }
             }
+            
             createdOnce = true
         }
         
@@ -123,12 +129,10 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
             let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
             let leftPoint = CGPointMake(0, self.collectionView.center.y + self.collectionView.contentOffset.y)
             if let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint) {
-                print("found center cell: ");print(collectionView.cellForItemAtIndexPath(currentIndexPath))
                 setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
                 collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
             } else if let leftIndexPath = collectionView.indexPathForItemAtPoint(leftPoint) {
-                print("found left cell: ");print(collectionView.cellForItemAtIndexPath(leftIndexPath))
-                setCurrentCell(collectionView.cellForItemAtIndexPath(leftIndexPath)!)
+                collectionView.indexPathForCell(lastCell!)
                 collectionView.scrollToItemAtIndexPath(leftIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
             }
         } else {
@@ -146,13 +150,12 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
     
     func setCurrentCell(cell:UICollectionViewCell) {
         let cl = cell as! IntroSliderCell
-        
         if let i = cells.indexOf(cl) {
             currentPosition = i
-            print("cell position \(i) of \(cells.count)")
-        } else {
-            print("cell not in created array")
         }
+        
+        //might be needed as fallback cell for new swipe that could fail if no new cell is found
+        lastCell = cell
     }
     
     func getItemSize() -> CGSize {
