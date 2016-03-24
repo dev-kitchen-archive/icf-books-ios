@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="223.5" y="-468"/>
         </scene>
-        <!--DetailView-->
+        <!--DetailTableView-->
         <scene sceneID="dP3-Do-all">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="detailPages" storyboardName="DetailPages" referencedIdentifier="DetailView" id="QTy-py-b2y" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="detailPages" storyboardName="DetailPages" referencedIdentifier="DetailTableView" id="QTy-py-b2y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19D-QF-o0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="221.5" y="-423"/>

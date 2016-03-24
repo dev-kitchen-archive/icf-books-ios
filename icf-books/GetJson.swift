@@ -40,7 +40,7 @@ class GetJson {
                 errorString = "Parsing Error"
             }
             
-            if retrievedData != nil && retrievedData!.valueForKey("status") as! String != "404" {
+            if (response as! NSHTTPURLResponse).statusCode == 404 {
                 let error = retrievedData?.valueForKey("No Data @ given URL")
             }
             

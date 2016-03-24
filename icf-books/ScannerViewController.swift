@@ -47,8 +47,11 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         if scannedString.rangeOfString(Api.baseUrl as String) != nil {
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
-            if Media.getById(Api.idFromUrl(scannedString)) != nil {
+            if let media = Media.getById(Api.idFromUrl(scannedString)){
                 infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
+                
+                //as this media content is already available open the detail page
+                openDetailViewForMedia(withId: media.valueForKey("id") as! String)
             } else {
                 
                 infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
@@ -83,16 +86,21 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     
     func persistObject(objectToSave:NSDictionary) {
         if Media.saveNewEntity(objectToSave) {
-            let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailView") as! DetailViewController
-            vc.scan = Media.getById(objectToSave.valueForKey("id") as! String)
-            self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
-            self.dismissViewControllerAnimated(true, completion: nil)
+            openDetailViewForMedia(withId: objectToSave.valueForKey("id") as! String)
         } else {
             infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was successfully saved")
         }
 
     }
+    
+    func openDetailViewForMedia(withId id:String) {
+        let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("DetailTableView") as! DetailTableViewController
+        vc.scan = Media.getById(id)
+        self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     /*
         camera view appending to existing layout from here

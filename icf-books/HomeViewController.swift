@@ -21,7 +21,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         super.viewWillAppear(animated)
         
         //show intro to user, if he opens the app for the first time
-        presentIntroView()
+        //presentIntroView()
         
         //load table data
         readScannedObjects()
@@ -171,7 +171,10 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "openSavedScan" {
             if let indexPath = table.indexPathForSelectedRow {
-                let destinationVC = segue.destinationViewController as! DetailViewController
+//                let destinationVC = segue.destinationViewController as! DetailViewController
+//                destinationVC.scan = scans[indexPath.row]
+                
+                let destinationVC = segue.destinationViewController as! DetailTableViewController
                 destinationVC.scan = scans[indexPath.row]
             }
         } else if segue.identifier == "openScanner" {

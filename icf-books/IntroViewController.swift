@@ -109,11 +109,13 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
             let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
             let leftPoint = CGPointMake(0, self.collectionView.center.y + self.collectionView.contentOffset.y)
             if let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint) {
-                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+                print("found center: ");print(currentIndexPath)
                 setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
+                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
             } else if let currentIndexPath = collectionView.indexPathForItemAtPoint(leftPoint) {
-                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+                print("found left: ");print(currentIndexPath)
                 setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
+                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
             }
         } else {
             

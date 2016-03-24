@@ -11,6 +11,10 @@
 		E1032A931C7AFD0B00EAB4E3 /* AboutApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032A951C7AFD0B00EAB4E3 /* AboutApp.storyboard */; };
 		E1032A9B1C7AFE9C00EAB4E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */; };
 		E1032A9F1C7AFFCC00EAB4E3 /* DetailPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032AA11C7AFFCC00EAB4E3 /* DetailPages.storyboard */; };
+		E134EB4C1CA4892800D3B283 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */; };
+		E134EB4E1CA48DC200D3B283 /* DetailTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB4D1CA48DC200D3B283 /* DetailTitleCell.swift */; };
+		E134EB501CA48DE600D3B283 /* DetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB4F1CA48DE600D3B283 /* DetailDescriptionCell.swift */; };
+		E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB511CA48DF300D3B283 /* DetailMovieCell.swift */; };
 		E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14611CA29155002EB7CA /* IntroViewController.swift */; };
 		E13F14661CA2B0CD002EB7CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14651CA2B0CD002EB7CA /* Color.swift */; };
 		E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14671CA2B394002EB7CA /* MasterViewController.swift */; };
@@ -30,7 +34,6 @@
 		E18589551C734F4800378011 /* icf_booksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589541C734F4800378011 /* icf_booksUITests.swift */; };
 		E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589621C737C8500378011 /* ProgressTableViewCell.swift */; };
 		E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589641C737CD600378011 /* ContentTableViewCell.swift */; };
-		E18589671C738A3400378011 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589661C738A3400378011 /* DetailViewController.swift */; };
 		E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */; };
 		E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589731C75CFD400378011 /* ScannerViewController.swift */; };
 		E18589761C76223000378011 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589751C76223000378011 /* GetJson.swift */; };
@@ -66,6 +69,10 @@
 		E1032A9E1C7AFE9F00EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1032AA01C7AFFCC00EAB4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DetailPages.storyboard; sourceTree = "<group>"; };
 		E1032AA31C7AFFCF00EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/DetailPages.strings; sourceTree = "<group>"; };
+		E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		E134EB4D1CA48DC200D3B283 /* DetailTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTitleCell.swift; sourceTree = "<group>"; };
+		E134EB4F1CA48DE600D3B283 /* DetailDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDescriptionCell.swift; sourceTree = "<group>"; };
+		E134EB511CA48DF300D3B283 /* DetailMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMovieCell.swift; sourceTree = "<group>"; };
 		E13F14611CA29155002EB7CA /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E13F14651CA2B0CD002EB7CA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E13F14671CA2B394002EB7CA /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +98,6 @@
 		E18589561C734F4800378011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E18589621C737C8500378011 /* ProgressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressTableViewCell.swift; sourceTree = "<group>"; };
 		E18589641C737CD600378011 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
-		E18589661C738A3400378011 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoImageTableViewCell.swift; sourceTree = "<group>"; };
 		E18589731C75CFD400378011 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		E18589751C76223000378011 /* GetJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 				E18589641C737CD600378011 /* ContentTableViewCell.swift */,
 				E18589681C74ABD300378011 /* InfoImageTableViewCell.swift */,
 				E18589621C737C8500378011 /* ProgressTableViewCell.swift */,
+				E134EB4D1CA48DC200D3B283 /* DetailTitleCell.swift */,
+				E134EB4F1CA48DE600D3B283 /* DetailDescriptionCell.swift */,
+				E134EB511CA48DF300D3B283 /* DetailMovieCell.swift */,
 				E13F146E1CA2B951002EB7CA /* IntroSliderCell.swift */,
 			);
 			name = Cells;
@@ -218,7 +227,7 @@
 			children = (
 				E13F14671CA2B394002EB7CA /* MasterViewController.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
-				E18589661C738A3400378011 /* DetailViewController.swift */,
+				E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */,
 				E18589731C75CFD400378011 /* ScannerViewController.swift */,
 				E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */,
 				E13F14611CA29155002EB7CA /* IntroViewController.swift */,
@@ -396,12 +405,15 @@
 				E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */,
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
 				E15FBBB01C791E9A004C444B /* Api.swift in Sources */,
+				E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */,
 				E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */,
 				E18589691C74ABD300378011 /* InfoImageTableViewCell.swift in Sources */,
+				E134EB501CA48DE600D3B283 /* DetailDescriptionCell.swift in Sources */,
 				E13F14661CA2B0CD002EB7CA /* Color.swift in Sources */,
-				E18589671C738A3400378011 /* DetailViewController.swift in Sources */,
+				E134EB4E1CA48DC200D3B283 /* DetailTitleCell.swift in Sources */,
 				E18589791C766FB200378011 /* ParseMedia.swift in Sources */,
 				E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */,
+				E134EB4C1CA4892800D3B283 /* DetailTableViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
 				E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */,
