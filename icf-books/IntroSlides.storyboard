@@ -77,7 +77,7 @@
                                                                 <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
-                                                            <color key="textColor" red="0.14901961389999999" green="0.5411764979" blue="0.70588237050000002" alpha="0.94902038570000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.11111111111111116" green="0.11111111111111116" blue="0.11111111111111116" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>

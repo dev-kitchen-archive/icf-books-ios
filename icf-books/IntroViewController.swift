@@ -11,10 +11,10 @@ import UIKit
 class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var data =  [["WILLKOMMEN", "imgName1", "Erweitere dein Buch mit Zusatzinfos, Bildern und Videos."],
-                 ["SO GEHTS", "imgName2", "Scanne die QR-Codes im Buch um die Inhalte anzuzeigen."],
-                 ["WIEDERFINDEN", "imgName3", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."],
-                 ["WIEDERFINDEN", "imgName3", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."]]
+    var data =  [["WILLKOMMEN", "intro_welcome", "Erweitere dein Buch mit Zusatzinfos, Bildern und Videos."],
+                 ["SO GEHTS", "intro_scan", "Scanne die QR-Codes im Buch um die Inhalte anzuzeigen."],
+                 ["WIEDERFINDEN", "intro_find", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."],
+                 ["WIEDERFINDEN", "intro_find", "Einmal gescannte Inhalte kannst du jederzeit wieder anzeigen."]]
     var cells = [IntroSliderCell]()
     var currentPosition = 0
     var createdOnce = false
@@ -75,9 +75,9 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
         if(!createdOnce) {
             for i in 0..<data.count {
                 let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pageCell", forIndexPath: NSIndexPath(forRow: i, inSection: 0)) as! IntroSliderCell
-                cell.cellTitle.text = data[indexPath.row][0]
-                //cell.cellImage = data[indexPath.row].1
-                cell.cellDescription.text = data[indexPath.row][2]
+                cell.cellTitle.text = data[i][0]
+                cell.cellImage.image = UIImage(named: data[i][1])
+                cell.cellDescription.text = data[i][2]
                 cells.append(cell)
             }
             createdOnce = true
@@ -109,13 +109,13 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
             let centerPoint = CGPointMake(self.collectionView.center.x + self.collectionView.contentOffset.x, self.collectionView.center.y + self.collectionView.contentOffset.y)
             let leftPoint = CGPointMake(0, self.collectionView.center.y + self.collectionView.contentOffset.y)
             if let currentIndexPath = collectionView.indexPathForItemAtPoint(centerPoint) {
-                print("found center: ");print(currentIndexPath)
+                print("found center cell: ");print(collectionView.cellForItemAtIndexPath(currentIndexPath))
                 setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
                 collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
-            } else if let currentIndexPath = collectionView.indexPathForItemAtPoint(leftPoint) {
-                print("found left: ");print(currentIndexPath)
-                setCurrentCell(collectionView.cellForItemAtIndexPath(currentIndexPath)!)
-                collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+            } else if let leftIndexPath = collectionView.indexPathForItemAtPoint(leftPoint) {
+                print("found left cell: ");print(collectionView.cellForItemAtIndexPath(leftIndexPath))
+                setCurrentCell(collectionView.cellForItemAtIndexPath(leftIndexPath)!)
+                collectionView.scrollToItemAtIndexPath(leftIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
             }
         } else {
             
