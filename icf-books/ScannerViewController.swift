@@ -71,15 +71,29 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     }
     
     func dataRetrieve(scannedURL: NSURL) {
-        GetJson.retrieveDictFrom(scannedURL, completionHandler: { (jsonDict:NSDictionary?, errorMessage:String?) in
+        //ensure to ask API for JSON and not HTML view
+        var url = scannedURL
+        if !scannedURL.absoluteString.hasSuffix(".json") {
+            var jsonUrl = scannedURL.absoluteString
+            jsonUrl = jsonUrl + ".json"
+            url = NSURL(string: jsonUrl)!
+        }
+        
+        //pass location of JSON Data to retrieve
+        GetJson.retrieveDictFrom(url, completionHandler: { (jsonDict:NSDictionary?, errorMessage:String?) in
             if errorMessage == nil {
                 if let media = ParseMedia.fromJson(jsonDict!) {
                     self.persistObject(media)
                 } else {
-                    self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
+                    }
                 }
             } else {
-                self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + errorMessage!
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + errorMessage!
+                }
+                
             }
         })
     }

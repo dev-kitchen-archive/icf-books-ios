@@ -13,9 +13,15 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var data = [[NSLocalizedString("INTRO_WELCOME_TITLE", comment:"Welcome Title"), NSLocalizedString("INTRO_WELCOME_IMAGE", comment:"Welcome image"), NSLocalizedString("INTRO_WELCOME_DESCRIPTION", comment:"Welcome description")],
-                [NSLocalizedString("INTRO_SCAN_TITLE", comment:"SCAN Title"), NSLocalizedString("INTRO_SCAN_IMAGE", comment:"SCAN image"), NSLocalizedString("INTRO_SCAN_DESCRIPTION", comment:"SCAN description")],
-                [NSLocalizedString("INTRO_FIND_TITLE", comment:"FIND Title"), NSLocalizedString("INTRO_FIND_IMAGE", comment:"FIND image"), NSLocalizedString("INTRO_FIND_DESCRIPTION", comment:"FIND description")]]
+    var data = [[NSLocalizedString("INTRO_WELCOME_TITLE", comment:"Welcome Title"),
+                    NSLocalizedString("INTRO_WELCOME_IMAGE", comment:"Welcome image"),
+                    NSLocalizedString("INTRO_WELCOME_DESCRIPTION", comment:"Welcome description")],
+                [NSLocalizedString("INTRO_SCAN_TITLE", comment:"SCAN Title"),
+                    NSLocalizedString("INTRO_SCAN_IMAGE", comment:"SCAN image"),
+                    NSLocalizedString("INTRO_SCAN_DESCRIPTION", comment:"SCAN description")],
+                [NSLocalizedString("INTRO_FIND_TITLE", comment:"FIND Title"),
+                    NSLocalizedString("INTRO_FIND_IMAGE", comment:"FIND image"),
+                    NSLocalizedString("INTRO_FIND_DESCRIPTION", comment:"FIND description")]]
     
     var cells = [IntroSliderCell]()
     var lastCell:UICollectionViewCell?

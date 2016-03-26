@@ -22,7 +22,14 @@ class DetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //add a blurry layer for background image
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        view.insertSubview(blurView, atIndex: 0)
+        
+        //makes the cell as high as it needs to be, regarding the content
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
         
@@ -36,6 +43,8 @@ class DetailTableViewController: UITableViewController {
                 let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                 let movieThumb = movieThumbData.map({UIImage(data: $0)})!
                 tableData.append([MediaType.Movie: movieThumb!])
+                
+                defineTableBackground(movieThumb!)
             }
             if let detailDesc = scan!.valueForKey("teaser") as? String {
                 if detailDesc != "" {
@@ -49,6 +58,14 @@ class DetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func defineTableBackground(img: UIImage){
+        //let imageView = UIImageView(image: img)
+        let imageView = UIImageView(image: UIImage(named: "AboutAppBack"))
+        imageView.contentMode = .Top
+        //ermview.insertSubview(imageView, atIndex: 0)
+        tableView.backgroundView = imageView
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,35 +82,32 @@ class DetailTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tableData.count
+        return tableData.count * 3
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let data = tableData[indexPath.row]
+        let data = tableData[(indexPath.row % tableData.count)]
         let mediaType = data.keys.first
         
         if mediaType == MediaType.Title {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailTitleCell", forIndexPath: indexPath) as? DetailTitleCell
             cell!.detailTitle.text = data[mediaType!] as? String
-            
-            print(data[mediaType!] as? String)
+            cell!.backgroundColor = .clearColor()
             
             return cell!
             
         } else if mediaType == MediaType.Movie {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailMovieCell", forIndexPath: indexPath) as? DetailMovieCell
             cell!.detailMovieThumb.image = data[mediaType!] as? UIImage
-            
-            print(data[mediaType!] as? UIImage)
-            
+            cell!.backgroundColor = .clearColor()
+
             return cell!
             
         } else /*if mediaType == MediaType.Description*/ {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailDescriptionCell", forIndexPath: indexPath) as? DetailDescriptionCell
             cell!.detailDescription.text = data[mediaType!] as? String
-            
-            print(data[mediaType!] as? String)
+            cell!.backgroundColor = .clearColor()
             
             return cell!
         }
