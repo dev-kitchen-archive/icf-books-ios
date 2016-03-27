@@ -63,8 +63,6 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     }
     
     func presentIntroView() {
-        userDefaults.setValue(true, forKey: "appAlreadyUsed")
-        userDefaults.synchronize()
         self.performSegueWithIdentifier("toIntroSlides", sender: self)
     }
 

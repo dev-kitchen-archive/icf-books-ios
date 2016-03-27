@@ -7,6 +7,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Linearicons-Free.ttf">
+            <string>Linearicons-Free</string>
+        </mutableArray>
+        <mutableArray key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </mutableArray>
         <mutableArray key="Montserrat-UltraLight.otf">
             <string>Montserrat-UltraLight</string>
         </mutableArray>
@@ -16,13 +22,48 @@
         <scene sceneID="6Ru-W7-f1l">
             <objects>
                 <tableViewController storyboardIdentifier="DetailTableView" id="2ON-ld-fJL" customClass="DetailTableViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sby-ic-22b">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sby-ic-22b">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailInfoCell" rowHeight="35" id="DZe-fT-CVb" customClass="DetailMovieCell" customModule="icf_books" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="35"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DZe-fT-CVb" id="vaC-qi-0tV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet / Update available / streaming needs data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSJ-Rf-soB">
+                                            <rect key="frame" x="8" y="1" width="549" height="34"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-nG-gdS">
+                                            <rect key="frame" x="565" y="1" width="35" height="35.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="hBa-vW-5S4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Linearicons-Free" family="Linearicons-Free" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Reh-nG-gdS" secondAttribute="trailing" constant="-8" id="6sA-aY-Um4"/>
+                                        <constraint firstItem="Reh-nG-gdS" firstAttribute="top" secondItem="vaC-qi-0tV" secondAttribute="topMargin" constant="-7" id="ETb-0q-jqM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fSJ-Rf-soB" secondAttribute="bottom" constant="-8" id="Fx4-6b-BzL"/>
+                                        <constraint firstItem="fSJ-Rf-soB" firstAttribute="top" secondItem="vaC-qi-0tV" secondAttribute="topMargin" constant="-7" id="SYU-VY-2BB"/>
+                                        <constraint firstItem="Reh-nG-gdS" firstAttribute="leading" secondItem="fSJ-Rf-soB" secondAttribute="trailing" constant="8" id="cOH-GC-zvQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Reh-nG-gdS" secondAttribute="bottom" constant="-9.5" id="hST-Ry-STV"/>
+                                        <constraint firstItem="fSJ-Rf-soB" firstAttribute="leading" secondItem="vaC-qi-0tV" secondAttribute="leadingMargin" id="i4e-sZ-fIo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.91386521464646464" green="0.38195565221791444" blue="0.01786556409342294" alpha="0.1290382179054054" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailTitleCell" rowHeight="70" id="eDa-cz-end" customClass="DetailTitleCell" customModule="icf_books" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="63" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eDa-cz-end" id="QwG-yr-QJS">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
@@ -47,7 +88,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailDescriptionCell" id="3UX-zs-0Gq" customClass="DetailDescriptionCell" customModule="icf_books" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="133" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3UX-zs-0Gq" id="4Iq-cV-602">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -72,7 +113,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailMovieCell" rowHeight="345" id="fO1-XJ-hml" customClass="DetailMovieCell" customModule="icf_books" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="142" width="600" height="345"/>
+                                <rect key="frame" x="0.0" y="177" width="600" height="345"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fO1-XJ-hml" id="zVd-Lp-bG8">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="345"/>

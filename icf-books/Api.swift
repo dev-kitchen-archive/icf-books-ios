@@ -20,8 +20,6 @@ class Api {
         let nsstring = strWithoutSlashes as NSString
         let nsrange = NSRange.init(location: strWithoutSlashes.characters.count - 36, length: 36)
         
-        //let index = strWithoutSlashes.endIndex.
-        
         let id = nsstring.substringWithRange(nsrange)
         return id as String
     }

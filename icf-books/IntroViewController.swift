@@ -10,6 +10,7 @@ import UIKit
 
 class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -62,6 +63,10 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
         if currentPosition + 1 < cells.count {
             defineCenterCell(asNextCellOnTheRight: true)
         } else {
+            //let application know, that the user as seen the intro
+            userDefaults.setValue(true, forKey: "appAlreadyUsed")
+            userDefaults.synchronize()
+            
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         

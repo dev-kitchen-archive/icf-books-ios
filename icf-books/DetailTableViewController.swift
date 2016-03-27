@@ -28,6 +28,11 @@ class DetailTableViewController: UITableViewController {
         let blurView = UIVisualEffectView(effect: blur)
         blurView.frame = self.view.bounds
         view.insertSubview(blurView, atIndex: 0)
+        // TODO: add constrints to blur view
+//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: blurView, attribute: .Top, multiplier: 1.0, constant: 0.0))
+//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: blurView, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
+//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: blurView, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
+//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: blurView, attribute: .Leading, multiplier: 1.0, constant: 0.0))
         
         //makes the cell as high as it needs to be, regarding the content
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -61,10 +66,8 @@ class DetailTableViewController: UITableViewController {
     }
     
     func defineTableBackground(img: UIImage){
-        //let imageView = UIImageView(image: img)
-        let imageView = UIImageView(image: UIImage(named: "AboutAppBack"))
+        let imageView = UIImageView(image: img)
         imageView.contentMode = .Top
-        //ermview.insertSubview(imageView, atIndex: 0)
         tableView.backgroundView = imageView
     }
 
