@@ -48,8 +48,7 @@ class Media: NSManagedObject {
         media.setValue(mediaDict.valueForKey("type"), forKey: "type")
         media.setValue(mediaDict.valueForKey("title"), forKey: "title")
         media.setValue(mediaDict.valueForKey("teaser"), forKey: "teaser")
-        media.setValue(mediaDict.valueForKey("thumbnailUrl"), forKey: "thumbnail_url")
-        media.setValue(mediaDict.valueForKey("fileUrl"), forKey: "file_url")
+        media.setValue(mediaDict.valueForKey("typeData"), forKey: "type_data")
         media.setValue(mediaDict.valueForKey("thumbnailData"), forKey: "thumbnail_data")
         
         do {

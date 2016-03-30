@@ -28,33 +28,77 @@ class DetailTableViewController: UITableViewController {
         let blurView = UIVisualEffectView(effect: blur)
         blurView.frame = self.view.bounds
         view.insertSubview(blurView, atIndex: 0)
-        // TODO: add constrints to blur view
-//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Top, relatedBy: .Equal, toItem: blurView, attribute: .Top, multiplier: 1.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: blurView, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: blurView, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
-//        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: blurView, attribute: .Leading, multiplier: 1.0, constant: 0.0))
         
         //makes the cell as high as it needs to be, regarding the content
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
         
         if scan != nil {
-            if let detailTitle = scan!.valueForKey("title") as? String {
-                if detailTitle != "" {
-                    tableData.append([MediaType.Title: detailTitle])
-                }
-            }
-            if scan!.valueForKey("thumbnail_data") as? NSData != nil {
-                let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
-                let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                tableData.append([MediaType.Movie: movieThumb!])
+            
+            if scan!.valueForKey("type") as! String == "movie" {
+            
+                //["title":title, "description":teaser, "thumbnail":imageData!, "video_url":fileUrl]
                 
-                defineTableBackground(movieThumb!)
-            }
-            if let detailDesc = scan!.valueForKey("teaser") as? String {
-                if detailDesc != "" {
-                    tableData.append([MediaType.Description: detailDesc])
+                let data = scan!.valueForKey("type_data") as! NSData
+                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
+                
+                if let detailTitle = dataDict.valueForKey("title") as? String {
+                    if detailTitle != "" {
+                        tableData.append([MediaType.Title: detailTitle])
+                    }
                 }
+                if scan!.valueForKey("thumbnail_data") as? NSData != nil {
+                    let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
+                    let movieThumb = movieThumbData.map({UIImage(data: $0)})!
+                    tableData.append([MediaType.Movie: movieThumb!])
+                    
+                    defineTableBackground(movieThumb!)
+                }
+                if let detailDesc = dataDict.valueForKey("description") as? String {
+                    if detailDesc != "" {
+                        tableData.append([MediaType.Description: detailDesc])
+                    }
+                }
+                
+                
+            } else if scan!.valueForKey("type") as! String == "two_movies_and_text" {
+                
+                //["title":title, "description1":dataDesc1, "description2":dataDesc2, "thumbnail":imageData!, "video_url1":dataMove1, "video_url2":dataMove2]
+                
+                let data = scan!.valueForKey("type_data") as! NSData
+                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
+                
+                if let detailTitle = dataDict.valueForKey("title") as? String {
+                    if detailTitle != "" {
+                        tableData.append([MediaType.Title: detailTitle])
+                    }
+                }
+                if scan!.valueForKey("thumbnail_data") as? NSData != nil {
+                    let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
+                    let movieThumb = movieThumbData.map({UIImage(data: $0)})!
+                    tableData.append([MediaType.Movie: movieThumb!])
+                    
+                    defineTableBackground(movieThumb!)
+                }
+                if let detailDesc = dataDict.valueForKey("description1") as? String {
+                    if detailDesc != "" {
+                        tableData.append([MediaType.Description: detailDesc])
+                    }
+                }
+                if scan!.valueForKey("thumbnail_data") as? NSData != nil {
+                    let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
+                    let movieThumb = movieThumbData.map({UIImage(data: $0)})!
+                    tableData.append([MediaType.Movie: movieThumb!])
+                    
+                    defineTableBackground(movieThumb!)
+                }
+                if let detailDesc = dataDict.valueForKey("description2") as? String {
+                    if detailDesc != "" {
+                        tableData.append([MediaType.Description: detailDesc])
+                    }
+                }
+                
+                
             }
         }
         
@@ -85,7 +129,7 @@ class DetailTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tableData.count * 3
+        return tableData.count
     }
 
     
@@ -157,8 +201,9 @@ class DetailTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "playVideo" {
-            let urlStr = (Api.baseUrl as String) + (scan!.valueForKey("file_url") as! String)
-            print(urlStr)
+            //let urlStr = (Api.baseUrl as String) + (scan!.valueForKey("file_url") as! String)
+            //-> file url from now on in type_data
+            
             //let url = NSURL(string: urlStr)
             let url = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
             

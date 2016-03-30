@@ -15,17 +15,16 @@
         <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="chapters" inverseEntity="Book" syncable="YES"/>
     </entity>
     <entity name="Media" representedClassName=".Media" syncable="YES">
-        <attribute name="file_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teaser" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbnail_data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="thumbnail_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type_data" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Media" positionX="-137" positionY="-6" width="128" height="150"/>
         <element name="Book" positionX="-315" positionY="-180" width="128" height="133"/>
         <element name="Chapter" positionX="-135" positionY="-153" width="128" height="103"/>
+        <element name="Media" positionX="-137" positionY="-6" width="128" height="135"/>
     </elements>
 </model>
