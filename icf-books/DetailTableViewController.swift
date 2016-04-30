@@ -37,12 +37,12 @@ class DetailTableViewController: UITableViewController {
             
             if scan!.valueForKey("type") as! String == "movie" {
             
-                //["title":title, "description":teaser, "thumbnail":imageData!, "video_url":fileUrl]
+                //{"file_url":"/asset/W1siZiIsIjIwMTYvMDMvMjYvdDByNjlucXgwX2JnX2ltZ18xNy5qcGciXV0?sha=626d7e0ceb8c48b7"}
                 
-                let dataRaw = scan!.valueForKey("type_data") as! NSData
-                let data:MediaTypeData = NSKeyedUnarchiver.unarchiveObjectWithData(dataRaw)! as! MediaTypeData
+                let data = scan!.valueForKey("type_data") as! NSData
+                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
                 
-                if let detailTitle = data.data!["title"] as? String {
+                if let detailTitle = scan!.valueForKey("title") as? String {
                     if detailTitle != "" {
                         tableData.append([MediaCellType.Title: detailTitle])
                     }
@@ -52,9 +52,12 @@ class DetailTableViewController: UITableViewController {
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
+                    let streamUrl = dataDict.valueForKey("file_url") as! String
+                    print(Api.baseUrl + streamUrl)
+                    
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = data.data!["description"] as? String {
+                if let detailDesc = scan!.valueForKey("teaser") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
                     }
@@ -63,12 +66,12 @@ class DetailTableViewController: UITableViewController {
                 
             } else if scan!.valueForKey("type") as! String == "two_movies_and_text" {
                 
-                //["title":title, "description1":dataDesc1, "description2":dataDesc2, "thumbnail":imageData!, "video_url1":dataMove1, "video_url2":dataMove2]
+                //{"movie1_url":"/asset/W1siZiIsIjIwMTYvMDQvMzAveGo5aXUxZXQ1X1NlcnZlcl85Ni5wbmciXV0?sha=c20cfa4301938c29","movie2_url":"/asset/W1siZiIsIjIwMTYvMDQvMzAvejV2ZGlkbGJ3X1NlcnZlcl80OC5wbmciXV0?sha=3928b81f6238e8a1","description1":"1. Noch nicht genug Informationen? Lorem ipsum doro set amor ipsum doro set amor ipsum doro set amor.","description2":"2. Noch nicht genug Informationen? Lorem ipsum doro set amor ipsum doro set amor ipsum doro set amor."},"updated_at":"2016-04-30T12:53:01.509Z"}
                 
-                let dataRaw = scan!.valueForKey("type_data") as! NSData
-                let data:MediaTypeData = NSKeyedUnarchiver.unarchiveObjectWithData(dataRaw)! as! MediaTypeData
+                let data = scan!.valueForKey("type_data") as! NSData
+                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
                 
-                if let detailTitle = data.data!["title"] as? String {
+                if let detailTitle = scan!.valueForKey("title") as? String {
                     if detailTitle != "" {
                         tableData.append([MediaCellType.Title: detailTitle])
                     }
@@ -78,9 +81,12 @@ class DetailTableViewController: UITableViewController {
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
+                    let streamUrl = dataDict.valueForKey("movie1_url") as! String
+                    print(Api.baseUrl + streamUrl)
+                    
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = data.data!["description1"] as? String {
+                if let detailDesc = dataDict.valueForKey("description1") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
                     }
@@ -90,9 +96,12 @@ class DetailTableViewController: UITableViewController {
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
+                    let streamUrl = dataDict.valueForKey("movie2_url") as! String
+                    print(Api.baseUrl + streamUrl)
+                    
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = data.data!["description2"] as? String {
+                if let detailDesc = dataDict.valueForKey("description2") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
                     }

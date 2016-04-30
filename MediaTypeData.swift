@@ -20,12 +20,13 @@ enum MediaType:String {
     }
 }
 
-class MediaTypeData {
+class MediaTypeData : NSObject {
     var type:MediaType
     var data:[String:AnyObject]?
     
     init(type:MediaType, jsonDict:NSDictionary){
         self.type = type
+        super.init()
         self.parseFromJson(jsonDict)
     }
     

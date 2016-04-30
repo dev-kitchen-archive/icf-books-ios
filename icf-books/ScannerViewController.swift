@@ -56,7 +56,9 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                 
                 infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
                 // (3) get data from url
-                let scannedURL = NSURL(string: scannedString)
+                let setUpUrl = Api.getLanguageUrl() + "/media/" + Api.idFromUrl(scannedString) + ".json"
+                print(setUpUrl)
+                let scannedURL = NSURL(string: setUpUrl)
                 if scannedURL != nil {
                     dataRetrieve(scannedURL!)
                 }

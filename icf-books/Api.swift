@@ -23,5 +23,13 @@ class Api {
         let id = nsstring.substringWithRange(nsrange)
         return id as String
     }
+    
+    static func getLanguageUrl() -> String {
+        if NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode)! as! String == "de" {
+            return baseUrl + "/de"
+        } else {
+            return baseUrl + "/en"
+        }
+    }
 
 }
