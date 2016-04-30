@@ -25,6 +25,7 @@
 		E158D5421C87855A00A543EA /* IntroSlides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E158D5411C87855A00A543EA /* IntroSlides.storyboard */; };
 		E15FBBAE1C791E5B004C444B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FBBAD1C791E5B004C444B /* Config.plist */; };
 		E15FBBB01C791E9A004C444B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FBBAF1C791E9A004C444B /* Api.swift */; };
+		E16166DB1CAD206400EFB9D8 /* MediaTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16166DA1CAD206400EFB9D8 /* MediaTypeData.swift */; };
 		E18589321C734F4800378011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589311C734F4800378011 /* AppDelegate.swift */; };
 		E18589341C734F4800378011 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589331C734F4800378011 /* HomeViewController.swift */; };
 		E18589371C734F4800378011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18589351C734F4800378011 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		E158D5411C87855A00A543EA /* IntroSlides.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroSlides.storyboard; sourceTree = "<group>"; };
 		E15FBBAD1C791E5B004C444B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		E15FBBAF1C791E9A004C444B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		E16166DA1CAD206400EFB9D8 /* MediaTypeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTypeData.swift; sourceTree = "<group>"; };
 		E185892E1C734F4800378011 /* icf-books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icf-books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18589311C734F4800378011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18589331C734F4800378011 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				E185897C1C76919400378011 /* Media+CoreDataProperties.swift */,
 				E185897D1C76919400378011 /* Media.swift */,
+				E16166DA1CAD206400EFB9D8 /* MediaTypeData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				E18589341C734F4800378011 /* HomeViewController.swift in Sources */,
 				E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */,
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
+				E16166DB1CAD206400EFB9D8 /* MediaTypeData.swift in Sources */,
 				E15FBBB01C791E9A004C444B /* Api.swift in Sources */,
 				E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */,
 				E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */,

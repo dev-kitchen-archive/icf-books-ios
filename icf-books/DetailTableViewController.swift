@@ -11,14 +11,14 @@ import CoreData
 import AVKit
 import AVFoundation
 
-enum MediaType {
+enum MediaCellType {
     case Title, Description, Movie, Image
 }
 
 class DetailTableViewController: UITableViewController {
     
     var scan: NSManagedObject?
-    var tableData = [[MediaType: AnyObject]]()
+    var tableData = [[MediaCellType: AnyObject]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,24 +39,24 @@ class DetailTableViewController: UITableViewController {
             
                 //["title":title, "description":teaser, "thumbnail":imageData!, "video_url":fileUrl]
                 
-                let data = scan!.valueForKey("type_data") as! NSData
-                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
+                let dataRaw = scan!.valueForKey("type_data") as! NSData
+                let data:MediaTypeData = NSKeyedUnarchiver.unarchiveObjectWithData(dataRaw)! as! MediaTypeData
                 
-                if let detailTitle = dataDict.valueForKey("title") as? String {
+                if let detailTitle = data.data!["title"] as? String {
                     if detailTitle != "" {
-                        tableData.append([MediaType.Title: detailTitle])
+                        tableData.append([MediaCellType.Title: detailTitle])
                     }
                 }
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                    tableData.append([MediaType.Movie: movieThumb!])
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = dataDict.valueForKey("description") as? String {
+                if let detailDesc = data.data!["description"] as? String {
                     if detailDesc != "" {
-                        tableData.append([MediaType.Description: detailDesc])
+                        tableData.append([MediaCellType.Description: detailDesc])
                     }
                 }
                 
@@ -65,36 +65,36 @@ class DetailTableViewController: UITableViewController {
                 
                 //["title":title, "description1":dataDesc1, "description2":dataDesc2, "thumbnail":imageData!, "video_url1":dataMove1, "video_url2":dataMove2]
                 
-                let data = scan!.valueForKey("type_data") as! NSData
-                let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
+                let dataRaw = scan!.valueForKey("type_data") as! NSData
+                let data:MediaTypeData = NSKeyedUnarchiver.unarchiveObjectWithData(dataRaw)! as! MediaTypeData
                 
-                if let detailTitle = dataDict.valueForKey("title") as? String {
+                if let detailTitle = data.data!["title"] as? String {
                     if detailTitle != "" {
-                        tableData.append([MediaType.Title: detailTitle])
+                        tableData.append([MediaCellType.Title: detailTitle])
                     }
                 }
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                    tableData.append([MediaType.Movie: movieThumb!])
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = dataDict.valueForKey("description1") as? String {
+                if let detailDesc = data.data!["description1"] as? String {
                     if detailDesc != "" {
-                        tableData.append([MediaType.Description: detailDesc])
+                        tableData.append([MediaCellType.Description: detailDesc])
                     }
                 }
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                    tableData.append([MediaType.Movie: movieThumb!])
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     defineTableBackground(movieThumb!)
                 }
-                if let detailDesc = dataDict.valueForKey("description2") as? String {
+                if let detailDesc = data.data!["description2"] as? String {
                     if detailDesc != "" {
-                        tableData.append([MediaType.Description: detailDesc])
+                        tableData.append([MediaCellType.Description: detailDesc])
                     }
                 }
                 
@@ -137,14 +137,14 @@ class DetailTableViewController: UITableViewController {
         let data = tableData[(indexPath.row % tableData.count)]
         let mediaType = data.keys.first
         
-        if mediaType == MediaType.Title {
+        if mediaType == MediaCellType.Title {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailTitleCell", forIndexPath: indexPath) as? DetailTitleCell
             cell!.detailTitle.text = data[mediaType!] as? String
             cell!.backgroundColor = .clearColor()
             
             return cell!
             
-        } else if mediaType == MediaType.Movie {
+        } else if mediaType == MediaCellType.Movie {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailMovieCell", forIndexPath: indexPath) as? DetailMovieCell
             cell!.detailMovieThumb.image = data[mediaType!] as? UIImage
             cell!.backgroundColor = .clearColor()

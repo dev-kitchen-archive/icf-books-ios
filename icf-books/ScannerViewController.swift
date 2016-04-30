@@ -102,7 +102,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         if Media.saveNewEntity(objectToSave) {
             openDetailViewForMedia(withId: objectToSave.valueForKey("id") as! String)
         } else {
-            infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was successfully saved")
+            infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was NOT successfully saved")
         }
 
     }
