@@ -42,6 +42,8 @@
 		E18589791C766FB200378011 /* ParseMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589781C766FB200378011 /* ParseMedia.swift */; };
 		E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897C1C76919400378011 /* Media+CoreDataProperties.swift */; };
 		E185897F1C76919400378011 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897D1C76919400378011 /* Media.swift */; };
+		E1EB26B31CDB7F4200B00937 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB26B21CDB7F4200B00937 /* RequestManager.swift */; };
+		E1EB26B51CDB7F6400B00937 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB26B41CDB7F6400B00937 /* RequestError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		E18589781C766FB200378011 /* ParseMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseMedia.swift; sourceTree = "<group>"; };
 		E185897C1C76919400378011 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E185897D1C76919400378011 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		E1EB26B21CDB7F4200B00937 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		E1EB26B41CDB7F6400B00937 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,8 @@
 				E13F14651CA2B0CD002EB7CA /* Color.swift */,
 				E18589751C76223000378011 /* GetJson.swift */,
 				E18589781C766FB200378011 /* ParseMedia.swift */,
+				E1EB26B21CDB7F4200B00937 /* RequestManager.swift */,
+				E1EB26B41CDB7F6400B00937 /* RequestError.swift */,
 				E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */,
 			);
 			name = Helpers;
@@ -419,6 +425,7 @@
 				E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */,
 				E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */,
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
+				E1EB26B31CDB7F4200B00937 /* RequestManager.swift in Sources */,
 				E18589761C76223000378011 /* GetJson.swift in Sources */,
 				E185897F1C76919400378011 /* Media.swift in Sources */,
 				E18589341C734F4800378011 /* HomeViewController.swift in Sources */,
@@ -426,6 +433,7 @@
 				E18589631C737C8500378011 /* ProgressTableViewCell.swift in Sources */,
 				E16166DB1CAD206400EFB9D8 /* MediaTypeData.swift in Sources */,
 				E15FBBB01C791E9A004C444B /* Api.swift in Sources */,
+				E1EB26B51CDB7F6400B00937 /* RequestError.swift in Sources */,
 				E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */,
 				E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */,
 				E10876441CA49CB200CB7D24 /* NavigationController.swift in Sources */,
