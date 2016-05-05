@@ -117,31 +117,31 @@ class RequestManager {
         }
     }
     
-    //save task on the remote server
-    static func postNewsletter(withData data:[String: AnyObject], completionHandler: (error:RequestError?) -> (Void)) {
-        //get specific request
-        let url = NSURL(string: getUrlTasksBase() + "ABCDEFG#@#@#@#@#@#@##@#@#@#@#@#@##@#@#@#@#@#@##@#@#@#@#@#@##")!
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("Bearer " + getToken()!, forHTTPHeaderField: "Authorization")
-        
-        do {
-            //creat data from passed dict for saving task
-            let jsonData = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions.PrettyPrinted)
-            request.HTTPBody = jsonData
-            
-            //send data
-            getDataFromRequest(request, callback: {retrievedData, errorMessage -> Void in
-                completionHandler(error: errorMessage)
-            })
-            
-        } catch let error as NSError {
-            print(error)
-            completionHandler(error: RequestError.InvalidData)
-        }
-    }
+    //TODO: save Newsletter from user on remote server
+//    static func postNewsletter(withData data:[String: AnyObject], completionHandler: (error:RequestError?) -> (Void)) {
+//        //get specific request
+//        let url = NSURL(string: getUrlTasksBase() + "ABCDEFG#@#@#@#@#@#@##@#@#@#@#@#@##@#@#@#@#@#@##@#@#@#@#@#@##")!
+//        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+//        request.HTTPMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+//        request.setValue("Bearer " + getToken()!, forHTTPHeaderField: "Authorization")
+//        
+//        do {
+//            //creat data from passed dict for saving task
+//            let jsonData = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions.PrettyPrinted)
+//            request.HTTPBody = jsonData
+//            
+//            //send data
+//            getDataFromRequest(request, callback: {retrievedData, errorMessage -> Void in
+//                completionHandler(error: errorMessage)
+//            })
+//            
+//        } catch let error as NSError {
+//            print(error)
+//            completionHandler(error: RequestError.InvalidData)
+//        }
+//    }
     
     // genericly retrieve data depending on the request (for token, patients and tasks)
     private static func getDataFromRequest(request: NSMutableURLRequest, callback: (retrievedData:NSDictionary?, errorMessage:RequestError?) -> (Void)) {
