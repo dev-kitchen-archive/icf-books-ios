@@ -44,6 +44,7 @@
 		E185897F1C76919400378011 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897D1C76919400378011 /* Media.swift */; };
 		E1EB26B31CDB7F4200B00937 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB26B21CDB7F4200B00937 /* RequestManager.swift */; };
 		E1EB26B51CDB7F6400B00937 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB26B41CDB7F6400B00937 /* RequestError.swift */; };
+		E1FCD7EB1CDCBDDE00664300 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCD7EA1CDCBDDE00664300 /* WelcomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		E185897D1C76919400378011 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		E1EB26B21CDB7F4200B00937 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		E1EB26B41CDB7F6400B00937 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		E1FCD7EA1CDCBDDE00664300 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			children = (
 				E13F14671CA2B394002EB7CA /* MasterViewController.swift */,
 				E10876431CA49CB200CB7D24 /* NavigationController.swift */,
+				E1FCD7EA1CDCBDDE00664300 /* WelcomeController.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
 				E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */,
 				E18589731C75CFD400378011 /* ScannerViewController.swift */,
@@ -444,6 +447,7 @@
 				E18589791C766FB200378011 /* ParseMedia.swift in Sources */,
 				E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */,
 				E134EB4C1CA4892800D3B283 /* DetailTableViewController.swift in Sources */,
+				E1FCD7EB1CDCBDDE00664300 /* WelcomeController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
 				E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */,

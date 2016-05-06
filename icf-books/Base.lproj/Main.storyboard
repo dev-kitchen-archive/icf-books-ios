@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yQp-hb-2Pm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lnL-k3-4bt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -151,6 +151,60 @@
             </objects>
             <point key="canvasLocation" x="-190" y="292"/>
         </scene>
+        <!--Welcome Controller-->
+        <scene sceneID="gbI-Uy-t7V">
+            <objects>
+                <viewController id="lnL-k3-4bt" customClass="WelcomeController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8pQ-FC-OcR"/>
+                        <viewControllerLayoutGuide type="bottom" id="h9O-CU-wnl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IL5-Hx-q4C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutAppBack" translatesAutoresizingMaskIntoConstraints="NO" id="rFk-IV-Vbg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-g9-sBO">
+                                <rect key="frame" x="230" y="120" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Aa8-WG-TSJ"/>
+                                    <constraint firstAttribute="width" constant="140" id="hO6-Oz-7h8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this will fade out after 2 seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK1-qD-Itb">
+                                <rect key="frame" x="173" y="268" width="254" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="NUr-YK-KiC"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ulw-Gc-Yg1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rFk-IV-Vbg" firstAttribute="top" secondItem="IL5-Hx-q4C" secondAttribute="topMargin" id="3eV-bQ-EfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rFk-IV-Vbg" secondAttribute="trailing" constant="-20" id="CYx-VM-3YG"/>
+                            <constraint firstItem="YK1-qD-Itb" firstAttribute="top" secondItem="jx0-g9-sBO" secondAttribute="bottom" constant="8" id="Dah-ez-Fbn"/>
+                            <constraint firstItem="YK1-qD-Itb" firstAttribute="centerX" secondItem="IL5-Hx-q4C" secondAttribute="centerX" id="Thd-R7-qiZ"/>
+                            <constraint firstItem="jx0-g9-sBO" firstAttribute="centerX" secondItem="IL5-Hx-q4C" secondAttribute="centerX" id="WNl-Be-0rh"/>
+                            <constraint firstItem="h9O-CU-wnl" firstAttribute="top" secondItem="rFk-IV-Vbg" secondAttribute="bottom" id="hMP-cE-ucg"/>
+                            <constraint firstItem="rFk-IV-Vbg" firstAttribute="leading" secondItem="IL5-Hx-q4C" secondAttribute="leadingMargin" constant="-20" id="s58-8J-HX1"/>
+                            <constraint firstItem="jx0-g9-sBO" firstAttribute="top" secondItem="8pQ-FC-OcR" secondAttribute="bottom" constant="100" id="w8L-Y0-rcP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="yQp-hb-2Pm" kind="presentation" identifier="showHome" id="6ku-gm-nMB"/>
+                        <segue destination="r6p-3R-UGH" kind="presentation" identifier="showIntro" id="P82-4n-Puh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sd1-fe-aql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="-1169"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hST-pK-KPw">
             <objects>
@@ -173,7 +227,7 @@
                 <viewControllerPlaceholder storyboardName="IntroSlides" referencedIdentifier="IntroSlides" id="r6p-3R-UGH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvO-34-mjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-525"/>
+            <point key="canvasLocation" x="-412" y="-1169"/>
         </scene>
         <!--Ester-->
         <scene sceneID="D0R-lm-qk8">
@@ -372,7 +426,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="2Zu-cc-tWz" id="kW8-Gt-Hfe"/>
-                        <segue destination="r6p-3R-UGH" kind="presentation" identifier="toIntroSlides" id="8qJ-Mr-Vr1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-I1-f9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,6 +434,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AboutAppBack" width="1280" height="726"/>
         <image name="book_thumb" width="208" height="120"/>
         <image name="camera_icon" width="170" height="170"/>
         <image name="empty_table_info" width="750" height="1334"/>

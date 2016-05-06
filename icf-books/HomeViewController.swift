@@ -12,19 +12,12 @@ import CoreData
 class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
-    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     var scans = [NSManagedObject]()
     var chaptersCount = 1
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //show intro to user, if he opens the app for the first time
-        
-        if !self.userDefaults.boolForKey("appAlreadyUsed") {
-            presentIntroView()
-        }
         
         //load table data
         readScannedObjects()
@@ -60,11 +53,6 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         //because you could have new entries in coredata afer scanning new entry
         table.reloadData()
     }
-    
-    func presentIntroView() {
-        self.performSegueWithIdentifier("toIntroSlides", sender: self)
-    }
-
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
