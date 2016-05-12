@@ -14,8 +14,10 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     @IBOutlet weak var codeFenceImage: UIImageView!
     @IBOutlet weak var infoLayer: UIVisualEffectView!
     @IBOutlet weak var infoText: UILabel!
+    @IBOutlet weak var infoImage: UIImageView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var topLayer: UIVisualEffectView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     var homeDelegate:HomeViewController?
     var captureSession:AVCaptureSession?
@@ -210,30 +212,28 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     
     func animateInfoHeight() {
         if readyToScan {
-//            UIView.animateWithDuration(0.5, animations: {
-//                self.infoHeight.constant = self.view.frame.height
-//                // fade out self.codeFenceImage
-//                // fade out self.cancelButton
-//                self.codeFenceImage.hidden = true
-//                self.cancelButton.hidden = true
-//                self.qrCodeFrameView?.layer.borderColor = UIColor.clearColor().CGColor
-//                self.view.layoutIfNeeded()
-//            })
+            UIView.animateWithDuration(0.5, animations: {
+                self.heightConstraint.constant = 44
+                self.view.layoutIfNeeded()
+            })
+            
+            codeFenceImage.hidden = true
+            //if not sucessful reload, else hide button
+            cancelButton.titleLabel?.text = "↺"
         
             let animatedImg = getAnimation("tick")
-            codeFenceImage.image = animatedImg[animatedImg.count - 1]
-            codeFenceImage.animationImages = animatedImg
-            codeFenceImage.animationDuration = 1.5
-            codeFenceImage.animationRepeatCount = 1
-            codeFenceImage.startAnimating()
+            infoImage.image = animatedImg[animatedImg.count - 1]
+            infoImage.animationImages = animatedImg
+            infoImage.animationDuration = 1.5
+            infoImage.animationRepeatCount = 1
+            infoImage.startAnimating()
         } else {
-//            UIView.animateWithDuration(0.5, animations: {
-//                self.infoHeight.constant = 180
-//                self.codeFenceImage.hidden = false
-//                self.cancelButton.hidden = false
-//                self.view.layoutIfNeeded()
-//            })
-            codeFenceImage.image = UIImage(named: "scan_overlay")
+            UIView.animateWithDuration(0.5, animations: {
+                self.heightConstraint.constant = 484
+                self.view.layoutIfNeeded()
+            })
+            codeFenceImage.hidden = false
+            cancelButton.titleLabel?.text = "✕"
         }
         
         readyToScan = !readyToScan
