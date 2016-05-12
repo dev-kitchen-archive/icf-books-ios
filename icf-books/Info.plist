@@ -13,6 +13,16 @@
 		<string>Montserrat-Regular.otf</string>
 		<string>Montserrat-SemiBold.otf</string>
 		<string>Linearicons-Free.ttf</string>
+		<string>ArnhemPro-Black.ttf</string>
+		<string>ArnhemPro-BlackItalic.ttf</string>
+		<string>ArnhemPro-Blond.ttf</string>
+		<string>ArnhemPro-BlondItalic.ttf</string>
+		<string>ArnhemPro-Bold.ttf</string>
+		<string>ArnhemPro-BoldItalic.ttf</string>
+		<string>ArnhemPro-Normal.ttf</string>
+		<string>ArnhemPro-NormalItalic.ttf</string>
+		<string>ArnhemPro-SemiBold.ttf</string>
+		<string>ArnhemPro-SemiBoldItalic.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

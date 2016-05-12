@@ -6,19 +6,19 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="ArnhemPro-Blond.ttf">
+            <string>ArnhemPro-Blond</string>
+            <string>ArnhemPro-Blond</string>
+            <string>ArnhemPro-Blond</string>
+            <string>ArnhemPro-Blond</string>
+            <string>ArnhemPro-Blond</string>
+        </mutableArray>
         <mutableArray key="Montserrat-Light.otf">
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
-            <string>Montserrat-Light</string>
-            <string>Montserrat-Light</string>
-        </mutableArray>
-        <mutableArray key="Montserrat-UltraLight.otf">
-            <string>Montserrat-UltraLight</string>
-            <string>Montserrat-UltraLight</string>
-            <string>Montserrat-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -39,29 +39,29 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Das-Ux-dgm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="27"/>
                                 <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About the author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-pk-8Cf">
-                                <rect key="frame" x="20" y="243.5" width="560" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-pk-8Cf">
+                                <rect key="frame" x="20" y="247" width="560" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Ngp-ID-98a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="27"/>
                                 <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-MK-3Rn">
-                                <rect key="frame" x="20" y="113" width="472" height="122.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-MK-3Rn">
+                                <rect key="frame" x="20" y="113" width="472" height="126"/>
                                 <string key="text">The eagle, the king of the skies, people charmed us by his powerful flying skills and his outspoken far and perspicacity. And he is a symbol of vision focus and strength. It amazes Therefore did not the Bible repeatedly the image of the eagle uses so we learn our lives Divine perspective to consider.
 This book wants to encourage us to hold a vision of our life and to stay focused.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
-                                <rect key="frame" x="108" y="284.5" width="472" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
+                                <rect key="frame" x="108" y="288" width="472" height="72"/>
                                 <string key="text">Leo and Susanna Bigger jointly manage the ICF movement and ICF Zurich. Leo and Susanna have two children and live near Zurich. Leo is author of several books and on various television channels than TV preacher to consider.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,8 +74,8 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                     <constraint firstAttribute="width" constant="80" id="Eqe-9X-eti"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-hs-5oI">
-                                <rect key="frame" x="20" y="284.5" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-hs-5oI">
+                                <rect key="frame" x="20" y="288" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="h5N-Gh-L1Y"/>
                                     <constraint firstAttribute="width" constant="80" id="iQZ-eg-Ovc"/>
@@ -355,7 +355,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4Xm-ZK-DDC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="19"/>
+                                                    <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="28"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -427,7 +427,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                                     <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="REZ-vR-N94"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="18"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
@@ -495,11 +495,11 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-1k-Rjj">
-                                                    <rect key="frame" x="8" y="8" width="584" height="73"/>
+                                                    <rect key="frame" x="8" y="46" width="584" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="73" id="fuw-o6-Yb0"/>
+                                                        <constraint firstAttribute="height" constant="35" id="fuw-o6-Yb0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
+                                                    <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="32"/>
                                                     <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -511,7 +511,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                 <constraint firstItem="Rpy-1k-Rjj" firstAttribute="trailing" secondItem="05c-xY-JuG" secondAttribute="trailingMargin" id="FUJ-PA-BFF"/>
                                                 <constraint firstItem="ZJc-hI-AVg" firstAttribute="leading" secondItem="05c-xY-JuG" secondAttribute="leadingMargin" constant="65" id="I4h-35-86p"/>
                                                 <constraint firstItem="ZJc-hI-AVg" firstAttribute="trailing" secondItem="05c-xY-JuG" secondAttribute="trailingMargin" constant="-65" id="WCE-h9-rop"/>
-                                                <constraint firstItem="Rpy-1k-Rjj" firstAttribute="top" secondItem="05c-xY-JuG" secondAttribute="topMargin" id="aC2-OW-b8P"/>
+                                                <constraint firstItem="Rpy-1k-Rjj" firstAttribute="top" secondItem="05c-xY-JuG" secondAttribute="topMargin" constant="38" id="aC2-OW-b8P"/>
                                                 <constraint firstItem="ZJc-hI-AVg" firstAttribute="top" secondItem="Rpy-1k-Rjj" secondAttribute="bottom" constant="8" id="cNJ-Q3-yeH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZJc-hI-AVg" secondAttribute="bottom" constant="89" id="huu-fQ-j3d"/>
                                                 <constraint firstItem="Rpy-1k-Rjj" firstAttribute="leading" secondItem="05c-xY-JuG" secondAttribute="leadingMargin" id="jYA-pZ-6rv"/>

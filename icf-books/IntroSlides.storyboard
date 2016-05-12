@@ -6,12 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="ArnhemPro-Blond.ttf">
+            <string>ArnhemPro-Blond</string>
+        </mutableArray>
         <mutableArray key="Montserrat-Light.otf">
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
-        </mutableArray>
-        <mutableArray key="Montserrat-UltraLight.otf">
-            <string>Montserrat-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -79,7 +79,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="4sa-SZ-jrv"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Montserrat-UltraLight" family="Montserrat" pointSize="27"/>
+                                                            <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="32"/>
                                                             <color key="textColor" red="0.11111111111111116" green="0.11111111111111116" blue="0.11111111111111116" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
