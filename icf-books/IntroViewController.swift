@@ -38,7 +38,7 @@ class IntroViewController: MasterViewController, UICollectionViewDelegateFlowLay
             
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = Color.accent
+        collectionView.backgroundColor = UIColor.whiteColor()
     }
     
     // the controller that has a reference to the collection view

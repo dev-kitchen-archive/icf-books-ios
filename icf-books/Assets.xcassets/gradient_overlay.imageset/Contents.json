@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cover_DEF.jpg",
+      "filename" : "instaOverlay-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Cover_DEF-1.jpg",
+      "filename" : "instaOverlay-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Cover_DEF-2.jpg",
+      "filename" : "instaOverlay.png",
       "scale" : "3x"
     }
   ],

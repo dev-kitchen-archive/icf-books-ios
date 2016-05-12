@@ -13,7 +13,8 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var scannButton: UIButton!
-
+    @IBOutlet weak var tabBar: UIView!
+    
     var scans = [NSManagedObject]()
     var chaptersCount = 1
     
@@ -74,7 +75,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         } else if section == chaptersCount + 2 - 1 {
             return nil
         } else {
-            return "Kapitel \(section)"
+            return "Kapitel \(section) — Schönheit bewegt"
         }
     }
 
@@ -111,20 +112,17 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             if cell == nil {
                 cell = ProgressTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "progressCell")
             }
-            
-            //cell!.titel oder so
 
             return cell!
             
         }
-        // last section after chapters (1 spacing cell)
+        // last section after chapters (1 spacing cell) > spacing cell
         else if indexPath.section == chaptersCount + 1 {
             var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
             if cell == nil {
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
-            cell!.scanTitle.text = ""
-            cell!.scanDesc.text = ""
+            cell!.blur.hidden = true
             cell!.scanImage.image = UIImage()
             return cell!
         }
@@ -144,7 +142,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             
             cell!.scanTitle.text = scan.valueForKey("title") as? String
             cell!.scanDesc.text = scan.valueForKey("teaser") as? String
-            //cell!.titel oder so
+            cell!.blur.hidden = false
             
             return cell!
         }
@@ -154,27 +152,39 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         if scans.count < 1 {
             return 600
         } else if indexPath.section == 0 {
-            return 90
+            return 145
         } else if indexPath.section == chaptersCount + 1 {
-            return 75 // equals folating scan button
+            return 90 // equals folating scan button
         } else {
-            return 120
+            return 110
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "openSavedScan" {
             if let indexPath = table.indexPathForSelectedRow {
-//                let destinationVC = segue.destinationViewController as! DetailViewController
-//                destinationVC.scan = scans[indexPath.row]
-                
-                let destinationVC = segue.destinationViewController as! DetailTableViewController
-                destinationVC.scan = scans[indexPath.row]
+                if indexPath.section != chaptersCount + 1 {
+                    let destinationVC = segue.destinationViewController as! DetailTableViewController
+                    destinationVC.scan = scans[indexPath.row]
+                }
             }
         } else if segue.identifier == "openScanner" {
             let destinationVC = segue.destinationViewController as! ScannerViewController
             destinationVC.homeDelegate = self
         }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if let ident = identifier {
+            if ident == "openSavedScan" {
+                if let indexPath = table.indexPathForSelectedRow {
+                    if indexPath.section == chaptersCount + 1 {
+                        return false
+                    }
+                }
+            }
+        }
+        return true
     }
     
 }

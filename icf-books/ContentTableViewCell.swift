@@ -13,6 +13,7 @@ class ContentTableViewCell: UITableViewCell {
     @IBOutlet weak var scanTitle: UILabel!
     @IBOutlet weak var scanDesc: UILabel!
     @IBOutlet weak var scanImage: UIImageView!
+    @IBOutlet weak var blur: UIVisualEffectView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,7 +18,7 @@ class IntroSliderCell: UICollectionViewCell {
         super.awakeFromNib()
         
         //designing the cell
-        wrapper.layer.borderColor = UIColor(red:1, green:0.58, blue:0.01, alpha:1).CGColor
+        wrapper.layer.borderColor = Color.accent.CGColor
         wrapper.layer.borderWidth = 0.5
         
         wrapper.layer.shadowColor = UIColor.blackColor().CGColor
