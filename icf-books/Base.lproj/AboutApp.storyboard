@@ -89,15 +89,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOC-CC-nDX">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                     <state key="normal" title="Newsletter abonnieren"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="leading" secondItem="Txg-eB-YM4" secondAttribute="leadingMargin" id="4Zd-cM-SsV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rOC-CC-nDX" secondAttribute="bottom" constant="-1" id="bjq-ta-uaI"/>
-                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="trailing" secondItem="Txg-eB-YM4" secondAttribute="trailingMargin" id="cUS-tQ-mSm"/>
-                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="top" secondItem="Txg-eB-YM4" secondAttribute="topMargin" constant="-1.5" id="hgc-ZG-2ud"/>
+                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="leading" secondItem="Txg-eB-YM4" secondAttribute="leadingMargin" constant="-8" id="4Zd-cM-SsV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rOC-CC-nDX" secondAttribute="bottom" constant="-8" id="bjq-ta-uaI"/>
+                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="trailing" secondItem="Txg-eB-YM4" secondAttribute="trailingMargin" constant="8" id="cUS-tQ-mSm"/>
+                                                <constraint firstItem="rOC-CC-nDX" firstAttribute="top" secondItem="Txg-eB-YM4" secondAttribute="topMargin" constant="-8" id="hgc-ZG-2ud"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -112,18 +112,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICF Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iO-eW-bql">
-                                                    <rect key="frame" x="8" y="21" width="584" height="33"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Sh-Rkr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                                    <state key="normal" title="ICF Books"/>
+                                                    <connections>
+                                                        <action selector="icfBooks:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="yPB-Hz-pd9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0iO-eW-bql" firstAttribute="trailing" secondItem="gsl-8W-YV9" secondAttribute="trailingMargin" id="A4f-nW-4kR"/>
-                                                <constraint firstItem="0iO-eW-bql" firstAttribute="centerY" secondItem="gsl-8W-YV9" secondAttribute="centerY" id="C7R-5a-hDX"/>
-                                                <constraint firstItem="0iO-eW-bql" firstAttribute="leading" secondItem="gsl-8W-YV9" secondAttribute="leadingMargin" id="hee-Kc-ezp"/>
-                                                <constraint firstItem="0iO-eW-bql" firstAttribute="centerX" secondItem="gsl-8W-YV9" secondAttribute="centerX" id="wTF-UH-ebT"/>
+                                                <constraint firstItem="Qp4-Sh-Rkr" firstAttribute="top" secondItem="gsl-8W-YV9" secondAttribute="topMargin" constant="-8" id="BpH-Vv-b69"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qp4-Sh-Rkr" secondAttribute="trailing" constant="-8" id="FDL-qz-SiX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qp4-Sh-Rkr" secondAttribute="bottom" constant="-8" id="ZrO-DL-s5g"/>
+                                                <constraint firstItem="Qp4-Sh-Rkr" firstAttribute="leading" secondItem="gsl-8W-YV9" secondAttribute="leadingMargin" constant="-8" id="uAI-Ao-kM2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -134,18 +135,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICF Worship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUd-bQ-dxp">
-                                                    <rect key="frame" x="8" y="21" width="584" height="33"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d38-7F-fFD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                                    <state key="normal" title="ICF Worship"/>
+                                                    <connections>
+                                                        <action selector="icfWorship:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="4Kf-xX-rav"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wUd-bQ-dxp" firstAttribute="leading" secondItem="6wU-6h-sf1" secondAttribute="leadingMargin" id="CbD-Jd-ltJ"/>
-                                                <constraint firstItem="wUd-bQ-dxp" firstAttribute="centerY" secondItem="6wU-6h-sf1" secondAttribute="centerY" id="FsP-Lc-9yM"/>
-                                                <constraint firstItem="wUd-bQ-dxp" firstAttribute="centerX" secondItem="6wU-6h-sf1" secondAttribute="centerX" id="Hu7-gP-vk5"/>
-                                                <constraint firstItem="wUd-bQ-dxp" firstAttribute="trailing" secondItem="6wU-6h-sf1" secondAttribute="trailingMargin" id="cgz-Hb-gNw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="d38-7F-fFD" secondAttribute="bottom" constant="-8" id="ET6-MH-V1Q"/>
+                                                <constraint firstItem="d38-7F-fFD" firstAttribute="top" secondItem="6wU-6h-sf1" secondAttribute="topMargin" constant="-8" id="cBP-WV-rew"/>
+                                                <constraint firstItem="d38-7F-fFD" firstAttribute="leading" secondItem="6wU-6h-sf1" secondAttribute="leadingMargin" constant="-8" id="cjt-cw-Xid"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d38-7F-fFD" secondAttribute="trailing" constant="-8" id="zv9-oH-VYL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -156,18 +158,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="devkitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxr-G4-eUz">
-                                                    <rect key="frame" x="8" y="20" width="584" height="33"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drb-Zv-3KS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                                    <state key="normal" title="devkitchen"/>
+                                                    <connections>
+                                                        <action selector="devkitchen:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="JHl-hA-0UA"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cxr-G4-eUz" firstAttribute="trailing" secondItem="FED-eE-vlT" secondAttribute="trailingMargin" id="CQA-it-Elw"/>
-                                                <constraint firstItem="cxr-G4-eUz" firstAttribute="leading" secondItem="FED-eE-vlT" secondAttribute="leadingMargin" id="Jay-bm-uyv"/>
-                                                <constraint firstItem="cxr-G4-eUz" firstAttribute="centerY" secondItem="FED-eE-vlT" secondAttribute="centerY" id="WgD-ju-Y5U"/>
-                                                <constraint firstItem="cxr-G4-eUz" firstAttribute="centerX" secondItem="FED-eE-vlT" secondAttribute="centerX" id="s6V-HX-9so"/>
+                                                <constraint firstItem="drb-Zv-3KS" firstAttribute="leading" secondItem="FED-eE-vlT" secondAttribute="leadingMargin" constant="-8" id="Fn0-P1-H3f"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="drb-Zv-3KS" secondAttribute="trailing" constant="-8" id="eHm-1U-zv2"/>
+                                                <constraint firstItem="drb-Zv-3KS" firstAttribute="top" secondItem="FED-eE-vlT" secondAttribute="topMargin" constant="-8" id="q7I-F6-K16"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="drb-Zv-3KS" secondAttribute="bottom" constant="-8" id="u5a-Qu-828"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

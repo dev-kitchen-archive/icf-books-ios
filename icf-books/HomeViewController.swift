@@ -12,6 +12,7 @@ import CoreData
 class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var scannButton: UIButton!
 
     var scans = [NSManagedObject]()
     var chaptersCount = 1
@@ -28,8 +29,10 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         // Do any additional setup after loading the view, typically from a nib.
         table.delegate = self
         table.dataSource = self
+        
+        scannButton.imageView?.contentMode = .ScaleAspectFit
     }
-
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,10 +80,16 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { //either about book or intro image
+            //make content not scrollable
+            tableView.scrollEnabled = false
             return 1
         } else if section == chaptersCount + 1 { //spacing section sith space for button to scan
+            //make content not scrollable
+            tableView.scrollEnabled = true
             return 1
         } else { //actual scans for chapter
+            //make content not scrollable
+            tableView.scrollEnabled = true
             return scans.count
         }
     }
@@ -92,9 +101,6 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             if cell == nil {
                 cell = InfoImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infoImageCell")
             }
-            
-            //make content not scrollable
-            tableView.scrollEnabled = false
         
             return cell!
             

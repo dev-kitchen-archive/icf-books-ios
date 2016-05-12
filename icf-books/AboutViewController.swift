@@ -57,6 +57,17 @@ class AboutViewController: UITableViewController {
         
     }
 
+    @IBAction func icfBooks(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.icf.ch/books/")!)
+    }
+    
+    @IBAction func icfWorship(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.icf-worship.com")!)
+    }
+    
+    @IBAction func devkitchen(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://dev.kitchen/")!)
+    }
     /*
     // MARK: - Navigation
 
