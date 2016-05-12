@@ -5,6 +5,8 @@
 	<key>AppConfig_prod</key>
 	<dict>
 		<key>accent_color</key>
+		<string>#001f2c</string>
+		<key>red_color</key>
 		<string>#FA6562</string>
 		<key>base_url</key>
 		<string>https://rhino.dev.kitchen</string>

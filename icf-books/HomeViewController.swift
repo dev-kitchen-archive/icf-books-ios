@@ -93,7 +93,8 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
                 cell = InfoImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infoImageCell")
             }
             
-            //cell!.titel oder so
+            //make content not scrollable
+            tableView.scrollEnabled = false
         
             return cell!
             

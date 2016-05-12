@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "camera-icon.png",
+      "filename" : "book_cover-jpg.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "camera-icon@2x.png",
+      "filename" : "book_cover-jpg-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "camera-icon@3x.png",
+      "filename" : "book_cover-jpg-2.jpg",
       "scale" : "3x"
     }
   ],

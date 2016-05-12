@@ -11,7 +11,7 @@ import UIKit
 class InfoImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellImage: UIImageView!
-    var infoImage: UIImage? = UIImage(named: "empty_table_info")
+    var infoImage: UIImage? = UIImage(named: "no_scanned_codes_de")
 
     override func awakeFromNib() {
         super.awakeFromNib()
