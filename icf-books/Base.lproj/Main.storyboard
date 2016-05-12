@@ -7,6 +7,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Hairline.otf">
+            <string>Montserrat-Hairline</string>
+        </mutableArray>
         <mutableArray key="Montserrat-Light.otf">
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
@@ -61,6 +64,13 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
+                                <rect key="frame" x="108" y="288" width="472" height="72"/>
+                                <string key="text">Leo and Susanna Bigger jointly manage the ICF movement and ICF Zurich. Leo and Susanna have two children and live near Zurich. Leo is author of several books and on various television channels than TV preacher to consider.</string>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-cG-0M8">
                                 <rect key="frame" x="500" y="113" width="80" height="115"/>
                                 <constraints>
@@ -75,13 +85,6 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                     <constraint firstAttribute="width" constant="80" id="iQZ-eg-Ovc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
-                                <rect key="frame" x="108" y="288" width="472" height="72"/>
-                                <string key="text">Leo and Susanna Bigger jointly manage the ICF movement and ICF Zurich. Leo and Susanna have two children and live near Zurich. Leo is author of several books and on various television channels than TV preacher to consider.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -143,84 +146,97 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
-                                <rect key="frame" x="0.0" y="440" width="600" height="160"/>
+                                <rect key="frame" x="0.0" y="460" width="600" height="140"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5aV-X5-Sza">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
-                                            <rect key="frame" x="251" y="107" width="98" height="30"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code_preview" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-6l-8eS">
+                                            <rect key="frame" x="31" y="39" width="61" height="61"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="7k1-ND-wqu"/>
-                                                <constraint firstAttribute="width" constant="98" id="EW2-PB-Z3j"/>
+                                                <constraint firstAttribute="width" constant="61" id="VP6-wE-xQ7"/>
+                                                <constraint firstAttribute="height" constant="61" id="xVl-rh-kVl"/>
                                             </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your phone over the QR code to scan..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
+                                            <rect key="frame" x="100" y="39" width="449" height="21"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
-                                            <state key="normal" title="Cancel"/>
-                                            <connections>
-                                                <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>
-                                            </connections>
-                                        </button>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98b-Tu-Co1">
-                                            <rect key="frame" x="8" y="25" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="Jwt-zb-yVI"/>
-                                                <constraint firstAttribute="height" constant="30" id="TdF-6b-PuO"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <state key="normal" title="╳">
-                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="closeInfo:" destination="SKj-EP-XSB" eventType="touchUpInside" id="qoG-p6-VZx"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the QR-Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
-                                            <rect key="frame" x="8" y="54" width="584" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="sa7-Vy-zgQ" secondAttribute="trailing" constant="8" id="Cxg-JS-UHz"/>
-                                        <constraint firstAttribute="bottom" secondItem="fyT-CK-Gio" secondAttribute="bottom" constant="23" id="LzR-Xd-2UJ"/>
-                                        <constraint firstItem="fyT-CK-Gio" firstAttribute="centerX" secondItem="5aV-X5-Sza" secondAttribute="centerX" id="UT5-c7-oaw"/>
-                                        <constraint firstItem="98b-Tu-Co1" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="8" id="cIe-2C-EwQ"/>
-                                        <constraint firstItem="98b-Tu-Co1" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="25" id="hsX-UL-luG"/>
-                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="8" id="mJa-jR-KuY"/>
-                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="54" id="pdn-KL-och"/>
+                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="leading" secondItem="jkb-6l-8eS" secondAttribute="trailing" constant="8" id="4X9-cs-pof"/>
+                                        <constraint firstAttribute="trailing" secondItem="sa7-Vy-zgQ" secondAttribute="trailing" constant="51" id="OPz-jP-mbp"/>
+                                        <constraint firstItem="sa7-Vy-zgQ" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="39" id="b2J-RY-K7G"/>
+                                        <constraint firstItem="jkb-6l-8eS" firstAttribute="leading" secondItem="5aV-X5-Sza" secondAttribute="leading" constant="31" id="dFz-aZ-0rM"/>
+                                        <constraint firstItem="jkb-6l-8eS" firstAttribute="top" secondItem="5aV-X5-Sza" secondAttribute="top" constant="39" id="veX-21-NGE"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="pyw-0j-Fw9"/>
+                                    <constraint firstAttribute="height" constant="140" id="LjY-Kh-0DL"/>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code_frame" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-mO-3Jy">
-                                <rect key="frame" x="140" y="87" width="320" height="320"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-60-bxV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3jF-7a-aUu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
+                                            <rect key="frame" x="543" y="23" width="49" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="33" id="rfE-qF-hbD"/>
+                                                <constraint firstAttribute="width" constant="49" id="wlh-fh-GgF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Hairline" family="Montserrat" pointSize="34"/>
+                                            <state key="normal" title="✕">
+                                                <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="fyT-CK-Gio" secondAttribute="trailing" constant="8" id="JpT-xR-lWb"/>
+                                        <constraint firstAttribute="bottom" secondItem="fyT-CK-Gio" secondAttribute="bottom" constant="8" id="kFO-Wr-DnI"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="sql-Pc-RNZ"/>
-                                    <constraint firstAttribute="width" constant="320" id="vTG-ii-jlb"/>
+                                    <constraint firstAttribute="height" constant="64" id="VBd-7E-zta"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-mO-3Jy">
+                                <rect key="frame" x="160" y="152" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ad0-2Z-4lc"/>
+                                    <constraint firstAttribute="height" constant="280" id="fm8-xR-i6q"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UF0-mO-3Jy" firstAttribute="centerX" secondItem="8Mq-pk-nE2" secondAttribute="centerX" id="Ymd-46-D90"/>
-                            <constraint firstItem="DZg-b5-0FA" firstAttribute="top" secondItem="88s-i9-vrI" secondAttribute="bottom" id="bJb-8O-5q6"/>
-                            <constraint firstItem="UF0-mO-3Jy" firstAttribute="top" secondItem="Eod-rg-2s2" secondAttribute="bottom" constant="67" id="e1i-37-G87"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-20" id="gKZ-PN-4ch"/>
-                            <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="jPP-H0-XGq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-20" id="2wJ-6b-i3G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R3w-60-bxV" secondAttribute="trailing" constant="-20" id="CLH-J7-duZ"/>
+                            <constraint firstItem="R3w-60-bxV" firstAttribute="top" secondItem="8Mq-pk-nE2" secondAttribute="topMargin" id="OZg-Hd-WHw"/>
+                            <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="dw0-8U-4pL"/>
+                            <constraint firstItem="DZg-b5-0FA" firstAttribute="top" secondItem="88s-i9-vrI" secondAttribute="bottom" id="tRx-db-rJq"/>
+                            <constraint firstItem="R3w-60-bxV" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="v4u-vL-3DC"/>
+                            <constraint firstItem="UF0-mO-3Jy" firstAttribute="top" secondItem="R3w-60-bxV" secondAttribute="bottom" constant="88" id="vz0-Iy-aO8"/>
+                            <constraint firstItem="UF0-mO-3Jy" firstAttribute="centerX" secondItem="8Mq-pk-nE2" secondAttribute="centerX" id="zIx-9k-xiY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="fyT-CK-Gio" id="ARM-de-00l"/>
-                        <outlet property="closeInfo" destination="98b-Tu-Co1" id="aiq-bl-8Ql"/>
                         <outlet property="codeFenceImage" destination="UF0-mO-3Jy" id="ugl-UE-8tB"/>
-                        <outlet property="infoHeight" destination="pyw-0j-Fw9" id="xBr-gt-SSb"/>
                         <outlet property="infoLayer" destination="88s-i9-vrI" id="h6g-Ql-EHa"/>
                         <outlet property="infoText" destination="sa7-Vy-zgQ" id="AgF-td-OGW"/>
+                        <outlet property="topLayer" destination="R3w-60-bxV" id="WmS-0V-ncC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7H-bN-Qty" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -540,6 +556,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
         <image name="logo" width="1024" height="1024"/>
         <image name="no_scanned_codes_de" width="574" height="842"/>
         <image name="plus_button" width="149" height="149"/>
-        <image name="qr_code_frame" width="327" height="336"/>
+        <image name="qr_code_preview" width="144" height="140"/>
+        <image name="scan_overlay" width="546" height="544"/>
     </resources>
 </document>

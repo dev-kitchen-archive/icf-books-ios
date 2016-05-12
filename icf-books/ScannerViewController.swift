@@ -14,16 +14,15 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     @IBOutlet weak var codeFenceImage: UIImageView!
     @IBOutlet weak var infoLayer: UIVisualEffectView!
     @IBOutlet weak var infoText: UILabel!
-    @IBOutlet weak var infoHeight: NSLayoutConstraint!
     @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var closeInfo: UIButton!
+    @IBOutlet weak var topLayer: UIVisualEffectView!
     
     var homeDelegate:HomeViewController?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var lastScannedCode:String = ""
-    var infoSmall:Bool = true
+    var readyToScan:Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +66,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
             infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
         }
         
-        if infoSmall {
+        if readyToScan {
             qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
         }
     }
@@ -186,7 +185,9 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     // Place here all views that shall be placed above the camera view
     func placeViewsOverCamera() {
         view.bringSubviewToFront(infoLayer)
+        view.bringSubviewToFront(topLayer)
         view.bringSubviewToFront(codeFenceImage)
+        
     }
     
     func setupQrCodeHighlighter() {
@@ -198,38 +199,54 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     }
     
     @IBAction func cancelButtonPress(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    @IBAction func closeInfo(sender: AnyObject) {
-        lastScannedCode = ""
-        infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
-        animateInfoHeight()
+        if readyToScan {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            lastScannedCode = ""
+            infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
+            animateInfoHeight()
+        }
     }
     
     func animateInfoHeight() {
-        if infoSmall {
-            UIView.animateWithDuration(0.5, animations: {
-                self.infoHeight.constant = self.view.frame.height
-                // fade out self.codeFenceImage
-                // fade out self.cancelButton
-                self.codeFenceImage.hidden = true
-                self.cancelButton.hidden = true
-                self.closeInfo.hidden = false
-                self.qrCodeFrameView?.layer.borderColor = UIColor.clearColor().CGColor
-                self.view.layoutIfNeeded()
-            })
+        if readyToScan {
+//            UIView.animateWithDuration(0.5, animations: {
+//                self.infoHeight.constant = self.view.frame.height
+//                // fade out self.codeFenceImage
+//                // fade out self.cancelButton
+//                self.codeFenceImage.hidden = true
+//                self.cancelButton.hidden = true
+//                self.qrCodeFrameView?.layer.borderColor = UIColor.clearColor().CGColor
+//                self.view.layoutIfNeeded()
+//            })
+        
+            let animatedImg = getAnimation("tick")
+            codeFenceImage.image = animatedImg[animatedImg.count - 1]
+            codeFenceImage.animationImages = animatedImg
+            codeFenceImage.animationDuration = 1.5
+            codeFenceImage.animationRepeatCount = 1
+            codeFenceImage.startAnimating()
         } else {
-            UIView.animateWithDuration(0.5, animations: {
-                self.infoHeight.constant = 180
-                self.codeFenceImage.hidden = false
-                self.cancelButton.hidden = false
-                self.closeInfo.hidden = true
-                self.view.layoutIfNeeded()
-            })
+//            UIView.animateWithDuration(0.5, animations: {
+//                self.infoHeight.constant = 180
+//                self.codeFenceImage.hidden = false
+//                self.cancelButton.hidden = false
+//                self.view.layoutIfNeeded()
+//            })
+            codeFenceImage.image = UIImage(named: "scan_overlay")
         }
         
-        infoSmall = !infoSmall
+        readyToScan = !readyToScan
+    }
+    
+    
+    func getAnimation(icon:String) -> [UIImage] {
+        var imgListArray:[UIImage] = []
+        for countValue in 0...19 {
+            let strImageName : String = icon + String(countValue)
+            imgListArray.append(UIImage(named:strImageName)!)
+        }
+        return imgListArray
     }
 
     /*
