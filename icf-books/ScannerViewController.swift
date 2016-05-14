@@ -33,6 +33,10 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         placeViewsOverCamera()
         setupQrCodeHighlighter()
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

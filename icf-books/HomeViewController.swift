@@ -8,12 +8,14 @@
 
 import UIKit
 import CoreData
+import BubbleTransition
 
-class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: MasterViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var scannButton: UIButton!
+    @IBOutlet weak var scanButton: UIButton!
     @IBOutlet weak var tabBar: UIView!
+    let transition = BubbleTransition()
     
     var scans = [NSManagedObject]()
     var chaptersCount = 1
@@ -23,6 +25,9 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         
         //load table data
         readScannedObjects()
+        
+        //make scan button round
+        scanButton.layer.cornerRadius = 30
     }
     
     override func viewDidLoad() {
@@ -31,7 +36,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         table.delegate = self
         table.dataSource = self
         
-        scannButton.imageView?.contentMode = .ScaleAspectFit
+        scanButton.imageView?.contentMode = .ScaleAspectFit
     }
         
     override func didReceiveMemoryWarning() {
@@ -169,8 +174,10 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
                 }
             }
         } else if segue.identifier == "openScanner" {
-            let destinationVC = segue.destinationViewController as! ScannerViewController
-            destinationVC.homeDelegate = self
+            let controller = segue.destinationViewController as! ScannerViewController
+            controller.homeDelegate = self
+            controller.transitioningDelegate = self
+            controller.modalPresentationStyle = .Custom
         }
     }
     
@@ -185,6 +192,25 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             }
         }
         return true
+    }
+    
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = tabBar.center
+        transition.duration = 0.38
+        transition.bubbleColor = UIColor(red:0.11, green:0.11, blue:0.11, alpha:1.00)
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = tabBar.center
+        transition.duration = 0.38
+        transition.bubbleColor = UIColor(red:0.11, green:0.11, blue:0.11, alpha:1.00)
+        return transition
     }
     
 }
