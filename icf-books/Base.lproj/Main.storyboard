@@ -319,10 +319,10 @@ This book wants to encourage us to hold a vision of our life and to stay focused
             </objects>
             <point key="canvasLocation" x="-412" y="-1169"/>
         </scene>
-        <!--Ester-->
+        <!--ICF Books-->
         <scene sceneID="D0R-lm-qk8">
             <objects>
-                <viewController id="xSc-gb-BIx" customClass="HomeViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ICF Books" id="xSc-gb-BIx" customClass="HomeViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2qg-ob-Kwd"/>
                         <viewControllerLayoutGuide type="bottom" id="JZa-pA-4yL"/>
@@ -567,7 +567,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                             <constraint firstItem="JZa-pA-4yL" firstAttribute="top" secondItem="2Zu-cc-tWz" secondAttribute="bottom" id="kDA-55-qu1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ester" id="X9J-BS-YDJ">
+                    <navigationItem key="navigationItem" title="ICF Books" id="X9J-BS-YDJ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="kqj-g4-k9X">
                             <connections>
                                 <segue destination="pSI-Kd-yLV" kind="show" id="EDI-sc-Kzl"/>
