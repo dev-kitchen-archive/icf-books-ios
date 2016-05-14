@@ -392,7 +392,7 @@
 				TargetAttributes = {
 					E185892D1C734F4800378011 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = P93MCDR2XJ;
+						DevelopmentTeam = 87JGM8WP9S;
 					};
 					E18589441C734F4800378011 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -699,7 +699,7 @@
 				);
 				INFOPLIST_FILE = "icf-books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kitchen.dev.icf-books";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.icf.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -717,7 +717,7 @@
 				);
 				INFOPLIST_FILE = "icf-books/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kitchen.dev.icf-books";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.icf.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
