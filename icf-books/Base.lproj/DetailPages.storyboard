@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -119,10 +118,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="345"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kEX-b5-aXQ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kEX-b5-aXQ">
                                             <rect key="frame" x="8" y="8" width="584" height="329"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="kEX-b5-aXQ" secondAttribute="height" multiplier="16:9" id="SBF-p2-7Bt"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="330" id="4ze-jK-NTN"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45G-jf-msg">
@@ -138,11 +137,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="45G-jf-msg" firstAttribute="centerY" secondItem="zVd-Lp-bG8" secondAttribute="centerY" id="7dO-RD-fCg"/>
-                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="bottom" secondItem="zVd-Lp-bG8" secondAttribute="bottomMargin" id="Uo7-mM-Zdi"/>
+                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="trailing" secondItem="zVd-Lp-bG8" secondAttribute="trailingMargin" id="97y-il-SJt"/>
+                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="top" secondItem="zVd-Lp-bG8" secondAttribute="topMargin" id="FfY-Rt-foC"/>
+                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="leading" secondItem="zVd-Lp-bG8" secondAttribute="leadingMargin" id="cQs-Zu-CpM"/>
+                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="bottom" secondItem="zVd-Lp-bG8" secondAttribute="bottomMargin" id="ibQ-iA-25w"/>
                                         <constraint firstItem="45G-jf-msg" firstAttribute="centerX" secondItem="zVd-Lp-bG8" secondAttribute="centerX" id="jIh-Ye-QVf"/>
-                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="leading" secondItem="zVd-Lp-bG8" secondAttribute="leadingMargin" id="rmk-BY-fZX"/>
-                                        <constraint firstItem="kEX-b5-aXQ" firstAttribute="top" secondItem="zVd-Lp-bG8" secondAttribute="topMargin" id="tTH-WD-bvQ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kEX-b5-aXQ" secondAttribute="trailing" id="u8u-Kd-r3i"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -170,4 +169,7 @@
             <point key="canvasLocation" x="1275" y="239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book_cover-jpg" width="2008" height="3071"/>
+    </resources>
 </document>

@@ -343,14 +343,20 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-0k-VuB">
-                                                    <rect key="frame" x="17" y="20" width="70" height="105"/>
+                                                    <rect key="frame" x="21" y="20" width="70" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="105" id="3OK-u9-dlp"/>
                                                         <constraint firstAttribute="width" constant="70" id="fQa-eK-txb"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A book from Leo Bigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-nI-MPt">
+                                                    <rect key="frame" x="117" y="53" width="462" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOw-qj-xGP">
-                                                    <rect key="frame" x="117" y="12" width="462" height="30"/>
+                                                    <rect key="frame" x="117" y="15" width="462" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4Xm-ZK-DDC"/>
                                                     </constraints>
@@ -358,23 +364,17 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A book from Leo Bigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-nI-MPt">
-                                                    <rect key="frame" x="117" y="46" width="462" height="86.5"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
-                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GOw-qj-xGP" firstAttribute="top" secondItem="RdG-lr-Gnh" secondAttribute="topMargin" constant="4" id="De2-II-G6s"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bvr-nI-MPt" secondAttribute="bottom" constant="4.5" id="Lez-gp-J4A"/>
-                                                <constraint firstItem="ERU-0k-VuB" firstAttribute="leading" secondItem="RdG-lr-Gnh" secondAttribute="leadingMargin" constant="9" id="UPz-zv-5jC"/>
+                                                <constraint firstItem="GOw-qj-xGP" firstAttribute="top" secondItem="RdG-lr-Gnh" secondAttribute="topMargin" constant="7" id="De2-II-G6s"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bvr-nI-MPt" secondAttribute="bottom" constant="65.5" id="Lez-gp-J4A"/>
+                                                <constraint firstItem="ERU-0k-VuB" firstAttribute="leading" secondItem="RdG-lr-Gnh" secondAttribute="leadingMargin" constant="13" id="UPz-zv-5jC"/>
                                                 <constraint firstItem="ERU-0k-VuB" firstAttribute="centerY" secondItem="RdG-lr-Gnh" secondAttribute="centerY" id="dHz-rJ-Dee"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bvr-nI-MPt" secondAttribute="trailing" constant="13" id="euE-m5-8fg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GOw-qj-xGP" secondAttribute="trailing" constant="13" id="ga8-rC-B1J"/>
-                                                <constraint firstItem="bvr-nI-MPt" firstAttribute="top" secondItem="GOw-qj-xGP" secondAttribute="bottom" constant="4" id="kTq-yh-RGs"/>
-                                                <constraint firstItem="GOw-qj-xGP" firstAttribute="leading" secondItem="ERU-0k-VuB" secondAttribute="trailing" constant="30" id="pj7-ju-wcH"/>
-                                                <constraint firstItem="bvr-nI-MPt" firstAttribute="leading" secondItem="ERU-0k-VuB" secondAttribute="trailing" constant="30" id="rfo-Sv-1L2"/>
+                                                <constraint firstItem="bvr-nI-MPt" firstAttribute="top" secondItem="GOw-qj-xGP" secondAttribute="bottom" constant="8" id="kTq-yh-RGs"/>
+                                                <constraint firstItem="GOw-qj-xGP" firstAttribute="leading" secondItem="ERU-0k-VuB" secondAttribute="trailing" constant="26" id="pj7-ju-wcH"/>
+                                                <constraint firstItem="bvr-nI-MPt" firstAttribute="leading" secondItem="ERU-0k-VuB" secondAttribute="trailing" constant="26" id="rfo-Sv-1L2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -411,7 +411,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-gt-r1e">
-                                                                <rect key="frame" x="8" y="59" width="584" height="17"/>
+                                                                <rect key="frame" x="44" y="59" width="512" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="sJ7-X0-qz7"/>
                                                                 </constraints>
@@ -426,7 +426,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                                     <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="REZ-vR-N94"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="21"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
@@ -449,10 +449,10 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                             <constraint firstAttribute="bottom" secondItem="8bK-iX-tov" secondAttribute="bottom" id="Hzz-dY-IKh"/>
                                                             <constraint firstAttribute="trailing" secondItem="Wcp-VK-3Uf" secondAttribute="trailing" constant="8" id="MIw-7S-jD8"/>
                                                             <constraint firstItem="3ch-gt-r1e" firstAttribute="top" secondItem="Wcp-VK-3Uf" secondAttribute="bottom" constant="8" id="OXO-1u-99U"/>
-                                                            <constraint firstAttribute="trailing" secondItem="3ch-gt-r1e" secondAttribute="trailing" constant="8" id="SXw-F6-J4a"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3ch-gt-r1e" secondAttribute="trailing" constant="44" id="SXw-F6-J4a"/>
                                                             <constraint firstAttribute="trailing" secondItem="8bK-iX-tov" secondAttribute="trailing" id="gPX-dB-n18"/>
                                                             <constraint firstItem="Wcp-VK-3Uf" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" constant="8" id="m8a-7t-NsG"/>
-                                                            <constraint firstItem="3ch-gt-r1e" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" constant="8" id="wER-Wo-Aur"/>
+                                                            <constraint firstItem="3ch-gt-r1e" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" constant="44" id="wER-Wo-Aur"/>
                                                         </constraints>
                                                     </view>
                                                     <blurEffect style="extraLight"/>

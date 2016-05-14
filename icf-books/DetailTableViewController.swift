@@ -23,12 +23,6 @@ class DetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //add a blurry layer for background image
-        let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurView = UIVisualEffectView(effect: blur)
-        blurView.frame = self.view.bounds
-        view.insertSubview(blurView, atIndex: 0)
-        
         //makes the cell as high as it needs to be, regarding the content
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
@@ -119,9 +113,13 @@ class DetailTableViewController: UITableViewController {
     }
     
     func defineTableBackground(img: UIImage){
-        let imageView = UIImageView(image: img)
-        imageView.contentMode = .Top
-        tableView.backgroundView = imageView
+//        let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+//        let blurView = UIVisualEffectView(effect: blur)
+//        blurView.frame = self.view.bounds
+//        view.insertSubview(blurView, atIndex: 0)
+//        let imageView = UIImageView(image: img)
+//        imageView.contentMode = .Top
+//        tableView.backgroundView = imageView
     }
 
     override func didReceiveMemoryWarning() {

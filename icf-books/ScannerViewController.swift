@@ -115,11 +115,13 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     }
     
     func openDetailViewForMedia(withId id:String) {
-        let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("DetailTableView") as! DetailTableViewController
-        vc.scan = Media.getById(id)
-        self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dispatch_async(dispatch_get_main_queue()) {
+            let storyboard = UIStoryboard(name: "DetailPages", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailTableView") as! DetailTableViewController
+            vc.scan = Media.getById(id)
+            self.homeDelegate?.navigationController?.pushViewController(vc, animated: true)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     
@@ -211,6 +213,10 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
             lastScannedCode = ""
             infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
             animateInfoHeight()
+            
+            //TODO: break loading
+            print("here you should break the internet loading and coredata saving process")
+            readyToScan = !readyToScan
         }
     }
     
