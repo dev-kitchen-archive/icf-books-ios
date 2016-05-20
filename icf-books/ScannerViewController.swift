@@ -49,7 +49,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         animateInfoHeight()
         
         // (1) validate origin
-        if scannedString.rangeOfString(Api.baseUrl as String) != nil {
+        if scannedString.removeHttp().rangeOfString(Api.baseUrl.removeHttp()) != nil {
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
             if let media = Media.getById(Api.idFromUrl(scannedString)){

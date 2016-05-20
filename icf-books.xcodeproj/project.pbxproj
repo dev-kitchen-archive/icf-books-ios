@@ -25,6 +25,7 @@
 		E15FBBAE1C791E5B004C444B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15FBBAD1C791E5B004C444B /* Config.plist */; };
 		E15FBBB01C791E9A004C444B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15FBBAF1C791E9A004C444B /* Api.swift */; };
 		E16166DB1CAD206400EFB9D8 /* MediaTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16166DA1CAD206400EFB9D8 /* MediaTypeData.swift */; };
+		E181D5F91CEF8A86005C1D2F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181D5F81CEF8A86005C1D2F /* String.swift */; };
 		E18589321C734F4800378011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589311C734F4800378011 /* AppDelegate.swift */; };
 		E18589341C734F4800378011 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589331C734F4800378011 /* HomeViewController.swift */; };
 		E18589371C734F4800378011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18589351C734F4800378011 /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		E15FBBAD1C791E5B004C444B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		E15FBBAF1C791E9A004C444B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E16166DA1CAD206400EFB9D8 /* MediaTypeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTypeData.swift; sourceTree = "<group>"; };
+		E181D5F81CEF8A86005C1D2F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E185892E1C734F4800378011 /* icf-books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icf-books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18589311C734F4800378011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18589331C734F4800378011 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				E15FBBAF1C791E9A004C444B /* Api.swift */,
 				E13F14651CA2B0CD002EB7CA /* Color.swift */,
+				E181D5F81CEF8A86005C1D2F /* String.swift */,
 				E18589751C76223000378011 /* GetJson.swift */,
 				E18589781C766FB200378011 /* ParseMedia.swift */,
 				E1EB26B21CDB7F4200B00937 /* RequestManager.swift */,
@@ -500,6 +503,7 @@
 				E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */,
 				E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */,
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
+				E181D5F91CEF8A86005C1D2F /* String.swift in Sources */,
 				E1EB26B31CDB7F4200B00937 /* RequestManager.swift in Sources */,
 				E18589761C76223000378011 /* GetJson.swift in Sources */,
 				E185897F1C76919400378011 /* Media.swift in Sources */,
