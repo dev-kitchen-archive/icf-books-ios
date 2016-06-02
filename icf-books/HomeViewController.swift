@@ -18,6 +18,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     let transition = BubbleTransition()
     
     var scans = [NSManagedObject]()
+    var thumbnails = [UIImage]()
     var chaptersCount = 1
     
     override func viewWillAppear(animated: Bool) {
@@ -58,6 +59,15 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
+        
+        //prepare images for cells to be faster accessable
+        for scan in scans {
+            let imgData = scan.valueForKey("thumbnail_data") as? NSData
+            let imageArray = imgData.map({UIImage(data: $0)})
+            let image = imageArray!
+            thumbnails.append(image!)
+        }
+        
         
         //make sure that table data is reloaded after successfully loading core data
         //because you could have new entries in coredata afer scanning new entry
@@ -142,10 +152,11 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             
             let scan = scans[indexPath.row]
             
-            let imgData = scan.valueForKey("thumbnail_data") as? NSData
-            let imageArray = imgData.map({UIImage(data: $0)})
-            cell!.scanImage.image = imageArray!
-            
+//            let imgData = scan.valueForKey("thumbnail_data") as? NSData
+//            let imageArray = imgData.map({UIImage(data: $0)})
+//            cell!.scanImage.image = imageArray!
+            cell!.scanImage.image = thumbnails[indexPath.row]
+                
             cell!.scanTitle.text = scan.valueForKey("title") as? String
             cell!.scanDesc.text = scan.valueForKey("teaser") as? String
             cell!.blur.hidden = false
