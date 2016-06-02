@@ -46,7 +46,6 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     }
     
     func readScannedObjects(){
-        print("readScannedObjects was called")
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
