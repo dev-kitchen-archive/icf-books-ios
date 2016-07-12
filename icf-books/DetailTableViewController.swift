@@ -47,9 +47,6 @@ class DetailTableViewController: UITableViewController {
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     let streamUrl = dataDict.valueForKey("file_url") as! String
-                    print(Api.baseUrl + streamUrl)
-                    
-                    defineTableBackground(movieThumb!)
                 }
                 if let detailDesc = scan!.valueForKey("teaser") as? String {
                     if detailDesc != "" {
@@ -76,9 +73,6 @@ class DetailTableViewController: UITableViewController {
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     let streamUrl = dataDict.valueForKey("movie1_url") as! String
-                    print(Api.baseUrl + streamUrl)
-                    
-                    defineTableBackground(movieThumb!)
                 }
                 if let detailDesc = dataDict.valueForKey("description1") as? String {
                     if detailDesc != "" {
@@ -91,9 +85,6 @@ class DetailTableViewController: UITableViewController {
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
                     let streamUrl = dataDict.valueForKey("movie2_url") as! String
-                    print(Api.baseUrl + streamUrl)
-                    
-                    defineTableBackground(movieThumb!)
                 }
                 if let detailDesc = dataDict.valueForKey("description2") as? String {
                     if detailDesc != "" {
@@ -110,16 +101,6 @@ class DetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    func defineTableBackground(img: UIImage){
-//        let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
-//        let blurView = UIVisualEffectView(effect: blur)
-//        blurView.frame = self.view.bounds
-//        view.insertSubview(blurView, atIndex: 0)
-//        let imageView = UIImageView(image: img)
-//        imageView.contentMode = .Top
-//        tableView.backgroundView = imageView
     }
 
     override func didReceiveMemoryWarning() {
@@ -212,7 +193,7 @@ class DetailTableViewController: UITableViewController {
             //-> file url from now on in type_data
             
             //let url = NSURL(string: urlStr)
-            let url = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+            let url = NSURL(string: "https://icfbooksresources.s3.amazonaws.com/production/2016/07/07/12/14/10/b04c4266-0d96-4c5a-80ce-0c22f80f9b01/default.mp4")
             
             let destination = segue.destinationViewController as! AVPlayerViewController
             destination.player = AVPlayer(URL: url!)

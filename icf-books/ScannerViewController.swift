@@ -46,21 +46,40 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     //this class is called as soon as a
     func foundNewCode(scannedString:String) {
         
-        animateInfoHeight()
+        //animateInfoHeight()
         
         // (1) validate origin
         if scannedString.removeHttp().rangeOfString(Api.baseUrl.removeHttp()) != nil {
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
-            if let media = Media.getById(Api.idFromUrl(scannedString)){
+            let scannedId = Api.idFromUrl(scannedString)
+            if let media = Media.getById(scannedId){
                 infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
-                
+
                 //as this media content is already available open the detail page
                 openDetailViewForMedia(withId: media.valueForKey("id") as! String)
             } else {
                 
                 infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
-                // (3) get data from url
+                // (3) get data
+
+                RequestManager.getMedia(forMediaId: scannedId, completionHandler: { (media, error) -> (Void) in
+                    if error == nil {
+                        if let mediaParsed = ParseMedia.fromJson(media!) {
+                            self.persistObject(mediaParsed)
+                        } else {
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
+                            }
+                        }
+                    } else {
+                        print("implement error handling in ScannerViewController.swift")
+//                        dispatch_async(dispatch_get_main_queue()) {
+//                            self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten."
+//                        }
+                    }
+                })
+                
                 let setUpUrl = Api.getLanguageUrl() + "/media/" + Api.idFromUrl(scannedString) + ".json"
                 print(setUpUrl)
                 let scannedURL = NSURL(string: setUpUrl)
@@ -147,8 +166,8 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                 //only run code if a new qr code was detected
                 if metadataObj.stringValue != lastScannedCode {
                     
-                    lastScannedCode = metadataObj.stringValue
                     foundNewCode(metadataObj.stringValue)
+                    lastScannedCode = metadataObj.stringValue
                 }
             }
         }
@@ -195,7 +214,6 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         view.bringSubviewToFront(infoLayer)
         view.bringSubviewToFront(topLayer)
         view.bringSubviewToFront(codeFenceImage)
-        
     }
     
     func setupQrCodeHighlighter() {
@@ -212,7 +230,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         } else {
             lastScannedCode = ""
             infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
-            animateInfoHeight()
+            //animateInfoHeight()
             
             //TODO: break loading
             print("here you should break the internet loading and coredata saving process")
@@ -220,34 +238,34 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         }
     }
     
-    func animateInfoHeight() {
-        if readyToScan {
-            UIView.animateWithDuration(0.5, animations: {
-                self.heightConstraint.constant = 44
-                self.view.layoutIfNeeded()
-            })
-            
-            codeFenceImage.hidden = true
-            //if not sucessful reload, else hide button
-            cancelButton.titleLabel?.text = "↺"
-        
-            let animatedImg = getAnimation("tick")
-            infoImage.image = animatedImg[animatedImg.count - 1]
-            infoImage.animationImages = animatedImg
-            infoImage.animationDuration = 1.5
-            infoImage.animationRepeatCount = 1
-            infoImage.startAnimating()
-        } else {
-            UIView.animateWithDuration(0.5, animations: {
-                self.heightConstraint.constant = 484
-                self.view.layoutIfNeeded()
-            })
-            codeFenceImage.hidden = false
-            cancelButton.titleLabel?.text = "✕"
-        }
-        
-        readyToScan = !readyToScan
-    }
+//    func animateInfoHeight() {
+//        if readyToScan {
+//            UIView.animateWithDuration(0.5, animations: {
+//                self.heightConstraint.constant = 44
+//                self.view.layoutIfNeeded()
+//            })
+//            
+//            codeFenceImage.hidden = true
+//            //if not sucessful reload, else hide button
+//            cancelButton.titleLabel?.text = "↺"
+//        
+//            let animatedImg = getAnimation("tick")
+//            infoImage.image = animatedImg[animatedImg.count - 1]
+//            infoImage.animationImages = animatedImg
+//            infoImage.animationDuration = 1.5
+//            infoImage.animationRepeatCount = 1
+//            infoImage.startAnimating()
+//        } else {
+//            UIView.animateWithDuration(0.5, animations: {
+//                self.heightConstraint.constant = 484
+//                self.view.layoutIfNeeded()
+//            })
+//            codeFenceImage.hidden = false
+//            cancelButton.titleLabel?.text = "✕"
+//        }
+//        
+//        readyToScan = !readyToScan
+//    }
     
     
     func getAnimation(icon:String) -> [UIImage] {

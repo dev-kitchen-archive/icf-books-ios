@@ -13,18 +13,23 @@ class RequestManager {
     static private let uri = Api.getLanguageUrl()
     
     // get all books
-    static func getBooks(completionHandler: (books:NSDictionary?, error:RequestError?) -> (Void)) {
+    static func getBooks(completionHandler: (books:NSArray?, error:RequestError?) -> (Void)) {
         
         //get specific request
         if let request = httpGetOn("/books") {
+            
             //get data
-            getDataFromRequest(request, callback: {retrievedData, errorMessage -> Void in
-                
-                var books:NSDictionary? = nil
+            getDataFromRequest(request, retrieveArray: true, callback: {retrievedData, errorMessage -> Void in
+                var books:NSArray? = nil
+                var error:RequestError? = nil
                 
                 //if no error, bring the data in needed shape
                 if errorMessage == nil {
-                    
+                    if let rawData = retrievedData as? NSArray {
+                        books = rawData
+                    } else {
+                        error = RequestError.ParsingError
+                    }
                     //Parsing
                     //let info = retrievedData!["Info"] as! NSDictionary
                     //let listExists = Int((info.valueForKey("NumOutRows") as? String)!)! > 0
@@ -33,38 +38,40 @@ class RequestManager {
                     //    books = retrievedData!["List"] as! NSDictionary
                     //}
                 }
-                
-                completionHandler(books: books, error: errorMessage)
+                completionHandler(books: books, error: error)
             })
         } else {
             completionHandler(books: nil, error: RequestError.BadUrl)
         }
-        
-        
     }
     
-    // get all chapters for a book
-    static func getChapters(forBookId id:String, completionHandler: (chapters:NSDictionary?, error:RequestError?) -> (Void)) {
+    // get chapters for a specific book
+    static func getBookChapters(id:Int, completionHandler: (chapters:NSArray?, error:RequestError?) -> (Void)) {
         
         //get specific request
-        if let request = httpGetOn("/books/\(id)/chapters") {
+        if let request = httpGetOn("/books", params: "/\(id)/chapters") {
+            
             //get data
-            getDataFromRequest(request, callback: {retrievedData, errorMessage -> Void in
-                
-                var chapters:NSDictionary? = nil
+            getDataFromRequest(request, retrieveArray: true, callback: {retrievedData, errorMessage -> Void in
+                var chapters:NSArray? = nil
+                var error:RequestError? = nil
                 
                 //if no error, bring the data in needed shape
                 if errorMessage == nil {
-                    
-                    //Parsing//let info = retrievedData!["Info"] as! NSDictionary
+                    if let rawData = retrievedData as? NSArray {
+                        chapters = rawData
+                    } else {
+                        error = RequestError.ParsingError
+                    }
+                    //Parsing
+                    //let info = retrievedData!["Info"] as! NSDictionary
                     //let listExists = Int((info.valueForKey("NumOutRows") as? String)!)! > 0
                     //
                     //if listExists {
                     //    books = retrievedData!["List"] as! NSDictionary
                     //}
                 }
-                
-                completionHandler(chapters: chapters, error: errorMessage)
+                completionHandler(chapters: chapters, error: error)
             })
         } else {
             completionHandler(chapters: nil, error: RequestError.BadUrl)
@@ -75,23 +82,27 @@ class RequestManager {
     static func getMedia(forMediaId id:String, changedSince:String = "", completionHandler: (media:NSDictionary?, error:RequestError?) -> (Void)) {
         
         //get specific request
-        if let request = httpGetOn("/media/\(id)") {
+        if let request = httpGetOn("/media", params: "/\(id)") {
             //get data
             getDataFromRequest(request, callback: {retrievedData, errorMessage -> Void in
-                
                 var media:NSDictionary? = nil
+                var error:RequestError? = nil
                 
                 //if no error, bring the data in needed shape
                 if errorMessage == nil {
-                    
-                    //Parsing//let info = retrievedData!["Info"] as! NSDictionary
+                    if let rawData = retrievedData as? NSDictionary {
+                        media = rawData
+                    } else {
+                        error = RequestError.ParsingError
+                    }
+                    //Parsing
+                    //let info = retrievedData!["Info"] as! NSDictionary
                     //let listExists = Int((info.valueForKey("NumOutRows") as? String)!)! > 0
                     //
                     //if listExists {
                     //    books = retrievedData!["List"] as! NSDictionary
                     //}
                 }
-                
                 completionHandler(media: media, error: errorMessage)
             })
         } else {
@@ -144,20 +155,20 @@ class RequestManager {
 //    }
     
     // genericly retrieve data depending on the request (for token, patients and tasks)
-    private static func getDataFromRequest(request: NSMutableURLRequest, callback: (retrievedData:NSDictionary?, errorMessage:RequestError?) -> (Void)) {
+    private static func getDataFromRequest(request: NSMutableURLRequest, retrieveArray:Bool = false, callback: (retrievedData:AnyObject?, errorMessage:RequestError?) -> (Void)) {
         let session = NSURLSession.sharedSession()
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            var retrievedData: NSDictionary? = nil
+            var retrievedData: AnyObject? = nil
             var errorMsg: RequestError? = nil
             
             //try to get data
             do {
                 if data != nil {
-                    retrievedData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as? NSDictionary
-                    
-                    if retrievedData == nil {
-                        errorMsg = RequestError.NoData
+                    if retrieveArray {
+                        retrievedData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSArray
+                    } else {
+                        retrievedData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
                     }
                 } else {
                     errorMsg = RequestError.NoInternet
