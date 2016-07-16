@@ -9,7 +9,7 @@
 		<key>red_color</key>
 		<string>#FA6562</string>
 		<key>base_url</key>
-		<string>https://icfbooks.herokuapp.com</string>
+		<string>https://api-books.icf.church</string>
 	</dict>
 </dict>
 </plist>

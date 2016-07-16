@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ArnhemPro-Blond.ttf">
@@ -31,11 +32,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2Bj-Aj-FUB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UcH-eY-5ga">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Book Ester" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-hK-A4K">
-                                <rect key="frame" x="20" y="72" width="560" height="33"/>
+                                <rect key="frame" x="16" y="72" width="343" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Das-Ux-dgm"/>
                                 </constraints>
@@ -43,8 +44,8 @@
                                 <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-pk-8Cf">
-                                <rect key="frame" x="20" y="247" width="560" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About the author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-pk-8Cf">
+                                <rect key="frame" x="16" y="247" width="343" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Ngp-ID-98a"/>
                                 </constraints>
@@ -52,30 +53,30 @@
                                 <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-MK-3Rn">
-                                <rect key="frame" x="20" y="113" width="472" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-MK-3Rn">
+                                <rect key="frame" x="16" y="113" width="255" height="126.5"/>
                                 <string key="text">The eagle, the king of the skies, people charmed us by his powerful flying skills and his outspoken far and perspicacity. And he is a symbol of vision focus and strength. It amazes Therefore did not the Bible repeatedly the image of the eagle uses so we learn our lives Divine perspective to consider.
 This book wants to encourage us to hold a vision of our life and to stay focused.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
-                                <rect key="frame" x="108" y="288" width="472" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
+                                <rect key="frame" x="104" y="288" width="255" height="72.5"/>
                                 <string key="text">Leo and Susanna Bigger jointly manage the ICF movement and ICF Zurich. Leo and Susanna have two children and live near Zurich. Leo is author of several books and on various television channels than TV preacher to consider.</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-cG-0M8">
-                                <rect key="frame" x="500" y="113" width="80" height="115"/>
+                                <rect key="frame" x="279" y="113" width="80" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="0Lv-dm-owj"/>
                                     <constraint firstAttribute="width" constant="80" id="Eqe-9X-eti"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-hs-5oI">
-                                <rect key="frame" x="20" y="288" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-hs-5oI">
+                                <rect key="frame" x="16" y="288" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="h5N-Gh-L1Y"/>
                                     <constraint firstAttribute="width" constant="80" id="iQZ-eg-Ovc"/>
@@ -138,24 +139,24 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                         <viewControllerLayoutGuide type="bottom" id="DZg-b5-0FA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Mq-pk-nE2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
-                                <rect key="frame" x="0.0" y="504" width="600" height="96"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
+                                <rect key="frame" x="-4" y="504" width="383" height="163"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5aV-X5-Sza">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="163"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code_preview" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-6l-8eS">
-                                            <rect key="frame" x="31" y="18" width="61" height="61"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="qr_code_preview" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-6l-8eS">
+                                            <rect key="frame" x="31" y="51" width="61" height="61"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="61" id="9e8-pa-Xac"/>
                                                 <constraint firstAttribute="height" constant="61" id="HQT-yx-7WP"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your phone over the QR code to scan..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
-                                            <rect key="frame" x="107" y="10" width="442" height="68"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hold your phone over the QR code to scan..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
+                                            <rect key="frame" x="107" y="43" width="225" height="68"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="mdE-u2-RRF"/>
                                             </constraints>
@@ -176,13 +177,13 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-60-bxV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <rect key="frame" x="-4" y="0.0" width="383" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3jF-7a-aUu">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
-                                            <rect key="frame" x="543" y="23" width="49" height="33"/>
+                                            <rect key="frame" x="326" y="23" width="49" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="rfE-qF-hbD"/>
                                                 <constraint firstAttribute="width" constant="49" id="wlh-fh-GgF"/>
@@ -214,7 +215,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-mO-3Jy">
-                                <rect key="frame" x="160" y="152" width="280" height="280"/>
+                                <rect key="frame" x="47" y="152" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="ad0-2Z-4lc"/>
                                     <constraint firstAttribute="height" constant="280" id="fm8-xR-i6q"/>
@@ -234,6 +235,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                             <constraint firstItem="UF0-mO-3Jy" firstAttribute="centerX" secondItem="8Mq-pk-nE2" secondAttribute="centerX" id="zIx-9k-xiY"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="cancelButton" destination="fyT-CK-Gio" id="ARM-de-00l"/>
                         <outlet property="codeFenceImage" destination="UF0-mO-3Jy" id="ugl-UE-8tB"/>
@@ -246,7 +248,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7H-bN-Qty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="292"/>
+            <point key="canvasLocation" x="-190.5" y="363.5"/>
         </scene>
         <!--Welcome Controller-->
         <scene sceneID="gbI-Uy-t7V">
@@ -328,34 +330,34 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                         <viewControllerLayoutGuide type="bottom" id="JZa-pA-4yL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l3S-el-Kvu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Zu-cc-tWz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="progressCell" rowHeight="145" id="jiv-VC-hWM" customClass="ProgressTableViewCell" customModule="icf_books" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="145"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="progressCell" rowHeight="141" id="jiv-VC-hWM" customClass="ProgressTableViewCell" customModule="icf_books" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jiv-VC-hWM" id="RdG-lr-Gnh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-0k-VuB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-0k-VuB">
                                                     <rect key="frame" x="21" y="20" width="70" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="105" id="3OK-u9-dlp"/>
                                                         <constraint firstAttribute="width" constant="70" id="fQa-eK-txb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A book from Leo Bigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-nI-MPt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A book from Leo Bigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-nI-MPt">
                                                     <rect key="frame" x="117" y="53" width="462" height="19"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                                     <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOw-qj-xGP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOw-qj-xGP">
                                                     <rect key="frame" x="117" y="15" width="462" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4Xm-ZK-DDC"/>
@@ -385,18 +387,17 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                             <segue destination="GP6-1y-8k3" kind="show" id="ax5-c9-kse"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="110" id="pB3-wd-Mgq" customClass="ContentTableViewCell" customModule="icf_books" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="237" width="600" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="375" id="pB3-wd-Mgq" customClass="ContentTableViewCell" customModule="icf_books" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="233" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pB3-wd-Mgq" id="ybg-pc-N8Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-C3-lil">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="125" id="ZN0-kb-wE6"/>
-                                                        <constraint firstAttribute="height" constant="110" id="uFe-3I-Mu8"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -404,71 +405,51 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkS-fz-8ng">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m3b-w1-wRE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-gt-r1e">
-                                                                <rect key="frame" x="44" y="59" width="512" height="17"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="17" id="sJ7-X0-qz7"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
-                                                                <rect key="frame" x="8" y="29" width="584" height="22"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="22" id="24j-x3-LkB"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="REZ-vR-N94"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="21"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="BK5-0d-8Jr"/>
-                                                                        <exclude reference="REZ-vR-N94"/>
-                                                                    </mask>
-                                                                </variation>
-                                                            </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-iX-tov">
-                                                                <rect key="frame" x="0.0" y="104" width="600" height="6"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="6" id="VIF-Iy-UBm"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="Wcp-VK-3Uf" firstAttribute="top" secondItem="m3b-w1-wRE" secondAttribute="top" constant="29" id="96S-0A-yWR"/>
-                                                            <constraint firstItem="8bK-iX-tov" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" id="9mM-rp-fhG"/>
-                                                            <constraint firstAttribute="bottom" secondItem="8bK-iX-tov" secondAttribute="bottom" id="Hzz-dY-IKh"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Wcp-VK-3Uf" secondAttribute="trailing" constant="8" id="MIw-7S-jD8"/>
-                                                            <constraint firstItem="3ch-gt-r1e" firstAttribute="top" secondItem="Wcp-VK-3Uf" secondAttribute="bottom" constant="8" id="OXO-1u-99U"/>
-                                                            <constraint firstAttribute="trailing" secondItem="3ch-gt-r1e" secondAttribute="trailing" constant="44" id="SXw-F6-J4a"/>
-                                                            <constraint firstAttribute="trailing" secondItem="8bK-iX-tov" secondAttribute="trailing" id="gPX-dB-n18"/>
-                                                            <constraint firstItem="Wcp-VK-3Uf" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" constant="8" id="m8a-7t-NsG"/>
-                                                            <constraint firstItem="3ch-gt-r1e" firstAttribute="leading" secondItem="m3b-w1-wRE" secondAttribute="leading" constant="44" id="wER-Wo-Aur"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <blurEffect style="extraLight"/>
-                                                </visualEffectView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_black" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-iX-tov">
+                                                    <rect key="frame" x="0.0" y="225" width="375" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
+                                                    <rect key="frame" x="23" y="225" width="329" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="REZ-vR-N94"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="38"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="BK5-0d-8Jr"/>
+                                                            <exclude reference="REZ-vR-N94"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_pixel" translatesAutoresizingMaskIntoConstraints="NO" id="wlh-1k-Y5U">
+                                                    <rect key="frame" x="0.0" y="371" width="375" height="4"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="4" id="rg0-2T-lkU"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5e4-C3-lil" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="-8" id="7F6-8n-3eQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TkS-fz-8ng" secondAttribute="bottom" constant="-8" id="FIT-r9-WTK"/>
+                                                <constraint firstItem="8bK-iX-tov" firstAttribute="height" secondItem="5e4-C3-lil" secondAttribute="height" multiplier="0.4" id="1Gb-5S-ynM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Wcp-VK-3Uf" secondAttribute="bottom" constant="-8" id="CG9-rV-TXV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wlh-1k-Y5U" secondAttribute="trailing" constant="-8" id="DQi-qn-dks"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wlh-1k-Y5U" secondAttribute="bottom" constant="-8" id="Ha0-2x-EwV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8bK-iX-tov" secondAttribute="bottom" constant="-8" id="HrR-We-pcG"/>
+                                                <constraint firstItem="8bK-iX-tov" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="-8" id="JDj-qe-AqF"/>
+                                                <constraint firstItem="wlh-1k-Y5U" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="-8" id="L6B-LL-BHQ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5e4-C3-lil" secondAttribute="bottom" constant="0.5" id="ND0-uF-t0c"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="TkS-fz-8ng" secondAttribute="trailing" constant="-8" id="WCk-BE-LRv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="5e4-C3-lil" secondAttribute="trailing" constant="-8" id="ZIU-5F-C0e"/>
-                                                <constraint firstItem="5e4-C3-lil" firstAttribute="top" secondItem="ybg-pc-N8Y" secondAttribute="topMargin" constant="-8" id="Zag-Zc-n3o"/>
-                                                <constraint firstItem="TkS-fz-8ng" firstAttribute="top" secondItem="ybg-pc-N8Y" secondAttribute="topMargin" constant="-8" id="bEg-9f-6dE"/>
+                                                <constraint firstItem="Wcp-VK-3Uf" firstAttribute="trailing" secondItem="ybg-pc-N8Y" secondAttribute="trailingMargin" constant="-15" id="P4B-2O-mC4"/>
+                                                <constraint firstItem="5e4-C3-lil" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="-8" id="dB2-Xv-fe9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5e4-C3-lil" secondAttribute="bottom" constant="-8" id="gNv-gE-dpO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8bK-iX-tov" secondAttribute="trailing" constant="-8" id="hyJ-5v-YTC"/>
+                                                <constraint firstItem="Wcp-VK-3Uf" firstAttribute="height" secondItem="5e4-C3-lil" secondAttribute="height" multiplier="0.4" id="md3-sQ-ral"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5e4-C3-lil" secondAttribute="bottom" constant="-8" id="ni0-7C-UIs"/>
+                                                <constraint firstItem="5e4-C3-lil" firstAttribute="top" secondItem="ybg-pc-N8Y" secondAttribute="topMargin" constant="-8" id="oM7-db-DbV"/>
                                                 <constraint firstItem="5e4-C3-lil" firstAttribute="bottom" secondItem="ybg-pc-N8Y" secondAttribute="bottomMargin" id="qiq-cA-LDC"/>
-                                                <constraint firstItem="TkS-fz-8ng" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="-8" id="whr-bd-AJ9"/>
+                                                <constraint firstItem="Wcp-VK-3Uf" firstAttribute="leading" secondItem="ybg-pc-N8Y" secondAttribute="leadingMargin" constant="15" id="rdK-w0-jW3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5e4-C3-lil" secondAttribute="trailing" constant="-8" id="ysQ-qf-0i2"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -479,21 +460,20 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="blur" destination="TkS-fz-8ng" id="ZXW-MD-5c3"/>
-                                            <outlet property="scanDesc" destination="3ch-gt-r1e" id="3b0-jR-512"/>
-                                            <outlet property="scanImage" destination="5e4-C3-lil" id="EYe-GJ-Q58"/>
-                                            <outlet property="scanTitle" destination="Wcp-VK-3Uf" id="qDw-Fd-Qp0"/>
+                                            <outlet property="gradient" destination="8bK-iX-tov" id="cl4-ob-Cnd"/>
+                                            <outlet property="scanImage" destination="5e4-C3-lil" id="lMS-9d-Xrm"/>
+                                            <outlet property="scanTitle" destination="Wcp-VK-3Uf" id="u8h-vO-Uyb"/>
                                             <segue destination="QTy-py-b2y" kind="show" identifier="openSavedScan" id="L9F-Zp-6d4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="infoImageCell" rowHeight="227" id="vZZ-XY-xlb" customClass="InfoImageTableViewCell" customModule="icf_books" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="347" width="600" height="227"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="infoImageCell" rowHeight="395" id="vZZ-XY-xlb" customClass="InfoImageTableViewCell" customModule="icf_books" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="608" width="375" height="395"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vZZ-XY-xlb" id="05c-xY-JuG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="227"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="395"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-1k-Rjj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-1k-Rjj">
                                                     <rect key="frame" x="8" y="46" width="584" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="fuw-o6-Yb0"/>
@@ -502,7 +482,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                                     <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_scanned_codes_de" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-hI-AVg">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="no_scanned_codes_de" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-hI-AVg">
                                                     <rect key="frame" x="73" y="89" width="454" height="41"/>
                                                 </imageView>
                                             </subviews>
@@ -523,13 +503,13 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUJ-CX-Z8M">
-                                <rect key="frame" x="0.0" y="510" width="600" height="90"/>
+                                <rect key="frame" x="-4" y="577" width="383" height="90"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Ps5-vt-jaC">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49J-BD-Hvm">
-                                        <rect key="frame" x="270" y="15" width="60" height="60"/>
+                                        <rect key="frame" x="161" y="15" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Gjs-4M-dg6"/>
@@ -574,6 +554,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scanButton" destination="49J-BD-Hvm" id="tKl-Ld-Y4V"/>
                         <outlet property="tabBar" destination="cUJ-CX-Z8M" id="478-zr-um8"/>
@@ -582,16 +563,18 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGn-I1-f9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-418"/>
+            <point key="canvasLocation" x="-190.5" y="-418.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="book_cover-jpg" width="2008" height="3071"/>
+        <image name="gradient_black" width="800" height="800"/>
         <image name="gradient_overlay" width="800" height="800"/>
         <image name="leo_bigger" width="665" height="665"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="no_scanned_codes_de" width="574" height="842"/>
         <image name="qr_code_preview" width="144" height="140"/>
         <image name="scan_overlay" width="546" height="544"/>
+        <image name="white_pixel" width="20" height="15"/>
     </resources>
 </document>

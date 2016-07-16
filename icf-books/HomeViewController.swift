@@ -82,17 +82,17 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return nil
-            //bookmarks could be in section == 1
-            
-        } else if section == chaptersCount + 2 - 1 {
-            return nil
-        } else {
-            return "Kapitel \(section) — Schönheit bewegt"
-        }
-    }
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 0 {
+//            return nil
+//            //bookmarks could be in section == 1
+//            
+//        } else if section == chaptersCount + 2 - 1 {
+//            return nil
+//        } else {
+//            return "Kapitel \(section) — Schönheit bewegt"
+//        }
+//    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { //either about book or intro image
@@ -137,8 +137,9 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             if cell == nil {
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
             }
-            cell!.blur.hidden = true
             cell!.scanImage.image = UIImage()
+            cell!.scanTitle.hidden = true
+            cell!.gradient.hidden = true
             return cell!
         }
         //for all other sections (that represent each chapter) show its containig scans
@@ -157,22 +158,22 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             cell!.scanImage.image = thumbnails[indexPath.row]
                 
             cell!.scanTitle.text = scan.valueForKey("title") as? String
-            cell!.scanDesc.text = scan.valueForKey("teaser") as? String
-            cell!.blur.hidden = false
             
             return cell!
         }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let width = UIScreen.mainScreen().bounds.width
+        let height = tableView.bounds.height
         if scans.count < 1 {
-            return 600
+            return height
         } else if indexPath.section == 0 {
             return 145
         } else if indexPath.section == chaptersCount + 1 {
             return 90 // equals folating scan button
         } else {
-            return 110
+            return width
         }
     }
     
@@ -215,7 +216,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         transition.bubbleColor = UIColor(red:0.11, green:0.11, blue:0.11, alpha:1.00)
         return transition
     }
-    
+
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .Dismiss
         transition.startingPoint = tabBar.center
