@@ -11,109 +11,14 @@
             <string>ArnhemPro-Blond</string>
             <string>ArnhemPro-Blond</string>
             <string>ArnhemPro-Blond</string>
-            <string>ArnhemPro-Blond</string>
-            <string>ArnhemPro-Blond</string>
         </mutableArray>
         <mutableArray key="Montserrat-Light.otf">
-            <string>Montserrat-Light</string>
-            <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Das Buch-->
-        <scene sceneID="EZE-UC-f1V">
-            <objects>
-                <viewController title="Das Buch" id="GP6-1y-8k3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qib-L3-oyN"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Bj-Aj-FUB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UcH-eY-5ga">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Book Ester" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-hK-A4K">
-                                <rect key="frame" x="16" y="72" width="343" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Das-Ux-dgm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="27"/>
-                                <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About the author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-pk-8Cf">
-                                <rect key="frame" x="16" y="247" width="343" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Ngp-ID-98a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="27"/>
-                                <color key="textColor" red="0.11111111110000001" green="0.11111111110000001" blue="0.11111111110000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-MK-3Rn">
-                                <rect key="frame" x="16" y="113" width="255" height="126.5"/>
-                                <string key="text">The eagle, the king of the skies, people charmed us by his powerful flying skills and his outspoken far and perspicacity. And he is a symbol of vision focus and strength. It amazes Therefore did not the Bible repeatedly the image of the eagle uses so we learn our lives Divine perspective to consider.
-This book wants to encourage us to hold a vision of our life and to stay focused.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69Y-Io-yKA">
-                                <rect key="frame" x="104" y="288" width="255" height="72.5"/>
-                                <string key="text">Leo and Susanna Bigger jointly manage the ICF movement and ICF Zurich. Leo and Susanna have two children and live near Zurich. Leo is author of several books and on various television channels than TV preacher to consider.</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-cG-0M8">
-                                <rect key="frame" x="279" y="113" width="80" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="0Lv-dm-owj"/>
-                                    <constraint firstAttribute="width" constant="80" id="Eqe-9X-eti"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-hs-5oI">
-                                <rect key="frame" x="16" y="288" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="h5N-Gh-L1Y"/>
-                                    <constraint firstAttribute="width" constant="80" id="iQZ-eg-Ovc"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rvE-pk-8Cf" firstAttribute="leading" secondItem="UcH-eY-5ga" secondAttribute="leadingMargin" id="3Mz-hk-HVI"/>
-                            <constraint firstItem="69Y-Io-yKA" firstAttribute="top" secondItem="rvE-pk-8Cf" secondAttribute="bottom" constant="8" id="5A4-Cu-jGJ"/>
-                            <constraint firstItem="rvE-pk-8Cf" firstAttribute="trailing" secondItem="UcH-eY-5ga" secondAttribute="trailingMargin" id="AR9-mH-u2i"/>
-                            <constraint firstItem="rvE-cG-0M8" firstAttribute="top" secondItem="PBe-hK-A4K" secondAttribute="bottom" constant="8" id="Q5P-gg-b6Y"/>
-                            <constraint firstItem="rvE-cG-0M8" firstAttribute="trailing" secondItem="UcH-eY-5ga" secondAttribute="trailingMargin" id="RdR-rW-jCb"/>
-                            <constraint firstItem="rvE-cG-0M8" firstAttribute="leading" secondItem="3rh-MK-3Rn" secondAttribute="trailing" constant="8" id="Xaj-oB-wjY"/>
-                            <constraint firstItem="3rh-MK-3Rn" firstAttribute="leading" secondItem="UcH-eY-5ga" secondAttribute="leadingMargin" id="cwe-In-0RA"/>
-                            <constraint firstItem="O7j-hs-5oI" firstAttribute="leading" secondItem="UcH-eY-5ga" secondAttribute="leadingMargin" id="e3g-AY-rKL"/>
-                            <constraint firstItem="PBe-hK-A4K" firstAttribute="top" secondItem="Qib-L3-oyN" secondAttribute="bottom" constant="8" id="hA2-KC-wp4"/>
-                            <constraint firstItem="3rh-MK-3Rn" firstAttribute="trailing" secondItem="UcH-eY-5ga" secondAttribute="trailingMargin" id="jVJ-8f-rgs"/>
-                            <constraint firstItem="PBe-hK-A4K" firstAttribute="leading" secondItem="UcH-eY-5ga" secondAttribute="leadingMargin" id="l57-Ca-rdj"/>
-                            <constraint firstItem="PBe-hK-A4K" firstAttribute="trailing" secondItem="UcH-eY-5ga" secondAttribute="trailingMargin" id="lEd-SH-tTv"/>
-                            <constraint firstItem="rvE-pk-8Cf" firstAttribute="top" secondItem="3rh-MK-3Rn" secondAttribute="bottom" constant="8" id="p6E-fq-cAr"/>
-                            <constraint firstItem="69Y-Io-yKA" firstAttribute="leading" secondItem="O7j-hs-5oI" secondAttribute="trailing" constant="8" id="ss2-KJ-x7l"/>
-                            <constraint firstItem="69Y-Io-yKA" firstAttribute="trailing" secondItem="UcH-eY-5ga" secondAttribute="trailingMargin" id="uQe-71-RJJ"/>
-                            <constraint firstItem="O7j-hs-5oI" firstAttribute="top" secondItem="rvE-pk-8Cf" secondAttribute="bottom" constant="8" id="umT-qx-Db3"/>
-                            <constraint firstItem="3rh-MK-3Rn" firstAttribute="top" secondItem="PBe-hK-A4K" secondAttribute="bottom" constant="8" id="yp5-jD-zVs"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="jVJ-8f-rgs"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="riD-cT-VX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="607" y="-372"/>
-        </scene>
         <!--AboutApp-->
         <scene sceneID="PAv-ZS-cbM">
             <objects>
@@ -176,6 +81,13 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-mO-3Jy">
+                                <rect key="frame" x="47" y="152" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ad0-2Z-4lc"/>
+                                    <constraint firstAttribute="height" constant="280" id="fm8-xR-i6q"/>
+                                </constraints>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-60-bxV">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3jF-7a-aUu">
@@ -214,13 +126,6 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-mO-3Jy">
-                                <rect key="frame" x="47" y="152" width="280" height="280"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="ad0-2Z-4lc"/>
-                                    <constraint firstAttribute="height" constant="280" id="fm8-xR-i6q"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -384,7 +289,6 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                                             <outlet property="bookAuthor" destination="bvr-nI-MPt" id="8FQ-d4-hpG"/>
                                             <outlet property="bookImage" destination="ERU-0k-VuB" id="Md2-1T-d7A"/>
                                             <outlet property="bookTitle" destination="GOw-qj-xGP" id="WOU-KE-hbh"/>
-                                            <segue destination="GP6-1y-8k3" kind="show" id="ax5-c9-kse"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myCell" rowHeight="375" id="pB3-wd-Mgq" customClass="ContentTableViewCell" customModule="icf_books" customModuleProvider="target">
@@ -505,7 +409,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUJ-CX-Z8M">
                                 <rect key="frame" x="-4" y="577" width="383" height="90"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Ps5-vt-jaC">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Ps5-vt-jaC">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49J-BD-Hvm">
@@ -547,7 +451,7 @@ This book wants to encourage us to hold a vision of our life and to stay focused
                             <constraint firstItem="JZa-pA-4yL" firstAttribute="top" secondItem="2Zu-cc-tWz" secondAttribute="bottom" id="kDA-55-qu1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ICF Books" id="X9J-BS-YDJ">
+                    <navigationItem key="navigationItem" title="Ester" id="X9J-BS-YDJ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="kqj-g4-k9X">
                             <connections>
                                 <segue destination="pSI-Kd-yLV" kind="show" id="EDI-sc-Kzl"/>
@@ -570,7 +474,6 @@ This book wants to encourage us to hold a vision of our life and to stay focused
         <image name="book_cover-jpg" width="2008" height="3071"/>
         <image name="gradient_black" width="800" height="800"/>
         <image name="gradient_overlay" width="800" height="800"/>
-        <image name="leo_bigger" width="665" height="665"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="no_scanned_codes_de" width="574" height="842"/>
         <image name="qr_code_preview" width="144" height="140"/>

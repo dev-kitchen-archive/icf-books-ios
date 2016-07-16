@@ -74,11 +74,10 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
         if scans.count < 1 {
             return 1
         } else {
-            return chaptersCount + 2 //plus two for firs section containing progress and las one that has spacing cell
+            return chaptersCount + 1 //if there are scanns, have a second section containing an empty cell for bottom space
         }
     }
     
@@ -95,16 +94,11 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
 //    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 { //either about book or intro image
+        if scans.count < 1 || section == chaptersCount { //either about book or intro image
             //make content not scrollable
             tableView.scrollEnabled = false
             return 1
-        } else if section == chaptersCount + 1 { //spacing section sith space for button to scan
-            //make content not scrollable
-            tableView.scrollEnabled = true
-            return 1
-        } else { //actual scans for chapter
-            //make content not scrollable
+        } else { //spacing section with space for button to scan
             tableView.scrollEnabled = true
             return scans.count
         }
@@ -121,18 +115,8 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             return cell!
             
         }
-        // if something is scanned show progress in 1st section (only 1 cell given)
-        else if indexPath.section == 0 {
-            var cell = tableView.dequeueReusableCellWithIdentifier("progressCell") as? ProgressTableViewCell
-            if cell == nil {
-                cell = ProgressTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "progressCell")
-            }
-
-            return cell!
-            
-        }
-        // last section after chapters (1 spacing cell) > spacing cell
-        else if indexPath.section == chaptersCount + 1 {
+        // last section after chapters sections --> spacing cell section
+        else if indexPath.section == chaptersCount {
             var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
             if cell == nil {
                 cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
@@ -151,12 +135,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             }
             
             let scan = scans[indexPath.row]
-            
-//            let imgData = scan.valueForKey("thumbnail_data") as? NSData
-//            let imageArray = imgData.map({UIImage(data: $0)})
-//            cell!.scanImage.image = imageArray!
             cell!.scanImage.image = thumbnails[indexPath.row]
-                
             cell!.scanTitle.text = scan.valueForKey("title") as? String
             
             return cell!
@@ -168,9 +147,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         let height = tableView.bounds.height
         if scans.count < 1 {
             return height
-        } else if indexPath.section == 0 {
-            return 145
-        } else if indexPath.section == chaptersCount + 1 {
+        } else if indexPath.section == chaptersCount {
             return 90 // equals folating scan button
         } else {
             return width
