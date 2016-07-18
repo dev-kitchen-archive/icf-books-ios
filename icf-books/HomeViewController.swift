@@ -38,20 +38,25 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         table.dataSource = self
         
         scanButton.imageView?.contentMode = .ScaleAspectFit
-    }
         
+        
+        //set title of navigation view to welcome user
+        if scans.count < 1 {
+            self.title = NSLocalizedString("WELCOME", comment:"welcome title")
+        } else {
+            self.title = "ESTER"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func readScannedObjects(){
-        //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        //2
         let fetchRequest = NSFetchRequest(entityName: "Media")
-        //3
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
             scans = results as! [NSManagedObject]
@@ -94,26 +99,36 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
 //    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if scans.count < 1 || section == chaptersCount { //either about book or intro image
+        if scans.count < 1 {
             //make content not scrollable
             tableView.scrollEnabled = false
-            return 1
-        } else { //spacing section with space for button to scan
+            //AboutBookCell and InfoImageCell
+            return 2
+        } else {
+            //spacing section with space for button to scan
             tableView.scrollEnabled = true
             return scans.count
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // if nothing is scanned yet, show info howto use (only 1 section will be given)
-        if scans.count < 1 {
-            var cell = tableView.dequeueReusableCellWithIdentifier("infoImageCell") as? InfoImageTableViewCell
+        // if nothing is scanned yet, show AboutBookCell
+        if scans.count < 1 && indexPath.row == 0 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("aboutBookCell") as? AboutBookCell
             if cell == nil {
-                cell = InfoImageTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infoImageCell")
+                cell = AboutBookCell(style: UITableViewCellStyle.Default, reuseIdentifier: "aboutBookCell")
+            }
+            
+            return cell!
+        }
+        // if nothing is scanned yet, show InfoImageCell
+        else if scans.count < 1 && indexPath.row == 1 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("infoImageCell") as? InfoImageCell
+            if cell == nil {
+                cell = InfoImageCell(style: UITableViewCellStyle.Default, reuseIdentifier: "infoImageCell")
             }
         
             return cell!
-            
         }
         // last section after chapters sections --> spacing cell section
         else if indexPath.section == chaptersCount {
@@ -144,9 +159,11 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let width = UIScreen.mainScreen().bounds.width
-        let height = tableView.bounds.height
-        if scans.count < 1 {
-            return height
+        
+        if scans.count < 1 && indexPath.row == 0 {
+            return 170
+        } else if scans.count < 1 && indexPath.row == 1 {
+            return 330
         } else if indexPath.section == chaptersCount {
             return 90 // equals folating scan button
         } else {

@@ -30,3 +30,13 @@
 //General
 "BUTTON_NEXT" = "Next";
 "BUTTON_START" = "Start now";
+
+//new
+"WELCOME" = "WELCOME";
+
+"BOOK_TITLE" = "ESTHER – On Your Way With God";
+"BOOK_RELEASE" = "Available from 1st Sept 2016";
+"BOOK_BUTTON" = "buy online";
+
+"INFO_TITLE" = "No videos added so far";
+"TNFO_DESC" = "Access the plus button to add new videos from your book";

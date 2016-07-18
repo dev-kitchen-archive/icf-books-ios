@@ -30,3 +30,13 @@
 //General
 "BUTTON_NEXT" = "Weiter";
 "BUTTON_START" = "Jetzt starten";
+
+//new
+"WELCOME" = "WILLKOMMEN";
+
+"BOOK_TITLE" = "ESTHER – Mit Gott die Welt auf den Kopf stellen";
+"BOOK_RELEASE" = "Ab 1. Sept 2016 im Handel erhältlich";
+"BOOK_BUTTON" = "Online kaufen";
+
+"INFO_TITLE" = "Noch keine Videos vorhanden";
+"TNFO_DESC" = "Verwende den Plus-Button um zusätzliche Videos zum Buch anzuzeigen";
