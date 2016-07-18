@@ -18,12 +18,12 @@ class WelcomeController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
-        //show intro to user, if he opens the app for the first time
-        startWithView(!self.userDefaults.boolForKey("appAlreadyUsed"))
+        //show intro to user, if he opens the app for the third time, to show special news
+        //!self.userDefaults.boolForKey("appAlreadyUsed")
+        startWithView(false)
     }
     
     func startWithView(intro:Bool) {
-        print(intro)
         if intro {
             self.performSegueWithIdentifier("showIntro", sender: self)
         } else {

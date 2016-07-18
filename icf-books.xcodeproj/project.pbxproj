@@ -18,7 +18,7 @@
 		E134EB501CA48DE600D3B283 /* DetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB4F1CA48DE600D3B283 /* DetailDescriptionCell.swift */; };
 		E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134EB511CA48DF300D3B283 /* DetailMovieCell.swift */; };
 		E13BAC721D3CFB5B001176F4 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BAC711D3CFB5B001176F4 /* UIDeviceExtension.swift */; };
-		E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14611CA29155002EB7CA /* IntroViewController.swift */; };
+		E13BAC741D3D0592001176F4 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BAC731D3D0592001176F4 /* IntroViewController.swift */; };
 		E13F14661CA2B0CD002EB7CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14651CA2B0CD002EB7CA /* Color.swift */; };
 		E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F14671CA2B394002EB7CA /* MasterViewController.swift */; };
 		E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F146E1CA2B951002EB7CA /* IntroSliderCell.swift */; };
@@ -100,7 +100,7 @@
 		E134EB4F1CA48DE600D3B283 /* DetailDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDescriptionCell.swift; sourceTree = "<group>"; };
 		E134EB511CA48DF300D3B283 /* DetailMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMovieCell.swift; sourceTree = "<group>"; };
 		E13BAC711D3CFB5B001176F4 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
-		E13F14611CA29155002EB7CA /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E13BAC731D3D0592001176F4 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E13F14651CA2B0CD002EB7CA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E13F14671CA2B394002EB7CA /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		E13F146A1CA2B79A002EB7CA /* Montserrat-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-UltraLight.otf"; sourceTree = "<group>"; };
@@ -293,12 +293,12 @@
 			children = (
 				E13F14671CA2B394002EB7CA /* MasterViewController.swift */,
 				E10876431CA49CB200CB7D24 /* NavigationController.swift */,
+				E13BAC731D3D0592001176F4 /* IntroViewController.swift */,
 				E1FCD7EA1CDCBDDE00664300 /* WelcomeController.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
 				E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */,
 				E18589731C75CFD400378011 /* ScannerViewController.swift */,
 				E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */,
-				E13F14611CA29155002EB7CA /* IntroViewController.swift */,
 			);
 			name = ViewControlers;
 			sourceTree = "<group>";
@@ -517,7 +517,6 @@
 				E15FBBB01C791E9A004C444B /* Api.swift in Sources */,
 				E1EB26B51CDB7F6400B00937 /* RequestError.swift in Sources */,
 				E134EB521CA48DF300D3B283 /* DetailMovieCell.swift in Sources */,
-				E13F14621CA29155002EB7CA /* IntroViewController.swift in Sources */,
 				E10876441CA49CB200CB7D24 /* NavigationController.swift in Sources */,
 				E18589691C74ABD300378011 /* InfoImageCell.swift in Sources */,
 				E134EB501CA48DE600D3B283 /* DetailDescriptionCell.swift in Sources */,
@@ -527,6 +526,7 @@
 				E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */,
 				E134EB4C1CA4892800D3B283 /* DetailTableViewController.swift in Sources */,
 				E1FCD7EB1CDCBDDE00664300 /* WelcomeController.swift in Sources */,
+				E13BAC741D3D0592001176F4 /* IntroViewController.swift in Sources */,
 				E18589321C734F4800378011 /* AppDelegate.swift in Sources */,
 				E13BAC721D3CFB5B001176F4 /* UIDeviceExtension.swift in Sources */,
 				E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */,
