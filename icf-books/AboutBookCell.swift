@@ -30,6 +30,7 @@ class AboutBookCell: UITableViewCell {
         bookShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
         bookShadow.layer.shadowOpacity = 0.2
         bookShadow.layer.shadowRadius = 2.4
+        bookShadow.layer.cornerRadius = 5
         
         //button
         bookButton.layer.cornerRadius = 5

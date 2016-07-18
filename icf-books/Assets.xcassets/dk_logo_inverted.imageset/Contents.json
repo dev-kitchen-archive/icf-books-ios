@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Image.png",
+      "filename" : "dk_logo_inverted.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Image-1.png",
+      "filename" : "dk_logo_inverted-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Image-2.png",
+      "filename" : "dk_logo_inverted-2.png",
       "scale" : "3x"
     }
   ],

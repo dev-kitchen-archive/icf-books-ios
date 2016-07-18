@@ -11,11 +11,31 @@ import CoreData
 
 class AboutViewController: UITableViewController {
 
+    @IBOutlet weak var newsletterShadow: UIView!
+    @IBOutlet weak var newsletterContainer: UIView!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.tintColor = Color.accent
-        // Do any additional setup after loading the view.
+        
+        //Button
+        signUpButton.layer.cornerRadius = 5
+        signUpButton.layer.borderWidth = 1
+        signUpButton.layer.borderColor = UIColor.blackColor().CGColor
+        
+        //Newsletter
+        newsletterContainer.layer.borderWidth = 0.5
+        newsletterContainer.layer.borderColor = UIColor.lightGrayColor().CGColor
+        newsletterContainer.layer.cornerRadius = 5
+        newsletterContainer.clipsToBounds = true
+        
+        newsletterShadow.layer.shadowColor = UIColor.blackColor().CGColor
+        newsletterShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
+        newsletterShadow.layer.shadowOpacity = 0.2
+        newsletterShadow.layer.shadowRadius = 2.4
+        newsletterShadow.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +88,14 @@ class AboutViewController: UITableViewController {
     @IBAction func devkitchen(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://dev.kitchen/")!)
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0 {
+            print("party")
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
