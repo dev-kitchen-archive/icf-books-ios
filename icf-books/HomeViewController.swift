@@ -18,7 +18,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     let transition = BubbleTransition()
     
     var scans = [NSManagedObject]()
-    var thumbnails = [UIImage]()
+    var thumbnails = [UIImage]() 
     var chaptersCount = 1
     
     override func viewWillAppear(animated: Bool) {
@@ -26,6 +26,13 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         
         //load table data
         readScannedObjects()
+        
+        //set title of navigation view to welcome user
+        if scans.count < 1 {
+            self.title = NSLocalizedString("WELCOME", comment:"welcome title")
+        } else {
+            self.title = "ESTER"
+        }
         
         //style the scan button
         scanButton.layer.cornerRadius = 30
@@ -42,14 +49,6 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         table.dataSource = self
         
         scanButton.imageView?.contentMode = .ScaleAspectFit
-        
-        
-        //set title of navigation view to welcome user
-        if scans.count < 1 {
-            self.title = NSLocalizedString("WELCOME", comment:"welcome title")
-        } else {
-            self.title = "ESTER"
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,6 +107,8 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             tableView.scrollEnabled = false
             //AboutBookCell and InfoImageCell
             return 2
+        } else if section == chaptersCount {
+            return 1
         } else {
             //spacing section with space for button to scan
             tableView.scrollEnabled = true
@@ -136,13 +137,10 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         }
         // last section after chapters sections --> spacing cell section
         else if indexPath.section == chaptersCount {
-            var cell = tableView.dequeueReusableCellWithIdentifier("myCell") as? ContentTableViewCell
+            var cell = tableView.dequeueReusableCellWithIdentifier("spaceCell")
             if cell == nil {
-                cell = ContentTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
+                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "spaceCell")
             }
-            cell!.scanImage.image = UIImage()
-            cell!.scanTitle.hidden = true
-            cell!.gradient.hidden = true
             return cell!
         }
         //for all other sections (that represent each chapter) show its containig scans

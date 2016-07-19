@@ -448,14 +448,20 @@
                                             <segue destination="QTy-py-b2y" kind="show" identifier="openSavedScan" id="L9F-Zp-6d4"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="spaceCell" rowHeight="90" id="xJd-Uv-veJ">
+                                        <rect key="frame" x="0.0" y="967" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xJd-Uv-veJ" id="gE0-fK-NSo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUJ-CX-Z8M">
                                 <rect key="frame" x="-4" y="577" width="383" height="90"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Ps5-vt-jaC">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49J-BD-Hvm">
                                         <rect key="frame" x="161" y="15" width="60" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -473,13 +479,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Ps5-vt-jaC" secondAttribute="bottom" id="3su-ok-k9q"/>
                                     <constraint firstItem="49J-BD-Hvm" firstAttribute="centerY" secondItem="cUJ-CX-Z8M" secondAttribute="centerY" id="8Md-y9-oGf"/>
                                     <constraint firstAttribute="height" constant="90" id="KXI-PX-1Jx"/>
                                     <constraint firstItem="49J-BD-Hvm" firstAttribute="centerX" secondItem="cUJ-CX-Z8M" secondAttribute="centerX" id="Xh5-Yg-uij"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ps5-vt-jaC" secondAttribute="trailing" id="dCH-ic-8xZ"/>
-                                    <constraint firstItem="Ps5-vt-jaC" firstAttribute="leading" secondItem="cUJ-CX-Z8M" secondAttribute="leading" id="w6T-0D-nun"/>
-                                    <constraint firstItem="Ps5-vt-jaC" firstAttribute="top" secondItem="cUJ-CX-Z8M" secondAttribute="top" id="yjs-zI-zI0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -516,7 +518,6 @@
     <resources>
         <image name="book_cover-jpg" width="2008" height="3071"/>
         <image name="cancle" width="123" height="120"/>
-        <image name="gradient_overlay" width="800" height="800"/>
         <image name="image_shadow" width="1080" height="400"/>
         <image name="info" width="26" height="26"/>
         <image name="logo" width="1024" height="1024"/>
