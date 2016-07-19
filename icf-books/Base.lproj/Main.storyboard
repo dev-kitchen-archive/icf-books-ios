@@ -12,7 +12,6 @@
         </mutableArray>
         <mutableArray key="Montserrat-Light.otf">
             <string>Montserrat-Light</string>
-            <string>Montserrat-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -44,25 +43,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
-                                <rect key="frame" x="-4" y="504" width="383" height="163"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88s-i9-vrI">
+                                <rect key="frame" x="-8" y="504" width="391" height="163"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5aV-X5-Sza">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="163"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="391" height="163"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="qr_code_preview" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-6l-8eS">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-6l-8eS">
                                             <rect key="frame" x="31" y="51" width="61" height="61"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="61" id="9e8-pa-Xac"/>
                                                 <constraint firstAttribute="height" constant="61" id="HQT-yx-7WP"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hold your phone over the QR code to scan..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
-                                            <rect key="frame" x="107" y="43" width="225" height="68"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your phone over the QR code to scan..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Vy-zgQ">
+                                            <rect key="frame" x="107" y="43" width="233" height="68"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="mdE-u2-RRF"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -91,21 +90,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
-                                            <rect key="frame" x="326" y="23" width="49" height="33"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-CK-Gio">
+                                            <rect key="frame" x="341" y="26" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="33" id="rfE-qF-hbD"/>
-                                                <constraint firstAttribute="width" constant="49" id="wlh-fh-GgF"/>
+                                                <constraint firstAttribute="height" constant="30" id="rfE-qF-hbD"/>
+                                                <constraint firstAttribute="width" constant="30" id="wlh-fh-GgF"/>
                                             </constraints>
-                                            <state key="normal">
-                                                <attributedString key="attributedTitle">
-                                                    <fragment content="✕">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="39" name="ZapfDingbatsITC"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="39"/>
+                                            <state key="normal" image="cancle">
+                                                <color key="titleColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="cancelButtonPress:" destination="SKj-EP-XSB" eventType="touchUpInside" id="20t-ZZ-Uy4"/>
@@ -113,7 +106,7 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="fyT-CK-Gio" secondAttribute="trailing" constant="8" id="JpT-xR-lWb"/>
+                                        <constraint firstAttribute="trailing" secondItem="fyT-CK-Gio" secondAttribute="trailing" constant="12" id="JpT-xR-lWb"/>
                                         <constraint firstAttribute="bottom" secondItem="fyT-CK-Gio" secondAttribute="bottom" constant="8" id="kFO-Wr-DnI"/>
                                     </constraints>
                                 </view>
@@ -126,11 +119,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-20" id="2wJ-6b-i3G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-24" id="2wJ-6b-i3G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R3w-60-bxV" secondAttribute="trailing" constant="-20" id="CLH-J7-duZ"/>
-                            <constraint firstItem="88s-i9-vrI" firstAttribute="top" secondItem="Eod-rg-2s2" secondAttribute="bottom" constant="484" id="CRi-ym-CGv"/>
+                            <constraint firstItem="88s-i9-vrI" firstAttribute="top" secondItem="Eod-rg-2s2" secondAttribute="bottom" constant="504" id="CRi-ym-CGv"/>
                             <constraint firstItem="R3w-60-bxV" firstAttribute="top" secondItem="8Mq-pk-nE2" secondAttribute="topMargin" id="OZg-Hd-WHw"/>
-                            <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="dw0-8U-4pL"/>
+                            <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-24" id="dw0-8U-4pL"/>
                             <constraint firstItem="DZg-b5-0FA" firstAttribute="top" secondItem="88s-i9-vrI" secondAttribute="bottom" id="tRx-db-rJq"/>
                             <constraint firstItem="R3w-60-bxV" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="v4u-vL-3DC"/>
                             <constraint firstItem="UF0-mO-3Jy" firstAttribute="top" secondItem="R3w-60-bxV" secondAttribute="bottom" constant="88" id="vz0-Iy-aO8"/>
@@ -463,15 +456,14 @@
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Ps5-vt-jaC">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49J-BD-Hvm">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49J-BD-Hvm">
                                         <rect key="frame" x="161" y="15" width="60" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Gjs-4M-dg6"/>
                                             <constraint firstAttribute="height" constant="60" id="k4W-Hb-4At"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="62"/>
-                                        <state key="normal" title="+">
+                                        <state key="normal" backgroundImage="plus_button">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -503,7 +495,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ester" id="X9J-BS-YDJ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="kqj-g4-k9X">
+                        <barButtonItem key="rightBarButtonItem" image="info" style="done" id="kqj-g4-k9X">
                             <connections>
                                 <segue destination="pSI-Kd-yLV" kind="show" id="EDI-sc-Kzl"/>
                             </connections>
@@ -523,11 +515,14 @@
     </scenes>
     <resources>
         <image name="book_cover-jpg" width="2008" height="3071"/>
+        <image name="cancle" width="123" height="120"/>
         <image name="gradient_overlay" width="800" height="800"/>
         <image name="image_shadow" width="1080" height="400"/>
+        <image name="info" width="26" height="26"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="phone_scanner" width="195" height="360"/>
-        <image name="qr_code_preview" width="144" height="140"/>
+        <image name="plus_button" width="180" height="180"/>
+        <image name="qr_code" width="180" height="180"/>
         <image name="scan_overlay" width="546" height="544"/>
         <image name="white_pixel" width="20" height="15"/>
     </resources>

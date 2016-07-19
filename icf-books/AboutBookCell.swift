@@ -27,9 +27,9 @@ class AboutBookCell: UITableViewCell {
         bookContainer.clipsToBounds = true
         
         bookShadow.layer.shadowColor = UIColor.blackColor().CGColor
-        bookShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
+        bookShadow.layer.shadowOffset = CGSize(width: 0, height: 1.75)
         bookShadow.layer.shadowOpacity = 0.2
-        bookShadow.layer.shadowRadius = 2.4
+        bookShadow.layer.shadowRadius = 2
         bookShadow.layer.cornerRadius = 5
         
         //button

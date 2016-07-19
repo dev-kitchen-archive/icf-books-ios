@@ -27,8 +27,12 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         //load table data
         readScannedObjects()
         
-        //make scan button round
+        //style the scan button
         scanButton.layer.cornerRadius = 30
+        scanButton.layer.shadowColor = UIColor.blackColor().CGColor
+        scanButton.layer.shadowOffset = CGSize(width: 0, height: 1.9)
+        scanButton.layer.shadowOpacity = 0.6
+        scanButton.layer.shadowRadius = 2
     }
     
     override func viewDidLoad() {

@@ -25,6 +25,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     var qrCodeFrameView:UIView?
     var lastScannedCode:String = ""
     var readyToScan:Bool = true
+    var hide = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,23 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         setupCamera()
         placeViewsOverCamera()
         setupQrCodeHighlighter()
+        
+//        //fade out statusbar
+//        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1 * Int64(NSEC_PER_SEC))
+//        dispatch_after(time, dispatch_get_main_queue()) {
+//            self.hide = true
+//            self.prefersStatusBarHidden()
+//            self.setNeedsStatusBarAppearanceUpdate()
+//        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        UIStatusBarAnimation.Fade
+        return hide
     }
 
     override func didReceiveMemoryWarning() {

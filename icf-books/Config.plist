@@ -10,8 +10,16 @@
 		<string>#FA6562</string>
 		<key>base_url</key>
 		<string>https://icfbooks.herokuapp.com</string>
-		<key>buy_url</key>
+		<key>buy_book_url</key>
 		<string>https://www.icf-onlinestore.com/de/icf-books/</string>
+		<key>store_url</key>
+		<string>https://www.icf-onlinestore.com/</string>
+		<key>dev_url</key>
+		<string>https://dev.kitchen/</string>
+		<key>fontis_url</key>
+		<string>https://www.fontis-verlag.com/</string>
+		<key>impressum_url</key>
+		<string>https://www.icf.church/impressum/</string>
 	</dict>
 </dict>
 </plist>

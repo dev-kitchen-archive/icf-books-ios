@@ -10,7 +10,8 @@ import UIKit
 import CoreData
 
 class AboutViewController: UITableViewController {
-
+    
+    @IBOutlet weak var newsletterCell: UITableViewCell!
     @IBOutlet weak var newsletterShadow: UIView!
     @IBOutlet weak var newsletterContainer: UIView!
     @IBOutlet weak var signUpButton: UIButton!
@@ -26,6 +27,8 @@ class AboutViewController: UITableViewController {
         signUpButton.layer.borderColor = UIColor.blackColor().CGColor
         
         //Newsletter
+        newsletterCell.separatorInset = UIEdgeInsetsMake(0, 0, 0, newsletterCell.bounds.size.width)
+        
         newsletterContainer.layer.borderWidth = 0.5
         newsletterContainer.layer.borderColor = UIColor.lightGrayColor().CGColor
         newsletterContainer.layer.cornerRadius = 5
@@ -62,6 +65,7 @@ class AboutViewController: UITableViewController {
                 try managedContext.save()
             } catch let error as NSError {
                 // TODO: handle the error
+                print(error)
             }
             
             
@@ -90,10 +94,22 @@ class AboutViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            print("party")
+        if indexPath.section == 2 && indexPath.row == 4 {
+            let url = NSURL(string: Api.storeUrl)
+            UIApplication.sharedApplication().openURL(url!)
+        } else if indexPath.section == 3 && indexPath.row == 2 {
+            let url = NSURL(string: Api.devUrl)
+            UIApplication.sharedApplication().openURL(url!)
+        } else if indexPath.section == 4 && indexPath.row == 0 {
+            let url = NSURL(string: Api.fontis)
+            UIApplication.sharedApplication().openURL(url!)
+        } else if indexPath.section == 4 && indexPath.row == 1 {
+            let url = NSURL(string: Api.impressum)
+            UIApplication.sharedApplication().openURL(url!)
         }
     }
+    
+    
     
     
     /*
@@ -107,26 +123,13 @@ class AboutViewController: UITableViewController {
     */
     
     // MARK: - Table view data source
-    
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-    
-    /*
+/*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-    
-    // Configure the cell...
-    
-    return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+       
+        return cell
     }
-    */
+ */
     
     /*
     // Override to support conditional editing of the table view.
