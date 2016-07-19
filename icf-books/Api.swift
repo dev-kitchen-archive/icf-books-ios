@@ -12,6 +12,8 @@ class Api {
     static let dct = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Config", ofType: "plist")!)
     static let prodConfigs = dct!["AppConfig_prod"] as! NSDictionary
     static var baseUrl = prodConfigs["base_url"] as! String
+    static var buyUrl = prodConfigs["buy_url"] as! String
+    
     
     static func idFromUrl(urlString:String) -> String {
         let strWithoutExtension = urlString.stringByReplacingOccurrencesOfString(".json", withString: "")

@@ -10,6 +10,8 @@
 		<string>#FA6562</string>
 		<key>base_url</key>
 		<string>https://icfbooks.herokuapp.com</string>
+		<key>buy_url</key>
+		<string>https://www.icf-onlinestore.com/de/icf-books/</string>
 	</dict>
 </dict>
 </plist>

@@ -285,6 +285,9 @@
                                                             <state key="normal" title="Online kaufen">
                                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="bookButtonClick:" destination="jiv-VC-hWM" eventType="touchUpInside" id="Dos-ZL-e2E"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>

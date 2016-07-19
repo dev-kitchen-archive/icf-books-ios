@@ -49,6 +49,11 @@ class AboutBookCell: UITableViewCell {
         }
     }
 
+    @IBAction func bookButtonClick(sender: AnyObject) {
+        let url = NSURL(string: Api.buyUrl)
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
