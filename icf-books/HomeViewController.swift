@@ -31,7 +31,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         if scans.count < 1 {
             self.title = NSLocalizedString("WELCOME", comment:"welcome title")
         } else {
-            self.title = "ESTER"
+            self.title = "ESTHER"
         }
         
         //style the scan button

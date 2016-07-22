@@ -10,13 +10,13 @@ import Foundation
 
 enum RequestError: String {
     case
-    InvalidData = "invalidData",
-    NoData = "noData",
-    NoInternet = "noInternet",
-    Error401 = "error401",
-    Error404 = "error404",
-    Error500 = "error500",
-    EmptyData = "emptyData",
     ParsingError = "parsingError",
-    BadUrl = "badUrl"
+    
+    UnexpectedServerBehaving = "unexpected server side bahing",
+    BadUrl = "compund url is corrupted",
+    InvalidData = "the data that should be sent is not valid",
+    Error401 = "not authorized",
+    Error404 = "uri path not found",
+    Error500 = "internal server error",
+    Error204 = "empty content"
 }

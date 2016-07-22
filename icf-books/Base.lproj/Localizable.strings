@@ -33,3 +33,38 @@
 
 "INFO_TITLE" = "No videos added so far";
 "TNFO_DESC" = "Access the plus button to add new videos from your book";
+
+"ABOUT_NEWSLETTER" = "Stay informed";
+"ABOUT_NEWSLETTER_DESC" = "Be the first one to know about any new books from Leo Bigger.";
+"ABOUT_NEWSLETTER_BUTTON" = "Newsletter signup";
+"ABOUT_NEWSLETTER_SIGNUP_FAIL" = "Invalid data";
+"ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC" = "Please ensure that you entered a valid email address and a name.";
+"ABOUT_NEWSLETTER_SIGNEDUP" = "You receive the newsletter on @ but you still can add a new address.";
+
+"ABOUT_IMPRINT" = "Imprint";
+"ABOUT_FONTIS" = "Fontis press";
+"ABOUT_DEVELOPER" = "Developers website";
+"ABOUT_DEVELOPER_DESC" = "The developer kitchen are five friends from ICF Zurich. They desire to stay digitally on the cutting edge by realizing projects. Projects like this app.";
+"ABOUT_STORE" = "ICF Online Store";
+"ABOUT_WORSHIP_FOLLOW" = "Follow ICF Worship";
+"ABOUT_CHURCH_FOLLOW" = "Follow ICF Church";
+"ABOUT_CHURCH_DESC" = "The International Chrstian Fellowship (ICF) exists for already more than 20 years and is part of a Swiss and European christian movement. Over 2000 attendants join in the weekly services of the church in the heart of Zurich.";
+"ABOUT_LEO_FOLLOW" = "Follow Leo Bigger";
+"ABOUT_LEO_DESC" = "Besides being pastor of ICF Zurich and author of this book, Leo Bigger is also a husband and father of two boys.";
+
+"ERROR_INTERNET" = "No working internet connection";
+"ERROR_INTERNET_DESC" = "This app needs access to the web.";
+"ERROR_IGNORE_BTN" = "Ignore";
+"ERROR_SETTINGS_BTN" = "Check settings";
+"ERROR_CAMERA" = "Limited permissions";
+"ERROR_CAMERA_DESC" = "Change your permission settings to grant this app access to the camera for scanning QR-Codes.";
+"ERROR_CAMERA_BTN" = "Open setting";
+"ERROR_NEWSLETTER" = "Sign up failed";
+"ERROR_NEWSLETTER_DESC" = "Signing up to the newsletter is currently not possible. Please try again later.";
+"ERROR_NEWSLETTER_BTN" = "Ok";
+"SUCCESS_NEWSLETTER" = "Thank you";
+"SUCCESS_NEWSLETTER_DESC" = "You signed up for Leo Biggers newsletter.";
+"SUCCESS_NEWSLETTER_BTN" = "Ok";
+"ERROR_BAD_URL" = "Video cannot be loaded";
+"ERROR_BAD_URL_DESC" = "The deposited URL for streaming this video is not valid.";
+

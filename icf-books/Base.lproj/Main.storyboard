@@ -10,9 +10,6 @@
         <mutableArray key="ArnhemPro-Blond.ttf">
             <string>ArnhemPro-Blond</string>
         </mutableArray>
-        <mutableArray key="Montserrat-Light.otf">
-            <string>Montserrat-Light</string>
-        </mutableArray>
     </customFonts>
     <scenes>
         <!--AboutApp-->
@@ -117,7 +114,7 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-24" id="2wJ-6b-i3G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R3w-60-bxV" secondAttribute="trailing" constant="-20" id="CLH-J7-duZ"/>
@@ -157,30 +154,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-g9-sBO">
-                                <rect key="frame" x="230" y="120" width="140" height="140"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Aa8-WG-TSJ"/>
-                                    <constraint firstAttribute="width" constant="140" id="hO6-Oz-7h8"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_extended" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-g9-sBO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICF BOOKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK1-qD-Itb">
-                                <rect key="frame" x="230" y="268" width="140" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="NUr-YK-KiC"/>
-                                    <constraint firstAttribute="height" constant="26" id="Ulw-Gc-Yg1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.1215686277" blue="0.17254902420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YK1-qD-Itb" firstAttribute="top" secondItem="jx0-g9-sBO" secondAttribute="bottom" constant="8" id="Dah-ez-Fbn"/>
-                            <constraint firstItem="YK1-qD-Itb" firstAttribute="centerX" secondItem="IL5-Hx-q4C" secondAttribute="centerX" id="Thd-R7-qiZ"/>
-                            <constraint firstItem="jx0-g9-sBO" firstAttribute="top" secondItem="8pQ-FC-OcR" secondAttribute="bottom" constant="100" id="Uyc-8k-xzG"/>
-                            <constraint firstItem="jx0-g9-sBO" firstAttribute="centerX" secondItem="IL5-Hx-q4C" secondAttribute="centerX" id="WNl-Be-0rh"/>
+                            <constraint firstItem="h9O-CU-wnl" firstAttribute="top" secondItem="jx0-g9-sBO" secondAttribute="bottom" id="4jJ-in-aSG"/>
+                            <constraint firstItem="jx0-g9-sBO" firstAttribute="top" secondItem="IL5-Hx-q4C" secondAttribute="topMargin" id="ONT-dD-IX6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jx0-g9-sBO" secondAttribute="trailing" constant="-20" id="dm4-3P-bqd"/>
+                            <constraint firstItem="jx0-g9-sBO" firstAttribute="leading" secondItem="IL5-Hx-q4C" secondAttribute="leadingMargin" constant="-20" id="re9-M0-BOV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -246,7 +228,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-t4-0Z3">
                                                     <rect key="frame" x="8" y="18" width="359" height="134"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-0k-VuB">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover" translatesAutoresizingMaskIntoConstraints="NO" id="ERU-0k-VuB">
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="134"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="135" id="MOh-jq-48f"/>
@@ -387,10 +369,10 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-iX-tov">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-iX-tov">
                                                     <rect key="frame" x="0.0" y="225" width="375" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
                                                     <rect key="frame" x="23" y="225" width="329" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
@@ -516,10 +498,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book_cover-jpg" width="2008" height="3071"/>
+        <image name="book_cover" width="2008" height="3071"/>
         <image name="cancle" width="123" height="120"/>
         <image name="image_shadow" width="1080" height="400"/>
         <image name="info" width="26" height="26"/>
+        <image name="launch_screen_extended" width="1480" height="1800"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="phone_scanner" width="195" height="360"/>
         <image name="plus_button" width="180" height="180"/>

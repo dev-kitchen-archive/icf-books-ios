@@ -19,116 +19,143 @@
         <scene sceneID="D8L-pX-Npk">
             <objects>
                 <tableViewController storyboardIdentifier="AboutApp" title="INFO" id="XSQ-k4-K6u" customClass="AboutViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ir0-bR-xOn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ir0-bR-xOn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection id="rRb-2n-4uo">
+                            <tableViewSection headerTitle="News" id="vjW-8u-JtJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="250" id="nba-gv-WvA">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="w7t-1t-fVK">
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nba-gv-WvA" id="a6g-vK-ytd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w7t-1t-fVK" id="frb-en-fgR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bts-aM-FYP">
-                                                    <rect key="frame" x="16" y="8" width="343" height="233"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScI-ks-Inf">
-                                                    <rect key="frame" x="16" y="8" width="343" height="234"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICF_books" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-bx-JGY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="105"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="105" id="V4z-2g-agr"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-oL-WYq">
-                                                            <rect key="frame" x="0.0" y="50" width="343" height="55"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="55" id="r53-0O-nWf"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleib informiert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRj-Fo-nZE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="105"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="105" id="7sM-12-o3p"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttu-o2-KCE">
-                                                            <rect key="frame" x="8" y="152" width="327" height="29"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
-                                                        </textField>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Erhalte als erster informationen zu Leo Biggers neuen Bücher." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JY-CZ-xWI">
-                                                            <rect key="frame" x="8" y="111" width="327" height="33.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9V-0c-ohe">
-                                                            <rect key="frame" x="8" y="189" width="327" height="36.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="36.5" id="i85-4y-Thq"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Anmelden">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_book_2-1" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
+                                                    <rect key="frame" x="0.0" y="103" width="375" height="68"/>
                                                     <constraints>
-                                                        <constraint firstItem="E9V-0c-ohe" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" constant="8" id="1OB-BG-5xn"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PHa-bx-JGY" secondAttribute="trailing" id="5VM-hk-Aad"/>
-                                                        <constraint firstItem="5JY-CZ-xWI" firstAttribute="top" secondItem="tRj-Fo-nZE" secondAttribute="bottom" constant="6" id="9M7-yD-bkc"/>
-                                                        <constraint firstItem="ttu-o2-KCE" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" constant="8" id="9i7-0o-Xrf"/>
-                                                        <constraint firstItem="LSo-oL-WYq" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" id="AD2-yp-ZZK"/>
-                                                        <constraint firstItem="tRj-Fo-nZE" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" id="ClU-mv-cRv"/>
-                                                        <constraint firstItem="tRj-Fo-nZE" firstAttribute="top" secondItem="ScI-ks-Inf" secondAttribute="top" id="FEC-wg-5JQ"/>
-                                                        <constraint firstItem="PHa-bx-JGY" firstAttribute="top" secondItem="ScI-ks-Inf" secondAttribute="top" id="L7s-jO-Tg4"/>
-                                                        <constraint firstItem="PHa-bx-JGY" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" id="Ne6-Ev-eaR"/>
-                                                        <constraint firstItem="LSo-oL-WYq" firstAttribute="top" secondItem="ScI-ks-Inf" secondAttribute="top" constant="50" id="Pdo-58-ssa"/>
-                                                        <constraint firstAttribute="trailing" secondItem="LSo-oL-WYq" secondAttribute="trailing" id="YXI-ID-6UL"/>
-                                                        <constraint firstItem="E9V-0c-ohe" firstAttribute="top" secondItem="ttu-o2-KCE" secondAttribute="bottom" constant="8" id="bDa-bh-rYv"/>
-                                                        <constraint firstItem="5JY-CZ-xWI" firstAttribute="leading" secondItem="ScI-ks-Inf" secondAttribute="leading" constant="8" id="dCf-za-Maa"/>
-                                                        <constraint firstAttribute="trailing" secondItem="E9V-0c-ohe" secondAttribute="trailing" constant="8" id="hnP-VA-IhZ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5JY-CZ-xWI" secondAttribute="trailing" constant="8" id="pm3-5w-lMm"/>
-                                                        <constraint firstAttribute="bottom" secondItem="E9V-0c-ohe" secondAttribute="bottom" constant="8" id="qZj-Gf-dn9"/>
-                                                        <constraint firstAttribute="trailing" secondItem="tRj-Fo-nZE" secondAttribute="trailing" id="yPW-hJ-Gch"/>
-                                                        <constraint firstItem="ttu-o2-KCE" firstAttribute="top" secondItem="5JY-CZ-xWI" secondAttribute="bottom" constant="7.5" id="zrf-Tc-BnY"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ttu-o2-KCE" secondAttribute="trailing" constant="8" id="ztj-jZ-J76"/>
+                                                        <constraint firstAttribute="height" constant="68" id="GAU-9l-rDz"/>
                                                     </constraints>
-                                                </view>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleib informiert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecq-ol-vzU">
+                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="68" id="dVG-d3-q0q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ScI-ks-Inf" firstAttribute="top" secondItem="a6g-vK-ytd" secondAttribute="topMargin" constant="0.5" id="5Id-Sy-y1x"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bts-aM-FYP" secondAttribute="bottom" constant="0.5" id="Jwd-eo-9zv"/>
-                                                <constraint firstItem="ScI-ks-Inf" firstAttribute="leading" secondItem="a6g-vK-ytd" secondAttribute="leadingMargin" constant="8" id="NXN-j9-Mgi"/>
-                                                <constraint firstItem="bts-aM-FYP" firstAttribute="leading" secondItem="a6g-vK-ytd" secondAttribute="leadingMargin" constant="8" id="be7-GV-IMX"/>
-                                                <constraint firstItem="ScI-ks-Inf" firstAttribute="trailing" secondItem="a6g-vK-ytd" secondAttribute="trailingMargin" constant="-8" id="mFn-zU-76s"/>
-                                                <constraint firstItem="bts-aM-FYP" firstAttribute="trailing" secondItem="a6g-vK-ytd" secondAttribute="trailingMargin" constant="-8" id="nem-RS-ffa"/>
-                                                <constraint firstItem="bts-aM-FYP" firstAttribute="top" secondItem="a6g-vK-ytd" secondAttribute="topMargin" id="uXg-ny-23c"/>
-                                                <constraint firstItem="ScI-ks-Inf" firstAttribute="bottom" secondItem="a6g-vK-ytd" secondAttribute="bottomMargin" id="z0B-3B-BQI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fdk-nW-u7X" secondAttribute="bottom" constant="-8.5" id="8CZ-C7-MZK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ecq-ol-vzU" secondAttribute="bottom" constant="-7.5" id="L7B-tD-5eX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fB7-S4-onG" secondAttribute="bottom" constant="-8.5" id="Lkh-P7-3Dg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fB7-S4-onG" secondAttribute="trailing" constant="-8" id="OOm-Wo-gNU"/>
+                                                <constraint firstItem="Ecq-ol-vzU" firstAttribute="leading" secondItem="frb-en-fgR" secondAttribute="leadingMargin" constant="-8" id="PQM-Re-yAg"/>
+                                                <constraint firstItem="fB7-S4-onG" firstAttribute="top" secondItem="frb-en-fgR" secondAttribute="topMargin" constant="-8" id="UfB-4u-pUq"/>
+                                                <constraint firstItem="Fdk-nW-u7X" firstAttribute="leading" secondItem="frb-en-fgR" secondAttribute="leadingMargin" constant="-8" id="VeS-cV-8lt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ecq-ol-vzU" secondAttribute="trailing" constant="-8" id="nhu-Og-tvb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fdk-nW-u7X" secondAttribute="trailing" constant="-8" id="nsX-yR-3ap"/>
+                                                <constraint firstItem="fB7-S4-onG" firstAttribute="leading" secondItem="frb-en-fgR" secondAttribute="leadingMargin" constant="-8" id="ycF-gh-MSY"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AB2-cY-AaK" rowHeight="45" style="IBUITableViewCellStyleDefault" id="ck6-9W-Xfn">
+                                        <rect key="frame" x="0.0" y="220.5" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ck6-9W-Xfn" id="SUQ-F3-9qH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erhalte als erster informationen zu Leo Biggers neuen Bücher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fUF-U2-zCj">
+                                        <rect key="frame" x="0.0" y="265.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUF-U2-zCj" id="KX0-fq-QMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVl-Bh-GGE">
+                                                    <rect key="frame" x="15" y="0.0" width="344" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dVl-Bh-GGE" secondAttribute="trailing" constant="7" id="HHL-cg-tXP"/>
+                                                <constraint firstItem="dVl-Bh-GGE" firstAttribute="leading" secondItem="KX0-fq-QMQ" secondAttribute="leadingMargin" constant="7" id="IBh-TU-D4w"/>
+                                                <constraint firstItem="dVl-Bh-GGE" firstAttribute="top" secondItem="KX0-fq-QMQ" secondAttribute="topMargin" constant="-8" id="eXi-aU-tof"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dVl-Bh-GGE" secondAttribute="bottom" constant="-8" id="nDz-Qr-BDk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DfA-Tg-kuP">
+                                        <rect key="frame" x="0.0" y="309.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfA-Tg-kuP" id="XQR-Lr-HUq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aml-Ab-xY4">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aml-Ab-xY4" secondAttribute="bottom" constant="-8" id="Oaf-Fp-uo4"/>
+                                                <constraint firstItem="aml-Ab-xY4" firstAttribute="leading" secondItem="XQR-Lr-HUq" secondAttribute="leadingMargin" constant="7" id="qjx-q4-KWV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aml-Ab-xY4" secondAttribute="trailing" constant="7" id="qyb-pL-8v6"/>
+                                                <constraint firstItem="aml-Ab-xY4" firstAttribute="top" secondItem="XQR-Lr-HUq" secondAttribute="topMargin" constant="-8" id="sq5-zC-2r9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHI-WT-bqC">
+                                        <rect key="frame" x="0.0" y="353.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHI-WT-bqC" id="sBF-xn-xZS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <state key="normal" title="Newsletter anmelden">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="signUp:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="9dF-Wr-yaT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Autor" id="OR0-sF-UUE">
+                            <tableViewSection headerTitle="Author" id="OR0-sF-UUE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="gvl-Rf-VHW">
-                                        <rect key="frame" x="0.0" y="335" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="447.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvl-Rf-VHW" id="Rj2-2x-K47">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-Xs-7nd">
@@ -161,14 +188,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yys-OQ-rrB" rowHeight="62" style="IBUITableViewCellStyleDefault" id="K5h-21-2fD">
-                                        <rect key="frame" x="0.0" y="506" width="375" height="62"/>
+                                        <rect key="frame" x="0.0" y="618.5" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5h-21-2fD" id="eKq-uP-5FX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nebst Pastor von ICF Zürich und Autor dieses Buches ist Leo Bigger auch Ehemann und Vater von zwei Knaben." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="62"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nebst Pastor von ICF Zürich und Autor dieses Buches ist Leo Bigger auch Ehemann und Vater von zwei Knaben" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="61.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,14 +205,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="17B-bM-6pb" style="IBUITableViewCellStyleDefault" id="heg-UG-SdO">
-                                        <rect key="frame" x="0.0" y="568" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="680.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="heg-UG-SdO" id="hdr-i7-e1d">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Leo Bigger folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="17B-bM-6pb">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,16 +227,16 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Kirche" id="j7t-8x-Ccy">
+                            <tableViewSection headerTitle="Church" id="j7t-8x-Ccy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="wV5-u6-ajC">
-                                        <rect key="frame" x="0.0" y="662" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="774.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wV5-u6-ajC" id="LmQ-0A-XGY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICF_church" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-IN-5q1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_church" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-IN-5q1">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="X0a-Ru-6cx">
@@ -239,16 +266,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fAp-9Z-Xsz" rowHeight="80" style="IBUITableViewCellStyleDefault" id="mRL-yR-Wvj">
-                                        <rect key="frame" x="0.0" y="833" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="945.5" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRL-yR-Wvj" id="z4u-2n-UXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fAp-9Z-Xsz">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="80"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Die International Chrstian Fellowship, kurz ICF, prägt die Schweiz und Europa seit 20 Jahren. Wöchentlich kommen über 2000 Besucher in die Kirche im Herzen Zürichs.</string>
+                                                    <string key="text">Die International Chrstian Fellowship, kurz ICF, prägt die Schweiz und Europa seit 20 Jahren. Wöchentlich kommen über 2000 Besucher in die Kirche im Herzen Zürichs</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -257,14 +284,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="icfChurch" textLabel="6y5-Tq-eo9" style="IBUITableViewCellStyleDefault" id="bRb-9X-sdE">
-                                        <rect key="frame" x="0.0" y="913" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1025.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRb-9X-sdE" id="bCX-ZB-b3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Church folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6y5-Tq-eo9">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,14 +305,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fpS-81-kEY" style="IBUITableViewCellStyleDefault" id="hGU-7Q-m8B">
-                                        <rect key="frame" x="0.0" y="957" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1069.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGU-7Q-m8B" id="CRv-Ub-lxf">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Worship folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fpS-81-kEY">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,21 +326,21 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CNA-Eu-KHm" detailTextLabel="Zxt-TA-jfF" style="IBUITableViewCellStyleValue1" id="n6d-EE-2j9">
-                                        <rect key="frame" x="0.0" y="1001" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1113.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6d-EE-2j9" id="dd9-3y-9hA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Online Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CNA-Eu-KHm">
-                                                    <rect key="frame" x="15" y="13" width="117.5" height="19.5"/>
+                                                    <rect key="frame" x="15" y="12" width="117.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="www.icf-onlinestore.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zxt-TA-jfF">
-                                                    <rect key="frame" x="179.5" y="13" width="180.5" height="19.5"/>
+                                                    <rect key="frame" x="179.5" y="12" width="180.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -325,13 +352,13 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Entwickler" id="49S-ft-Nta">
+                            <tableViewSection headerTitle="Developer" id="49S-ft-Nta">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="NrQ-GX-O61">
-                                        <rect key="frame" x="0.0" y="1095" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="1207.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NrQ-GX-O61" id="We0-gx-FMc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dk_logo_inverted" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-RJ-rqb">
@@ -364,14 +391,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YQj-uk-MDS" rowHeight="80" style="IBUITableViewCellStyleDefault" id="GBI-HQ-FR5">
-                                        <rect key="frame" x="0.0" y="1266" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="1378.5" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBI-HQ-FR5" id="RIQ-9h-Yzp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YQj-uk-MDS">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="80"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Die Entwicklerküche, fünf Freunde aus dem ICF Zürich, wünschen sich auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so auch diese App.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -382,21 +409,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eI2-e5-AsY" detailTextLabel="D5h-Ov-qOr" style="IBUITableViewCellStyleValue1" id="dcw-pv-rFL">
-                                        <rect key="frame" x="0.0" y="1346" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1458.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcw-pv-rFL" id="Bqs-LH-r4U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Webseite der Entwickler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eI2-e5-AsY">
-                                                    <rect key="frame" x="15" y="13" width="175" height="19.5"/>
+                                                    <rect key="frame" x="15" y="12" width="175" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="dev.kitchen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5h-Ov-qOr">
-                                                    <rect key="frame" x="277" y="13" width="83" height="19.5"/>
+                                                    <rect key="frame" x="277" y="12" width="83" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -411,14 +438,14 @@
                             <tableViewSection id="9Hh-Gq-R0N">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="a35-zB-tIn" style="IBUITableViewCellStyleDefault" id="gnK-8z-4Mm">
-                                        <rect key="frame" x="0.0" y="1426" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1538.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnK-8z-4Mm" id="M58-14-kwY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Fontis Verlag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a35-zB-tIn">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -429,14 +456,14 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e9C-Ed-Cdp" style="IBUITableViewCellStyleDefault" id="ub3-x2-Igy">
-                                        <rect key="frame" x="0.0" y="1470" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1582.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ub3-x2-Igy" id="0se-nB-XEr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9C-Ed-Cdp">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,24 +473,31 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SdS-4j-8P5">
-                                        <rect key="frame" x="0.0" y="1514" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="SdS-4j-8P5">
+                                        <rect key="frame" x="0.0" y="1626.5" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdS-4j-8P5" id="yFr-xt-ecV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-Tv-IVd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-                                                    <state key="normal" title="DELETE PERSISTED DATA">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-Tv-IVd">
+                                                    <rect key="frame" x="0.0" y="30" width="375" height="35.5"/>
+                                                    <state key="normal" title="reset">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="resetButton:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="TLC-Gs-Hq3"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="leading" secondItem="yFr-xt-ecV" secondAttribute="leadingMargin" constant="-8" id="CYE-8u-4AH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wLX-Tv-IVd" secondAttribute="trailing" constant="-8" id="Jdk-7f-gvX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wLX-Tv-IVd" secondAttribute="bottom" constant="-8" id="VQH-g4-15i"/>
+                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="top" secondItem="yFr-xt-ecV" secondAttribute="topMargin" constant="22" id="rs4-zg-B2r"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -475,10 +509,21 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="newsletterCell" destination="nba-gv-WvA" id="8HM-jX-4Lh"/>
-                        <outlet property="newsletterContainer" destination="ScI-ks-Inf" id="hxW-kN-cvW"/>
-                        <outlet property="newsletterShadow" destination="bts-aM-FYP" id="kei-QI-dcY"/>
-                        <outlet property="signUpButton" destination="E9V-0c-ohe" id="hHo-BA-6xS"/>
+                        <outlet property="devDesc" destination="YQj-uk-MDS" id="VXz-en-Nhq"/>
+                        <outlet property="emailField" destination="aml-Ab-xY4" id="mcj-Ed-AQd"/>
+                        <outlet property="followChurch" destination="6y5-Tq-eo9" id="l6R-Fl-xhe"/>
+                        <outlet property="followLeo" destination="17B-bM-6pb" id="Jrc-4N-5p8"/>
+                        <outlet property="followWorship" destination="fpS-81-kEY" id="h39-0U-4Nu"/>
+                        <outlet property="icfDesc" destination="fAp-9Z-Xsz" id="yFS-ar-IbX"/>
+                        <outlet property="leoDesc" destination="yys-OQ-rrB" id="WWG-2A-agP"/>
+                        <outlet property="nameField" destination="dVl-Bh-GGE" id="Xrw-YK-7gZ"/>
+                        <outlet property="newsletterButton" destination="Fad-DQ-nyV" id="yVf-j9-YyX"/>
+                        <outlet property="newsletterDesc" destination="AB2-cY-AaK" id="NbY-La-0kG"/>
+                        <outlet property="newsletterTitle" destination="Ecq-ol-vzU" id="Hty-Fo-SCw"/>
+                        <outlet property="openDeveloper" destination="eI2-e5-AsY" id="zQ9-BY-laA"/>
+                        <outlet property="openFontis" destination="a35-zB-tIn" id="qWR-74-8xJ"/>
+                        <outlet property="openImprint" destination="e9C-Ed-Cdp" id="b7r-g6-5YQ"/>
+                        <outlet property="openStore" destination="CNA-Eu-KHm" id="SDB-KI-1dQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCx-2d-F73" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,7 +533,7 @@
         <!--Leo Bigger-->
         <scene sceneID="dqP-SO-z02">
             <objects>
-                <tableViewController title="Leo Bigger" id="grm-db-2gl" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="leo" title="Leo Bigger" id="grm-db-2gl" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5h9-WG-SBk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,12 +624,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oy-Gs-flL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111.5" y="-2056.5"/>
+            <point key="canvasLocation" x="1054.5" y="-2065.5"/>
         </scene>
         <!--ICF Church-->
         <scene sceneID="64k-lP-wuS">
             <objects>
-                <tableViewController title="ICF Church" id="XdB-hs-Vgk" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="church" title="ICF Church" id="XdB-hs-Vgk" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ixr-kM-ZVy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -599,8 +644,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Webseite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5vq-tX-zpP">
-                                                    <rect key="frame" x="15" y="12" width="67.5" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5vq-tX-zpP">
+                                                    <rect key="frame" x="15" y="12" width="59" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -756,7 +801,7 @@
         <!--ICF Worship-->
         <scene sceneID="7zb-A2-BAv">
             <objects>
-                <tableViewController title="ICF Worship" id="Qhm-TT-w8O" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="worship" title="ICF Worship" id="Qhm-TT-w8O" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="edK-1H-OGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -771,8 +816,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Webseite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="THt-Li-CCR">
-                                                    <rect key="frame" x="15" y="12" width="67.5" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="THt-Li-CCR">
+                                                    <rect key="frame" x="15" y="12" width="59" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -927,10 +972,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ICF_books" width="1800" height="412"/>
-        <image name="ICF_church" width="1280" height="720"/>
+        <image name="about_book_2-1" width="788" height="394"/>
+        <image name="about_church" width="1280" height="720"/>
         <image name="dk_logo_inverted" width="800" height="647"/>
         <image name="image_shadow" width="1080" height="400"/>
-        <image name="leo_bigger" width="665" height="665"/>
+        <image name="leo_bigger" width="1092" height="545"/>
     </resources>
 </document>

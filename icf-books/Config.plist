@@ -6,8 +6,6 @@
 	<dict>
 		<key>accent_color</key>
 		<string>#001f2c</string>
-		<key>red_color</key>
-		<string>#FA6562</string>
 		<key>base_url</key>
 		<string>https://icfbooks.herokuapp.com</string>
 		<key>buy_book_url</key>
@@ -20,6 +18,24 @@
 		<string>https://www.fontis-verlag.com/</string>
 		<key>impressum_url</key>
 		<string>https://www.icf.church/impressum/</string>
+		<key>leo_blog_url</key>
+		<string>https://www.leobigger.com/</string>
+		<key>leo_fb_url</key>
+		<string>https://www.facebook.com/Bigger.Leo/</string>
+		<key>leo_insta_url</key>
+		<string>https://www.instagram.com/leobigger/</string>
+		<key>church_blog_url</key>
+		<string>https://www.icf.church/</string>
+		<key>church_fb_url</key>
+		<string>https://www.facebook.com/icfmovement/</string>
+		<key>church_insta_url</key>
+		<string>https://www.instagram.com/icfmovement/</string>
+		<key>worship_blog_url</key>
+		<string>https://www.icf-worship.com/</string>
+		<key>worship_fb_url</key>
+		<string>https://www.facebook.com/ICFWorship/</string>
+		<key>worship_insta_url</key>
+		<string>https://www.instagram.com/icfworship/</string>
 	</dict>
 </dict>
 </plist>

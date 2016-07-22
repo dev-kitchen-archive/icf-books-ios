@@ -11,6 +11,7 @@ import UIKit
 class DetailMovieCell: UITableViewCell {
     
     @IBOutlet weak var detailMovieThumb: UIImageView!
+    @IBOutlet weak var detailMovieUrl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

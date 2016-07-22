@@ -18,16 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_cover-jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YUD-x1-KDn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="uBA-PI-N9j">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YUD-x1-KDn" secondAttribute="bottom" id="78h-MP-Z40"/>
-                            <constraint firstItem="YUD-x1-KDn" firstAttribute="leading" secondItem="D2W-MB-k6o" secondAttribute="leadingMargin" constant="-20" id="PyM-7j-k2m"/>
-                            <constraint firstItem="YUD-x1-KDn" firstAttribute="top" secondItem="D2W-MB-k6o" secondAttribute="topMargin" id="WJg-7g-6op"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YUD-x1-KDn" secondAttribute="trailing" constant="-20" id="zzH-So-kPh"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="uBA-PI-N9j" secondAttribute="bottom" id="AcI-h6-ZiB"/>
+                            <constraint firstItem="uBA-PI-N9j" firstAttribute="top" secondItem="D2W-MB-k6o" secondAttribute="topMargin" id="Rzf-20-aZM"/>
+                            <constraint firstItem="uBA-PI-N9j" firstAttribute="leading" secondItem="D2W-MB-k6o" secondAttribute="leadingMargin" constant="-20" id="e9V-Qt-QoD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uBA-PI-N9j" secondAttribute="trailing" constant="-20" id="fXP-qb-Eag"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book_cover-jpg" width="2008" height="3071"/>
+        <image name="launch_screen" width="1480" height="1800"/>
     </resources>
 </document>

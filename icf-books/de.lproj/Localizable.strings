@@ -33,3 +33,38 @@
 
 "INFO_TITLE" = "Noch keine Videos vorhanden";
 "TNFO_DESC" = "Verwende den Plus-Button um zusätzliche Videos zum Buch anzuzeigen";
+
+"ABOUT_NEWSLETTER" = "Bleib informiert";
+"ABOUT_NEWSLETTER_BUTTON" = "Newsletter anmelden";
+"ABOUT_NEWSLETTER_DESC" = "Erhalte als erster informationen zu Leo Biggers neuen Bücher.";
+"ABOUT_NEWSLETTER_SIGNUP_FAIL" = "Unvollständige Angaben";
+"ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC" = "Bitte überprüfe ob Name und Email-Adresse korrekt sind.";
+"ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhälst die Newsletter an @ , kannst aber gerne eine weitere Adresse hinterlegen.";
+
+"ABOUT_IMPRINT" = "Impressum";
+"ABOUT_FONTIS" = "Fontis Verlag";
+"ABOUT_DEVELOPER" = "Website der Entwickler";
+"ABOUT_DEVELOPER_DESC" = "Die Entwicklerküche, fünf Freunde aus dem ICF Zürich, wünschen sich auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so auch diese App.";
+"ABOUT_STORE" = "ICF Online Store";
+"ABOUT_WORSHIP_FOLLOW" = "ICF Worship folgen";
+"ABOUT_CHURCH_FOLLOW" = "ICF Church folgen";
+"ABOUT_CHURCH_DESC" = "Die International Chrstian Fellowship, kurz ICF, prägt die Schweiz und Europa seit 20 Jahren. Wöchentlich kommen über 2000 Besucher in die Kirche im Herzen Zürichs.";
+"ABOUT_LEO_FOLLOW" = "Leo Bigger folgen";
+"ABOUT_LEO_DESC" = "Nebst Pastor von ICF Zürich und Author dieses Buches ist Leo Bigger auch Ehemann und Vater von Zwei Knaben.";
+
+"ERROR_INTERNET" = "Keine Internetverbindung";
+"ERROR_INTERNET_DESC" = "Diese App benötigt Internetzugang";
+"ERROR_IGNORE_BTN" = "Ignorieren";
+"ERROR_SETTINGS_BTN" = "Einstellungen überprüfen";
+"ERROR_CAMERA" = "Kamerazugriff nicht möglich";
+"ERROR_CAMERA_DESC" = "Erlaube dieser App den Zugriff auf die Kamera um QR-Codes zu scannen.";
+"ERROR_CAMERA_BTN" = "Enstellungen öffnen";
+"ERROR_NEWSLETTER" = "Anmeldung nicht möglich";
+"ERROR_NEWSLETTER_DESC" = "Momentan ist die Anmeldung nicht möglich, bitte versuche es zu einem späteren Zeitpunkt nochmals";
+"ERROR_NEWSLETTER_BTN" = "Ok";
+"SUCCESS_NEWSLETTER" = "Danke";
+"SUCCESS_NEWSLETTER_DESC" = "Du hast dich erfolgreich für Leo Bigges Newsletter angemeldet.";
+"SUCCESS_NEWSLETTER_BTN" = "Ok";
+"ERROR_BAD_URL" = "Video kann nicht geladen werden";
+"ERROR_BAD_URL_DESC" = "Die hinterlegte URL für das Streamen des Videos ist nicht gültig.";
+

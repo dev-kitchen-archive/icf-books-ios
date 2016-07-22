@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "leo_bigger.jpg",
+      "filename" : "Bigger-Family_App-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "leo_bigger-1.jpg",
+      "filename" : "Bigger-Family_App-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "leo_bigger-2.jpg",
+      "filename" : "Bigger-Family_App.png",
       "scale" : "3x"
     }
   ],

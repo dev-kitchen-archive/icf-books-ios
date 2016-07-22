@@ -9,36 +9,59 @@
 import UIKit
 import CoreData
 
-class AboutViewController: UITableViewController {
+class AboutViewController: UITableViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var newsletterCell: UITableViewCell!
-    @IBOutlet weak var newsletterShadow: UIView!
-    @IBOutlet weak var newsletterContainer: UIView!
-    @IBOutlet weak var signUpButton: UIButton!
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    @IBOutlet weak var openImprint: UILabel!
+    @IBOutlet weak var openFontis: UILabel!
+    @IBOutlet weak var openDeveloper: UILabel!
+    @IBOutlet weak var openStore: UILabel!
+    @IBOutlet weak var followWorship: UILabel!
+    @IBOutlet weak var followChurch: UILabel!
+    @IBOutlet weak var followLeo: UILabel!
+    @IBOutlet weak var devDesc: UILabel!
+    @IBOutlet weak var icfDesc: UILabel!
+    @IBOutlet weak var leoDesc: UILabel!
+    @IBOutlet weak var newsletterTitle: UILabel!
+    @IBOutlet weak var newsletterDesc: UILabel!
+    @IBOutlet weak var newsletterButton: UIButton!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.tintColor = Color.accent
         
-        //Button
-        signUpButton.layer.cornerRadius = 5
-        signUpButton.layer.borderWidth = 1
-        signUpButton.layer.borderColor = UIColor.blackColor().CGColor
+        //newsletter
+        if let email = userDefaults.objectForKey("newsletter") as? String {
+            newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: email)
+        }
         
-        //Newsletter
-        newsletterCell.separatorInset = UIEdgeInsetsMake(0, 0, 0, newsletterCell.bounds.size.width)
+        nameField.delegate = self
+        emailField.delegate = self
+        newsletterTitle.text = NSLocalizedString("ABOUT_NEWSLETTER", comment:"stay informed")
+        newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_DESC", comment:"Newsletter description")
+        newsletterButton.setTitle(NSLocalizedString("ABOUT_NEWSLETTER_BUTTON", comment:"segn up"), forState: .Normal)
         
-        newsletterContainer.layer.borderWidth = 0.5
-        newsletterContainer.layer.borderColor = UIColor.lightGrayColor().CGColor
-        newsletterContainer.layer.cornerRadius = 5
-        newsletterContainer.clipsToBounds = true
+        //leo
+        leoDesc.text = NSLocalizedString("ABOUT_LEO_DESC", comment:"Leo Bigger description")
+        followLeo.text = NSLocalizedString("ABOUT_LEO_FOLLOW", comment:"Leo Bigger description")
         
-        newsletterShadow.layer.shadowColor = UIColor.blackColor().CGColor
-        newsletterShadow.layer.shadowOffset = CGSize(width: 0, height: 1)
-        newsletterShadow.layer.shadowOpacity = 0.2
-        newsletterShadow.layer.shadowRadius = 2.4
-        newsletterShadow.layer.cornerRadius = 5
+        //icf
+        icfDesc.text = NSLocalizedString("ABOUT_CHURCH_DESC", comment:"ICF Church description")
+        followChurch.text = NSLocalizedString("ABOUT_CHURCH_FOLLOW", comment:"ICF Church follow")
+        followWorship.text = NSLocalizedString("ABOUT_WORSHIP_FOLLOW", comment:"ICF Worship follow")
+        openStore.text = NSLocalizedString("ABOUT_STORE", comment:"ICF Online Store")
+        
+        //dev
+        devDesc.text = NSLocalizedString("ABOUT_DEVELOPER_DESC", comment:"Developer Kitchen")
+        openDeveloper.text = NSLocalizedString("ABOUT_DEVELOPER", comment:"dev kitchen website")
+        
+        //imprint / press
+        openFontis.text = NSLocalizedString("ABOUT_FONTIS", comment:"Fontis press")
+        openImprint.text = NSLocalizedString("ABOUT_IMPRINT", comment:"imprint")
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,27 +93,14 @@ class AboutViewController: UITableViewController {
             
             
             //make intro available again
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            userDefaults.removeObjectForKey("appAlreadyUsed")
-            userDefaults.synchronize()
+            self.userDefaults.removeObjectForKey("appAlreadyUsed")
+            self.userDefaults.synchronize()
         }
         alertController.addAction(cancelAction)
         alertController.addAction(destroyAction)
         
         self.presentViewController(alertController, animated: true) { }
         
-    }
-
-    @IBAction func icfBooks(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.icf.ch/books/")!)
-    }
-    
-    @IBAction func icfWorship(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.icf-worship.com")!)
-    }
-    
-    @IBAction func devkitchen(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://dev.kitchen/")!)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -110,7 +120,51 @@ class AboutViewController: UITableViewController {
     }
     
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if (textField == nameField) {
+            nameField.resignFirstResponder()
+            emailField.becomeFirstResponder()
+            return true
+        } else {
+            self.view.endEditing(true)
+            return false
+        }
+    }
     
+    @IBAction func signUp(sender: AnyObject) {
+        if !Reachability.isConnectedToNetwork() {
+            ErrorManager.internetPermission(self)
+        } else {
+            let name = nameField.text
+            let email = emailField.text
+            if name?.characters.count >= 1 && isValidEmail(email) {
+                RequestManager.postNewsletter(email!, name: name!, completionHandler: { (error) -> (Void) in
+                    if error != nil {
+                        ErrorManager.newsletterFail(self)
+                    } else {
+                        self.userDefaults.setValue(email, forKey: "newsletter")
+                        self.newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: email!)
+                        
+                        ErrorManager.newsletterSuccess(self)
+                    }
+                })
+            } else {
+                let alert = UIAlertController(title: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_FAIL", comment:"invalid data"), message: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC", comment:"invalid data explainded"), preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func isValidEmail(testStr:String?) -> Bool {
+        if testStr != nil {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailTest.evaluateWithObject(testStr)
+        } else {
+            return false
+        }
+    }
     
     /*
     // MARK: - Navigation

@@ -19,6 +19,7 @@ class DetailTableViewController: UITableViewController {
     
     var scan: NSManagedObject?
     var tableData = [[MediaCellType: AnyObject]]()
+    var movieUrl:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +28,36 @@ class DetailTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
         
+        //check internet connection
+        if !Reachability.isConnectedToNetwork() {
+            ErrorManager.internetPermission(self)
+        }
+        
         if scan != nil {
             
             if scan!.valueForKey("type") as! String == "movie" {
-            
-                //{"file_url":"/asset/W1siZiIsIjIwMTYvMDMvMjYvdDByNjlucXgwX2JnX2ltZ18xNy5qcGciXV0?sha=626d7e0ceb8c48b7"}
                 
                 let data = scan!.valueForKey("type_data") as! NSData
                 let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
                 
+                //define title
                 if let detailTitle = scan!.valueForKey("title") as? String {
                     if detailTitle != "" {
-                        tableData.append([MediaCellType.Title: detailTitle])
+                        self.title = detailTitle
                     }
                 }
+                
+                //define movie Cell data
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                    tableData.append([MediaCellType.Movie: movieThumb!])
                     
-                    let streamUrl = dataDict.valueForKey("file_url") as! String
+                    movieUrl = dataDict.valueForKey("file_url") as? String
+                    
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                 }
+                
+                //define description Cell data
                 if let detailDesc = scan!.valueForKey("teaser") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
@@ -57,35 +67,45 @@ class DetailTableViewController: UITableViewController {
                 
             } else if scan!.valueForKey("type") as! String == "two_movies_and_text" {
                 
-                //{"movie1_url":"/asset/W1siZiIsIjIwMTYvMDQvMzAveGo5aXUxZXQ1X1NlcnZlcl85Ni5wbmciXV0?sha=c20cfa4301938c29","movie2_url":"/asset/W1siZiIsIjIwMTYvMDQvMzAvejV2ZGlkbGJ3X1NlcnZlcl80OC5wbmciXV0?sha=3928b81f6238e8a1","description1":"1. Noch nicht genug Informationen? Lorem ipsum doro set amor ipsum doro set amor ipsum doro set amor.","description2":"2. Noch nicht genug Informationen? Lorem ipsum doro set amor ipsum doro set amor ipsum doro set amor."},"updated_at":"2016-04-30T12:53:01.509Z"}
-                
                 let data = scan!.valueForKey("type_data") as! NSData
                 let dataDict:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
                 
+                //define title
                 if let detailTitle = scan!.valueForKey("title") as? String {
                     if detailTitle != "" {
-                        tableData.append([MediaCellType.Title: detailTitle])
+                        self.title = detailTitle
                     }
                 }
+                
+                //define movie 1 Cell data
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
                     tableData.append([MediaCellType.Movie: movieThumb!])
                     
-                    let streamUrl = dataDict.valueForKey("movie1_url") as! String
+                    movieUrl = dataDict.valueForKey("movie1_url") as? String
+                    
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                 }
+                
+                //define description 1 Cell data
                 if let detailDesc = dataDict.valueForKey("description1") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
                     }
                 }
+                
+                //define movie 2 Cell data
                 if scan!.valueForKey("thumbnail_data") as? NSData != nil {
                     let movieThumbData = scan!.valueForKey("thumbnail_data") as? NSData
                     let movieThumb = movieThumbData.map({UIImage(data: $0)})!
-                    tableData.append([MediaCellType.Movie: movieThumb!])
                     
-                    let streamUrl = dataDict.valueForKey("movie2_url") as! String
+                    movieUrl = dataDict.valueForKey("movie2_url") as? String
+                    
+                    tableData.append([MediaCellType.Movie: movieThumb!])
                 }
+                
+                //define description 2 Cell data
                 if let detailDesc = dataDict.valueForKey("description2") as? String {
                     if detailDesc != "" {
                         tableData.append([MediaCellType.Description: detailDesc])
@@ -95,12 +115,6 @@ class DetailTableViewController: UITableViewController {
                 
             }
         }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -139,53 +153,36 @@ class DetailTableViewController: UITableViewController {
 
             return cell!
             
-        } else /*if mediaType == MediaType.Description*/ {
+        } else if mediaType == MediaCellType.Description {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailDescriptionCell", forIndexPath: indexPath) as? DetailDescriptionCell
             cell!.detailDescription.text = data[mediaType!] as? String
             cell!.backgroundColor = .clearColor()
             
             return cell!
+        } else {
+            return UITableViewCell()
         }
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let cell = tableView.cellForRowAtIndexPath(indexPath)
+//        
+//        if cell is DetailMovieCell {
+//            let targetController = self.storyboard!.instantiateViewControllerWithIdentifier("videoView") as! AVPlayerViewController
+//            if let url = NSURL(string: movieUrl!) {
+//                targetController.player = AVPlayer(URL: url)
+//                self.navigationController!.pushViewController(targetController, animated: true)
+//            } else {
+//                ErrorManager.badUrl(self)
+//            }
+//            
+//        }
+//    }
     
     // MARK: - Navigation
 
+    
+    //TODO: depercated - remove this function
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "playVideo" {
@@ -193,10 +190,17 @@ class DetailTableViewController: UITableViewController {
             //-> file url from now on in type_data
             
             //let url = NSURL(string: urlStr)
-            let url = NSURL(string: "https://icfbooksresources.s3.amazonaws.com/production/2016/07/07/12/14/10/b04c4266-0d96-4c5a-80ce-0c22f80f9b01/default.mp4")
+            if (movieUrl != nil) {
+                if let url = NSURL(string: movieUrl!) {
+                    let destination = segue.destinationViewController as! AVPlayerViewController
+                    destination.player = AVPlayer(URL: url)
+                } else {
+                    ErrorManager.badUrl(self)
+                }
+            } else {
+                ErrorManager.badUrl(self)
+            }
             
-            let destination = segue.destinationViewController as! AVPlayerViewController
-            destination.player = AVPlayer(URL: url!)
             
         }
     }

@@ -25,31 +25,32 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     var qrCodeFrameView:UIView?
     var lastScannedCode:String = ""
     var readyToScan:Bool = true
-    var hide = false
-
+    var autorizedCam = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupCamera()
-        placeViewsOverCamera()
-        setupQrCodeHighlighter()
+        //check camera access:
+        autorizedCam = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo) == .Authorized
         
-//        //fade out statusbar
-//        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1 * Int64(NSEC_PER_SEC))
-//        dispatch_after(time, dispatch_get_main_queue()) {
-//            self.hide = true
-//            self.prefersStatusBarHidden()
-//            self.setNeedsStatusBarAppearanceUpdate()
-//        }
+        if autorizedCam {
+            setupCamera()
+            setupQrCodeHighlighter()
+            placeViewsOverCamera()
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !autorizedCam {
+            ErrorManager.cameraPermission(self)
+        }
+        if !Reachability.isConnectedToNetwork() {
+            ErrorManager.internetPermission(self)
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        UIStatusBarAnimation.Fade
-        return hide
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,15 +64,15 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         //animateInfoHeight()
         
         // (1) validate origin
-        if scannedString.removeHttp().rangeOfString(Api.baseUrl.removeHttp()) != nil {
+        if let scannedId = Api.idFromUrl(scannedString) {
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             // (2) Validate if id already persisted
-            let scannedId = Api.idFromUrl(scannedString)
             if let media = Media.getById(scannedId){
                 infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
 
                 //as this media content is already available open the detail page
                 openDetailViewForMedia(withId: media.valueForKey("id") as! String)
+                
             } else {
                 
                 infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
@@ -80,26 +81,28 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                 RequestManager.getMedia(forMediaId: scannedId, completionHandler: { (media, error) -> (Void) in
                     if error == nil {
                         if let mediaParsed = ParseMedia.fromJson(media!) {
+                            print("yes")
                             self.persistObject(mediaParsed)
                         } else {
+                            print("no")
                             dispatch_async(dispatch_get_main_queue()) {
                                 self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
                             }
                         }
                     } else {
                         print("implement error handling in ScannerViewController.swift")
+                        print(error)
 //                        dispatch_async(dispatch_get_main_queue()) {
 //                            self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten."
 //                        }
                     }
                 })
-                
-                let setUpUrl = Api.getLanguageUrl() + "/media/" + Api.idFromUrl(scannedString) + ".json"
-                print(setUpUrl)
-                let scannedURL = NSURL(string: setUpUrl)
-                if scannedURL != nil {
-                    dataRetrieve(scannedURL!)
-                }
+//                let setUpUrl = Api.getLanguageUrl() + "/media/" + scannedId + ".json"
+//                print(setUpUrl)
+//                let scannedURL = NSURL(string: setUpUrl)
+//                if scannedURL != nil {
+//                    dataRetrieve(scannedURL!)
+//                }
             }
         } else {
             infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
@@ -140,9 +143,12 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     
     func persistObject(objectToSave:NSDictionary) {
         if Media.saveNewEntity(objectToSave) {
+            print("yes 2")
             openDetailViewForMedia(withId: objectToSave.valueForKey("id") as! String)
         } else {
-            infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was NOT successfully saved")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was NOT successfully saved")
+            }
         }
 
     }
@@ -291,6 +297,48 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         return imgListArray
     }
 
+//    func cameraAccess() -> Bool {
+//        var status = false
+//        let cameraMediaType = AVMediaTypeVideo
+//        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(cameraMediaType)
+//        
+//        switch cameraAuthorizationStatus {
+//            
+//        // The client is authorized to access the hardware supporting a media type.
+//        case .Authorized:
+//            status = true
+//            break
+//            
+//            // The client is not authorized to access the hardware for the media type. The user cannot change
+//        // the client's status, possibly due to active restrictions such as parental controls being in place.
+//        case .Restricted:
+//            break
+//            
+//        // The user explicitly denied access to the hardware supporting a media type for the client.
+//        case .Denied:
+//            break
+//            
+//        // Indicates that the user has not yet made a choice regarding whether the client can access the hardware.
+//        case .NotDetermined:
+//            // Prompting user for the permission to use the camera.
+//            AVCaptureDevice.requestAccessForMediaType(cameraMediaType) { granted in
+//                if !granted {
+//                    //ask for permission
+//                }
+//            }
+//        }
+//        
+//        return status
+//    }
+    
+    func checkPermission() {
+        let alert = UIAlertController(title: NSLocalizedString("ERROR_CAMERA", comment:"no camera access"), message: NSLocalizedString("ERROR_CAMERA_DESC", comment:"no camera access explainded"), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("ERROR_CAMERA_BTN", comment:"go to settings action"), style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
+            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
