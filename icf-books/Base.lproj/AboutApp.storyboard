@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_book_2-1" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_book" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
@@ -66,15 +66,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AB2-cY-AaK" rowHeight="45" style="IBUITableViewCellStyleDefault" id="ck6-9W-Xfn">
-                                        <rect key="frame" x="0.0" y="220.5" width="375" height="45"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AB2-cY-AaK" rowHeight="51" style="IBUITableViewCellStyleDefault" id="ck6-9W-Xfn">
+                                        <rect key="frame" x="0.0" y="220.5" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ck6-9W-Xfn" id="SUQ-F3-9qH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erhalte als erster informationen zu Leo Biggers neuen Bücher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="50.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +84,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fUF-U2-zCj">
-                                        <rect key="frame" x="0.0" y="265.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="271.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUF-U2-zCj" id="KX0-fq-QMQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -106,7 +106,7 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DfA-Tg-kuP">
-                                        <rect key="frame" x="0.0" y="309.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfA-Tg-kuP" id="XQR-Lr-HUq">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -128,13 +128,13 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHI-WT-bqC">
-                                        <rect key="frame" x="0.0" y="353.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="359.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHI-WT-bqC" id="sBF-xn-xZS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <state key="normal" title="Newsletter anmelden">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,6 +144,12 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fad-DQ-nyV" secondAttribute="bottom" constant="-8" id="05I-Am-M1H"/>
+                                                <constraint firstItem="Fad-DQ-nyV" firstAttribute="top" secondItem="sBF-xn-xZS" secondAttribute="topMargin" constant="-8" id="5Xx-p6-DVn"/>
+                                                <constraint firstItem="Fad-DQ-nyV" firstAttribute="leading" secondItem="sBF-xn-xZS" secondAttribute="leadingMargin" constant="-8" id="7jz-3p-CTc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fad-DQ-nyV" secondAttribute="trailing" constant="-8" id="dOO-tx-bBM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -152,7 +158,7 @@
                             <tableViewSection headerTitle="Author" id="OR0-sF-UUE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="gvl-Rf-VHW">
-                                        <rect key="frame" x="0.0" y="447.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="453.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvl-Rf-VHW" id="Rj2-2x-K47">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
@@ -187,16 +193,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yys-OQ-rrB" rowHeight="62" style="IBUITableViewCellStyleDefault" id="K5h-21-2fD">
-                                        <rect key="frame" x="0.0" y="618.5" width="375" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yys-OQ-rrB" rowHeight="137" style="IBUITableViewCellStyleDefault" id="K5h-21-2fD">
+                                        <rect key="frame" x="0.0" y="624.5" width="375" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5h-21-2fD" id="eKq-uP-5FX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="136.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nebst Pastor von ICF Zürich und Autor dieses Buches ist Leo Bigger auch Ehemann und Vater von zwei Knaben" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="61.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="136.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement.  Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer «Kirche am Puls der Zeit».</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -205,7 +212,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="17B-bM-6pb" style="IBUITableViewCellStyleDefault" id="heg-UG-SdO">
-                                        <rect key="frame" x="0.0" y="680.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="761.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="heg-UG-SdO" id="hdr-i7-e1d">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -230,7 +237,7 @@
                             <tableViewSection headerTitle="Church" id="j7t-8x-Ccy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="wV5-u6-ajC">
-                                        <rect key="frame" x="0.0" y="774.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="855.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wV5-u6-ajC" id="LmQ-0A-XGY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
@@ -265,17 +272,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fAp-9Z-Xsz" rowHeight="80" style="IBUITableViewCellStyleDefault" id="mRL-yR-Wvj">
-                                        <rect key="frame" x="0.0" y="945.5" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fAp-9Z-Xsz" rowHeight="152" style="IBUITableViewCellStyleDefault" id="mRL-yR-Wvj">
+                                        <rect key="frame" x="0.0" y="1026.5" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRL-yR-Wvj" id="z4u-2n-UXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fAp-9Z-Xsz">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="151.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Die International Chrstian Fellowship, kurz ICF, prägt die Schweiz und Europa seit 20 Jahren. Wöchentlich kommen über 2000 Besucher in die Kirche im Herzen Zürichs</string>
+                                                    <string key="text">ICF ist eine überkonfessionelle Freikirche auf biblischer Grundlage, die aus dem Traum entstanden ist, Kirche für die Menschen dynamisch, lebensnah und zeitgemäss zu gestalten.
+ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine christliche Kirche zu schaffen, die am Puls der Zeit, kreativ, innovativ und manchmal auch ein bisschen verrückt ist!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -284,7 +292,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="icfChurch" textLabel="6y5-Tq-eo9" style="IBUITableViewCellStyleDefault" id="bRb-9X-sdE">
-                                        <rect key="frame" x="0.0" y="1025.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1178.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRb-9X-sdE" id="bCX-ZB-b3m">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -305,7 +313,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fpS-81-kEY" style="IBUITableViewCellStyleDefault" id="hGU-7Q-m8B">
-                                        <rect key="frame" x="0.0" y="1069.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1222.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGU-7Q-m8B" id="CRv-Ub-lxf">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -326,7 +334,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CNA-Eu-KHm" detailTextLabel="Zxt-TA-jfF" style="IBUITableViewCellStyleValue1" id="n6d-EE-2j9">
-                                        <rect key="frame" x="0.0" y="1113.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1266.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6d-EE-2j9" id="dd9-3y-9hA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -339,8 +347,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="www.icf-onlinestore.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zxt-TA-jfF">
-                                                    <rect key="frame" x="179.5" y="12" width="180.5" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="icf-onlinestore.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zxt-TA-jfF">
+                                                    <rect key="frame" x="219" y="12" width="141" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,7 +363,7 @@
                             <tableViewSection headerTitle="Developer" id="49S-ft-Nta">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="NrQ-GX-O61">
-                                        <rect key="frame" x="0.0" y="1207.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="1360.5" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NrQ-GX-O61" id="We0-gx-FMc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
@@ -390,15 +398,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YQj-uk-MDS" rowHeight="80" style="IBUITableViewCellStyleDefault" id="GBI-HQ-FR5">
-                                        <rect key="frame" x="0.0" y="1378.5" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YQj-uk-MDS" rowHeight="85" style="IBUITableViewCellStyleDefault" id="GBI-HQ-FR5">
+                                        <rect key="frame" x="0.0" y="1531.5" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBI-HQ-FR5" id="RIQ-9h-Yzp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YQj-uk-MDS">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="84.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Die Entwicklerküche, fünf Freunde aus dem ICF Zürich, wünschen sich auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so auch diese App.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -409,7 +417,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eI2-e5-AsY" detailTextLabel="D5h-Ov-qOr" style="IBUITableViewCellStyleValue1" id="dcw-pv-rFL">
-                                        <rect key="frame" x="0.0" y="1458.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1616.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcw-pv-rFL" id="Bqs-LH-r4U">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -438,7 +446,7 @@
                             <tableViewSection id="9Hh-Gq-R0N">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="a35-zB-tIn" style="IBUITableViewCellStyleDefault" id="gnK-8z-4Mm">
-                                        <rect key="frame" x="0.0" y="1538.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1696.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnK-8z-4Mm" id="M58-14-kwY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -456,7 +464,7 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e9C-Ed-Cdp" style="IBUITableViewCellStyleDefault" id="ub3-x2-Igy">
-                                        <rect key="frame" x="0.0" y="1582.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1740.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ub3-x2-Igy" id="0se-nB-XEr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -474,7 +482,7 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="SdS-4j-8P5">
-                                        <rect key="frame" x="0.0" y="1626.5" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="1784.5" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdS-4j-8P5" id="yFr-xt-ecV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
@@ -973,7 +981,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about_book_2-1" width="788" height="394"/>
+        <image name="about_book" width="1280" height="640"/>
         <image name="about_church" width="1280" height="720"/>
         <image name="dk_logo_inverted" width="800" height="647"/>
         <image name="image_shadow" width="1080" height="400"/>
