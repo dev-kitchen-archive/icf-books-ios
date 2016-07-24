@@ -66,6 +66,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         // (1) validate origin
         if let scannedId = Api.idFromUrl(scannedString) {
             infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
+            infoImage.image = UIImage(named: "ok")
             // (2) Validate if id already persisted
             if let media = Media.getById(scannedId){
                 infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
@@ -97,15 +98,11 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
 //                        }
                     }
                 })
-//                let setUpUrl = Api.getLanguageUrl() + "/media/" + scannedId + ".json"
-//                print(setUpUrl)
-//                let scannedURL = NSURL(string: setUpUrl)
-//                if scannedURL != nil {
-//                    dataRetrieve(scannedURL!)
-//                }
+
             }
         } else {
             infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
+            infoImage.image = UIImage(named: "nok")
         }
         
         if readyToScan {
