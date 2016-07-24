@@ -43,15 +43,15 @@ class ErrorManager {
                                       preferredStyle: UIAlertControllerStyle.Alert)
         
         //Buttons
-        alert.addAction(UIAlertAction(title: NSLocalizedString("ERROR_IGNORE_BTN", comment:"ignore action"),
-            style: UIAlertActionStyle.Default,
-            handler: nil))
-        
         alert.addAction(UIAlertAction(title: NSLocalizedString("ERROR_SETTINGS_BTN", comment:"go to settings action"),
             style: UIAlertActionStyle.Default,
             handler: {(alert: UIAlertAction!) in
                 UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
-            }))
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("ERROR_IGNORE_BTN", comment:"ignore action"),
+            style: UIAlertActionStyle.Default,
+            handler: nil))
         
         //Present action
         presenter.presentViewController(alert, animated: true, completion: nil)
@@ -87,7 +87,22 @@ class ErrorManager {
         presenter.presentViewController(alert, animated: true, completion: nil)
     }
     
-    static func newsletterSuccess(presenter:UIViewController) {
+    static func newsletterInvalid(presenter:UIViewController) {
+        //Alert
+        let alert = UIAlertController(title: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_INVALID", comment:"invalid data"),
+                                      message: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_INVALID_DESC", comment:"invalid data explainded"),
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //Buttons
+        alert.addAction(UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: nil))
+        
+        //Present action
+        presenter.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    static func newsletterSuccess(presenter:UIViewController, callback:()->()) {
         //Alert
         let alert = UIAlertController(title: NSLocalizedString("SUCCESS_NEWSLETTER", comment:"signup success"),
                                       message: NSLocalizedString("SUCCESS_NEWSLETTER_DESC", comment:"signup success description"),
@@ -100,6 +115,9 @@ class ErrorManager {
         
         //Present action
         presenter.presentViewController(alert, animated: true, completion: nil)
+        
+        //run callback if
+        callback()
     }
     
 }

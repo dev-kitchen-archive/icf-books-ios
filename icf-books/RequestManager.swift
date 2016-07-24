@@ -99,7 +99,7 @@ class RequestManager {
                         error = RequestError.ParsingError
                     }
                 }
-                completionHandler(media: media, error: errorMessage)
+                completionHandler(media: media, error: error)
             })
         } else {
             completionHandler(media: nil, error: RequestError.BadUrl)

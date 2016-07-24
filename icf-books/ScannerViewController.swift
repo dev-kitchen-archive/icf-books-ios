@@ -65,43 +65,46 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         
         // (1) validate origin
         if let scannedId = Api.idFromUrl(scannedString) {
-            infoText.text = NSLocalizedString("QR_RECOGNIZED", comment:"QR-Code recognized")
             infoImage.image = UIImage(named: "ok")
+            infoText.text = NSLocalizedString("SCAN_QR_RECOGNIZED", comment:"QR-Code recognized")
+            
             // (2) Validate if id already persisted
             if let media = Media.getById(scannedId){
-                infoText.text = NSLocalizedString("QR_AGAIN", comment:"QR-Code already scanned")
+                infoText.text = NSLocalizedString("SCAN_QR_AGAIN", comment:"QR-Code already scanned")
 
                 //as this media content is already available open the detail page
                 openDetailViewForMedia(withId: media.valueForKey("id") as! String)
                 
-            } else {
+            } else if Reachability.isConnectedToNetwork() {
                 
-                infoText.text = NSLocalizedString("LOAD_DATA", comment:"Data is beeing loaded")
+                infoText.text = NSLocalizedString("SCAN_LOAD_DATA", comment:"Data is beeing loaded")
                 // (3) get data
 
                 RequestManager.getMedia(forMediaId: scannedId, completionHandler: { (media, error) -> (Void) in
                     if error == nil {
                         if let mediaParsed = ParseMedia.fromJson(media!) {
-                            print("yes")
                             self.persistObject(mediaParsed)
                         } else {
-                            print("no")
                             dispatch_async(dispatch_get_main_queue()) {
-                                self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
+                                self.infoText.text = NSLocalizedString("SCAN_PARSE_ERROR", comment:"Error Parsing")
+                                self.infoImage.image = UIImage(named: "nok")
                             }
                         }
                     } else {
-                        print("implement error handling in ScannerViewController.swift")
                         print(error)
-//                        dispatch_async(dispatch_get_main_queue()) {
-//                            self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten."
-//                        }
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.infoText.text = NSLocalizedString("SCAN_SERVER_ERROR", comment:"Error from Server")
+                            self.infoImage.image = UIImage(named: "nok")
+                        }
                     }
                 })
 
+            } else {
+                infoImage.image = UIImage(named: "nok")
+                infoText.text = NSLocalizedString("SCAN_NO_INTERNET", comment:"No internet to load data")
             }
         } else {
-            infoText.text = NSLocalizedString("QR_INVALID", comment:"QR-Code is not from valid source")
+            infoText.text = NSLocalizedString("SCAN_QR_INVALID", comment:"QR-Code is not from valid source")
             infoImage.image = UIImage(named: "nok")
         }
         
@@ -109,42 +112,14 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
             qrCodeFrameView?.layer.borderColor = UIColor.whiteColor().CGColor
         }
     }
-    
-    func dataRetrieve(scannedURL: NSURL) {
-        //ensure to ask API for JSON and not HTML view
-        var url = scannedURL
-        if !scannedURL.absoluteString.hasSuffix(".json") {
-            var jsonUrl = scannedURL.absoluteString
-            jsonUrl = jsonUrl + ".json"
-            url = NSURL(string: jsonUrl)!
-        }
         
-        //pass location of JSON Data to retrieve
-        GetJson.retrieveDictFrom(url, completionHandler: { (jsonDict:NSDictionary?, errorMessage:String?) in
-            if errorMessage == nil {
-                if let media = ParseMedia.fromJson(jsonDict!) {
-                    self.persistObject(media)
-                } else {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + "404"
-                    }
-                }
-            } else {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.infoText.text = "Beim Laden der Daten ist ein Fehler aufgetreten: " + errorMessage!
-                }
-                
-            }
-        })
-    }
-    
     func persistObject(objectToSave:NSDictionary) {
         if Media.saveNewEntity(objectToSave) {
             print("yes 2")
             openDetailViewForMedia(withId: objectToSave.valueForKey("id") as! String)
         } else {
             dispatch_async(dispatch_get_main_queue()) {
-                self.infoText.text = NSLocalizedString("SAVED_DATA", comment:"Data was NOT successfully saved")
+                self.infoText.text = NSLocalizedString("SCAN_SAVED_DATA", comment:"Data was NOT successfully saved")
             }
         }
 
@@ -246,7 +221,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
             lastScannedCode = ""
-            infoText.text = NSLocalizedString("QR_SCAN", comment:"Scan the QR-Code")
+            infoText.text = NSLocalizedString("SCAN_QR_SCAN", comment:"Scan the QR-Code")
             //animateInfoHeight()
             
             //TODO: break loading
@@ -327,14 +302,6 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
 //        
 //        return status
 //    }
-    
-    func checkPermission() {
-        let alert = UIAlertController(title: NSLocalizedString("ERROR_CAMERA", comment:"no camera access"), message: NSLocalizedString("ERROR_CAMERA_DESC", comment:"no camera access explainded"), preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("ERROR_CAMERA_BTN", comment:"go to settings action"), style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in
-            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
     
     /*
     // MARK: - Navigation

@@ -13,12 +13,16 @@
 "INTRO_1_BUTTON" = "No thanks";
 
 //SCANNER
-"QR_SCAN" = "Scan the QR-Code";
-"QR_RECOGNIZED" = "QR-Code recognized";
-"QR_AGAIN" = "QR-Code already scanned (link to DetailView?)";
-"QR_INVALID" = "QR-Code is not from valid source";
-"LOAD_DATA" = "Data is beeing loaded";
-"SAVED_DATA" = "Data was successfully saved";
+"SCAN_QR_SCAN" = "Scan the QR-Code.";
+"SCAN_QR_RECOGNIZED" = "QR-Code recognized.";
+"SCAN_QR_AGAIN" = "QR-Code already scanned.";
+"SCAN_QR_INVALID" = "QR-Code is not from valid source.";
+"SCAN_LOAD_DATA" = "Data is beeing loaded.";
+"SCAN_SAVED_DATA" = "Data was successfully saved.";
+"SCAN_NO_INTERNET" = "No internet connection, try again later.";
+"SCAN_SERVER_ERROR" = "The server is not responding, try again later.";
+"SCAN_PARSE_ERROR" = "Parsing the data was not successful.";
+
 
 //General
 "BUTTON_NEXT" = "Next";
@@ -37,8 +41,8 @@
 "ABOUT_NEWSLETTER" = "Stay informed";
 "ABOUT_NEWSLETTER_DESC" = "Be the first one to know about any new books from Leo Bigger.";
 "ABOUT_NEWSLETTER_BUTTON" = "Newsletter signup";
-"ABOUT_NEWSLETTER_SIGNUP_FAIL" = "Invalid data";
-"ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC" = "Please ensure that you entered a valid email address and a name.";
+"ABOUT_NEWSLETTER_SIGNUP_INVALID" = "Invalid data";
+"ABOUT_NEWSLETTER_SIGNUP_INVALID_DESC" = "Please ensure that you entered a valid email address and a name.";
 "ABOUT_NEWSLETTER_SIGNEDUP" = "You receive the newsletter on @ but you still can add a new address.";
 
 "ABOUT_IMPRINT" = "Imprint";

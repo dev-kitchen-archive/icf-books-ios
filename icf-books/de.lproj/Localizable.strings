@@ -13,12 +13,15 @@
 "INTRO_1_BUTTON" = "No thanks";
 
 //SCANNER
-"QR_SCAN" = "Scanne einen QR-Code";
-"QR_RECOGNIZED" = "QR-Code erkannt";
-"QR_AGAIN" = "Der QR-Code wurde bereits gescannt (link direkt zur DetailView?)";
-"QR_INVALID" = "Der QR-Code ist nicht aus einem ICF Buch";
-"LOAD_DATA" = "Daten werden geladen";
-"SAVED_DATA" = "Daten wurden gespeichert";
+"SCAN_QR_SCAN" = "Scanne einen QR-Code.";
+"SCAN_QR_RECOGNIZED" = "QR-Code erkannt.";
+"SCAN_QR_AGAIN" = "Der QR-Code wurde bereits gescannt.";
+"SCAN_QR_INVALID" = "Der QR-Code ist nicht gültig.";
+"SCAN_LOAD_DATA" = "Daten werden geladen.";
+"SCAN_SAVED_DATA" = "Daten wurden gespeichert.";
+"SCAN_NO_INTERNET" = "Keine Internetverbindung, versuch es später nochmals.";
+"SCAN_SERVER_ERROR" = "Der Server ist nicht erreichbar, versuch es später nochmals.";
+"SCAN_PARSE_ERROR" = "Das verarbeiten der Daten war nicht erfolgreich.";
 
 //General
 "BUTTON_NEXT" = "Weiter";
@@ -37,9 +40,9 @@
 "ABOUT_NEWSLETTER" = "Bleib informiert";
 "ABOUT_NEWSLETTER_BUTTON" = "Newsletter anmelden";
 "ABOUT_NEWSLETTER_DESC" = "Erhalte als erster informationen zu Leo Biggers neuen Bücher.";
-"ABOUT_NEWSLETTER_SIGNUP_FAIL" = "Unvollständige Angaben";
-"ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC" = "Bitte überprüfe ob Name und Email-Adresse korrekt sind.";
-"ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhälst die Newsletter an @ , kannst aber gerne eine weitere Adresse hinterlegen.";
+"ABOUT_NEWSLETTER_SIGNUP_INVALID" = "Unvollständige Angaben";
+"ABOUT_NEWSLETTER_SIGNUP_INVALID_DESC" = "Bitte überprüfe ob Name und Email-Adresse korrekt sind.";
+"ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhälst die Newsletter an @, kannst aber gerne eine weitere Adresse hinterlegen.";
 
 "ABOUT_IMPRINT" = "Impressum";
 "ABOUT_FONTIS" = "Fontis Verlag";

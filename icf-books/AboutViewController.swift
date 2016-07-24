@@ -35,15 +35,17 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
         self.view.tintColor = Color.accent
         
         //newsletter
-        if let email = userDefaults.objectForKey("newsletter") as? String {
-            newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: email)
-        }
-        
         nameField.delegate = self
         emailField.delegate = self
         newsletterTitle.text = NSLocalizedString("ABOUT_NEWSLETTER", comment:"stay informed")
-        newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_DESC", comment:"Newsletter description")
         newsletterButton.setTitle(NSLocalizedString("ABOUT_NEWSLETTER_BUTTON", comment:"segn up"), forState: .Normal)
+        if let email = userDefaults.objectForKey("newsletter") as? String {
+            let mail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let mailText = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: mail)
+            newsletterDesc.text = mailText
+        } else {
+            newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_DESC", comment:"Newsletter description")
+        }
         
         //leo
         leoDesc.text = NSLocalizedString("ABOUT_LEO_DESC", comment:"Leo Bigger description")
@@ -71,10 +73,10 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func resetButton(sender: AnyObject) {
         let alertController = UIAlertController(title: nil, message: "Alle gescannten Einträge werden gelöscht", preferredStyle: .ActionSheet)
-        let cancelAction = UIAlertAction(title: "Abbrechen", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "cancel", style: .Cancel) { (action) in
             print("ActionSheet cancel")
         }
-        let destroyAction = UIAlertAction(title: "Löschen", style: .Destructive) { (action) in
+        let destroyAction = UIAlertAction(title: "remove", style: .Destructive) { (action) in
             print("ActionSheet deleted")
             
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -126,7 +128,7 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
             emailField.becomeFirstResponder()
             return true
         } else {
-            self.view.endEditing(true)
+            view.endEditing(true)
             return false
         }
     }
@@ -139,19 +141,27 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
             let email = emailField.text
             if name?.characters.count >= 1 && isValidEmail(email) {
                 RequestManager.postNewsletter(email!, name: name!, completionHandler: { (error) -> (Void) in
-                    if error != nil {
-                        ErrorManager.newsletterFail(self)
-                    } else {
-                        self.userDefaults.setValue(email, forKey: "newsletter")
-                        self.newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: email!)
-                        
-                        ErrorManager.newsletterSuccess(self)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        if error != nil {
+                            ErrorManager.newsletterFail(self)
+                        } else {
+                            self.userDefaults.setValue(email, forKey: "newsletter")
+                            self.userDefaults.synchronize()
+                            
+                            //define description informing that signup was successful
+                            self.newsletterDesc.text = NSLocalizedString("ABOUT_NEWSLETTER_SIGNEDUP", comment:"already signed up").stringByReplacingOccurrencesOfString("@", withString: email!)
+                            
+                            //reset fileds
+                            self.nameField.text = nil
+                            self.emailField.text = nil
+                            
+                            //calling altert to inform user about success and dismiss the keyboard
+                            ErrorManager.newsletterSuccess(self, callback: {self.view.endEditing(true)})
+                        }
                     }
                 })
             } else {
-                let alert = UIAlertController(title: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_FAIL", comment:"invalid data"), message: NSLocalizedString("ABOUT_NEWSLETTER_SIGNUP_FAIL_DESC", comment:"invalid data explainded"), preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+                ErrorManager.newsletterInvalid(self)
             }
         }
     }

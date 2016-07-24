@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1026A631D44E48500CF2AAD /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1026A621D44E48500CF2AAD /* PlayerViewController.swift */; };
 		E1032A7E1C7A876400EAB4E3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */; };
 		E1032A931C7AFD0B00EAB4E3 /* AboutApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1032A951C7AFD0B00EAB4E3 /* AboutApp.storyboard */; };
 		E1032A9B1C7AFE9C00EAB4E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */; };
@@ -42,7 +43,6 @@
 		E18589651C737CD600378011 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589641C737CD600378011 /* ContentTableViewCell.swift */; };
 		E18589691C74ABD300378011 /* InfoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589681C74ABD300378011 /* InfoImageCell.swift */; };
 		E18589741C75CFD400378011 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589731C75CFD400378011 /* ScannerViewController.swift */; };
-		E18589761C76223000378011 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589751C76223000378011 /* GetJson.swift */; };
 		E18589791C766FB200378011 /* ParseMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18589781C766FB200378011 /* ParseMedia.swift */; };
 		E185897E1C76919400378011 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897C1C76919400378011 /* Media+CoreDataProperties.swift */; };
 		E185897F1C76919400378011 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185897D1C76919400378011 /* Media.swift */; };
@@ -79,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1026A621D44E48500CF2AAD /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		E1032A7D1C7A876400EAB4E3 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E1032A911C7AFD0000EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		E1032A921C7AFD0000EAB4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		E18589641C737CD600378011 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		E18589681C74ABD300378011 /* InfoImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoImageCell.swift; sourceTree = "<group>"; };
 		E18589731C75CFD400378011 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
-		E18589751C76223000378011 /* GetJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
 		E18589781C766FB200378011 /* ParseMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseMedia.swift; sourceTree = "<group>"; };
 		E185897C1C76919400378011 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E185897D1C76919400378011 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
@@ -276,6 +276,7 @@
 				E13F14671CA2B394002EB7CA /* MasterViewController.swift */,
 				E10876431CA49CB200CB7D24 /* NavigationController.swift */,
 				E13BAC731D3D0592001176F4 /* IntroViewController.swift */,
+				E1026A621D44E48500CF2AAD /* PlayerViewController.swift */,
 				E1FCD7EA1CDCBDDE00664300 /* WelcomeController.swift */,
 				E18589331C734F4800378011 /* HomeViewController.swift */,
 				E134EB4B1CA4892800D3B283 /* DetailTableViewController.swift */,
@@ -294,10 +295,9 @@
 				E13F14651CA2B0CD002EB7CA /* Color.swift */,
 				E181D5F81CEF8A86005C1D2F /* String.swift */,
 				E14F0EB71D411D8F0079E48E /* Reachability.swift */,
-				E18589751C76223000378011 /* GetJson.swift */,
 				E18589781C766FB200378011 /* ParseMedia.swift */,
-				E1EB26B21CDB7F4200B00937 /* RequestManager.swift */,
 				E14F0EBB1D424C030079E48E /* ErrorManager.swift */,
+				E1EB26B21CDB7F4200B00937 /* RequestManager.swift */,
 				E1EB26B41CDB7F6400B00937 /* RequestError.swift */,
 				E1032A9D1C7AFE9C00EAB4E3 /* Localizable.strings */,
 			);
@@ -481,11 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13F146F1CA2B951002EB7CA /* IntroSliderCell.swift in Sources */,
+				E1026A631D44E48500CF2AAD /* PlayerViewController.swift in Sources */,
 				E13F14681CA2B394002EB7CA /* MasterViewController.swift in Sources */,
 				E185893A1C734F4800378011 /* icf_books.xcdatamodeld in Sources */,
 				E181D5F91CEF8A86005C1D2F /* String.swift in Sources */,
 				E1EB26B31CDB7F4200B00937 /* RequestManager.swift in Sources */,
-				E18589761C76223000378011 /* GetJson.swift in Sources */,
 				E185897F1C76919400378011 /* Media.swift in Sources */,
 				E14F0EB81D411D8F0079E48E /* Reachability.swift in Sources */,
 				E18589341C734F4800378011 /* HomeViewController.swift in Sources */,

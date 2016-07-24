@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2ON-ld-fJL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2ON-ld-fJL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -127,7 +127,7 @@
         <!--AV Player View Controller-->
         <scene sceneID="VBD-Zm-nqA">
             <objects>
-                <avPlayerViewController storyboardIdentifier="videoView" videoGravity="AVLayerVideoGravityResizeAspect" id="0Q0-fg-47D" sceneMemberID="viewController"/>
+                <avPlayerViewController storyboardIdentifier="videoView" videoGravity="AVLayerVideoGravityResizeAspect" id="0Q0-fg-47D" customClass="PlayerViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXO-RS-FrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1275" y="239"/>
