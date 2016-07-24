@@ -473,20 +473,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="199" id="SdS-4j-8P5">
-                                        <rect key="frame" x="0.0" y="1626.5" width="375" height="199"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="SdS-4j-8P5">
+                                        <rect key="frame" x="0.0" y="1626.5" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdS-4j-8P5" id="yFr-xt-ecV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="198.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-Tv-IVd">
-                                                    <rect key="frame" x="0.0" y="155" width="375" height="35.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35.5" id="e9W-Gk-faC"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
                                                     <state key="normal" title="reset">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="0.33144946808510639" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="resetButton:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="TLC-Gs-Hq3"/>
@@ -494,9 +492,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wLX-Tv-IVd" secondAttribute="bottom" id="Fe6-sY-wFQ"/>
-                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="leading" secondItem="yFr-xt-ecV" secondAttribute="leadingMargin" constant="-8" id="kbX-de-ohm"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wLX-Tv-IVd" secondAttribute="trailing" constant="-8" id="xRJ-y5-bZP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wLX-Tv-IVd" secondAttribute="trailing" constant="-8" id="GAt-dL-Eyc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wLX-Tv-IVd" secondAttribute="bottom" constant="-8" id="GR8-z7-Rsk"/>
+                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="top" secondItem="yFr-xt-ecV" secondAttribute="topMargin" constant="-8" id="YaR-fO-MlR"/>
+                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="leading" secondItem="yFr-xt-ecV" secondAttribute="leadingMargin" constant="-8" id="av0-Xv-scx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>

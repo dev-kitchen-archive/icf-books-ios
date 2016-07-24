@@ -72,7 +72,7 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func resetButton(sender: AnyObject) {
-        let alertController = UIAlertController(title: nil, message: "Alle gescannten Einträge werden gelöscht", preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: nil, message: "Remove all scanned qr code entries?", preferredStyle: .ActionSheet)
         let cancelAction = UIAlertAction(title: "cancel", style: .Cancel) { (action) in
             print("ActionSheet cancel")
         }
