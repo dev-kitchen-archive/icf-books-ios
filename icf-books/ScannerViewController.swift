@@ -25,23 +25,17 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     var qrCodeFrameView:UIView?
     var lastScannedCode:String = ""
     var readyToScan:Bool = true
-    var autorizedCam = false
+    var autorizedCam:Bool? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //check camera access:
-        autorizedCam = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo) == .Authorized
-        
-        if autorizedCam {
-            setupCamera()
-            setupQrCodeHighlighter()
-            placeViewsOverCamera()
-        }
+        //check camera access
+        autorizedCam = setupWithCameraAccess()
     }
     
     override func viewDidAppear(animated: Bool) {
-        if !autorizedCam {
+        if autorizedCam == false {
             ErrorManager.cameraPermission(self)
         }
         if !Reachability.isConnectedToNetwork() {
@@ -115,7 +109,6 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         
     func persistObject(objectToSave:NSDictionary) {
         if Media.saveNewEntity(objectToSave) {
-            print("yes 2")
             openDetailViewForMedia(withId: objectToSave.valueForKey("id") as! String)
         } else {
             dispatch_async(dispatch_get_main_queue()) {
@@ -269,39 +262,59 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         return imgListArray
     }
 
-//    func cameraAccess() -> Bool {
-//        var status = false
-//        let cameraMediaType = AVMediaTypeVideo
-//        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(cameraMediaType)
-//        
-//        switch cameraAuthorizationStatus {
-//            
-//        // The client is authorized to access the hardware supporting a media type.
-//        case .Authorized:
-//            status = true
-//            break
-//            
-//            // The client is not authorized to access the hardware for the media type. The user cannot change
-//        // the client's status, possibly due to active restrictions such as parental controls being in place.
-//        case .Restricted:
-//            break
-//            
-//        // The user explicitly denied access to the hardware supporting a media type for the client.
-//        case .Denied:
-//            break
-//            
-//        // Indicates that the user has not yet made a choice regarding whether the client can access the hardware.
-//        case .NotDetermined:
-//            // Prompting user for the permission to use the camera.
-//            AVCaptureDevice.requestAccessForMediaType(cameraMediaType) { granted in
-//                if !granted {
-//                    //ask for permission
-//                }
-//            }
-//        }
-//        
-//        return status
-//    }
+    /*
+     loads camera after ensuring that app has access
+     */
+    func setupWithCameraAccess() -> Bool? {
+        var access:Bool? = nil
+        let cameraMediaType = AVMediaTypeVideo
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(cameraMediaType)
+        
+        switch cameraAuthorizationStatus {
+            
+        // The client is authorized to access the hardware supporting a media type.
+        case .Authorized:
+            loadCameraView()
+            access = true
+            break
+            
+        // The client is not authorized to access the hardware for the media type. The user cannot change
+        // the client's status, possibly due to active restrictions such as parental controls being in place.
+        case .Restricted:
+            access = false
+            break
+            
+        // The user explicitly denied access to the hardware supporting a media type for the client.
+        case .Denied:
+            access = false
+            break
+            
+        // Indicates that the user has not yet made a choice regarding whether the client can access the hardware.
+        case .NotDetermined:
+            // Prompting user for the permission to use the camera.
+            AVCaptureDevice.requestAccessForMediaType(cameraMediaType) { granted in
+                dispatch_async(dispatch_get_main_queue()) {
+                    if granted {
+                        self.loadCameraView()
+                        access = true
+                    } else {
+                        ErrorManager.cameraPermission(self)
+                        access = false
+                    }
+                }
+            }
+        }
+        
+        return access
+    }
+    
+    // loads view after permission check in func setupWithCameraAccess()
+    func loadCameraView() {
+        setupCamera()
+        setupQrCodeHighlighter()
+        placeViewsOverCamera()
+    }
+    
     
     /*
     // MARK: - Navigation

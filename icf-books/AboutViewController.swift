@@ -76,30 +76,30 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
         let cancelAction = UIAlertAction(title: "cancel", style: .Cancel) { (action) in
             print("ActionSheet cancel")
         }
-        let destroyAction = UIAlertAction(title: "remove", style: .Destructive) { (action) in
-            print("ActionSheet deleted")
-            
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            let managedContext = appDelegate.managedObjectContext
-            
-            let fetchRequest = NSFetchRequest(entityName: "Media")
-            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-            do {
-                try managedContext.executeRequest(deleteRequest)
-                try managedContext.save()
-            } catch let error as NSError {
-                // TODO: handle the error
-                print(error)
-            }
-            
-            
-            //make intro available again
-            self.userDefaults.removeObjectForKey("appAlreadyUsed")
-            self.userDefaults.synchronize()
-        }
+//        let destroyAction = UIAlertAction(title: "remove", style: .Destructive) { (action) in
+//            print("ActionSheet deleted")
+//            
+//            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//            let managedContext = appDelegate.managedObjectContext
+//            
+//            let fetchRequest = NSFetchRequest(entityName: "Media")
+//            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//
+//            do {
+//                try managedContext.executeRequest(deleteRequest)
+//                try managedContext.save()
+//            } catch let error as NSError {
+//                // TODO: handle the error
+//                print(error)
+//            }
+//            
+//            
+//            //make intro available again
+//            self.userDefaults.removeObjectForKey("appAlreadyUsed")
+//            self.userDefaults.synchronize()
+//        }
         alertController.addAction(cancelAction)
-        alertController.addAction(destroyAction)
+        //alertController.addAction(destroyAction)
         
         self.presentViewController(alertController, animated: true) { }
         
