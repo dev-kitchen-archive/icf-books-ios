@@ -63,18 +63,22 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
             scans = results as! [NSManagedObject]
+            scans = scans.reverse()
+            
+            //prepare images for cells to be faster accessable
+            //thumbnails.removeAll()
+            for scan in scans {
+                print(".------------.")
+                print(scan.valueForKey("title") as? String)
+                let imgData = scan.valueForKey("thumbnail_data") as? NSData
+                let imageArray = imgData.map({UIImage(data: $0)})
+                let image = imageArray!
+                thumbnails.append(image!)
+            }
+            print(thumbnails.count)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
-        
-        //prepare images for cells to be faster accessable
-        for scan in scans {
-            let imgData = scan.valueForKey("thumbnail_data") as? NSData
-            let imageArray = imgData.map({UIImage(data: $0)})
-            let image = imageArray!
-            thumbnails.append(image!)
-        }
-        
         
         //make sure that table data is reloaded after successfully loading core data
         //because you could have new entries in coredata afer scanning new entry
@@ -117,7 +121,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // if nothing is scanned yet, show AboutBookCell
+        // if nothing is scanned yet, show AboutBookCell and...
         if scans.count < 1 && indexPath.row == 0 {
             var cell = tableView.dequeueReusableCellWithIdentifier("aboutBookCell") as? AboutBookCell
             if cell == nil {
@@ -126,7 +130,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             
             return cell!
         }
-        // if nothing is scanned yet, show InfoImageCell
+        // ...if nothing is scanned yet, also show InfoImageCell
         else if scans.count < 1 && indexPath.row == 1 {
             var cell = tableView.dequeueReusableCellWithIdentifier("infoImageCell") as? InfoImageCell
             if cell == nil {
@@ -135,7 +139,7 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
         
             return cell!
         }
-        // last section after chapters sections --> spacing cell section
+        // last section after chapters sections --> always spacing cell section
         else if indexPath.section == chaptersCount {
             var cell = tableView.dequeueReusableCellWithIdentifier("spaceCell")
             if cell == nil {

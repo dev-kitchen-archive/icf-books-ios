@@ -379,14 +379,14 @@
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-iX-tov">
                                                     <rect key="frame" x="0.0" y="225" width="375" height="150"/>
                                                 </imageView>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-VK-3Uf">
                                                     <rect key="frame" x="23" y="225" width="329" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="BK5-0d-8Jr"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="REZ-vR-N94"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Blond" family="Arnhem Pro" pointSize="38"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">

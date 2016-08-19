@@ -481,29 +481,33 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="SdS-4j-8P5">
-                                        <rect key="frame" x="0.0" y="1811.5" width="375" height="0.0"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="E8u-Xe-dX4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="MI3-Ag-HPO">
+                                        <rect key="frame" x="0.0" y="1847.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdS-4j-8P5" id="yFr-xt-ecV">
-                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="0.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MI3-Ag-HPO" id="hiV-S5-Bk9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-Tv-IVd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WT-mr-f3A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
                                                     <state key="normal" title="reset">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="0.33144946808510639" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="0.33144946809999998" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="resetButton:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="TLC-Gs-Hq3"/>
+                                                        <action selector="resetButton:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="ebh-ek-tOo"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wLX-Tv-IVd" secondAttribute="trailing" constant="-8" id="GAt-dL-Eyc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wLX-Tv-IVd" secondAttribute="bottom" constant="-8" id="GR8-z7-Rsk"/>
-                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="top" secondItem="yFr-xt-ecV" secondAttribute="topMargin" constant="-8" id="YaR-fO-MlR"/>
-                                                <constraint firstItem="wLX-Tv-IVd" firstAttribute="leading" secondItem="yFr-xt-ecV" secondAttribute="leadingMargin" constant="-8" id="av0-Xv-scx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8WT-mr-f3A" secondAttribute="trailing" constant="-8" id="3S4-3T-Z6V"/>
+                                                <constraint firstItem="8WT-mr-f3A" firstAttribute="leading" secondItem="hiV-S5-Bk9" secondAttribute="leadingMargin" constant="-8" id="BZm-yS-Cau"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8WT-mr-f3A" secondAttribute="bottom" constant="-8" id="Xbc-Jc-7sm"/>
+                                                <constraint firstItem="8WT-mr-f3A" firstAttribute="top" secondItem="hiV-S5-Bk9" secondAttribute="topMargin" constant="-8" id="prC-5f-MrX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
