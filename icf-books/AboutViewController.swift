@@ -32,6 +32,14 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //add hidden button for reseting the app
+        
+        let delteteEntries = UIBarButtonItem(image: UIImage(named: "transparent_pixel"), style: .Plain, target: self, action: #selector(resetButton))
+        
+        
+        navigationItem.rightBarButtonItem = delteteEntries
+        
+        
         self.view.tintColor = Color.accent
         
         //newsletter

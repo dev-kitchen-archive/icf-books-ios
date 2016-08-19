@@ -59,7 +59,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         
         // (1) validate origin
         if let scannedId = Api.idFromUrl(scannedString) {
-            infoImage.image = UIImage(named: "ok")
+            infoImage.image = UIImage(named: "qr_code_preview_success")
             infoText.text = NSLocalizedString("SCAN_QR_RECOGNIZED", comment:"QR-Code recognized")
             
             // (2) Validate if id already persisted
@@ -81,25 +81,25 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                         } else {
                             dispatch_async(dispatch_get_main_queue()) {
                                 self.infoText.text = NSLocalizedString("SCAN_PARSE_ERROR", comment:"Error Parsing")
-                                self.infoImage.image = UIImage(named: "nok")
+                                self.infoImage.image = UIImage(named: "qr_code_preview_error")
                             }
                         }
                     } else {
                         print(error)
                         dispatch_async(dispatch_get_main_queue()) {
                             self.infoText.text = NSLocalizedString("SCAN_SERVER_ERROR", comment:"Error from Server")
-                            self.infoImage.image = UIImage(named: "nok")
+                            self.infoImage.image = UIImage(named: "qr_code_preview_error")
                         }
                     }
                 })
 
             } else {
-                infoImage.image = UIImage(named: "nok")
+                infoImage.image = UIImage(named: "qr_code_preview_error")
                 infoText.text = NSLocalizedString("SCAN_NO_INTERNET", comment:"No internet to load data")
             }
         } else {
             infoText.text = NSLocalizedString("SCAN_QR_INVALID", comment:"QR-Code is not from valid source")
-            infoImage.image = UIImage(named: "nok")
+            infoImage.image = UIImage(named: "qr_code_preview_error")
         }
         
         if readyToScan {
@@ -315,6 +315,26 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         placeViewsOverCamera()
     }
     
+    @IBAction func flashToggle(sender: AnyObject) {
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        if (device.hasTorch) {
+            do {
+                try device.lockForConfiguration()
+                if (device.torchMode == AVCaptureTorchMode.On) {
+                    device.torchMode = AVCaptureTorchMode.Off
+                } else {
+                    do {
+                        try device.setTorchModeOnWithLevel(1.0)
+                    } catch {
+                        print(error)
+                    }
+                }
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        }
+    }
     
     /*
     // MARK: - Navigation

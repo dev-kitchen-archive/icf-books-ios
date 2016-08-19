@@ -116,14 +116,25 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkQ-55-V6N">
+                                <rect key="frame" x="-4" y="64" width="383" height="463"/>
+                                <state key="normal" title="flash"/>
+                                <connections>
+                                    <action selector="flashToggle:" destination="SKj-EP-XSB" eventType="touchUpInside" id="Xi7-Er-BGs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83580115619546247" green="0.83580115619546247" blue="0.83580115619546247" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pkQ-55-V6N" secondAttribute="trailing" constant="-20" id="3M2-S9-52L"/>
                             <constraint firstItem="DZg-b5-0FA" firstAttribute="top" secondItem="88s-i9-vrI" secondAttribute="bottom" id="7yB-mf-NH3"/>
+                            <constraint firstItem="pkQ-55-V6N" firstAttribute="top" secondItem="R3w-60-bxV" secondAttribute="bottom" id="Aox-0I-Mf3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R3w-60-bxV" secondAttribute="trailing" constant="-20" id="CLH-J7-duZ"/>
                             <constraint firstItem="UF0-mO-3Jy" firstAttribute="centerY" secondItem="8Mq-pk-nE2" secondAttribute="centerY" multiplier="0.88" constant="0.29999999999999999" id="FqN-s6-bvN"/>
+                            <constraint firstItem="pkQ-55-V6N" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="Jtv-jO-8eV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="88s-i9-vrI" secondAttribute="trailing" constant="-20" id="NHB-Fo-V35"/>
                             <constraint firstItem="R3w-60-bxV" firstAttribute="top" secondItem="8Mq-pk-nE2" secondAttribute="topMargin" id="OZg-Hd-WHw"/>
+                            <constraint firstItem="DZg-b5-0FA" firstAttribute="top" secondItem="pkQ-55-V6N" secondAttribute="bottom" constant="140" id="RA3-IX-b8t"/>
                             <constraint firstItem="88s-i9-vrI" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="S5e-WP-mH5"/>
                             <constraint firstItem="UF0-mO-3Jy" firstAttribute="centerX" secondItem="8Mq-pk-nE2" secondAttribute="centerX" id="kqh-Kr-EEB"/>
                             <constraint firstItem="R3w-60-bxV" firstAttribute="leading" secondItem="8Mq-pk-nE2" secondAttribute="leadingMargin" constant="-20" id="v4u-vL-3DC"/>

@@ -66,10 +66,8 @@ class HomeViewController: MasterViewController, UITableViewDataSource, UITableVi
             scans = scans.reverse()
             
             //prepare images for cells to be faster accessable
-            //thumbnails.removeAll()
+            thumbnails.removeAll()
             for scan in scans {
-                print(".------------.")
-                print(scan.valueForKey("title") as? String)
                 let imgData = scan.valueForKey("thumbnail_data") as? NSData
                 let imageArray = imgData.map({UIImage(data: $0)})
                 let image = imageArray!

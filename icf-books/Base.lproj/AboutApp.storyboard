@@ -73,7 +73,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erhalte als erster informationen zu Leo Biggers neuen Bücher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erhalte als erster Informationen zu Leo Biggers neuen Bücher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="55.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -373,10 +373,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-I7-EZp">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="103.5" width="375" height="68"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="devkitchen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co3-OH-rvC">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="102.5" width="375" height="68"/>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -387,10 +387,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                 <constraint firstAttribute="trailingMargin" secondItem="Co3-OH-rvC" secondAttribute="trailing" constant="-8" id="5Aq-r1-sbg"/>
                                                 <constraint firstItem="gUU-RJ-rqb" firstAttribute="top" secondItem="We0-gx-FMc" secondAttribute="topMargin" constant="-8" id="6KN-8u-roq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gUU-RJ-rqb" secondAttribute="trailing" constant="-8" id="Muy-5J-BXv"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="CT7-I7-EZp" secondAttribute="bottom" constant="-7.5" id="RHL-vf-3zL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CT7-I7-EZp" secondAttribute="bottom" constant="-9" id="RHL-vf-3zL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="CT7-I7-EZp" secondAttribute="trailing" constant="-8" id="YPB-od-8nG"/>
                                                 <constraint firstItem="Co3-OH-rvC" firstAttribute="leading" secondItem="We0-gx-FMc" secondAttribute="leadingMargin" constant="-8" id="ama-LL-oD3"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Co3-OH-rvC" secondAttribute="bottom" constant="-7.5" id="hB2-VX-5he"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Co3-OH-rvC" secondAttribute="bottom" constant="-8" id="hB2-VX-5he"/>
                                                 <constraint firstItem="CT7-I7-EZp" firstAttribute="leading" secondItem="We0-gx-FMc" secondAttribute="leadingMargin" constant="-8" id="plN-XB-Y9L"/>
                                                 <constraint firstItem="gUU-RJ-rqb" firstAttribute="leading" secondItem="We0-gx-FMc" secondAttribute="leadingMargin" constant="-8" id="sjv-tA-JvG"/>
                                                 <constraint firstItem="Co3-OH-rvC" firstAttribute="height" secondItem="CT7-I7-EZp" secondAttribute="height" id="tOT-ga-Bm4"/>
@@ -480,37 +480,6 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="E8u-Xe-dX4">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="MI3-Ag-HPO">
-                                        <rect key="frame" x="0.0" y="1847.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MI3-Ag-HPO" id="hiV-S5-Bk9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WT-mr-f3A">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="9"/>
-                                                    <state key="normal" title="reset">
-                                                        <color key="titleColor" white="0.66666666669999997" alpha="0.33144946809999998" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="resetButton:" destination="XSQ-k4-K6u" eventType="touchUpInside" id="ebh-ek-tOo"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8WT-mr-f3A" secondAttribute="trailing" constant="-8" id="3S4-3T-Z6V"/>
-                                                <constraint firstItem="8WT-mr-f3A" firstAttribute="leading" secondItem="hiV-S5-Bk9" secondAttribute="leadingMargin" constant="-8" id="BZm-yS-Cau"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="8WT-mr-f3A" secondAttribute="bottom" constant="-8" id="Xbc-Jc-7sm"/>
-                                                <constraint firstItem="8WT-mr-f3A" firstAttribute="top" secondItem="hiV-S5-Bk9" secondAttribute="topMargin" constant="-8" id="prC-5f-MrX"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

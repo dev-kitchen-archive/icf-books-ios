@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "dk_logo.png",
+      "filename" : "qr_code_preview_error.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dk_logo-1.png",
+      "filename" : "qr_code_preview_error-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dk_logo-2.png",
+      "filename" : "qr_code_preview_error-2.png",
       "scale" : "3x"
     }
   ],

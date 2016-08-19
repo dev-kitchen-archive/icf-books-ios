@@ -39,7 +39,7 @@
 
 "ABOUT_NEWSLETTER" = "Bleib informiert";
 "ABOUT_NEWSLETTER_BUTTON" = "Newsletter anmelden";
-"ABOUT_NEWSLETTER_DESC" = "Erhalte als erster informationen zu Leo Biggers neuen Bücher.";
+"ABOUT_NEWSLETTER_DESC" = "Erhalte als erster Informationen zu Leo Biggers neuen Bücher.";
 "ABOUT_NEWSLETTER_SIGNUP_INVALID" = "Unvollständige Angaben";
 "ABOUT_NEWSLETTER_SIGNUP_INVALID_DESC" = "Bitte überprüfe ob Name und Email-Adresse korrekt sind.";
 "ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhälst die Newsletter an @, kannst aber gerne eine weitere Adresse hinterlegen.";
