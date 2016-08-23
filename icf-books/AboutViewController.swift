@@ -191,18 +191,10 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let width = UIScreen.mainScreen().bounds.width
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+//        let width = UIScreen.mainScreen().bounds.width
+//        let cell = tableView.cellForRowAtIndexPath(indexPath)
         
-        if let text = cell?.textLabel?.text {
-            print(text)
-            
-            if text.characters.count > 1 {
-                return UITableViewAutomaticDimension
-            }
-        }
-        
-        return UITableViewAutomaticDimension//(width / 2)
+        return UITableViewAutomaticDimension
     }
     
     override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

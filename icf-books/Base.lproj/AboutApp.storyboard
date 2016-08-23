@@ -34,14 +34,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="about_book" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_book" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="171" id="Ony-c1-nCf"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
-                                                    <rect key="frame" x="0.0" y="103" width="375" height="68"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
+                                                    <rect key="frame" x="0.0" y="103" width="320" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="68" id="GAU-9l-rDz"/>
                                                     </constraints>
@@ -144,8 +144,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43.5" id="xd4-BU-xfv"/>
                                                     </constraints>
@@ -177,17 +177,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-Xs-7nd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-Xs-7nd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="171" id="BsC-eK-VwK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="7yv-uS-nWf">
-                                                    <rect key="frame" x="0.0" y="103" width="375" height="68"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="7yv-uS-nWf">
+                                                    <rect key="frame" x="0.0" y="103" width="320" height="68"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Leo Bigger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otl-3R-ckj">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leo Bigger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otl-3R-ckj">
+                                                    <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
