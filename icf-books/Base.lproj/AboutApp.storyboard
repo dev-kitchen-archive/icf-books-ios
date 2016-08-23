@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -20,30 +21,33 @@
             <objects>
                 <tableViewController storyboardIdentifier="AboutApp" title="INFO" id="XSQ-k4-K6u" customClass="AboutViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ir0-bR-xOn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="News" id="vjW-8u-JtJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="w7t-1t-fVK">
-                                        <rect key="frame" x="0.0" y="49.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w7t-1t-fVK" id="frb-en-fgR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_book" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="about_book" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-S4-onG">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="171" id="Ony-c1-nCf"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-nW-u7X">
                                                     <rect key="frame" x="0.0" y="103" width="375" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="68" id="GAU-9l-rDz"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bleib informiert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecq-ol-vzU">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="68" id="dVG-d3-q0q"/>
                                                     </constraints>
@@ -66,15 +70,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AB2-cY-AaK" rowHeight="56" style="IBUITableViewCellStyleDefault" id="ck6-9W-Xfn">
-                                        <rect key="frame" x="0.0" y="220.5" width="375" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AB2-cY-AaK" rowHeight="54" style="IBUITableViewCellStyleDefault" id="ck6-9W-Xfn">
+                                        <rect key="frame" x="0.0" y="220.5" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ck6-9W-Xfn" id="SUQ-F3-9qH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erhalte als erster Informationen zu Leo Biggers neuen Bücher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="55.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Du erhältst den Newslette, kannst aber gerne eine weitere Adresse hinterlegen.Du " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AB2-cY-AaK">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="53.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,14 +88,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fUF-U2-zCj">
-                                        <rect key="frame" x="0.0" y="276.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="274.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUF-U2-zCj" id="KX0-fq-QMQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVl-Bh-GGE">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="XhS-3I-M31"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                                 </textField>
@@ -106,14 +113,17 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DfA-Tg-kuP">
-                                        <rect key="frame" x="0.0" y="320.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="318.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfA-Tg-kuP" id="XQR-Lr-HUq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aml-Ab-xY4">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="3d6-Ga-uWf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                                 </textField>
@@ -128,14 +138,17 @@
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHI-WT-bqC">
-                                        <rect key="frame" x="0.0" y="364.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="362.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHI-WT-bqC" id="sBF-xn-xZS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-DQ-nyV">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="xd4-BU-xfv"/>
+                                                    </constraints>
                                                     <state key="normal" title="Newsletter anmelden">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -158,19 +171,22 @@
                             <tableViewSection headerTitle="Author" id="OR0-sF-UUE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="gvl-Rf-VHW">
-                                        <rect key="frame" x="0.0" y="458.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="456.5" width="320" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvl-Rf-VHW" id="Rj2-2x-K47">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-Xs-7nd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="leo_bigger" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-Xs-7nd">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="171" id="BsC-eK-VwK"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="7yv-uS-nWf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="7yv-uS-nWf">
                                                     <rect key="frame" x="0.0" y="103" width="375" height="68"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leo Bigger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otl-3R-ckj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Leo Bigger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otl-3R-ckj">
                                                     <rect key="frame" x="0.0" y="102" width="375" height="68"/>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,17 +209,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yys-OQ-rrB" rowHeight="144" style="IBUITableViewCellStyleDefault" id="K5h-21-2fD">
-                                        <rect key="frame" x="0.0" y="629.5" width="375" height="144"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yys-OQ-rrB" rowHeight="329" style="IBUITableViewCellStyleDefault" id="K5h-21-2fD">
+                                        <rect key="frame" x="0.0" y="627.5" width="320" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5h-21-2fD" id="eKq-uP-5FX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="328.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="143.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yys-OQ-rrB">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="328.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement.  Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer «Kirche am Puls der Zeit».</string>
+                                                    <string key="text">Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement.  Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer „Kirche am Puls der Zeit“, wo Menschen Jesus begegnen und ein Zuhause finden können. Heute gehört ICF mit bereits über 50 Kirchen zu einer der grössten kirchlichen Bewegungen in Europa. Leo ist ausserdem Autor mehrerer Bücher, Gastredner im In- und Ausland und TV-Prediger auf diversen deutschsprachigen Fernsehsendern (www.icf-tv.com). Man hört immer wieder, Leo begeistere die Leute und motiviere sie durch seine leidenschaftliche, humorvolle und unkomplizierte Art.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -212,14 +228,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="17B-bM-6pb" style="IBUITableViewCellStyleDefault" id="heg-UG-SdO">
-                                        <rect key="frame" x="0.0" y="773.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="956.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="heg-UG-SdO" id="hdr-i7-e1d">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Leo Bigger folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="17B-bM-6pb">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,20 +253,23 @@
                             <tableViewSection headerTitle="Church" id="j7t-8x-Ccy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="wV5-u6-ajC">
-                                        <rect key="frame" x="0.0" y="867.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="1050.5" width="320" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wV5-u6-ajC" id="LmQ-0A-XGY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_church" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-IN-5q1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="171" id="a5q-qc-DtW"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="X0a-Ru-6cx">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICF Church" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upg-ms-NAP">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -272,18 +291,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fAp-9Z-Xsz" rowHeight="160" style="IBUITableViewCellStyleDefault" id="mRL-yR-Wvj">
-                                        <rect key="frame" x="0.0" y="1038.5" width="375" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fAp-9Z-Xsz" rowHeight="90" style="IBUITableViewCellStyleDefault" id="mRL-yR-Wvj">
+                                        <rect key="frame" x="0.0" y="1221.5" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRL-yR-Wvj" id="z4u-2n-UXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fAp-9Z-Xsz">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="159.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="89.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">ICF ist eine überkonfessionelle Freikirche auf biblischer Grundlage, die aus dem Traum entstanden ist, Kirche für die Menschen dynamisch, lebensnah und zeitgemäss zu gestalten.
-ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine christliche Kirche zu schaffen, die am Puls der Zeit, kreativ, innovativ und manchmal auch ein bisschen verrückt ist!</string>
+                                                    <string key="text">ICF (International Christian Fellowship) ist eine überkonfessionelle Kirche auf biblischer Grundlage, die aus dem Traum entstanden ist, Kirche für die Menschen dynamisch, lebensnah und zeitgemäss zu gestalten.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -292,14 +310,14 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="icfChurch" textLabel="6y5-Tq-eo9" style="IBUITableViewCellStyleDefault" id="bRb-9X-sdE">
-                                        <rect key="frame" x="0.0" y="1198.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1311.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRb-9X-sdE" id="bCX-ZB-b3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Church folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6y5-Tq-eo9">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,14 +331,14 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fpS-81-kEY" style="IBUITableViewCellStyleDefault" id="hGU-7Q-m8B">
-                                        <rect key="frame" x="0.0" y="1242.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1355.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGU-7Q-m8B" id="CRv-Ub-lxf">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Worship folgen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fpS-81-kEY">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,10 +352,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CNA-Eu-KHm" detailTextLabel="Zxt-TA-jfF" style="IBUITableViewCellStyleValue1" id="n6d-EE-2j9">
-                                        <rect key="frame" x="0.0" y="1286.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1399.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6d-EE-2j9" id="dd9-3y-9hA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ICF Online Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CNA-Eu-KHm">
@@ -348,7 +366,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="icf-onlinestore.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zxt-TA-jfF">
-                                                    <rect key="frame" x="219" y="12" width="141" height="19.5"/>
+                                                    <rect key="frame" x="164" y="12" width="141" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -363,20 +381,29 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                             <tableViewSection headerTitle="Developer" id="49S-ft-Nta">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="NrQ-GX-O61">
-                                        <rect key="frame" x="0.0" y="1380.5" width="375" height="171"/>
+                                        <rect key="frame" x="0.0" y="1493.5" width="320" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NrQ-GX-O61" id="We0-gx-FMc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dk_logo_inverted" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-RJ-rqb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gUU-RJ-rqb" secondAttribute="height" multiplier="2:1" id="Ab1-ah-BdP"/>
+                                                        <constraint firstAttribute="height" constant="171" id="jF1-dg-v57"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Ab1-ah-BdP"/>
+                                                        </mask>
+                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-I7-EZp">
-                                                    <rect key="frame" x="0.0" y="103.5" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="103" width="320" height="68"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="devkitchen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co3-OH-rvC">
-                                                    <rect key="frame" x="0.0" y="102.5" width="375" height="68"/>
+                                                    <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                                     <fontDescription key="fontDescription" name="ArnhemPro-Normal" family="Arnhem Pro" pointSize="38"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -398,15 +425,15 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YQj-uk-MDS" rowHeight="92" style="IBUITableViewCellStyleDefault" id="GBI-HQ-FR5">
-                                        <rect key="frame" x="0.0" y="1551.5" width="375" height="92"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YQj-uk-MDS" rowHeight="76" style="IBUITableViewCellStyleDefault" id="GBI-HQ-FR5">
+                                        <rect key="frame" x="0.0" y="1664.5" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBI-HQ-FR5" id="RIQ-9h-Yzp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YQj-uk-MDS">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="91.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="75.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Die Entwicklerküche, fünf Freunde aus dem ICF Zürich, wünschen sich auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so auch diese App.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -417,10 +444,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eI2-e5-AsY" detailTextLabel="D5h-Ov-qOr" style="IBUITableViewCellStyleValue1" id="dcw-pv-rFL">
-                                        <rect key="frame" x="0.0" y="1643.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1740.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcw-pv-rFL" id="Bqs-LH-r4U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Webseite der Entwickler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eI2-e5-AsY">
@@ -431,7 +458,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="dev.kitchen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5h-Ov-qOr">
-                                                    <rect key="frame" x="277" y="12" width="83" height="19.5"/>
+                                                    <rect key="frame" x="222" y="12" width="83" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,14 +473,14 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                             <tableViewSection id="9Hh-Gq-R0N">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="a35-zB-tIn" style="IBUITableViewCellStyleDefault" id="gnK-8z-4Mm">
-                                        <rect key="frame" x="0.0" y="1723.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1820.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnK-8z-4Mm" id="M58-14-kwY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Fontis Verlag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a35-zB-tIn">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -464,14 +491,14 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         <color key="backgroundColor" red="0.9809225063" green="0.9809225063" blue="0.9809225063" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e9C-Ed-Cdp" style="IBUITableViewCellStyleDefault" id="ub3-x2-Igy">
-                                        <rect key="frame" x="0.0" y="1767.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1864.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ub3-x2-Igy" id="0se-nB-XEr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9C-Ed-Cdp">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -489,7 +516,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                             <outlet property="delegate" destination="XSQ-k4-K6u" id="YUg-aJ-kV7"/>
                         </connections>
                     </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="devDesc" destination="YQj-uk-MDS" id="VXz-en-Nhq"/>
                         <outlet property="emailField" destination="aml-Ab-xY4" id="mcj-Ed-AQd"/>
@@ -510,24 +537,24 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCx-2d-F73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612.5" y="-1782.5"/>
+            <point key="canvasLocation" x="611" y="-1784"/>
         </scene>
         <!--Leo Bigger-->
         <scene sceneID="dqP-SO-z02">
             <objects>
                 <tableViewController restorationIdentifier="leo" title="Leo Bigger" id="grm-db-2gl" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5h9-WG-SBk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="eSX-ks-kM0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jbx-px-Hde" detailTextLabel="mko-AA-NEU" style="IBUITableViewCellStyleValue1" id="hn0-DS-R4g">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hn0-DS-R4g" id="lHP-Iq-93y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jbx-px-Hde">
@@ -538,7 +565,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="www.leobigger.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mko-AA-NEU">
-                                                    <rect key="frame" x="217.5" y="12" width="142.5" height="19.5"/>
+                                                    <rect key="frame" x="162.5" y="12" width="142.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -548,10 +575,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Zxn-vu-s5H" detailTextLabel="ymh-T8-O2a" style="IBUITableViewCellStyleValue1" id="DDk-DE-uOJ">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DDk-DE-uOJ" id="5Cz-rQ-A29">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zxn-vu-s5H">
@@ -562,7 +589,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="@leobigger" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ymh-T8-O2a">
-                                                    <rect key="frame" x="277" y="12" width="83" height="19.5"/>
+                                                    <rect key="frame" x="222" y="12" width="83" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -572,10 +599,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="aXP-7f-ZyF" detailTextLabel="9Qv-1r-oHM" style="IBUITableViewCellStyleValue1" id="bl1-R5-lGv">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bl1-R5-lGv" id="Sis-Un-I3z">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXP-7f-ZyF">
@@ -586,7 +613,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="fb.com/Bigger.Leo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Qv-1r-oHM">
-                                                    <rect key="frame" x="227" y="12" width="133" height="19.5"/>
+                                                    <rect key="frame" x="172" y="12" width="133" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -613,17 +640,17 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
             <objects>
                 <tableViewController restorationIdentifier="church" title="ICF Church" id="XdB-hs-Vgk" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ixr-kM-ZVy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="ZIf-aO-ton">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5vq-tX-zpP" detailTextLabel="iAz-cV-Exn" style="IBUITableViewCellStyleValue1" id="XWS-zx-pgW">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWS-zx-pgW" id="xhW-i7-U1Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5vq-tX-zpP">
@@ -634,7 +661,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="www.icf.church" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iAz-cV-Exn">
-                                                    <rect key="frame" x="248.5" y="12" width="111.5" height="19.5"/>
+                                                    <rect key="frame" x="193.5" y="12" width="111.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -644,10 +671,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="a93-qh-Pv5" detailTextLabel="bEv-QM-FTp" style="IBUITableViewCellStyleValue1" id="AEV-oW-4Je">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AEV-oW-4Je" id="rJh-LE-ZAZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a93-qh-Pv5">
@@ -658,7 +685,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="@icfmovement" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bEv-QM-FTp">
-                                                    <rect key="frame" x="251" y="12" width="109" height="19.5"/>
+                                                    <rect key="frame" x="196" y="12" width="109" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -668,10 +695,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kaw-B8-E62" detailTextLabel="tik-ND-mJZ" style="IBUITableViewCellStyleValue1" id="mwJ-Jm-GEb">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwJ-Jm-GEb" id="neM-qg-R8x">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kaw-B8-E62">
@@ -682,7 +709,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="fb.com/icfmovement" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tik-ND-mJZ">
-                                                    <rect key="frame" x="210" y="12" width="150" height="19.5"/>
+                                                    <rect key="frame" x="155" y="12" width="150" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -785,17 +812,17 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
             <objects>
                 <tableViewController restorationIdentifier="worship" title="ICF Worship" id="Qhm-TT-w8O" customClass="LinksViewController" customModule="icf_books" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="edK-1H-OGf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="ARQ-8z-Vqq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="THt-Li-CCR" detailTextLabel="cEN-WL-XVp" style="IBUITableViewCellStyleValue1" id="qJz-T0-QE3">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJz-T0-QE3" id="RW5-kh-THf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="THt-Li-CCR">
@@ -806,7 +833,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="www.icf-worship.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cEN-WL-XVp">
-                                                    <rect key="frame" x="203.5" y="12" width="156.5" height="19.5"/>
+                                                    <rect key="frame" x="148.5" y="12" width="156.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -816,10 +843,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="peo-WC-jDS" detailTextLabel="gjk-pL-7y4" style="IBUITableViewCellStyleValue1" id="9RX-xn-gtN">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9RX-xn-gtN" id="5za-bL-rsI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="peo-WC-jDS">
@@ -830,7 +857,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="@icfworship" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjk-pL-7y4">
-                                                    <rect key="frame" x="270.5" y="12" width="89.5" height="19.5"/>
+                                                    <rect key="frame" x="215.5" y="12" width="89.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -840,10 +867,10 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Xvk-d8-SIM" detailTextLabel="o26-VE-3Lt" style="IBUITableViewCellStyleValue1" id="eJ7-rG-PMv">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJ7-rG-PMv" id="4pJ-90-snv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xvk-d8-SIM">
@@ -854,7 +881,7 @@ ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="fb.com/ICFWorship" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o26-VE-3Lt">
-                                                    <rect key="frame" x="220.5" y="12" width="139.5" height="19.5"/>
+                                                    <rect key="frame" x="165.5" y="12" width="139.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>

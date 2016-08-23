@@ -168,6 +168,9 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
                             
                             //calling altert to inform user about success and dismiss the keyboard
                             ErrorManager.newsletterSuccess(self, callback: {self.view.endEditing(true)})
+                            
+                            //updating cell height
+                            self.tableView.reloadData()
                         }
                     }
                 })
@@ -185,6 +188,25 @@ class AboutViewController: UITableViewController, UITextFieldDelegate {
         } else {
             return false
         }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let width = UIScreen.mainScreen().bounds.width
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        if let text = cell?.textLabel?.text {
+            print(text)
+            
+            if text.characters.count > 1 {
+                return UITableViewAutomaticDimension
+            }
+        }
+        
+        return UITableViewAutomaticDimension//(width / 2)
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     /*

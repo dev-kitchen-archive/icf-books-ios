@@ -19,8 +19,8 @@
 "SCAN_QR_INVALID" = "Der QR-Code ist nicht gültig.";
 "SCAN_LOAD_DATA" = "Daten werden geladen.";
 "SCAN_SAVED_DATA" = "Daten wurden gespeichert.";
-"SCAN_NO_INTERNET" = "Keine Internetverbindung, versuch es später nochmals.";
-"SCAN_SERVER_ERROR" = "Der Server ist nicht erreichbar, versuch es später nochmals.";
+"SCAN_NO_INTERNET" = "Keine Internetverbindung, versuche es später nochmals.";
+"SCAN_SERVER_ERROR" = "Der Server ist nicht erreichbar, versuche es später nochmals.";
 "SCAN_PARSE_ERROR" = "Das verarbeiten der Daten war nicht erfolgreich.";
 
 //General
@@ -30,30 +30,32 @@
 //new
 "WELCOME" = "WILLKOMMEN";
 
-"BOOK_TITLE" = "ESTHER – Mit Gott die Welt auf den Kopf stellen";
-"BOOK_RELEASE" = "Ab 1. Sept 2016 im Handel erhältlich";
+"BOOK_TITLE" = "Esther – Mit Gott die Welt auf den Kopf stellen";
+"BOOK_RELEASE" = "";
 "BOOK_BUTTON" = "Online kaufen";
 
 "INFO_TITLE" = "Noch keine Videos vorhanden";
-"TNFO_DESC" = "Verwende den Plus-Button um zusätzliche Videos zum Buch anzuzeigen";
+"TNFO_DESC" = "Drücke den Plus-Button um zusätzliche Videos zum Buch anzuzeigen";
 
-"ABOUT_NEWSLETTER" = "Bleib informiert";
+"ABOUT_NEWSLETTER" = "Bleibe informiert";
 "ABOUT_NEWSLETTER_BUTTON" = "Newsletter anmelden";
-"ABOUT_NEWSLETTER_DESC" = "Erhalte als erster Informationen zu Leo Biggers neuen Bücher.";
+"ABOUT_NEWSLETTER_DESC" = "Erhalte als erster Informationen zu Leo Biggers neuen Publikationen.";
 "ABOUT_NEWSLETTER_SIGNUP_INVALID" = "Unvollständige Angaben";
 "ABOUT_NEWSLETTER_SIGNUP_INVALID_DESC" = "Bitte überprüfe ob Name und Email-Adresse korrekt sind.";
-"ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhälst die Newsletter an @, kannst aber gerne eine weitere Adresse hinterlegen.";
+"ABOUT_NEWSLETTER_SIGNEDUP" = "Du erhältst den Newsletter an @, kannst aber gerne eine weitere Adresse hinterlegen.";
 
 "ABOUT_IMPRINT" = "Impressum";
-"ABOUT_FONTIS" = "Fontis Verlag";
+"ABOUT_FONTIS" = "Fontis-Verlag";
 "ABOUT_DEVELOPER" = "Website der Entwickler";
-"ABOUT_DEVELOPER_DESC" = "Die Entwicklerküche, fünf Freunde aus dem ICF Zürich, wünschen sich auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so auch diese App.";
+"ABOUT_DEVELOPER_DESC" = "Die Entwicklerküche. Fünf Freunde aus dem ICF Zürich die sich wünschen auch digital am Puls der Zeit zu bleiben. Sie realisieren gemeinsam Projekte, so wie auch diese App.";
 "ABOUT_STORE" = "ICF Online Store";
 "ABOUT_WORSHIP_FOLLOW" = "ICF Worship folgen";
 "ABOUT_CHURCH_FOLLOW" = "ICF Church folgen";
-"ABOUT_CHURCH_DESC" = "ICF ist eine überkonfessionelle Freikirche auf biblischer Grundlage, die aus dem Traum entstanden ist, Kirche für die Menschen dynamisch, lebensnah und zeitgemäss zu gestalten. ICF bedeutet International Christian Fellowship und konkret auch folgendes: Eine christliche Kirche zu schaffen, die am Puls der Zeit, kreativ, innovativ und manchmal auch ein bisschen verrückt ist!";
+"ABOUT_CHURCH_DESC" = "ICF (International Christian Fellowship) ist eine überkonfessionelle Kirche auf biblischer Grundlage, die aus dem Traum entstanden ist, Kirche für die Menschen dynamisch, lebensnah und zeitgemäss zu gestalten.";
 "ABOUT_LEO_FOLLOW" = "Leo Bigger folgen";
-"ABOUT_LEO_DESC" = "Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement. Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer «Kirche am Puls der Zeit».";
+//"ABOUT_LEO_DESC" = "Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement. Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer «Kirche am Puls der Zeit».";
+
+"ABOUT_LEO_DESC" = "Leo Bigger und seine Frau Susanna sind leitende Pastoren des ICF Zürich, einer Kirche mit 3200 Besuchern pro Wochenende in 7 Locations, und Leiter des ICF Movement.  Im Jahr 1996 gründeten Leo und zwei weitere Pastoren ICF Zürich. Damit verwirklichten sie den Traum von einer «Kirche am Puls der Zeit», wo Menschen Jesus begegnen und ein Zuhause finden können. Heute gehört ICF mit bereits über 50 Kirchen zu einer der grössten kirchlichen Bewegungen in Europa. Leo ist ausserdem Autor mehrerer Bücher, Gastredner im In- und Ausland und TV-Prediger auf diversen deutschsprachigen Fernsehsendern (www.icf-tv.com). Man hört immer wieder, Leo begeistere die Leute und motiviere sie durch seine leidenschaftliche, humorvolle und unkomplizierte Art.";
 
 "ERROR_INTERNET" = "Keine Internetverbindung";
 "ERROR_INTERNET_DESC" = "Diese App benötigt Internetzugang";
@@ -61,12 +63,12 @@
 "ERROR_SETTINGS_BTN" = "Einstellungen überprüfen";
 "ERROR_CAMERA" = "Kamerazugriff nicht möglich";
 "ERROR_CAMERA_DESC" = "Erlaube dieser App den Zugriff auf die Kamera um QR-Codes zu scannen.";
-"ERROR_CAMERA_BTN" = "Enstellungen öffnen";
+"ERROR_CAMERA_BTN" = "Einstellungen öffnen";
 "ERROR_NEWSLETTER" = "Anmeldung nicht möglich";
 "ERROR_NEWSLETTER_DESC" = "Momentan ist die Anmeldung nicht möglich, bitte versuche es zu einem späteren Zeitpunkt nochmals";
 "ERROR_NEWSLETTER_BTN" = "Ok";
 "SUCCESS_NEWSLETTER" = "Danke";
-"SUCCESS_NEWSLETTER_DESC" = "Du hast dich erfolgreich für Leo Bigges Newsletter angemeldet.";
+"SUCCESS_NEWSLETTER_DESC" = "Du hast dich erfolgreich für Leo Biggers Newsletter angemeldet.";
 "SUCCESS_NEWSLETTER_BTN" = "Ok";
 "ERROR_BAD_URL" = "Video kann nicht geladen werden";
 "ERROR_BAD_URL_DESC" = "Die hinterlegte URL für das Streamen des Videos ist nicht gültig.";
