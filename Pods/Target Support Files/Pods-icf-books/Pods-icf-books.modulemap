@@ -1,0 +1,6 @@
+framework module Pods_icf_books {
+  umbrella header "Pods-icf-books-umbrella.h"
+
+  export *
+  module * { export * }
+}
