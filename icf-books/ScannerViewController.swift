@@ -18,6 +18,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var topLayer: UIVisualEffectView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var flashIcon: UIImageView!
     
     var homeDelegate:HomeViewController?
     var captureSession:AVCaptureSession?
@@ -26,6 +27,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     var lastScannedCode:String = ""
     var readyToScan:Bool = true
     var autorizedCam:Bool? = nil
+    var flashLight = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -199,6 +201,7 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
         view.bringSubviewToFront(infoLayer)
         view.bringSubviewToFront(topLayer)
         view.bringSubviewToFront(codeFenceImage)
+        view.bringSubviewToFront(flashIcon)
     }
     
     func setupQrCodeHighlighter() {
@@ -222,35 +225,6 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
             readyToScan = !readyToScan
         }
     }
-    
-//    func animateInfoHeight() {
-//        if readyToScan {
-//            UIView.animateWithDuration(0.5, animations: {
-//                self.heightConstraint.constant = 44
-//                self.view.layoutIfNeeded()
-//            })
-//            
-//            codeFenceImage.hidden = true
-//            //if not sucessful reload, else hide button
-//            cancelButton.titleLabel?.text = "↺"
-//        
-//            let animatedImg = getAnimation("tick")
-//            infoImage.image = animatedImg[animatedImg.count - 1]
-//            infoImage.animationImages = animatedImg
-//            infoImage.animationDuration = 1.5
-//            infoImage.animationRepeatCount = 1
-//            infoImage.startAnimating()
-//        } else {
-//            UIView.animateWithDuration(0.5, animations: {
-//                self.heightConstraint.constant = 484
-//                self.view.layoutIfNeeded()
-//            })
-//            codeFenceImage.hidden = false
-//            cancelButton.titleLabel?.text = "✕"
-//        }
-//        
-//        readyToScan = !readyToScan
-//    }
     
     
     func getAnimation(icon:String) -> [UIImage] {
@@ -316,6 +290,15 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
     }
     
     @IBAction func flashToggle(sender: AnyObject) {
+        //change icon
+        if !flashLight {
+            flashIcon.image = UIImage(named: "flash_on")
+        } else {
+            flashIcon.image = UIImage(named: "flash_off")
+        }
+        flashLight = !flashLight
+        
+        //turn on/off the light
         let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         if (device.hasTorch) {
             do {
