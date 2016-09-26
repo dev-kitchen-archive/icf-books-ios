@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import AVKit
 import AVFoundation
+import Firebase
 
 enum MediaCellType {
     case Title, Description, Movie, Image
@@ -23,6 +24,21 @@ class DetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //firebase analytics
+        var analysticsTitle = ""
+        var analysticsId = ""
+        
+        if let analTitle = scan!.valueForKey("title") as? String {
+            analysticsTitle = analTitle
+        }
+        if let analId = scan!.valueForKey("id") as? String {
+            analysticsId = analId
+        }
+        
+        FIRAnalytics.logEventWithName(kFIREventSelectContent, parameters: [
+            kFIRParameterContentType: analysticsTitle + " movie",
+            kFIRParameterItemID: analysticsId
+            ])
         
         //makes the cell as high as it needs to be, regarding the content
         tableView.rowHeight = UITableViewAutomaticDimension

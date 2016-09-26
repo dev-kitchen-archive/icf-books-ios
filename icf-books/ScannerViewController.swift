@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import CoreData
+import Firebase
 
 class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var codeFenceImage: UIImageView!
@@ -79,11 +80,25 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                 RequestManager.getMedia(forMediaId: scannedId, completionHandler: { (media, error) -> (Void) in
                     if error == nil {
                         if let mediaParsed = ParseMedia.fromJson(media!) {
-                            self.persistObject(mediaParsed)
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.persistObject(mediaParsed)
+                                
+                                //firebase analytics
+                                FIRAnalytics.logEventWithName(kFIREventViewItem, parameters: [
+                                    kFIRParameterContentType: "QR Scan successfull",
+                                    kFIRParameterItemID: String(mediaParsed.indexForKey("id"))
+                                    ])
+                            }
+                            
                         } else {
                             dispatch_async(dispatch_get_main_queue()) {
                                 self.infoText.text = NSLocalizedString("SCAN_PARSE_ERROR", comment:"Error Parsing")
                                 self.infoImage.image = UIImage(named: "qr_code_preview_error")
+                                
+                                //firebase analytics
+                                FIRAnalytics.logEventWithName(kFIREventViewItem, parameters: [
+                                    kFIRParameterContentType: "QR Scan error parsing"
+                                    ])
                             }
                         }
                     } else {
@@ -91,6 +106,11 @@ class ScannerViewController: MasterViewController, AVCaptureMetadataOutputObject
                         dispatch_async(dispatch_get_main_queue()) {
                             self.infoText.text = NSLocalizedString("SCAN_SERVER_ERROR", comment:"Error from Server")
                             self.infoImage.image = UIImage(named: "qr_code_preview_error")
+                            
+                            //firebase analytics
+                            FIRAnalytics.logEventWithName(kFIREventViewItem, parameters: [
+                                kFIRParameterContentType: "QR Scan error from server resopnse"
+                                ])
                         }
                     }
                 })

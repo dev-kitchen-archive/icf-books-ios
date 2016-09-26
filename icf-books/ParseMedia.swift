@@ -33,11 +33,6 @@ class ParseMedia {
             
             //put together data type specific
             let mediaTypeDict = dict.objectForKey("data") as! NSDictionary
-            //do a lot of good validation somewhere
-            //do a lot of good validation somewhere
-            //do a lot of good validation somewhere
-            //do a lot of good validation somewhere
-            //do a lot of good validation somewhere
 
             let typeData : NSData = NSKeyedArchiver.archivedDataWithRootObject(mediaTypeDict)
             
